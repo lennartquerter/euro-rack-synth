@@ -112,7 +112,7 @@ There are some general NPN and PNP transistors you can get, I mainly got some va
 - TL074 (50x) [operational amplifier]
 - CD40106 (10x) [Hex Schmidt trigger]
 - CD4016 [decade counter]
-- CD.... [binary counter]
+- CD4040 [binary counter]
 
 
 ## Schematics & PCB creation
@@ -190,13 +190,33 @@ top board. I got simple 3mm & 2mm spacers from nylon.
 - [VCO: CEM 3340](modules/voltage-controlled-oscillators/1-vixen/README.md)
 - [LFO](modules/voltage-controlled-oscillators/1-vixen/README.md)
 - [Digital Sequencer](modules/voltage-controlled-oscillators/1-vixen/README.md)
+
 - [Filter: CEM 3320](modules/voltage-controlled-oscillators/1-vixen/README.md)
 - [Filter: Ladder](modules/voltage-controlled-oscillators/1-vixen/README.md)
 - [Digital Quantizer](modules/voltage-controlled-oscillators/1-vixen/README.md)
 - [Midi to CV](modules/voltage-controlled-oscillators/1-vixen/README.md)
 
 
+- Binary counter (or clock splitter)
+- Simple Mult
+- Simple Math
+
+
 - [Kick](modules/voltage-controlled-oscillators/1-vixen/README.md)
 - [Snare/clap](modules/voltage-controlled-oscillators/1-vixen/README.md)
 - [HiHat](modules/voltage-controlled-oscillators/1-vixen/README.md)
 
+
+- Delay/Reverb (Analog/Spring)
+- Delay/Reverb (Digital)
+- Sample & Hold
+- White/pink noise module
+
+
+- Cool input device
+
+
+### Tooling
+
+- 1v/oct tuner (just 8 holes each 1v)
+- SemiTone generator?
