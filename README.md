@@ -8,7 +8,7 @@ I'm not an expert, but I'm learning as I go and I'm happy to share what I've lea
 
 ### Oscillators
 
-- [VIXEN 3000.014](./voltage-controlled-oscillators/1-vixen/README.md)
+- [VIXEN 3000.014](modules/voltage-controlled-oscillators/1-vixen/README.md)
 
 
 
