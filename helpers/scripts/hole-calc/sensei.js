@@ -228,13 +228,26 @@ const holePositions = [
         fromRight: 8.8,
         diameter: 6.2
     },
-    ,
     {
         label: 'TRIM',
         name: 'TRIM',
         fromTop: 104.7,
         fromRight: 56.25,
         diameter: 6.2
+    },
+    {
+        label: 'SW_Gutter_01',
+        name: 'TRIM',
+        fromTop: 25.24,
+        fromRight: 0,
+        diameter: 0
+    },
+    {
+        label: 'SW_Gutter_01',
+        name: 'TRIM',
+        fromTop: 65.22,
+        fromRight: 0,
+        diameter: 0
     },
 ]
 
