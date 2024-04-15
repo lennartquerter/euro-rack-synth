@@ -19,6 +19,13 @@ const holePositions = [
         diameter: 6.1
     },
     {
+        label: '1_led',
+        name: '1_led',
+        fromTop: 4.9,
+        fromRight: 21.5,
+        diameter: 3.0
+    },
+    {
         label: '1_ctrl',
         name: '1_ctrl',
         fromTop: 12.9,
@@ -31,6 +38,13 @@ const holePositions = [
         fromTop: 28.375,
         fromRight: 21.42,
         diameter: 6.1
+    },
+    {
+        label: '2_led',
+        name: '2_led',
+        fromTop: 20.425,
+        fromRight: 21.5,
+        diameter: 3.0
     },
     {
         label: '2_ctrl',
@@ -47,6 +61,13 @@ const holePositions = [
         diameter: 6.1
     },
     {
+        label: '3_led',
+        name: '3_led',
+        fromTop: 35.9,
+        fromRight: 21.5,
+        diameter: 3.0
+    },
+    {
         label: '3_ctrl',
         name: '3_ctrl',
         fromTop: 43.9,
@@ -59,6 +80,13 @@ const holePositions = [
         fromTop: 59.4,
         fromRight: 21.42,
         diameter: 6.1
+    },
+    {
+        label: '4_led',
+        name: '4_led',
+        fromTop: 51.4,
+        fromRight: 21.5,
+        diameter: 3.0
     },
     {
         label: '4_ctrl',
@@ -94,6 +122,12 @@ const holePositions = [
         fromTop: 98,
         fromRight: 7.8,
         diameter: 6.1
+    }, {
+        label: 'out_led',
+        name: 'out_led',
+        fromTop: 90.5,
+        fromRight: 7.8,
+        diameter: 3.0
     },
 ]
 
