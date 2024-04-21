@@ -1,5 +1,5 @@
 const panelWidth = 42;
-const panelHeight = 128.5;
+const panelHeight = 129.5;
 
 const pcbWidth = 42;
 const pcbScoreOffset = 2;
