@@ -484,243 +484,7 @@
         )
       )
     )
-    (symbol "Synth_Custom:AudioJack2_PJ398SM" (in_bom yes) (on_board yes)
-      (property "Reference" "J" (at 0 8.89 0)
-        (effects (font (size 1.27 1.27)))
-      )
-      (property "Value" "AudioJack2_PJ398SM" (at 0 6.35 0)
-        (effects (font (size 1.27 1.27)))
-      )
-      (property "Footprint" "synth-custom:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles" (at -1.27 -5.08 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "Datasheet" "~" (at 1.27 -6.35 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_keywords" "audio jack receptacle mono headphones phone TS connector PJ398SM" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_description" "Audio Jack, 2 Poles (Mono / TS), Switched T Pole (Normalling) (PJ398SM)" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_fp_filters" "Jack*" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (symbol "AudioJack2_PJ398SM_0_1"
-        (polyline
-          (pts
-            (xy 0.508 -0.254)
-            (xy 0.762 -0.762)
-          )
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy -1.27 0)
-            (xy -0.635 -0.635)
-            (xy 0 0)
-            (xy 2.54 0)
-          )
-          (stroke (width 0.254) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy 2.54 -2.54)
-            (xy 0.508 -2.54)
-            (xy 0.508 -0.254)
-            (xy 0.254 -0.762)
-          )
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy 2.54 2.54)
-            (xy -3.175 2.54)
-            (xy -3.175 0)
-            (xy -3.81 -0.635)
-            (xy -4.445 0)
-          )
-          (stroke (width 0.254) (type default))
-          (fill (type none))
-        )
-      )
-      (symbol "AudioJack2_PJ398SM_1_1"
-        (pin passive line (at 5.08 2.54 180) (length 2.54)
-          (name "~" (effects (font (size 1.27 1.27))))
-          (number "S" (effects (font (size 1.27 1.27))))
-        )
-        (pin passive line (at 5.08 0 180) (length 2.54)
-          (name "~" (effects (font (size 1.27 1.27))))
-          (number "T" (effects (font (size 1.27 1.27))))
-        )
-        (pin passive line (at 5.08 -2.54 180) (length 2.54)
-          (name "~" (effects (font (size 1.27 1.27))))
-          (number "TN" (effects (font (size 1.27 1.27))))
-        )
-      )
-    )
-    (symbol "Synth_Custom:CONN_Header_01x04" (in_bom yes) (on_board yes)
-      (property "Reference" "H" (at 2.54 0 0)
-        (effects (font (size 1.27 1.27)))
-      )
-      (property "Value" "" (at 0 2.54 0)
-        (effects (font (size 1.27 1.27)))
-      )
-      (property "Footprint" "synth-custom:PinHeader_1x04_P2.00mm_Vertical" (at 0 -2.54 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "Datasheet" "" (at 0 2.54 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_locked" "" (at 0 0 0)
-        (effects (font (size 1.27 1.27)))
-      )
-      (property "ki_keywords" "Eurorack" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_description" "PinHeader for Eurorack Synth (4 pins)" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (symbol "CONN_Header_01x04_1_1"
-        (rectangle (start -1.27 0.127) (end 0 -0.127)
-          (stroke (width 0.1524) (type default))
-          (fill (type none))
-        )
-        (rectangle (start -1.27 1.27) (end 1.27 -1.27)
-          (stroke (width 0.254) (type default))
-          (fill (type background))
-        )
-        (pin passive line (at -5.08 0 0) (length 3.81)
-          (name "1" (effects (font (size 1.27 1.27))))
-          (number "1" (effects (font (size 1.27 1.27))))
-        )
-      )
-      (symbol "CONN_Header_01x04_2_1"
-        (rectangle (start -1.27 0.127) (end 0 -0.127)
-          (stroke (width 0.1524) (type default))
-          (fill (type none))
-        )
-        (rectangle (start -1.27 1.27) (end 1.27 -1.27)
-          (stroke (width 0.254) (type default))
-          (fill (type background))
-        )
-        (pin passive line (at -5.08 0 0) (length 3.81)
-          (name "2" (effects (font (size 1.27 1.27))))
-          (number "2" (effects (font (size 1.27 1.27))))
-        )
-      )
-      (symbol "CONN_Header_01x04_3_1"
-        (rectangle (start -1.27 0.127) (end 0 -0.127)
-          (stroke (width 0.1524) (type default))
-          (fill (type none))
-        )
-        (rectangle (start -1.27 1.27) (end 1.27 -1.27)
-          (stroke (width 0.254) (type default))
-          (fill (type background))
-        )
-        (pin passive line (at -5.08 0 0) (length 3.81)
-          (name "3" (effects (font (size 1.27 1.27))))
-          (number "3" (effects (font (size 1.27 1.27))))
-        )
-      )
-      (symbol "CONN_Header_01x04_4_1"
-        (rectangle (start -1.27 0.127) (end 0 -0.127)
-          (stroke (width 0.1524) (type default))
-          (fill (type none))
-        )
-        (rectangle (start -1.27 1.27) (end 1.27 -1.27)
-          (stroke (width 0.254) (type default))
-          (fill (type background))
-        )
-        (pin passive line (at -5.08 0 0) (length 3.81)
-          (name "4" (effects (font (size 1.27 1.27))))
-          (number "4" (effects (font (size 1.27 1.27))))
-        )
-      )
-    )
-    (symbol "Synth_Custom:CONN_Socket_01x04" (in_bom yes) (on_board yes)
-      (property "Reference" "H" (at 2.54 0 0)
-        (effects (font (size 1.27 1.27)))
-      )
-      (property "Value" "" (at 0 2.54 0)
-        (effects (font (size 1.27 1.27)))
-      )
-      (property "Footprint" "synth-custom:PinSocket_1x04_P2.00mm_Vertical" (at 0 -2.54 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "Datasheet" "" (at 0 2.54 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_locked" "" (at 0 0 0)
-        (effects (font (size 1.27 1.27)))
-      )
-      (property "ki_keywords" "Eurorack" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_description" "PinHeader for Eurorack Synth (4 pins)" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (symbol "CONN_Socket_01x04_1_1"
-        (rectangle (start -1.27 0.127) (end 0 -0.127)
-          (stroke (width 0.1524) (type default))
-          (fill (type none))
-        )
-        (rectangle (start -1.27 1.27) (end 1.27 -1.27)
-          (stroke (width 0.254) (type default))
-          (fill (type background))
-        )
-        (pin passive line (at -5.08 0 0) (length 3.81)
-          (name "1" (effects (font (size 1.27 1.27))))
-          (number "1" (effects (font (size 1.27 1.27))))
-        )
-      )
-      (symbol "CONN_Socket_01x04_2_1"
-        (rectangle (start -1.27 0.127) (end 0 -0.127)
-          (stroke (width 0.1524) (type default))
-          (fill (type none))
-        )
-        (rectangle (start -1.27 1.27) (end 1.27 -1.27)
-          (stroke (width 0.254) (type default))
-          (fill (type background))
-        )
-        (pin passive line (at -5.08 0 0) (length 3.81)
-          (name "2" (effects (font (size 1.27 1.27))))
-          (number "2" (effects (font (size 1.27 1.27))))
-        )
-      )
-      (symbol "CONN_Socket_01x04_3_1"
-        (rectangle (start -1.27 0.127) (end 0 -0.127)
-          (stroke (width 0.1524) (type default))
-          (fill (type none))
-        )
-        (rectangle (start -1.27 1.27) (end 1.27 -1.27)
-          (stroke (width 0.254) (type default))
-          (fill (type background))
-        )
-        (pin passive line (at -5.08 0 0) (length 3.81)
-          (name "3" (effects (font (size 1.27 1.27))))
-          (number "3" (effects (font (size 1.27 1.27))))
-        )
-      )
-      (symbol "CONN_Socket_01x04_4_1"
-        (rectangle (start -1.27 0.127) (end 0 -0.127)
-          (stroke (width 0.1524) (type default))
-          (fill (type none))
-        )
-        (rectangle (start -1.27 1.27) (end 1.27 -1.27)
-          (stroke (width 0.254) (type default))
-          (fill (type background))
-        )
-        (pin passive line (at -5.08 0 0) (length 3.81)
-          (name "4" (effects (font (size 1.27 1.27))))
-          (number "4" (effects (font (size 1.27 1.27))))
-        )
-      )
-    )
-    (symbol "Synth_Custom:Conn_02x05_PWR_Eurorack" (pin_names (offset 1.016) hide) (in_bom yes) (on_board yes)
+    (symbol "Synth_Custom:CONN_02x05_PWR_Eurorack" (pin_names (offset 1.016) hide) (in_bom yes) (on_board yes)
       (property "Reference" "H" (at 0 7.62 0)
         (effects (font (size 1.27 1.27)))
       )
@@ -742,7 +506,7 @@
       (property "ki_fp_filters" "Connector*:*_2x??_*" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (symbol "Conn_02x05_PWR_Eurorack_1_1"
+      (symbol "CONN_02x05_PWR_Eurorack_1_1"
         (rectangle (start -2.54 -4.953) (end -1.27 -5.207)
           (stroke (width 0.1524) (type default))
           (fill (type none))
@@ -826,6 +590,242 @@
         (pin passive line (at -6.35 -5.08 0) (length 3.81)
           (name "Pin_9" (effects (font (size 1.27 1.27))))
           (number "9" (effects (font (size 1.27 1.27))))
+        )
+      )
+    )
+    (symbol "Synth_Custom:CONN_Header_01x04" (in_bom yes) (on_board yes)
+      (property "Reference" "H" (at 2.54 0 0)
+        (effects (font (size 1.27 1.27)))
+      )
+      (property "Value" "" (at 0 2.54 0)
+        (effects (font (size 1.27 1.27)))
+      )
+      (property "Footprint" "synth-custom:PinHeader_1x04_P2.54mm_Vertical" (at 0 -2.54 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "Datasheet" "" (at 0 2.54 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_locked" "" (at 0 0 0)
+        (effects (font (size 1.27 1.27)))
+      )
+      (property "ki_keywords" "Eurorack" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_description" "PinHeader for Eurorack Synth (4 pins)" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (symbol "CONN_Header_01x04_1_1"
+        (rectangle (start -1.27 0.127) (end 0 -0.127)
+          (stroke (width 0.1524) (type default))
+          (fill (type none))
+        )
+        (rectangle (start -1.27 1.27) (end 1.27 -1.27)
+          (stroke (width 0.254) (type default))
+          (fill (type background))
+        )
+        (pin passive line (at -5.08 0 0) (length 3.81)
+          (name "1" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27))))
+        )
+      )
+      (symbol "CONN_Header_01x04_2_1"
+        (rectangle (start -1.27 0.127) (end 0 -0.127)
+          (stroke (width 0.1524) (type default))
+          (fill (type none))
+        )
+        (rectangle (start -1.27 1.27) (end 1.27 -1.27)
+          (stroke (width 0.254) (type default))
+          (fill (type background))
+        )
+        (pin passive line (at -5.08 0 0) (length 3.81)
+          (name "2" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27))))
+        )
+      )
+      (symbol "CONN_Header_01x04_3_1"
+        (rectangle (start -1.27 0.127) (end 0 -0.127)
+          (stroke (width 0.1524) (type default))
+          (fill (type none))
+        )
+        (rectangle (start -1.27 1.27) (end 1.27 -1.27)
+          (stroke (width 0.254) (type default))
+          (fill (type background))
+        )
+        (pin passive line (at -5.08 0 0) (length 3.81)
+          (name "3" (effects (font (size 1.27 1.27))))
+          (number "3" (effects (font (size 1.27 1.27))))
+        )
+      )
+      (symbol "CONN_Header_01x04_4_1"
+        (rectangle (start -1.27 0.127) (end 0 -0.127)
+          (stroke (width 0.1524) (type default))
+          (fill (type none))
+        )
+        (rectangle (start -1.27 1.27) (end 1.27 -1.27)
+          (stroke (width 0.254) (type default))
+          (fill (type background))
+        )
+        (pin passive line (at -5.08 0 0) (length 3.81)
+          (name "4" (effects (font (size 1.27 1.27))))
+          (number "4" (effects (font (size 1.27 1.27))))
+        )
+      )
+    )
+    (symbol "Synth_Custom:CONN_Socket_01x04" (in_bom yes) (on_board yes)
+      (property "Reference" "H" (at 2.54 0 0)
+        (effects (font (size 1.27 1.27)))
+      )
+      (property "Value" "" (at 0 2.54 0)
+        (effects (font (size 1.27 1.27)))
+      )
+      (property "Footprint" "synth-custom:PinSocket_1x04_P2.54mm_Vertical" (at 0 -2.54 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "Datasheet" "" (at 0 2.54 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_locked" "" (at 0 0 0)
+        (effects (font (size 1.27 1.27)))
+      )
+      (property "ki_keywords" "Eurorack" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_description" "PinHeader for Eurorack Synth (4 pins)" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (symbol "CONN_Socket_01x04_1_1"
+        (rectangle (start -1.27 0.127) (end 0 -0.127)
+          (stroke (width 0.1524) (type default))
+          (fill (type none))
+        )
+        (rectangle (start -1.27 1.27) (end 1.27 -1.27)
+          (stroke (width 0.254) (type default))
+          (fill (type background))
+        )
+        (pin passive line (at -5.08 0 0) (length 3.81)
+          (name "1" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27))))
+        )
+      )
+      (symbol "CONN_Socket_01x04_2_1"
+        (rectangle (start -1.27 0.127) (end 0 -0.127)
+          (stroke (width 0.1524) (type default))
+          (fill (type none))
+        )
+        (rectangle (start -1.27 1.27) (end 1.27 -1.27)
+          (stroke (width 0.254) (type default))
+          (fill (type background))
+        )
+        (pin passive line (at -5.08 0 0) (length 3.81)
+          (name "2" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27))))
+        )
+      )
+      (symbol "CONN_Socket_01x04_3_1"
+        (rectangle (start -1.27 0.127) (end 0 -0.127)
+          (stroke (width 0.1524) (type default))
+          (fill (type none))
+        )
+        (rectangle (start -1.27 1.27) (end 1.27 -1.27)
+          (stroke (width 0.254) (type default))
+          (fill (type background))
+        )
+        (pin passive line (at -5.08 0 0) (length 3.81)
+          (name "3" (effects (font (size 1.27 1.27))))
+          (number "3" (effects (font (size 1.27 1.27))))
+        )
+      )
+      (symbol "CONN_Socket_01x04_4_1"
+        (rectangle (start -1.27 0.127) (end 0 -0.127)
+          (stroke (width 0.1524) (type default))
+          (fill (type none))
+        )
+        (rectangle (start -1.27 1.27) (end 1.27 -1.27)
+          (stroke (width 0.254) (type default))
+          (fill (type background))
+        )
+        (pin passive line (at -5.08 0 0) (length 3.81)
+          (name "4" (effects (font (size 1.27 1.27))))
+          (number "4" (effects (font (size 1.27 1.27))))
+        )
+      )
+    )
+    (symbol "Synth_Custom:Jack_default" (in_bom yes) (on_board yes)
+      (property "Reference" "J" (at 0 8.89 0)
+        (effects (font (size 1.27 1.27)))
+      )
+      (property "Value" "AudioJack2_PJ398SM" (at 0 6.35 0)
+        (effects (font (size 1.27 1.27)))
+      )
+      (property "Footprint" "synth-custom:Jack_default" (at -1.27 -5.08 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "Datasheet" "~" (at 1.27 -6.35 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_keywords" "audio jack receptacle mono headphones phone TS connector PJ398SM" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_description" "Audio Jack, 2 Poles (Mono / TS), Switched T Pole (Normalling) (PJ398SM)" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_fp_filters" "Jack*" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (symbol "Jack_default_0_1"
+        (polyline
+          (pts
+            (xy 0.508 -0.254)
+            (xy 0.762 -0.762)
+          )
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy -1.27 0)
+            (xy -0.635 -0.635)
+            (xy 0 0)
+            (xy 2.54 0)
+          )
+          (stroke (width 0.254) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy 2.54 -2.54)
+            (xy 0.508 -2.54)
+            (xy 0.508 -0.254)
+            (xy 0.254 -0.762)
+          )
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy 2.54 2.54)
+            (xy -3.175 2.54)
+            (xy -3.175 0)
+            (xy -3.81 -0.635)
+            (xy -4.445 0)
+          )
+          (stroke (width 0.254) (type default))
+          (fill (type none))
+        )
+      )
+      (symbol "Jack_default_1_1"
+        (pin passive line (at 5.08 2.54 180) (length 2.54)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "S" (effects (font (size 1.27 1.27))))
+        )
+        (pin passive line (at 5.08 0 180) (length 2.54)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "T" (effects (font (size 1.27 1.27))))
+        )
+        (pin passive line (at 5.08 -2.54 180) (length 2.54)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "TN" (effects (font (size 1.27 1.27))))
         )
       )
     )
@@ -1120,6 +1120,9 @@
   (junction (at 49.53 115.57) (diameter 0) (color 0 0 0 0)
     (uuid 1b09f62e-7f56-4877-a387-a8d2bc2b1c2f)
   )
+  (junction (at 205.105 158.75) (diameter 0) (color 0 0 0 0)
+    (uuid 1b8aba31-ebe4-434c-81f4-4a06200e8eca)
+  )
   (junction (at 123.19 264.16) (diameter 0) (color 0 0 0 0)
     (uuid 2628a88b-6ec1-4b2e-b41b-a9d5fc91f500)
   )
@@ -1168,6 +1171,9 @@
   (junction (at 72.39 234.95) (diameter 0) (color 0 0 0 0)
     (uuid 6f3763c3-dd70-4dc0-b16e-af5d5d5ded7d)
   )
+  (junction (at 217.17 275.59) (diameter 0) (color 0 0 0 0)
+    (uuid 7c478c08-eef8-4d1a-b619-98c968a5ae86)
+  )
   (junction (at 124.46 156.21) (diameter 0) (color 0 0 0 0)
     (uuid 7d29b6c5-62b4-4565-8e2e-00f9a6b4639c)
   )
@@ -1203,6 +1209,12 @@
   )
   (junction (at 201.93 158.75) (diameter 0) (color 0 0 0 0)
     (uuid ad8f7057-2e43-48a4-a078-fee410abc234)
+  )
+  (junction (at 215.265 264.16) (diameter 0) (color 0 0 0 0)
+    (uuid b276e5fa-73f9-47be-a8f0-af4caf23ce53)
+  )
+  (junction (at 216.535 254) (diameter 0) (color 0 0 0 0)
+    (uuid b3f53a1e-5857-4ea3-b9da-10f90a5444b6)
   )
   (junction (at 85.09 177.8) (diameter 0) (color 0 0 0 0)
     (uuid b4b8d346-63dc-41d1-ab1c-ae69ced05c20)
@@ -1249,10 +1261,13 @@
   (junction (at 109.22 187.96) (diameter 0) (color 0 0 0 0)
     (uuid f89e1e05-5cf1-4999-9599-fa4095fcaa84)
   )
+  (junction (at 203.2 39.37) (diameter 0) (color 0 0 0 0)
+    (uuid f93e52a5-28a7-4474-a3f3-38a3712e70d3)
+  )
 
   (no_connect (at 40.64 180.34) (uuid 03b31cee-7545-4090-895e-46352b7c265b))
   (no_connect (at 36.83 118.11) (uuid 2dbf1351-7658-4e39-bb80-a548ac76bef3))
-  (no_connect (at 236.22 156.21) (uuid 3cc676af-7f86-41e9-a99e-c1cc7c83c909))
+  (no_connect (at 241.3 156.21) (uuid 3cc676af-7f86-41e9-a99e-c1cc7c83c909))
   (no_connect (at 38.1 60.96) (uuid 96986c54-48a4-4f58-874b-c82840cd2d59))
   (no_connect (at 39.37 237.49) (uuid cb494a57-b2ff-44f6-81ab-b64efa8fd55d))
   (no_connect (at 233.68 36.83) (uuid ef802fff-5a0e-4111-8707-49ff50f5646c))
@@ -1301,7 +1316,7 @@
     (stroke (width 0) (type default))
     (uuid 0dd5ba6e-9612-4f57-99a2-32e7215f268f)
   )
-  (wire (pts (xy 232.41 158.75) (xy 236.22 158.75))
+  (wire (pts (xy 232.41 158.75) (xy 241.3 158.75))
     (stroke (width 0) (type default))
     (uuid 0ec84e27-5379-4a0b-95d5-f8b1dcc0aa97)
   )
@@ -1373,6 +1388,10 @@
     (stroke (width 0) (type default))
     (uuid 281f5f1b-01b1-4feb-8de4-7512a534fc07)
   )
+  (wire (pts (xy 216.535 254) (xy 223.52 254))
+    (stroke (width 0) (type default))
+    (uuid 28b65c8f-29ee-41ef-8d16-ca4277dda582)
+  )
   (wire (pts (xy 132.08 58.42) (xy 140.97 58.42))
     (stroke (width 0) (type default))
     (uuid 28fb90ff-5a3f-4326-9e04-b9710b76d51c)
@@ -1388,6 +1407,10 @@
   (wire (pts (xy 92.71 41.91) (xy 129.54 41.91))
     (stroke (width 0) (type default))
     (uuid 2c564498-30d3-4aad-bd3b-dd468a2542e2)
+  )
+  (wire (pts (xy 215.265 264.16) (xy 223.52 264.16))
+    (stroke (width 0) (type default))
+    (uuid 2d095494-0a8f-4c7b-8d2c-72fb97735037)
   )
   (wire (pts (xy 53.34 177.8) (xy 59.69 177.8))
     (stroke (width 0) (type default))
@@ -1477,7 +1500,7 @@
     (stroke (width 0) (type default))
     (uuid 487b9031-56b9-4ca9-82d9-68fd0fdb5c77)
   )
-  (wire (pts (xy 233.68 161.29) (xy 236.22 161.29))
+  (wire (pts (xy 237.49 161.29) (xy 241.3 161.29))
     (stroke (width 0) (type default))
     (uuid 498ea0ed-d2c0-49aa-9f8e-edda5cd5af7c)
   )
@@ -1525,7 +1548,7 @@
     (stroke (width 0) (type default))
     (uuid 578709e6-ca67-4413-b996-4d590bc6b3a7)
   )
-  (wire (pts (xy 199.39 39.37) (xy 204.47 39.37))
+  (wire (pts (xy 199.39 39.37) (xy 203.2 39.37))
     (stroke (width 0) (type default))
     (uuid 5844b257-2459-47fe-823d-f77d7e8b2e53)
   )
@@ -1625,7 +1648,7 @@
     (stroke (width 0) (type default))
     (uuid 7ab3e9f8-49cd-4246-8ea8-fe17372915c0)
   )
-  (wire (pts (xy 207.01 254) (xy 223.52 254))
+  (wire (pts (xy 207.01 254) (xy 216.535 254))
     (stroke (width 0) (type default))
     (uuid 8397b3d6-e52d-4759-8c68-3645be029edf)
   )
@@ -1644,6 +1667,10 @@
   (wire (pts (xy 85.09 177.8) (xy 87.63 177.8))
     (stroke (width 0) (type default))
     (uuid 8b3df05a-3ed0-491b-9a47-3ca88a5a2bf6)
+  )
+  (wire (pts (xy 217.17 275.59) (xy 223.52 275.59))
+    (stroke (width 0) (type default))
+    (uuid 8cc49e91-d734-4208-92d4-470d2e6ca6cd)
   )
   (wire (pts (xy 158.75 177.8) (xy 151.13 177.8))
     (stroke (width 0) (type default))
@@ -1701,6 +1728,10 @@
     (stroke (width 0) (type default))
     (uuid 9bd176d9-6710-4e58-888f-bd4b18f24be6)
   )
+  (wire (pts (xy 205.105 158.75) (xy 208.915 158.75))
+    (stroke (width 0) (type default))
+    (uuid 9ea03608-ac14-4c20-937a-7779408059f9)
+  )
   (wire (pts (xy 132.08 58.42) (xy 132.08 62.23))
     (stroke (width 0) (type default))
     (uuid a0fe74b2-6eb2-48e0-954a-8fac79138f08)
@@ -1733,7 +1764,7 @@
     (stroke (width 0) (type default))
     (uuid a79cae5f-01f1-42b4-9b0d-dee6275fbc0e)
   )
-  (wire (pts (xy 220.98 158.75) (xy 224.79 158.75))
+  (wire (pts (xy 222.885 158.75) (xy 224.79 158.75))
     (stroke (width 0) (type default))
     (uuid a8bf3997-6a90-4e0f-b444-54789b18724f)
   )
@@ -1764,6 +1795,10 @@
   (wire (pts (xy 95.25 182.88) (xy 95.25 187.96))
     (stroke (width 0) (type default))
     (uuid ad5b457e-536b-43ee-969a-db05c84d59e1)
+  )
+  (wire (pts (xy 203.2 36.195) (xy 203.2 39.37))
+    (stroke (width 0) (type default))
+    (uuid aebf1915-8e68-4373-a88d-94dc1ff624f0)
   )
   (wire (pts (xy 129.54 41.91) (xy 138.43 41.91))
     (stroke (width 0) (type default))
@@ -1805,9 +1840,13 @@
     (stroke (width 0) (type default))
     (uuid b9e1edcb-37cd-4fed-9bae-26b5d6fe1756)
   )
-  (wire (pts (xy 207.01 275.59) (xy 223.52 275.59))
+  (wire (pts (xy 207.01 275.59) (xy 217.17 275.59))
     (stroke (width 0) (type default))
     (uuid bbec1f01-93ab-4e4f-933e-ead08c10e497)
+  )
+  (wire (pts (xy 205.105 156.21) (xy 205.105 158.75))
+    (stroke (width 0) (type default))
+    (uuid bca46db7-5772-4eed-9f9b-be78782bfe02)
   )
   (wire (pts (xy 72.39 224.79) (xy 72.39 229.87))
     (stroke (width 0) (type default))
@@ -1853,7 +1892,7 @@
     (stroke (width 0) (type default))
     (uuid c89b70a1-e475-40c7-b44e-30df43096504)
   )
-  (wire (pts (xy 207.01 264.16) (xy 223.52 264.16))
+  (wire (pts (xy 207.01 264.16) (xy 215.265 264.16))
     (stroke (width 0) (type default))
     (uuid c8f95325-de34-4aed-b544-603f196b730d)
   )
@@ -1872,6 +1911,10 @@
   (wire (pts (xy 95.25 142.24) (xy 95.25 135.89))
     (stroke (width 0) (type default))
     (uuid cd987ede-ea15-45b1-ad3a-59dc618561b2)
+  )
+  (wire (pts (xy 203.2 39.37) (xy 204.47 39.37))
+    (stroke (width 0) (type default))
+    (uuid cf3ba28e-282d-478b-b846-dcc1e6dfcedb)
   )
   (wire (pts (xy 223.52 264.16) (xy 223.52 267.97))
     (stroke (width 0) (type default))
@@ -1981,7 +2024,7 @@
     (stroke (width 0) (type default))
     (uuid f543d4af-70f6-497f-9b40-e4c69888ed7e)
   )
-  (wire (pts (xy 201.93 158.75) (xy 207.01 158.75))
+  (wire (pts (xy 201.93 158.75) (xy 205.105 158.75))
     (stroke (width 0) (type default))
     (uuid f66b9520-673f-4720-aaed-69e7172b23a9)
   )
@@ -1993,7 +2036,7 @@
     (stroke (width 0) (type default))
     (uuid f9a1dae3-1569-436b-8488-5ca2b39249a4)
   )
-  (wire (pts (xy 233.68 163.83) (xy 233.68 161.29))
+  (wire (pts (xy 237.49 163.83) (xy 237.49 161.29))
     (stroke (width 0) (type default))
     (uuid fb94e77f-c3a4-48ee-bdba-3f47c9e007ec)
   )
@@ -2034,24 +2077,10 @@
     (uuid e913b2b4-f25b-4255-809a-f0cb63a8101a)
   )
 
-  (text "Transistor here should be inverted" (at 102.87 53.34 0)
-    (effects (font (size 1.27 1.27)) (justify left bottom))
-    (uuid 28910606-998e-4df0-8a34-eb0a6218a752)
-  )
-  (text "There is still an offset issue... transistors are not matched well enough?"
-    (at 76.2 80.645 0)
-    (effects (font (size 1.27 1.27)) (justify left bottom))
-    (uuid b628017a-e54d-4776-b122-e636558ee7f4)
-  )
-  (text "This is really 83K, no other real option" (at 71.755 127.635 0)
-    (effects (font (size 1.27 1.27)) (justify left bottom))
-    (uuid fee3104e-8126-4c08-8e45-ce9d56b0ece6)
-  )
-
   (symbol (lib_id "Device:R_Potentiometer") (at 35.56 204.47 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 0228783e-50c3-4441-bda2-b04370ad5332)
-    (property "Reference" "RV1" (at 33.02 203.2 0)
+    (property "Reference" "RV4" (at 33.02 203.2 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "100K" (at 33.02 205.74 0)
@@ -2067,9 +2096,9 @@
     (pin "3" (uuid 307ff757-3c48-48f6-968c-faa1fef266fa))
     (pin "2" (uuid 8ce41f7c-a310-40ed-b814-bad55d7608cb))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
-          (reference "RV1") (unit 1)
+          (reference "RV4") (unit 1)
         )
       )
     )
@@ -2078,7 +2107,7 @@
   (symbol (lib_id "power:GNDREF") (at 39.37 110.49 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 0353c162-09d6-432a-b733-5b992ce16b22)
-    (property "Reference" "#PWR016" (at 39.37 104.14 0)
+    (property "Reference" "#PWR012" (at 39.37 104.14 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GNDREF" (at 39.37 105.41 0)
@@ -2092,9 +2121,9 @@
     )
     (pin "1" (uuid cda3cf6f-8613-4fcc-9a18-ed1f72cee3d9))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
-          (reference "#PWR016") (unit 1)
+          (reference "#PWR012") (unit 1)
         )
       )
     )
@@ -2103,7 +2132,7 @@
   (symbol (lib_id "power:GNDREF") (at 231.14 44.45 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 0634b737-3402-4641-a5da-33b651f6a31e)
-    (property "Reference" "#PWR015" (at 231.14 50.8 0)
+    (property "Reference" "#PWR03" (at 231.14 50.8 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GNDREF" (at 231.14 49.53 0)
@@ -2117,9 +2146,9 @@
     )
     (pin "1" (uuid 6c896ae6-4791-4611-a98b-56644446b85c))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
-          (reference "#PWR015") (unit 1)
+          (reference "#PWR03") (unit 1)
         )
       )
     )
@@ -2128,13 +2157,13 @@
   (symbol (lib_id "Device:R") (at 43.18 85.09 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 064563c9-5b68-497c-9fcf-d8a2500f66dd)
-    (property "Reference" "R3" (at 43.18 78.74 90)
+    (property "Reference" "R13" (at 43.18 78.74 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "100K" (at 43.18 81.28 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "synth-custom:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" (at 43.18 86.868 90)
+    (property "Footprint" "synth-custom:R_default" (at 43.18 86.868 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 43.18 85.09 0)
@@ -2143,33 +2172,33 @@
     (pin "1" (uuid b67ee052-3fc2-4fb8-b6f6-43d37618e98e))
     (pin "2" (uuid 2339f5fa-2ac2-4bbf-9757-fdd009642f43))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
-          (reference "R3") (unit 1)
+          (reference "R13") (unit 1)
         )
       )
     )
   )
 
-  (symbol (lib_id "Mechanical:MountingHole") (at 252.73 228.6 0) (unit 1)
+  (symbol (lib_id "Mechanical:MountingHole") (at 388.62 245.745 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 07d73c0a-c8b6-4e2c-b77a-a62d8d42cab7)
-    (property "Reference" "H7" (at 255.27 227.33 0)
+    (property "Reference" "H12" (at 391.16 244.475 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "MountingHole" (at 255.27 229.87 0)
+    (property "Value" "MountingHole" (at 391.16 247.015 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "MountingHole:MountingHole_2.5mm" (at 252.73 228.6 0)
+    (property "Footprint" "MountingHole:MountingHole_3.2mm_M3" (at 388.62 245.745 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "~" (at 252.73 228.6 0)
+    (property "Datasheet" "~" (at 388.62 245.745 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
-          (reference "H7") (unit 1)
+          (reference "H12") (unit 1)
         )
       )
     )
@@ -2178,13 +2207,13 @@
   (symbol (lib_id "Device:R") (at 45.72 234.95 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 0ca1554b-bcf5-4ade-ae25-bb29ff84b0df)
-    (property "Reference" "R17" (at 45.72 228.6 90)
+    (property "Reference" "R31" (at 45.72 228.6 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "100K" (at 45.72 231.14 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "synth-custom:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" (at 45.72 236.728 90)
+    (property "Footprint" "synth-custom:R_default" (at 45.72 236.728 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 45.72 234.95 0)
@@ -2193,9 +2222,9 @@
     (pin "1" (uuid 414fbdbb-c255-4f3e-8852-ad4157666ee0))
     (pin "2" (uuid 56137456-d4f2-4113-b82c-e3438d6f95b3))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
-          (reference "R17") (unit 1)
+          (reference "R31") (unit 1)
         )
       )
     )
@@ -2204,13 +2233,13 @@
   (symbol (lib_id "Device:R") (at 109.22 222.25 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 12d5d75f-60fb-4e2a-8a4d-11bdfe753997)
-    (property "Reference" "R22" (at 111.76 220.98 0)
+    (property "Reference" "R30" (at 111.76 220.98 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "10K" (at 111.76 223.52 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Footprint" "synth-custom:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" (at 110.998 222.25 90)
+    (property "Footprint" "synth-custom:R_default" (at 110.998 222.25 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 109.22 222.25 0)
@@ -2219,9 +2248,9 @@
     (pin "1" (uuid 0ba5e7f2-c5af-404c-ab07-2d0ea7305296))
     (pin "2" (uuid e02e7532-a455-4fd7-bd04-d091dc22f1a5))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
-          (reference "R22") (unit 1)
+          (reference "R30") (unit 1)
         )
       )
     )
@@ -2230,7 +2259,7 @@
   (symbol (lib_id "power:-12V") (at 234.95 275.59 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 14d897ee-65fb-438b-80a2-37b6bd027509)
-    (property "Reference" "#PWR02" (at 237.49 275.59 0)
+    (property "Reference" "#PWR035" (at 237.49 275.59 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "-12V" (at 240.03 275.59 0)
@@ -2244,9 +2273,9 @@
     )
     (pin "1" (uuid 0cf7537c-1f1c-4241-adda-dfcb9ea7a290))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
-          (reference "#PWR02") (unit 1)
+          (reference "#PWR035") (unit 1)
         )
       )
     )
@@ -2255,13 +2284,13 @@
   (symbol (lib_id "Synth_Custom:CONN_Header_01x04") (at 73.66 177.8 0) (unit 3)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 15044111-74f6-4b62-aa0a-bcf1fadacde4)
-    (property "Reference" "H1" (at 71.12 175.26 0)
+    (property "Reference" "H3" (at 71.12 175.26 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "TOP_4_SGL" (at 73.66 175.26 0)
+    (property "Value" "TOP_4_SGL_1" (at 73.66 175.26 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Footprint" "synth-custom:PinHeader_1x04_P2.00mm_Vertical" (at 73.66 180.34 0)
+    (property "Footprint" "synth-custom:PinHeader_1x04_P2.54mm_Vertical" (at 73.66 180.34 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "" (at 73.66 175.26 0)
@@ -2272,9 +2301,9 @@
     (pin "2" (uuid ec959852-6425-42a8-9a99-a8780ae7cdd2))
     (pin "3" (uuid a4bbb640-83f7-4ee5-81a5-05cd9288a47e))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
-          (reference "H1") (unit 3)
+          (reference "H3") (unit 3)
         )
       )
     )
@@ -2283,7 +2312,7 @@
   (symbol (lib_id "power:GNDREF") (at 59.69 73.66 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 1742f550-2665-4861-804b-5a803777aafa)
-    (property "Reference" "#PWR021" (at 59.69 80.01 0)
+    (property "Reference" "#PWR09" (at 59.69 80.01 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GNDREF" (at 59.69 78.74 0)
@@ -2297,9 +2326,9 @@
     )
     (pin "1" (uuid d3fea7f4-5e62-48ac-9353-6118b4ccf62b))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
-          (reference "#PWR021") (unit 1)
+          (reference "#PWR09") (unit 1)
         )
       )
     )
@@ -2308,13 +2337,13 @@
   (symbol (lib_id "Synth_Custom:CONN_Socket_01x04") (at 269.24 261.62 0) (unit 2)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 17f65502-036d-4318-8ed3-d248f9e3fdc4)
-    (property "Reference" "H3" (at 270.51 261.62 0)
+    (property "Reference" "H1" (at 270.51 261.62 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "BTM_4_SGL" (at 269.24 259.08 0)
+    (property "Value" "BTM_4_SGL_2" (at 269.24 259.08 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Footprint" "synth-custom:PinSocket_1x04_P2.00mm_Vertical" (at 269.24 264.16 0)
+    (property "Footprint" "synth-custom:PinSocket_1x04_P2.54mm_Vertical" (at 269.24 264.16 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "" (at 269.24 259.08 0)
@@ -2325,9 +2354,9 @@
     (pin "3" (uuid 2f0c4210-b83c-436d-926a-ba79b7d385d8))
     (pin "4" (uuid a7277f20-d94d-4a2f-bf01-d92498d8dea0))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
-          (reference "H3") (unit 2)
+          (reference "H1") (unit 2)
         )
       )
     )
@@ -2351,7 +2380,7 @@
     (pin "1" (uuid c29620df-56f7-4ad6-9ca6-82ecb10e80f1))
     (pin "2" (uuid 3fecd586-9056-46a9-8970-467bf8cfa3e2))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
           (reference "C6") (unit 1)
         )
@@ -2362,7 +2391,7 @@
   (symbol (lib_id "power:GNDREF") (at 40.64 48.26 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 25507559-85e9-4635-b31a-7b02debcb510)
-    (property "Reference" "#PWR020" (at 40.64 41.91 0)
+    (property "Reference" "#PWR04" (at 40.64 41.91 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GNDREF" (at 40.64 43.18 0)
@@ -2376,36 +2405,36 @@
     )
     (pin "1" (uuid 596b6a73-98fc-4047-9c0e-3366f2e65d7b))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
-          (reference "#PWR020") (unit 1)
+          (reference "#PWR04") (unit 1)
         )
       )
     )
   )
 
-  (symbol (lib_id "Synth_Custom:AudioJack2_PJ398SM") (at 241.3 158.75 180) (unit 1)
+  (symbol (lib_id "Synth_Custom:Jack_default") (at 246.38 158.75 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 28101850-8f20-4bcf-8677-d486bb57545c)
-    (property "Reference" "J7" (at 247.65 157.5435 0)
+    (property "Reference" "J4" (at 252.73 157.5435 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Value" "OUT_1" (at 247.65 160.0835 0)
+    (property "Value" "OUT_2" (at 252.73 160.0835 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Footprint" "synth-custom:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles" (at 242.57 153.67 0)
+    (property "Footprint" "synth-custom:Jack_default" (at 247.65 153.67 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "~" (at 240.03 152.4 0)
+    (property "Datasheet" "~" (at 245.11 152.4 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "S" (uuid f4e77f75-13cf-4db2-8c1b-a68b70371acd))
     (pin "TN" (uuid 4965e084-ad96-4f87-9f13-4298c3c44df4))
     (pin "T" (uuid 00cef434-9112-4a7b-bb8a-1da296c152c9))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
-          (reference "J7") (unit 1)
+          (reference "J4") (unit 1)
         )
       )
     )
@@ -2414,13 +2443,13 @@
   (symbol (lib_id "Device:R") (at 142.24 36.83 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 2867e94c-2e57-4404-9d23-01817766e79b)
-    (property "Reference" "R23" (at 142.24 30.48 90)
+    (property "Reference" "R4" (at 142.24 30.48 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Value" "10K" (at 142.24 33.02 90)
+    (property "Value" "10K 1%" (at 142.24 33.02 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "synth-custom:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" (at 142.24 38.608 90)
+    (property "Footprint" "synth-custom:R_default" (at 142.24 38.608 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 142.24 36.83 0)
@@ -2429,9 +2458,9 @@
     (pin "1" (uuid 6b12023e-14e9-4aeb-b0ad-26f8e8a61e4d))
     (pin "2" (uuid 32e21768-cf73-4b5b-aba0-2988b8cefa8a))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
-          (reference "R23") (unit 1)
+          (reference "R4") (unit 1)
         )
       )
     )
@@ -2446,7 +2475,7 @@
     (property "Value" "1N5819" (at 185.1025 271.78 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" (at 185.42 280.035 0)
+    (property "Footprint" "synth-custom:D_PWR_default" (at 185.42 280.035 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "http://www.vishay.com/docs/88525/1n5817.pdf" (at 185.42 275.59 0)
@@ -2455,7 +2484,7 @@
     (pin "2" (uuid dd00532d-00d8-4df1-8463-52b9a773b715))
     (pin "1" (uuid de8647de-e076-4806-8cf9-eaca80521ac8))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
           (reference "D2") (unit 1)
         )
@@ -2463,25 +2492,25 @@
     )
   )
 
-  (symbol (lib_id "Mechanical:MountingHole") (at 233.68 209.55 0) (unit 1)
+  (symbol (lib_id "Mechanical:MountingHole") (at 369.57 226.695 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 2f4d39b8-02c6-4a81-b326-3966e8b8dd99)
-    (property "Reference" "H10" (at 236.22 208.28 0)
+    (property "Reference" "H5" (at 372.11 225.425 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "MountingHole" (at 236.22 210.82 0)
+    (property "Value" "MountingHole" (at 372.11 227.965 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "MountingHole:MountingHole_2.5mm" (at 233.68 209.55 0)
+    (property "Footprint" "MountingHole:MountingHole_3.2mm_M3" (at 369.57 226.695 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "~" (at 233.68 209.55 0)
+    (property "Datasheet" "~" (at 369.57 226.695 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
-          (reference "H10") (unit 1)
+          (reference "H5") (unit 1)
         )
       )
     )
@@ -2490,13 +2519,13 @@
   (symbol (lib_id "Device:R") (at 144.78 161.29 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 30ab3ffb-5a02-4f85-adbc-e5d48b79b1db)
-    (property "Reference" "R30" (at 144.78 158.75 90)
+    (property "Reference" "R22" (at 144.78 158.75 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Value" "10K" (at 144.78 163.83 90)
+    (property "Value" "10K 1%" (at 144.78 163.83 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "synth-custom:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" (at 144.78 163.068 90)
+    (property "Footprint" "synth-custom:R_default" (at 144.78 163.068 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 144.78 161.29 0)
@@ -2505,9 +2534,9 @@
     (pin "1" (uuid f4ce56ae-6943-4fc7-be15-372a738d8caf))
     (pin "2" (uuid 792765ab-1987-40c3-a548-3b0e5157ebb8))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
-          (reference "R30") (unit 1)
+          (reference "R22") (unit 1)
         )
       )
     )
@@ -2516,13 +2545,13 @@
   (symbol (lib_id "Synth_Custom:CONN_Socket_01x04") (at 269.24 264.16 0) (unit 3)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 3181d99c-0b14-46bb-89c0-d02e8924e57d)
-    (property "Reference" "H3" (at 270.51 264.16 0)
+    (property "Reference" "H1" (at 270.51 264.16 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "BTM_4_SGL" (at 269.24 261.62 0)
+    (property "Value" "BTM_4_SGL_2" (at 269.24 261.62 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Footprint" "synth-custom:PinSocket_1x04_P2.00mm_Vertical" (at 269.24 266.7 0)
+    (property "Footprint" "synth-custom:PinSocket_1x04_P2.54mm_Vertical" (at 269.24 266.7 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "" (at 269.24 261.62 0)
@@ -2533,9 +2562,9 @@
     (pin "3" (uuid de1bafe4-6a39-4a05-a42c-baffa3b11ed0))
     (pin "4" (uuid a7277f20-d94d-4a2f-bf01-d92498d8dea1))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
-          (reference "H3") (unit 3)
+          (reference "H1") (unit 3)
         )
       )
     )
@@ -2544,13 +2573,13 @@
   (symbol (lib_id "Device:R") (at 198.12 275.59 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 36f1b1e2-688c-4419-84dd-17e9c7ab8cbf)
-    (property "Reference" "R2" (at 198.12 280.67 90)
+    (property "Reference" "R34" (at 198.12 280.67 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "10" (at 198.12 278.13 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "synth-custom:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" (at 198.12 277.368 90)
+    (property "Footprint" "synth-custom:R_default" (at 198.12 277.368 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 198.12 275.59 0)
@@ -2559,9 +2588,9 @@
     (pin "1" (uuid 4e24e5a2-b678-4674-9659-cd2d9b0706bf))
     (pin "2" (uuid 3b08fb94-8b00-4e39-90ad-599a5d9ab901))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
-          (reference "R2") (unit 1)
+          (reference "R34") (unit 1)
         )
       )
     )
@@ -2573,10 +2602,10 @@
     (property "Reference" "R7" (at 189.23 48.26 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Value" "100K" (at 189.23 53.34 90)
+    (property "Value" "100K 1%" (at 189.23 53.34 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "synth-custom:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" (at 189.23 49.022 90)
+    (property "Footprint" "synth-custom:R_default" (at 189.23 49.022 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 189.23 50.8 0)
@@ -2585,7 +2614,7 @@
     (pin "1" (uuid 338489d4-b13d-4ef3-8f29-815df471a10c))
     (pin "2" (uuid fc2cc4b3-96be-4e13-a6e9-6c44b89d37a8))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
           (reference "R7") (unit 1)
         )
@@ -2596,13 +2625,13 @@
   (symbol (lib_id "Device:R") (at 92.71 26.67 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 37aca439-70b8-4c98-9669-792c915d9096)
-    (property "Reference" "R12" (at 95.25 25.4 0)
+    (property "Reference" "R1" (at 95.25 25.4 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Value" "20K" (at 95.25 27.94 0)
+    (property "Value" "20K 1%" (at 95.25 27.94 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Footprint" "synth-custom:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" (at 94.488 26.67 90)
+    (property "Footprint" "synth-custom:R_default" (at 94.488 26.67 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 92.71 26.67 0)
@@ -2611,9 +2640,9 @@
     (pin "1" (uuid 42c0b628-1824-415b-869b-c31f37269645))
     (pin "2" (uuid 2efa582b-36bd-4e66-a485-d38219e5c2cb))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
-          (reference "R12") (unit 1)
+          (reference "R1") (unit 1)
         )
       )
     )
@@ -2622,13 +2651,13 @@
   (symbol (lib_id "Device:R") (at 144.78 156.21 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 39343037-f43c-4b14-9257-a7a9cd82b7e3)
-    (property "Reference" "R28" (at 144.78 149.86 90)
+    (property "Reference" "R20" (at 144.78 149.86 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Value" "10K" (at 144.78 152.4 90)
+    (property "Value" "10K 1%" (at 144.78 152.4 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "synth-custom:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" (at 144.78 157.988 90)
+    (property "Footprint" "synth-custom:R_default" (at 144.78 157.988 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 144.78 156.21 0)
@@ -2637,9 +2666,9 @@
     (pin "1" (uuid 6caad8d9-1451-409e-ae63-d95afce7a3f7))
     (pin "2" (uuid 8ef2d738-29c2-4eed-9e79-b7a1ae7f6a5c))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
-          (reference "R28") (unit 1)
+          (reference "R20") (unit 1)
         )
       )
     )
@@ -2662,7 +2691,7 @@
     )
     (pin "1" (uuid f47ff275-0b40-45dd-9a18-7d572004fc2c))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
           (reference "#FLG01") (unit 1)
         )
@@ -2673,13 +2702,13 @@
   (symbol (lib_id "Device:R") (at 95.25 146.05 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 3b45e2d9-c134-48cb-9102-310d84d43962)
-    (property "Reference" "R21" (at 97.79 144.78 0)
+    (property "Reference" "R17" (at 97.79 144.78 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Value" "20K" (at 97.79 147.32 0)
+    (property "Value" "20K 1%" (at 97.79 147.32 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Footprint" "synth-custom:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" (at 97.028 146.05 90)
+    (property "Footprint" "synth-custom:R_default" (at 97.028 146.05 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 95.25 146.05 0)
@@ -2688,9 +2717,9 @@
     (pin "1" (uuid c65b5d70-ccf3-4250-a7bf-21a25bfb0839))
     (pin "2" (uuid 260d239a-7dc7-49a7-8a48-24c0b78a54b1))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
-          (reference "R21") (unit 1)
+          (reference "R17") (unit 1)
         )
       )
     )
@@ -2699,7 +2728,7 @@
   (symbol (lib_id "Device:R_Potentiometer_Trim") (at 158.75 189.23 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 3d100d54-90a7-4934-a77d-f2810011d14a)
-    (property "Reference" "RV2" (at 158.75 193.04 90)
+    (property "Reference" "RV3" (at 158.75 193.04 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "100K" (at 158.75 195.58 90)
@@ -2715,9 +2744,9 @@
     (pin "1" (uuid e07a3c98-70dd-4b17-bf6c-f126cbdd9165))
     (pin "3" (uuid aac58fee-3433-4dd3-bea0-08d5d91b8598))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
-          (reference "RV2") (unit 1)
+          (reference "RV3") (unit 1)
         )
       )
     )
@@ -2732,7 +2761,7 @@
     (property "Value" "1N5819" (at 185.7375 250.19 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" (at 185.42 249.555 0)
+    (property "Footprint" "synth-custom:D_PWR_default" (at 185.42 249.555 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "http://www.vishay.com/docs/88525/1n5817.pdf" (at 185.42 254 0)
@@ -2741,7 +2770,7 @@
     (pin "2" (uuid 87069bbe-cb7c-4e82-a1e8-ebeacc423bd0))
     (pin "1" (uuid 5526693a-a375-4ff2-afa0-7e705dda57c5))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
           (reference "D1") (unit 1)
         )
@@ -2752,13 +2781,13 @@
   (symbol (lib_id "Synth_Custom:CONN_Socket_01x04") (at 74.93 58.42 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 3fb4307d-6142-4869-ae79-194fae7095c3)
-    (property "Reference" "H2" (at 77.47 55.88 0)
+    (property "Reference" "H4" (at 77.47 55.88 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "BTM_4_SGL" (at 74.93 60.96 0)
+    (property "Value" "BTM_4_SGL_1" (at 74.93 60.96 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Footprint" "synth-custom:PinSocket_1x04_P2.00mm_Vertical" (at 74.93 55.88 0)
+    (property "Footprint" "synth-custom:PinSocket_1x04_P2.54mm_Vertical" (at 74.93 55.88 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "" (at 74.93 60.96 0)
@@ -2769,9 +2798,9 @@
     (pin "3" (uuid 473a46c1-d9e7-4c24-806b-b364d670dd8f))
     (pin "4" (uuid 327e8a72-e37d-47bf-ad4e-83b4e984f4b4))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
-          (reference "H2") (unit 1)
+          (reference "H4") (unit 1)
         )
       )
     )
@@ -2780,7 +2809,7 @@
   (symbol (lib_id "power:GNDREF") (at 43.18 167.64 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 41d8b47b-a3b3-449e-810c-434d8d674d3c)
-    (property "Reference" "#PWR030" (at 43.18 161.29 0)
+    (property "Reference" "#PWR016" (at 43.18 161.29 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GNDREF" (at 43.18 162.56 0)
@@ -2794,9 +2823,9 @@
     )
     (pin "1" (uuid cb1e0440-e502-4339-bb81-cf659b2d5688))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
-          (reference "#PWR030") (unit 1)
+          (reference "#PWR016") (unit 1)
         )
       )
     )
@@ -2805,13 +2834,13 @@
   (symbol (lib_id "Device:R") (at 170.18 149.86 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 4222b1ff-2c58-4dbb-8bd7-c66d9534ccb6)
-    (property "Reference" "R32" (at 167.64 151.13 0)
-      (effects (font (size 1.27 1.27)) (justify right))
+    (property "Reference" "R19" (at 172.72 148.59 0)
+      (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "100K" (at 167.64 148.59 0)
-      (effects (font (size 1.27 1.27)) (justify right))
+    (property "Value" "100K 1%" (at 172.72 151.13 0)
+      (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "synth-custom:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" (at 168.402 149.86 90)
+    (property "Footprint" "synth-custom:R_default" (at 168.402 149.86 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 170.18 149.86 0)
@@ -2820,9 +2849,9 @@
     (pin "1" (uuid 5896b190-bf76-4129-bcfe-0e1ead5ef857))
     (pin "2" (uuid 2e332001-fa5a-4bd1-a723-8421251f9fb9))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
-          (reference "R32") (unit 1)
+          (reference "R19") (unit 1)
         )
       )
     )
@@ -2831,7 +2860,7 @@
   (symbol (lib_id "Device:C_Polarized") (at 223.52 271.78 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 42c4d859-435e-4022-b888-dd8a571a8d61)
-    (property "Reference" "C4" (at 227.33 269.621 0)
+    (property "Reference" "C5" (at 227.33 269.621 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "0.1uF" (at 227.33 272.161 0)
@@ -2846,9 +2875,9 @@
     (pin "1" (uuid 4c15bade-7f49-4e34-a7f6-7b64ff23fe2b))
     (pin "2" (uuid a34978ea-de39-4688-a5b1-c1a3766c2768))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
-          (reference "C4") (unit 1)
+          (reference "C5") (unit 1)
         )
       )
     )
@@ -2857,13 +2886,13 @@
   (symbol (lib_id "Device:R") (at 226.06 39.37 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 43720b27-31a6-469d-ae6f-720f46ccf2ab)
-    (property "Reference" "R9" (at 226.06 33.02 90)
+    (property "Reference" "R5" (at 226.06 33.02 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "1K" (at 226.06 35.56 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "synth-custom:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" (at 226.06 41.148 90)
+    (property "Footprint" "synth-custom:R_default" (at 226.06 41.148 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 226.06 39.37 0)
@@ -2872,9 +2901,9 @@
     (pin "1" (uuid b01d5376-1f2f-43be-af35-77e20234d91e))
     (pin "2" (uuid 597c2323-12ea-446b-9d41-7045f6599bbf))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
-          (reference "R9") (unit 1)
+          (reference "R5") (unit 1)
         )
       )
     )
@@ -2883,13 +2912,13 @@
   (symbol (lib_id "Device:R") (at 147.32 177.8 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 43e90940-736a-4475-b375-63947d6bf709)
-    (property "Reference" "R31" (at 147.32 171.45 90)
+    (property "Reference" "R25" (at 147.32 171.45 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "100K" (at 147.32 173.99 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "synth-custom:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" (at 147.32 179.578 90)
+    (property "Footprint" "synth-custom:R_default" (at 147.32 179.578 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 147.32 177.8 0)
@@ -2898,9 +2927,34 @@
     (pin "1" (uuid 6b3e144c-7dfe-4825-91c8-2b48a95e67ed))
     (pin "2" (uuid 1cd7909b-0b47-4e58-9f11-eba6b7ffdce8))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
-          (reference "R31") (unit 1)
+          (reference "R25") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Connector:TestPoint") (at 216.535 254 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 44e7dbcb-cb01-46ae-a787-09d74fe6c5b6)
+    (property "Reference" "TP11" (at 218.44 249.428 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Value" "+12V" (at 218.44 251.968 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "Connector_Pin:Pin_D1.0mm_L10.0mm" (at 221.615 254 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 221.615 254 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid bad281a5-6027-4967-aafa-718a9c50a861))
+    (instances
+      (project "sparkle"
+        (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
+          (reference "TP11") (unit 1)
         )
       )
     )
@@ -2915,7 +2969,7 @@
     (property "Value" "BC548" (at 95.25 59.69 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Package_TO_SOT_THT:TO-92_Inline" (at 95.25 60.325 0)
+    (property "Footprint" "Package_TO_SOT_THT:TO-92_HandSolder" (at 95.25 60.325 0)
       (effects (font (size 1.27 1.27) italic) (justify left) hide)
     )
     (property "Datasheet" "https://www.onsemi.com/pub/Collateral/BC550-D.pdf" (at 90.17 58.42 0)
@@ -2925,7 +2979,7 @@
     (pin "1" (uuid 6ef3f0be-2fd5-4837-9f62-875b41f9a887))
     (pin "3" (uuid 9943430e-f134-4cab-b3e0-6ca5c10cca71))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
           (reference "Q1") (unit 1)
         )
@@ -2942,7 +2996,7 @@
     (property "Value" "BC548" (at 97.79 179.07 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Package_TO_SOT_THT:TO-92_Inline" (at 97.79 179.705 0)
+    (property "Footprint" "Package_TO_SOT_THT:TO-92_HandSolder" (at 97.79 179.705 0)
       (effects (font (size 1.27 1.27) italic) (justify left) hide)
     )
     (property "Datasheet" "https://www.onsemi.com/pub/Collateral/BC550-D.pdf" (at 92.71 177.8 0)
@@ -2952,7 +3006,7 @@
     (pin "1" (uuid 415d8d86-5968-4a9d-a14c-d8926ec704e9))
     (pin "3" (uuid 8a7d4d60-55cc-4322-8cf7-ba5397b85208))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
           (reference "Q3") (unit 1)
         )
@@ -2960,25 +3014,25 @@
     )
   )
 
-  (symbol (lib_id "Mechanical:MountingHole") (at 233.68 228.6 0) (unit 1)
+  (symbol (lib_id "Mechanical:MountingHole") (at 369.57 245.745 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 4f627171-b334-4ba1-bea8-0d4c5ec185b0)
-    (property "Reference" "H9" (at 236.22 227.33 0)
+    (property "Reference" "H11" (at 372.11 244.475 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "MountingHole" (at 236.22 229.87 0)
+    (property "Value" "MountingHole" (at 372.11 247.015 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "MountingHole:MountingHole_2.5mm" (at 233.68 228.6 0)
+    (property "Footprint" "MountingHole:MountingHole_3.2mm_M3" (at 369.57 245.745 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "~" (at 233.68 228.6 0)
+    (property "Datasheet" "~" (at 369.57 245.745 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
-          (reference "H9") (unit 1)
+          (reference "H11") (unit 1)
         )
       )
     )
@@ -2987,13 +3041,13 @@
   (symbol (lib_id "Synth_Custom:CONN_Header_01x04") (at 69.85 58.42 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 515c749d-d706-49dd-b9b0-efff6cc71ada)
-    (property "Reference" "H1" (at 67.31 55.88 0)
+    (property "Reference" "H3" (at 67.31 55.88 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "TOP_4_SGL" (at 69.85 55.88 0)
+    (property "Value" "TOP_4_SGL_1" (at 69.85 55.88 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Footprint" "synth-custom:PinHeader_1x04_P2.00mm_Vertical" (at 69.85 60.96 0)
+    (property "Footprint" "synth-custom:PinHeader_1x04_P2.54mm_Vertical" (at 69.85 60.96 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "" (at 69.85 55.88 0)
@@ -3004,27 +3058,27 @@
     (pin "2" (uuid ec959852-6425-42a8-9a99-a8780ae7cdd1))
     (pin "3" (uuid a4bbb640-83f7-4ee5-81a5-05cd9288a47d))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
-          (reference "H1") (unit 1)
+          (reference "H3") (unit 1)
         )
       )
     )
   )
 
-  (symbol (lib_id "Synth_Custom:CONN_Socket_01x04") (at 212.09 158.75 0) (unit 4)
+  (symbol (lib_id "Synth_Custom:CONN_Socket_01x04") (at 213.995 158.75 0) (unit 4)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 518053e9-4400-4e6e-8696-53fd8985e70d)
-    (property "Reference" "H3" (at 209.55 161.29 0)
+    (property "Reference" "H1" (at 211.455 161.29 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "BTM_4_SGL" (at 212.09 156.21 0)
+    (property "Value" "BTM_4_SGL_2" (at 213.995 156.21 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Footprint" "synth-custom:PinSocket_1x04_P2.00mm_Vertical" (at 212.09 161.29 0)
+    (property "Footprint" "synth-custom:PinSocket_1x04_P2.54mm_Vertical" (at 213.995 161.29 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "" (at 212.09 156.21 0)
+    (property "Datasheet" "" (at 213.995 156.21 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 862aedc7-552b-4e26-8f00-0496fe231696))
@@ -3032,9 +3086,9 @@
     (pin "3" (uuid 473a46c1-d9e7-4c24-806b-b364d670dd90))
     (pin "4" (uuid 327e8a72-e37d-47bf-ad4e-83b4e984f4b5))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
-          (reference "H3") (unit 4)
+          (reference "H1") (unit 4)
         )
       )
     )
@@ -3043,13 +3097,13 @@
   (symbol (lib_id "Connector:TestPoint") (at 109.22 187.96 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 548c3a4b-42fa-4b8f-8c3a-c513c138a917)
-    (property "Reference" "TP6" (at 111.76 183.388 0)
+    (property "Reference" "TP10" (at 111.76 183.388 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "B" (at 111.76 185.928 0)
+    (property "Value" "CV_2" (at 111.76 185.928 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 114.3 187.96 0)
+    (property "Footprint" "Connector_Pin:Pin_D1.0mm_L10.0mm" (at 114.3 187.96 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 114.3 187.96 0)
@@ -3057,9 +3111,9 @@
     )
     (pin "1" (uuid ac3bcd27-68e1-4e23-ae7d-ee3108c1563e))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
-          (reference "TP6") (unit 1)
+          (reference "TP10") (unit 1)
         )
       )
     )
@@ -3068,7 +3122,7 @@
   (symbol (lib_id "power:PWR_FLAG") (at 233.68 264.16 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 5570e068-f473-4365-9d73-02b822c1b12a)
-    (property "Reference" "#FLG03" (at 233.68 266.065 0)
+    (property "Reference" "#FLG02" (at 233.68 266.065 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "PWR_FLAG" (at 234.95 267.97 0)
@@ -3082,9 +3136,9 @@
     )
     (pin "1" (uuid 688fdb00-b239-487f-bab9-3dffe0228145))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
-          (reference "#FLG03") (unit 1)
+          (reference "#FLG02") (unit 1)
         )
       )
     )
@@ -3093,7 +3147,7 @@
   (symbol (lib_id "Device:C_Polarized") (at 207.01 271.78 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 55a4c468-22f9-4510-8405-7a9a61e8355f)
-    (property "Reference" "C2" (at 210.82 269.621 0)
+    (property "Reference" "C4" (at 210.82 269.621 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "47uF" (at 210.82 272.161 0)
@@ -3108,16 +3162,16 @@
     (pin "1" (uuid 60369d7a-2ee9-486a-a7b8-fd4cff523de9))
     (pin "2" (uuid eaa09991-2256-4dd9-9a6a-5ae7d62bef4c))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
-          (reference "C2") (unit 1)
+          (reference "C4") (unit 1)
         )
       )
     )
   )
 
-  (symbol (lib_id "Transistor_BJT:BC548") (at 124.46 58.42 180) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+  (symbol (lib_id "Transistor_BJT:BC548") (at 124.46 58.42 0) (mirror y) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
     (uuid 55cfda2b-05f3-4182-a2f7-74bd8f9c4d38)
     (property "Reference" "Q2" (at 119.38 57.15 0)
       (effects (font (size 1.27 1.27)) (justify left))
@@ -3125,7 +3179,7 @@
     (property "Value" "BC548" (at 119.38 59.69 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Package_TO_SOT_THT:TO-92_Inline" (at 119.38 56.515 0)
+    (property "Footprint" "Package_TO_SOT_THT:TO-92_HandSolder" (at 119.38 60.325 0)
       (effects (font (size 1.27 1.27) italic) (justify left) hide)
     )
     (property "Datasheet" "https://www.onsemi.com/pub/Collateral/BC550-D.pdf" (at 124.46 58.42 0)
@@ -3135,7 +3189,7 @@
     (pin "1" (uuid bad313a3-eab4-4387-945e-22afe710f653))
     (pin "3" (uuid 5f887bac-744d-423f-ac6f-27d39c4ce432))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
           (reference "Q2") (unit 1)
         )
@@ -3146,7 +3200,7 @@
   (symbol (lib_id "power:GNDREF") (at 236.22 264.16 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 56603f55-df88-4e68-9a64-778d952249f9)
-    (property "Reference" "#PWR03" (at 242.57 264.16 0)
+    (property "Reference" "#PWR030" (at 242.57 264.16 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GNDREF" (at 241.3 264.16 0)
@@ -3160,9 +3214,9 @@
     )
     (pin "1" (uuid 13d0038d-7195-4c1e-b023-1018095a2a08))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
-          (reference "#PWR03") (unit 1)
+          (reference "#PWR030") (unit 1)
         )
       )
     )
@@ -3171,13 +3225,13 @@
   (symbol (lib_id "Synth_Custom:CONN_Header_01x04") (at 59.69 234.95 0) (unit 4)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 56cd6802-7e54-47c0-8b5b-67a9375eb356)
-    (property "Reference" "H1" (at 57.15 232.41 0)
+    (property "Reference" "H3" (at 57.15 232.41 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "TOP_4_SGL" (at 59.69 232.41 0)
+    (property "Value" "TOP_4_SGL_1" (at 59.69 232.41 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Footprint" "synth-custom:PinHeader_1x04_P2.00mm_Vertical" (at 59.69 237.49 0)
+    (property "Footprint" "synth-custom:PinHeader_1x04_P2.54mm_Vertical" (at 59.69 237.49 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "" (at 59.69 232.41 0)
@@ -3188,9 +3242,9 @@
     (pin "2" (uuid ec959852-6425-42a8-9a99-a8780ae7cdd0))
     (pin "3" (uuid a4bbb640-83f7-4ee5-81a5-05cd9288a47c))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
-          (reference "H1") (unit 4)
+          (reference "H3") (unit 4)
         )
       )
     )
@@ -3199,13 +3253,13 @@
   (symbol (lib_id "Connector:TestPoint") (at 106.68 68.58 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 57f23506-6fb9-430b-a398-fd2ab9f7c7fa)
-    (property "Reference" "TP2" (at 109.22 64.008 0)
+    (property "Reference" "TP5" (at 109.22 64.008 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "B" (at 109.22 66.548 0)
+    (property "Value" "CV_1" (at 109.22 66.548 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 111.76 68.58 0)
+    (property "Footprint" "Connector_Pin:Pin_D1.0mm_L10.0mm" (at 111.76 68.58 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 111.76 68.58 0)
@@ -3213,9 +3267,9 @@
     )
     (pin "1" (uuid 623a8b3d-3064-4ae1-b38f-64dfe9b82fe4))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
-          (reference "TP2") (unit 1)
+          (reference "TP5") (unit 1)
         )
       )
     )
@@ -3224,7 +3278,7 @@
   (symbol (lib_id "power:+12V") (at 33.02 71.12 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 5b33cc5a-26cc-4c91-8f23-c3e4ab34f9c4)
-    (property "Reference" "#PWR018" (at 33.02 74.93 0)
+    (property "Reference" "#PWR06" (at 33.02 74.93 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+12V" (at 33.02 66.04 0)
@@ -3238,9 +3292,9 @@
     )
     (pin "1" (uuid 792ec520-d74e-437d-85c4-d1c4ee68f4ff))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
-          (reference "#PWR018") (unit 1)
+          (reference "#PWR06") (unit 1)
         )
       )
     )
@@ -3249,7 +3303,7 @@
   (symbol (lib_id "power:+12V") (at 147.32 187.96 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 5c94aff6-e2b7-4a25-9f1b-80052a7a1e38)
-    (property "Reference" "#PWR035" (at 147.32 191.77 0)
+    (property "Reference" "#PWR017" (at 147.32 191.77 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+12V" (at 147.32 182.88 0)
@@ -3263,9 +3317,9 @@
     )
     (pin "1" (uuid 9e46a624-ccbf-46b1-bb06-db49934db857))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
-          (reference "#PWR035") (unit 1)
+          (reference "#PWR017") (unit 1)
         )
       )
     )
@@ -3274,7 +3328,7 @@
   (symbol (lib_id "power:GNDREF") (at 264.16 264.16 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 5de46a8c-35d6-4ac9-80ef-ed6d4fac9dc8)
-    (property "Reference" "#PWR05" (at 264.16 270.51 0)
+    (property "Reference" "#PWR031" (at 264.16 270.51 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GNDREF" (at 264.16 269.24 0)
@@ -3288,9 +3342,9 @@
     )
     (pin "1" (uuid 3850edbf-d1ab-4a05-b97f-e4c27db0f14c))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
-          (reference "#PWR05") (unit 1)
+          (reference "#PWR031") (unit 1)
         )
       )
     )
@@ -3299,13 +3353,13 @@
   (symbol (lib_id "Connector:TestPoint") (at 129.54 36.83 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 60ff3209-6cf6-4e22-b0a1-99552a898391)
-    (property "Reference" "TP3" (at 132.08 32.258 0)
+    (property "Reference" "TP2" (at 132.08 32.258 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "C" (at 132.08 34.798 0)
+    (property "Value" "IN_1_UP" (at 132.08 34.798 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 134.62 36.83 0)
+    (property "Footprint" "Connector_Pin:Pin_D1.0mm_L10.0mm" (at 134.62 36.83 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 134.62 36.83 0)
@@ -3313,9 +3367,9 @@
     )
     (pin "1" (uuid 170549f4-247f-403f-897a-227b8f6d9a8b))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
-          (reference "TP3") (unit 1)
+          (reference "TP2") (unit 1)
         )
       )
     )
@@ -3324,13 +3378,13 @@
   (symbol (lib_id "Device:R") (at 106.68 102.87 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 647941ca-64b4-4957-b977-4979d604e726)
-    (property "Reference" "R24" (at 109.22 101.6 0)
+    (property "Reference" "R14" (at 109.22 101.6 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "10K" (at 109.22 104.14 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Footprint" "synth-custom:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" (at 108.458 102.87 90)
+    (property "Footprint" "synth-custom:R_default" (at 108.458 102.87 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 106.68 102.87 0)
@@ -3339,9 +3393,9 @@
     (pin "1" (uuid 1363282f-1a08-416f-a6e3-806edfcdb8ca))
     (pin "2" (uuid 1b45a410-afc9-4288-961c-f6b2a27aa680))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
-          (reference "R24") (unit 1)
+          (reference "R14") (unit 1)
         )
       )
     )
@@ -3350,13 +3404,13 @@
   (symbol (lib_id "Device:R") (at 191.77 170.18 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 660ba63a-f79e-4785-91f6-7437d8ad7dde)
-    (property "Reference" "R33" (at 191.77 167.64 90)
+    (property "Reference" "R23" (at 191.77 167.64 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Value" "100K" (at 191.77 172.72 90)
+    (property "Value" "100K 1%" (at 191.77 172.72 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "synth-custom:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" (at 191.77 168.402 90)
+    (property "Footprint" "synth-custom:R_default" (at 191.77 168.402 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 191.77 170.18 0)
@@ -3365,9 +3419,9 @@
     (pin "1" (uuid bc137d3b-36e5-40c3-b276-4097997df914))
     (pin "2" (uuid ebcdca53-12ee-4fba-b994-326b6047a0f6))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
-          (reference "R33") (unit 1)
+          (reference "R23") (unit 1)
         )
       )
     )
@@ -3376,7 +3430,7 @@
   (symbol (lib_id "power:GNDREF") (at 33.02 92.71 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 6610e2d2-eaad-4ff7-ad1c-2b143090125a)
-    (property "Reference" "#PWR017" (at 33.02 99.06 0)
+    (property "Reference" "#PWR010" (at 33.02 99.06 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GNDREF" (at 33.02 97.79 0)
@@ -3390,9 +3444,9 @@
     )
     (pin "1" (uuid 9323b506-a37b-474c-ad6c-15e62c811cd5))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
-          (reference "#PWR017") (unit 1)
+          (reference "#PWR010") (unit 1)
         )
       )
     )
@@ -3401,7 +3455,7 @@
   (symbol (lib_id "power:GNDREF") (at 120.65 264.16 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 68433a54-d650-4eb6-8976-0f410d858eb1)
-    (property "Reference" "#PWR012" (at 114.3 264.16 0)
+    (property "Reference" "#PWR029" (at 114.3 264.16 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GNDREF" (at 116.84 264.16 90)
@@ -3415,9 +3469,9 @@
     )
     (pin "1" (uuid 5b779262-7596-4f53-b677-7875dff59350))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
-          (reference "#PWR012") (unit 1)
+          (reference "#PWR029") (unit 1)
         )
       )
     )
@@ -3426,13 +3480,13 @@
   (symbol (lib_id "Synth_Custom:CONN_Header_01x04") (at 280.67 261.62 180) (unit 2)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 688a6734-0e7b-4069-88de-227cfb2bc357)
-    (property "Reference" "H4" (at 279.4 261.62 0)
+    (property "Reference" "H2" (at 279.4 261.62 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "TOP_4_SGL" (at 280.67 264.16 0)
+    (property "Value" "TOP_4_SGL_2" (at 280.67 264.16 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Footprint" "synth-custom:PinHeader_1x04_P2.00mm_Vertical" (at 280.67 259.08 0)
+    (property "Footprint" "synth-custom:PinHeader_1x04_P2.54mm_Vertical" (at 280.67 259.08 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "" (at 280.67 264.16 0)
@@ -3443,9 +3497,9 @@
     (pin "2" (uuid 245fbc67-79bd-4f8e-aca4-df057532853d))
     (pin "3" (uuid a4bbb640-83f7-4ee5-81a5-05cd9288a47f))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
-          (reference "H4") (unit 2)
+          (reference "H2") (unit 2)
         )
       )
     )
@@ -3454,7 +3508,7 @@
   (symbol (lib_id "Device:C_Polarized") (at 207.01 257.81 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 6f130583-a10d-4991-9667-5f2eb7121c3c)
-    (property "Reference" "C1" (at 210.82 255.651 0)
+    (property "Reference" "C2" (at 210.82 255.651 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "47uF" (at 210.82 258.191 0)
@@ -3469,9 +3523,9 @@
     (pin "1" (uuid 794e42d5-b35d-4caf-a8e5-9846a2ad7434))
     (pin "2" (uuid a745ad15-2791-4914-9fef-b3970d9aecec))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
-          (reference "C1") (unit 1)
+          (reference "C2") (unit 1)
         )
       )
     )
@@ -3480,7 +3534,7 @@
   (symbol (lib_id "Device:C_Polarized") (at 123.19 255.27 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 6f2523b7-74e9-4f03-9eb7-c6b3a046ca81)
-    (property "Reference" "C5" (at 127 253.111 0)
+    (property "Reference" "C1" (at 127 253.111 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "0.1uF" (at 127 255.651 0)
@@ -3495,9 +3549,9 @@
     (pin "1" (uuid fa60f22d-e4ab-4a50-b2dd-da8202f7fd68))
     (pin "2" (uuid 9e2ee8ac-5679-413d-a03e-d8bdd697b651))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
-          (reference "C5") (unit 1)
+          (reference "C1") (unit 1)
         )
       )
     )
@@ -3506,13 +3560,13 @@
   (symbol (lib_id "Connector:TestPoint") (at 129.54 41.91 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 6f3d0ad8-a08b-4686-a88b-bf6e4373b69f)
-    (property "Reference" "TP4" (at 132.08 43.942 0)
+    (property "Reference" "TP3" (at 132.08 43.942 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Value" "D" (at 132.08 46.482 0)
+    (property "Value" "IN_1_DOWN" (at 132.08 46.482 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Footprint" "" (at 124.46 41.91 0)
+    (property "Footprint" "Connector_Pin:Pin_D1.0mm_L10.0mm" (at 124.46 41.91 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 124.46 41.91 0)
@@ -3520,9 +3574,9 @@
     )
     (pin "1" (uuid 7ec4ab62-bb08-4c38-aad0-5a3ebdfea6b9))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
-          (reference "TP4") (unit 1)
+          (reference "TP3") (unit 1)
         )
       )
     )
@@ -3531,7 +3585,7 @@
   (symbol (lib_id "power:+12V") (at 264.16 261.62 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 7082f0ad-79c2-4e02-aefd-e1dca24c6940)
-    (property "Reference" "#PWR04" (at 264.16 265.43 0)
+    (property "Reference" "#PWR027" (at 264.16 265.43 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+12V" (at 261.62 257.81 0)
@@ -3545,9 +3599,9 @@
     )
     (pin "1" (uuid d26574d6-0ccd-41ae-9ee8-b8c900cd7556))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
-          (reference "#PWR04") (unit 1)
+          (reference "#PWR027") (unit 1)
         )
       )
     )
@@ -3556,13 +3610,13 @@
   (symbol (lib_id "Synth_Custom:CONN_Header_01x04") (at 57.15 115.57 0) (unit 2)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 722957ab-fe56-4c6b-a140-2763f996644a)
-    (property "Reference" "H1" (at 54.61 113.03 0)
+    (property "Reference" "H3" (at 54.61 113.03 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "TOP_4_SGL" (at 57.15 113.03 0)
+    (property "Value" "TOP_4_SGL_1" (at 57.15 113.03 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Footprint" "synth-custom:PinHeader_1x04_P2.00mm_Vertical" (at 57.15 118.11 0)
+    (property "Footprint" "synth-custom:PinHeader_1x04_P2.54mm_Vertical" (at 57.15 118.11 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "" (at 57.15 113.03 0)
@@ -3573,9 +3627,9 @@
     (pin "2" (uuid ec959852-6425-42a8-9a99-a8780ae7cdd3))
     (pin "3" (uuid a4bbb640-83f7-4ee5-81a5-05cd9288a480))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
-          (reference "H1") (unit 2)
+          (reference "H3") (unit 2)
         )
       )
     )
@@ -3584,7 +3638,7 @@
   (symbol (lib_id "power:GNDREF") (at 170.18 270.51 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 7379c49f-5e75-4b78-8f6a-560467b6c24b)
-    (property "Reference" "#PWR013" (at 176.53 270.51 0)
+    (property "Reference" "#PWR034" (at 176.53 270.51 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GNDREF" (at 175.26 270.51 0)
@@ -3598,33 +3652,33 @@
     )
     (pin "1" (uuid 440f0547-d10d-4427-8a23-35acaca8f999))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
-          (reference "#PWR013") (unit 1)
+          (reference "#PWR034") (unit 1)
         )
       )
     )
   )
 
-  (symbol (lib_id "Mechanical:MountingHole") (at 233.68 215.9 0) (unit 1)
+  (symbol (lib_id "Mechanical:MountingHole") (at 369.57 233.045 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 73a582cf-0c1d-4318-83e2-7ebc96be238f)
-    (property "Reference" "H11" (at 236.22 214.63 0)
+    (property "Reference" "H7" (at 372.11 231.775 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "MountingHole" (at 236.22 217.17 0)
+    (property "Value" "MountingHole" (at 372.11 234.315 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "MountingHole:MountingHole_2.5mm" (at 233.68 215.9 0)
+    (property "Footprint" "MountingHole:MountingHole_3.2mm_M3" (at 369.57 233.045 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "~" (at 233.68 215.9 0)
+    (property "Datasheet" "~" (at 369.57 233.045 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
-          (reference "H11") (unit 1)
+          (reference "H7") (unit 1)
         )
       )
     )
@@ -3633,13 +3687,13 @@
   (symbol (lib_id "Device:R") (at 142.24 41.91 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 754540c0-9883-4b2d-a78a-9c38315af36b)
-    (property "Reference" "R25" (at 142.24 39.37 90)
+    (property "Reference" "R6" (at 142.24 39.37 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Value" "10K" (at 142.24 44.45 90)
+    (property "Value" "10K 1%" (at 142.24 44.45 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "synth-custom:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" (at 142.24 43.688 90)
+    (property "Footprint" "synth-custom:R_default" (at 142.24 43.688 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 142.24 41.91 0)
@@ -3648,9 +3702,34 @@
     (pin "1" (uuid 2f421188-b45c-4d1d-a465-656a0c8c7854))
     (pin "2" (uuid 3ea9fb0d-8edb-4304-92bb-f81d7be40ad3))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
-          (reference "R25") (unit 1)
+          (reference "R6") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Connector:TestPoint") (at 215.265 264.16 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 7af3600d-fde4-4cd9-860b-1d374a5fe499)
+    (property "Reference" "TP12" (at 217.17 259.588 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Value" "GND" (at 217.17 262.128 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "Connector_Pin:Pin_D1.0mm_L10.0mm" (at 220.345 264.16 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 220.345 264.16 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 3494ebc8-028a-44a8-8721-697624fabf9e))
+    (instances
+      (project "sparkle"
+        (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
+          (reference "TP12") (unit 1)
         )
       )
     )
@@ -3662,10 +3741,10 @@
     (property "Reference" "TP8" (at 134.62 163.322 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Value" "D" (at 134.62 165.862 0)
+    (property "Value" "IN_2_DOWN" (at 134.62 165.862 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Footprint" "" (at 127 161.29 0)
+    (property "Footprint" "Connector_Pin:Pin_D1.0mm_L10.0mm" (at 127 161.29 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 127 161.29 0)
@@ -3673,9 +3752,34 @@
     )
     (pin "1" (uuid 71510b7b-9fd4-4597-8c83-dc89c755d9d7))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
           (reference "TP8") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Connector:TestPoint") (at 205.105 156.21 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 841aa665-c674-4acd-b93d-0af2b17025a1)
+    (property "Reference" "TP7" (at 207.01 151.638 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Value" "OUT_2" (at 207.01 154.178 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "Connector_Pin:Pin_D1.0mm_L10.0mm" (at 210.185 156.21 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 210.185 156.21 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid dd7f2196-72f7-4f6d-a153-e9c1616fb3db))
+    (instances
+      (project "sparkle"
+        (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
+          (reference "TP7") (unit 1)
         )
       )
     )
@@ -3684,7 +3788,7 @@
   (symbol (lib_id "Device:R_Potentiometer") (at 33.02 85.09 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 894d25d5-f0f8-4256-ba89-0d9a662ea3ed)
-    (property "Reference" "RV4" (at 30.48 83.82 0)
+    (property "Reference" "RV2" (at 30.48 83.82 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "100K" (at 30.48 86.36 0)
@@ -3700,9 +3804,9 @@
     (pin "3" (uuid 4480e8c7-8a81-4f90-a5c2-7bd6ffdd21f3))
     (pin "2" (uuid 6beff6e0-730f-4776-9682-df464ae7f21b))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
-          (reference "RV4") (unit 1)
+          (reference "RV2") (unit 1)
         )
       )
     )
@@ -3711,7 +3815,7 @@
   (symbol (lib_id "power:-12V") (at 166.37 72.39 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 8abdc1a4-7e8d-4d96-8c35-8baeed3007c4)
-    (property "Reference" "#PWR025" (at 166.37 74.93 0)
+    (property "Reference" "#PWR08" (at 166.37 74.93 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "-12V" (at 166.37 77.47 0)
@@ -3725,9 +3829,9 @@
     )
     (pin "1" (uuid c07e3514-0b2a-42d7-a9ef-2f3f3723cb57))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
-          (reference "#PWR025") (unit 1)
+          (reference "#PWR08") (unit 1)
         )
       )
     )
@@ -3736,13 +3840,13 @@
   (symbol (lib_id "Device:R") (at 59.69 185.42 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 8b9e0388-3e74-4b01-b83b-3495965be85a)
-    (property "Reference" "R19" (at 62.23 184.15 0)
+    (property "Reference" "R26" (at 62.23 184.15 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "100" (at 62.23 186.69 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Footprint" "synth-custom:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" (at 61.468 185.42 90)
+    (property "Footprint" "synth-custom:R_default" (at 61.468 185.42 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 59.69 185.42 0)
@@ -3751,9 +3855,9 @@
     (pin "1" (uuid 23104214-9782-40ee-91da-e05c19a3af07))
     (pin "2" (uuid 90443b21-2bc1-41cc-894d-6ae18402a210))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
-          (reference "R19") (unit 1)
+          (reference "R26") (unit 1)
         )
       )
     )
@@ -3762,13 +3866,13 @@
   (symbol (lib_id "Synth_Custom:CONN_Socket_01x04") (at 78.74 177.8 180) (unit 3)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 8d8449c2-73a1-46ab-b106-5a7c52e6423e)
-    (property "Reference" "H2" (at 81.28 175.26 0)
+    (property "Reference" "H4" (at 81.28 175.26 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "BTM_4_SGL" (at 78.74 180.34 0)
+    (property "Value" "BTM_4_SGL_1" (at 78.74 180.34 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Footprint" "synth-custom:PinSocket_1x04_P2.00mm_Vertical" (at 78.74 175.26 0)
+    (property "Footprint" "synth-custom:PinSocket_1x04_P2.54mm_Vertical" (at 78.74 175.26 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "" (at 78.74 180.34 0)
@@ -3779,33 +3883,33 @@
     (pin "3" (uuid 473a46c1-d9e7-4c24-806b-b364d670dd91))
     (pin "4" (uuid 327e8a72-e37d-47bf-ad4e-83b4e984f4b6))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
-          (reference "H2") (unit 3)
+          (reference "H4") (unit 3)
         )
       )
     )
   )
 
-  (symbol (lib_id "Mechanical:MountingHole") (at 252.73 222.25 0) (unit 1)
+  (symbol (lib_id "Mechanical:MountingHole") (at 388.62 239.395 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 8dd3ac55-b7a4-474e-bdab-b562f9ba1622)
-    (property "Reference" "H6" (at 255.27 220.98 0)
+    (property "Reference" "H10" (at 391.16 238.125 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "MountingHole" (at 255.27 223.52 0)
+    (property "Value" "MountingHole" (at 391.16 240.665 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "MountingHole:MountingHole_2.5mm" (at 252.73 222.25 0)
+    (property "Footprint" "MountingHole:MountingHole_3.2mm_M3" (at 388.62 239.395 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "~" (at 252.73 222.25 0)
+    (property "Datasheet" "~" (at 388.62 239.395 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
-          (reference "H6") (unit 1)
+          (reference "H10") (unit 1)
         )
       )
     )
@@ -3814,13 +3918,13 @@
   (symbol (lib_id "Device:R") (at 49.53 177.8 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 9166c94d-18aa-487d-a08f-32c2c0937b8a)
-    (property "Reference" "R18" (at 49.53 171.45 90)
+    (property "Reference" "R24" (at 49.53 171.45 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "100K" (at 49.53 173.99 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "synth-custom:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" (at 49.53 179.578 90)
+    (property "Footprint" "synth-custom:R_default" (at 49.53 179.578 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 49.53 177.8 0)
@@ -3829,9 +3933,9 @@
     (pin "1" (uuid 94c4c49c-701e-4bee-ba95-8d8447ed6bcc))
     (pin "2" (uuid 7b58693a-3af2-49bf-9a40-216ec6bba5fd))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
-          (reference "R18") (unit 1)
+          (reference "R24") (unit 1)
         )
       )
     )
@@ -3840,7 +3944,7 @@
   (symbol (lib_id "power:GNDREF") (at 132.08 72.39 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 92bc8ed9-183a-48ec-b5f7-82bf70b7b6c4)
-    (property "Reference" "#PWR023" (at 132.08 78.74 0)
+    (property "Reference" "#PWR07" (at 132.08 78.74 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GNDREF" (at 132.08 77.47 0)
@@ -3854,9 +3958,9 @@
     )
     (pin "1" (uuid db638f54-a2e8-495e-a276-61929cd9173f))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
-          (reference "#PWR023") (unit 1)
+          (reference "#PWR07") (unit 1)
         )
       )
     )
@@ -3880,7 +3984,7 @@
     (pin "1" (uuid 3a1d44a2-4237-4ec8-9d2d-4a0d64f9693e))
     (pin "2" (uuid de1b7267-dcd2-4dea-962e-07a7ad4bba2e))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
           (reference "C3") (unit 1)
         )
@@ -3891,13 +3995,13 @@
   (symbol (lib_id "Synth_Custom:CONN_Header_01x04") (at 213.36 39.37 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 93cd1199-084f-4425-92aa-ff3627c95ced)
-    (property "Reference" "H4" (at 215.9 41.91 0)
+    (property "Reference" "H2" (at 215.9 41.91 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "TOP_4_SGL" (at 213.36 41.91 0)
+    (property "Value" "TOP_4_SGL_2" (at 213.36 41.91 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Footprint" "synth-custom:PinHeader_1x04_P2.00mm_Vertical" (at 213.36 36.83 0)
+    (property "Footprint" "synth-custom:PinHeader_1x04_P2.54mm_Vertical" (at 213.36 36.83 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "" (at 213.36 41.91 0)
@@ -3908,9 +4012,9 @@
     (pin "2" (uuid ec959852-6425-42a8-9a99-a8780ae7cdd4))
     (pin "3" (uuid a4bbb640-83f7-4ee5-81a5-05cd9288a481))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
-          (reference "H4") (unit 1)
+          (reference "H2") (unit 1)
         )
       )
     )
@@ -3919,7 +4023,7 @@
   (symbol (lib_id "power:GNDREF") (at 157.48 270.51 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 95a6b788-e75c-406d-ae6a-a4ab6eedfab3)
-    (property "Reference" "#PWR014" (at 151.13 270.51 0)
+    (property "Reference" "#PWR033" (at 151.13 270.51 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GNDREF" (at 153.67 270.51 90)
@@ -3933,9 +4037,9 @@
     )
     (pin "1" (uuid bb314aac-939c-42ca-94da-74773b44d8e5))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
-          (reference "#PWR014") (unit 1)
+          (reference "#PWR033") (unit 1)
         )
       )
     )
@@ -3944,7 +4048,7 @@
   (symbol (lib_id "power:GNDREF") (at 167.64 22.86 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 968ea3b3-d6ed-44b8-903a-10dbaca5243a)
-    (property "Reference" "#PWR026" (at 167.64 16.51 0)
+    (property "Reference" "#PWR02" (at 167.64 16.51 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GNDREF" (at 167.64 17.78 0)
@@ -3958,33 +4062,33 @@
     )
     (pin "1" (uuid bd6c03a8-130c-4c73-af27-ea96ec992545))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
-          (reference "#PWR026") (unit 1)
+          (reference "#PWR02") (unit 1)
         )
       )
     )
   )
 
-  (symbol (lib_id "Mechanical:MountingHole") (at 252.73 215.9 0) (unit 1)
+  (symbol (lib_id "Mechanical:MountingHole") (at 388.62 233.045 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 9909ff97-c552-455f-bdcf-9f9e873e0661)
-    (property "Reference" "H13" (at 255.27 214.63 0)
+    (property "Reference" "H8" (at 391.16 231.775 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "MountingHole" (at 255.27 217.17 0)
+    (property "Value" "MountingHole" (at 391.16 234.315 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "MountingHole:MountingHole_2.5mm" (at 252.73 215.9 0)
+    (property "Footprint" "MountingHole:MountingHole_3.2mm_M3" (at 388.62 233.045 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "~" (at 252.73 215.9 0)
+    (property "Datasheet" "~" (at 388.62 233.045 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
-          (reference "H13") (unit 1)
+          (reference "H8") (unit 1)
         )
       )
     )
@@ -3993,7 +4097,7 @@
   (symbol (lib_id "power:GNDREF") (at 134.62 191.77 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 9a606be6-cb38-4254-95db-42d3a3665aaf)
-    (property "Reference" "#PWR034" (at 134.62 198.12 0)
+    (property "Reference" "#PWR020" (at 134.62 198.12 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GNDREF" (at 134.62 196.85 0)
@@ -4007,9 +4111,9 @@
     )
     (pin "1" (uuid 6925a7d9-d497-4243-a872-74c3a759bb89))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
-          (reference "#PWR034") (unit 1)
+          (reference "#PWR020") (unit 1)
         )
       )
     )
@@ -4018,7 +4122,7 @@
   (symbol (lib_id "power:GNDREF") (at 69.85 105.41 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 9d091788-c362-46ca-80e3-cbb81aa359ef)
-    (property "Reference" "#PWR019" (at 69.85 99.06 0)
+    (property "Reference" "#PWR011" (at 69.85 99.06 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GNDREF" (at 69.85 100.33 0)
@@ -4032,9 +4136,9 @@
     )
     (pin "1" (uuid e9cae987-7877-40b5-9a9e-748633f18a4f))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
-          (reference "#PWR019") (unit 1)
+          (reference "#PWR011") (unit 1)
         )
       )
     )
@@ -4043,13 +4147,13 @@
   (symbol (lib_id "Device:R") (at 132.08 66.04 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 9df08d0a-e6c4-47bb-b153-dd0c3e2f9ff0)
-    (property "Reference" "R29" (at 134.62 64.77 0)
+    (property "Reference" "R10" (at 134.62 64.77 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "100" (at 134.62 67.31 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Footprint" "synth-custom:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" (at 133.858 66.04 90)
+    (property "Footprint" "synth-custom:R_default" (at 133.858 66.04 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 132.08 66.04 0)
@@ -4058,9 +4162,9 @@
     (pin "1" (uuid b5b564b2-3038-4435-a3a4-d4a8156a71dc))
     (pin "2" (uuid 54f74c74-70bc-4392-bedf-6939114075b5))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
-          (reference "R29") (unit 1)
+          (reference "R10") (unit 1)
         )
       )
     )
@@ -4075,7 +4179,7 @@
     (property "Value" "100" (at 62.23 68.58 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Footprint" "synth-custom:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" (at 61.468 67.31 90)
+    (property "Footprint" "synth-custom:R_default" (at 61.468 67.31 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 59.69 67.31 0)
@@ -4084,7 +4188,7 @@
     (pin "1" (uuid 442d77cc-4a6c-4c57-a5ac-2f131b9ed528))
     (pin "2" (uuid acbac5be-1002-401a-bd79-e56bd778458c))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
           (reference "R11") (unit 1)
         )
@@ -4095,13 +4199,13 @@
   (symbol (lib_id "Connector:TestPoint") (at 85.09 170.18 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid a2f3fe02-2303-4512-a396-97a338600a2f)
-    (property "Reference" "TP5" (at 80.01 167.64 0)
+    (property "Reference" "TP9" (at 80.01 167.64 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "A" (at 86.36 167.64 0)
+    (property "Value" "IN_2" (at 86.36 167.64 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 90.17 170.18 0)
+    (property "Footprint" "Connector_Pin:Pin_D1.0mm_L10.0mm" (at 90.17 170.18 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 90.17 170.18 0)
@@ -4109,24 +4213,24 @@
     )
     (pin "1" (uuid 86644894-0d88-4440-adb0-5346938610b0))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
-          (reference "TP5") (unit 1)
+          (reference "TP9") (unit 1)
         )
       )
     )
   )
 
-  (symbol (lib_id "Synth_Custom:AudioJack2_PJ398SM") (at 34.29 234.95 0) (unit 1)
+  (symbol (lib_id "Synth_Custom:Jack_default") (at 34.29 234.95 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid a3c91947-9657-4cdf-8560-4ff0bab94504)
-    (property "Reference" "J5" (at 33.3375 227.33 0)
+    (property "Reference" "J6" (at 33.3375 227.33 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Value" "CV_1" (at 33.3375 229.87 0)
+    (property "Value" "CV_2" (at 33.3375 229.87 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "synth-custom:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles" (at 33.02 240.03 0)
+    (property "Footprint" "synth-custom:Jack_default" (at 33.02 240.03 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 35.56 241.3 0)
@@ -4136,33 +4240,33 @@
     (pin "TN" (uuid 552f85ff-115a-4c3f-92ad-d7bba80927c7))
     (pin "T" (uuid 2b11158d-de03-4f63-b2d7-19af079affd8))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
-          (reference "J5") (unit 1)
+          (reference "J6") (unit 1)
         )
       )
     )
   )
 
-  (symbol (lib_id "Mechanical:MountingHole") (at 233.68 222.25 0) (unit 1)
+  (symbol (lib_id "Mechanical:MountingHole") (at 369.57 239.395 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid a50b249b-f09c-4f6f-a50e-3195515aa492)
-    (property "Reference" "H8" (at 236.22 220.98 0)
+    (property "Reference" "H9" (at 372.11 238.125 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "MountingHole" (at 236.22 223.52 0)
+    (property "Value" "MountingHole" (at 372.11 240.665 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "MountingHole:MountingHole_2.5mm" (at 233.68 222.25 0)
+    (property "Footprint" "MountingHole:MountingHole_3.2mm_M3" (at 369.57 239.395 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "~" (at 233.68 222.25 0)
+    (property "Datasheet" "~" (at 369.57 239.395 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
-          (reference "H8") (unit 1)
+          (reference "H9") (unit 1)
         )
       )
     )
@@ -4171,7 +4275,7 @@
   (symbol (lib_id "power:GNDREF") (at 285.75 264.16 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid a52c8ba1-5949-4fee-bda4-87433898322a)
-    (property "Reference" "#PWR07" (at 285.75 270.51 0)
+    (property "Reference" "#PWR032" (at 285.75 270.51 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GNDREF" (at 285.75 269.24 0)
@@ -4185,18 +4289,18 @@
     )
     (pin "1" (uuid 89558955-f223-425b-8990-03fdff96ebc9))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
-          (reference "#PWR07") (unit 1)
+          (reference "#PWR032") (unit 1)
         )
       )
     )
   )
 
-  (symbol (lib_id "Synth_Custom:Conn_02x05_PWR_Eurorack") (at 163.83 270.51 180) (unit 1)
+  (symbol (lib_id "Synth_Custom:CONN_02x05_PWR_Eurorack") (at 163.83 270.51 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid a84abb57-1c82-492e-903f-79b8516c3182)
-    (property "Reference" "H5" (at 163.83 259.08 0)
+    (property "Reference" "H13" (at 163.83 259.08 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "Conn_02x05_PWR_Eurorack" (at 163.83 261.62 0)
@@ -4219,9 +4323,9 @@
     (pin "4" (uuid dd03cf3b-9741-41c7-812d-ffcdd0baff3c))
     (pin "3" (uuid c7439635-3718-4331-a995-6f60b24879c4))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
-          (reference "H5") (unit 1)
+          (reference "H13") (unit 1)
         )
       )
     )
@@ -4230,13 +4334,13 @@
   (symbol (lib_id "Device:R") (at 46.99 58.42 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid a870e4aa-0b27-4f64-a96c-5b6e71171331)
-    (property "Reference" "R5" (at 46.99 52.07 90)
+    (property "Reference" "R8" (at 46.99 52.07 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "100K" (at 46.99 54.61 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "synth-custom:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" (at 46.99 60.198 90)
+    (property "Footprint" "synth-custom:R_default" (at 46.99 60.198 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 46.99 58.42 0)
@@ -4245,9 +4349,9 @@
     (pin "1" (uuid 25635e80-3a96-4406-9c8b-ae5f8b825fda))
     (pin "2" (uuid bb32a83f-9c93-4038-b43f-648301ca094f))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
-          (reference "R5") (unit 1)
+          (reference "R8") (unit 1)
         )
       )
     )
@@ -4256,13 +4360,13 @@
   (symbol (lib_id "Device:R") (at 124.46 146.05 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid a8a78e92-aa09-4fdf-9a9b-6c6e02c12890)
-    (property "Reference" "R26" (at 127 144.78 0)
+    (property "Reference" "R18" (at 127 144.78 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Value" "20K" (at 127 147.32 0)
+    (property "Value" "20K 1%" (at 127 147.32 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Footprint" "synth-custom:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" (at 126.238 146.05 90)
+    (property "Footprint" "synth-custom:R_default" (at 126.238 146.05 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 124.46 146.05 0)
@@ -4271,36 +4375,9 @@
     (pin "1" (uuid daec95cf-2fd8-4188-8d34-849f31148448))
     (pin "2" (uuid 520905cf-1282-42b6-8cc2-be76fd3ecf91))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
-          (reference "R26") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Transistor_BJT:BC548") (at 127 177.8 180) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid a9555b11-1bd7-4b09-a21d-d72a376eff49)
-    (property "Reference" "Q4" (at 121.92 176.53 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Value" "BC548" (at 121.92 179.07 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "Package_TO_SOT_THT:TO-92_Inline" (at 121.92 175.895 0)
-      (effects (font (size 1.27 1.27) italic) (justify left) hide)
-    )
-    (property "Datasheet" "https://www.onsemi.com/pub/Collateral/BC550-D.pdf" (at 127 177.8 0)
-      (effects (font (size 1.27 1.27)) (justify left) hide)
-    )
-    (pin "2" (uuid ed0df3cd-027a-4ce2-b355-95e3f663ab3c))
-    (pin "1" (uuid 0fe2e4bb-b928-4115-bb25-e9907d86af93))
-    (pin "3" (uuid 6fadc8c4-d64f-4484-82f1-c12d7bd86320))
-    (instances
-      (project "VCA"
-        (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
-          (reference "Q4") (unit 1)
+          (reference "R18") (unit 1)
         )
       )
     )
@@ -4309,13 +4386,13 @@
   (symbol (lib_id "Device:R") (at 35.56 195.58 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid ad5f1c1d-f6de-4068-8511-e8343fd2deab)
-    (property "Reference" "R14" (at 38.1 194.31 0)
+    (property "Reference" "R28" (at 38.1 194.31 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "20K" (at 38.1 196.85 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Footprint" "synth-custom:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" (at 37.338 195.58 90)
+    (property "Footprint" "synth-custom:R_default" (at 37.338 195.58 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 35.56 195.58 0)
@@ -4324,9 +4401,9 @@
     (pin "1" (uuid 4d2388de-a676-4fc4-b47d-de7161432bca))
     (pin "2" (uuid 40069e15-584f-40ff-bb6a-2d04b22868f2))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
-          (reference "R14") (unit 1)
+          (reference "R28") (unit 1)
         )
       )
     )
@@ -4335,7 +4412,7 @@
   (symbol (lib_id "power:-12V") (at 120.65 276.86 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid ad7213e7-9936-43e6-99a1-39220d7a7bbb)
-    (property "Reference" "#PWR011" (at 118.11 276.86 0)
+    (property "Reference" "#PWR036" (at 118.11 276.86 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "-12V" (at 116.84 276.86 90)
@@ -4349,9 +4426,9 @@
     )
     (pin "1" (uuid b64914b1-da72-4e83-849a-807d3a90d8f0))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
-          (reference "#PWR011") (unit 1)
+          (reference "#PWR036") (unit 1)
         )
       )
     )
@@ -4360,13 +4437,13 @@
   (symbol (lib_id "Device:R") (at 43.18 115.57 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid af1e178f-aa04-4be6-a787-7463a3c3b47a)
-    (property "Reference" "R4" (at 43.18 109.22 90)
+    (property "Reference" "R15" (at 43.18 109.22 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "100K" (at 43.18 111.76 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "synth-custom:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" (at 43.18 117.348 90)
+    (property "Footprint" "synth-custom:R_default" (at 43.18 117.348 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 43.18 115.57 0)
@@ -4375,9 +4452,9 @@
     (pin "1" (uuid 9d257dcf-99b1-4fc7-8a08-94f5458fc2d8))
     (pin "2" (uuid f74b9962-ad1b-4a74-a5ba-c58a9e906d53))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
-          (reference "R4") (unit 1)
+          (reference "R15") (unit 1)
         )
       )
     )
@@ -4386,13 +4463,13 @@
   (symbol (lib_id "Synth_Custom:CONN_Header_01x04") (at 280.67 264.16 180) (unit 3)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid b2b2f209-f8ec-4da8-b3c6-ce9977cb307b)
-    (property "Reference" "H4" (at 279.4 264.16 0)
+    (property "Reference" "H2" (at 279.4 264.16 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "TOP_4_SGL" (at 280.67 266.7 0)
+    (property "Value" "TOP_4_SGL_2" (at 280.67 266.7 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Footprint" "synth-custom:PinHeader_1x04_P2.00mm_Vertical" (at 280.67 261.62 0)
+    (property "Footprint" "synth-custom:PinHeader_1x04_P2.54mm_Vertical" (at 280.67 261.62 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "" (at 280.67 266.7 0)
@@ -4403,9 +4480,9 @@
     (pin "2" (uuid ec959852-6425-42a8-9a99-a8780ae7cdd5))
     (pin "3" (uuid 03f1be5f-e8ea-477f-89df-e8de4466359b))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
-          (reference "H4") (unit 3)
+          (reference "H2") (unit 3)
         )
       )
     )
@@ -4414,7 +4491,7 @@
   (symbol (lib_id "power:GNDREF") (at 59.69 191.77 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid b2cbeecc-51cd-4826-bd0f-6170e883c95e)
-    (property "Reference" "#PWR032" (at 59.69 198.12 0)
+    (property "Reference" "#PWR019" (at 59.69 198.12 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GNDREF" (at 59.69 196.85 0)
@@ -4428,9 +4505,34 @@
     )
     (pin "1" (uuid 012f8b45-dbd3-49a2-80d0-5c2f8c74cb82))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
-          (reference "#PWR032") (unit 1)
+          (reference "#PWR019") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Connector:TestPoint") (at 203.2 36.195 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid b38da84e-4f56-431d-b76c-9bc67c8f64e4)
+    (property "Reference" "TP1" (at 205.74 31.623 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Value" "OUT_1" (at 205.74 34.163 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "Connector_Pin:Pin_D1.0mm_L10.0mm" (at 208.28 36.195 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 208.28 36.195 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 7d719843-abd4-400d-af95-4063b56b1f5d))
+    (instances
+      (project "sparkle"
+        (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
+          (reference "TP1") (unit 1)
         )
       )
     )
@@ -4466,7 +4568,7 @@
     (pin "5" (uuid 895ad56d-ac7f-47b1-870e-415b9064ae12))
     (pin "3" (uuid d6a31203-da79-456d-8bb6-65971e724d69))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
           (reference "U1") (unit 1)
         )
@@ -4477,7 +4579,7 @@
   (symbol (lib_id "power:+12V") (at 120.65 251.46 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid b5aef045-c134-4fd1-a923-5a3bc052cfb1)
-    (property "Reference" "#PWR010" (at 124.46 251.46 0)
+    (property "Reference" "#PWR025" (at 124.46 251.46 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+12V" (at 116.84 251.46 90)
@@ -4491,9 +4593,9 @@
     )
     (pin "1" (uuid 7e269c69-bb22-4b8a-b1b3-8cd08f410485))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
-          (reference "#PWR010") (unit 1)
+          (reference "#PWR025") (unit 1)
         )
       )
     )
@@ -4529,7 +4631,7 @@
     (pin "5" (uuid 895ad56d-ac7f-47b1-870e-415b9064ae13))
     (pin "3" (uuid 4a596224-9e79-43e1-82af-faf927cf8737))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
           (reference "U1") (unit 5)
         )
@@ -4540,7 +4642,7 @@
   (symbol (lib_id "power:GNDREF") (at 41.91 229.87 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid bbb2b328-e359-4e8d-a9fc-9fd44efe1715)
-    (property "Reference" "#PWR029" (at 41.91 223.52 0)
+    (property "Reference" "#PWR024" (at 41.91 223.52 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GNDREF" (at 41.91 224.79 0)
@@ -4554,9 +4656,9 @@
     )
     (pin "1" (uuid f297968f-057c-42a0-beb8-3df47f4ee314))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
-          (reference "#PWR029") (unit 1)
+          (reference "#PWR024") (unit 1)
         )
       )
     )
@@ -4565,7 +4667,7 @@
   (symbol (lib_id "power:+12V") (at 236.22 254 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid bedae71d-d03f-4b94-8750-bd370fd77cf6)
-    (property "Reference" "#PWR01" (at 232.41 254 0)
+    (property "Reference" "#PWR026" (at 232.41 254 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+12V" (at 241.3 254 0)
@@ -4579,9 +4681,9 @@
     )
     (pin "1" (uuid f2c89b45-81ee-4edc-b2c0-6d69a74105ae))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
-          (reference "#PWR01") (unit 1)
+          (reference "#PWR026") (unit 1)
         )
       )
     )
@@ -4590,13 +4692,13 @@
   (symbol (lib_id "Synth_Custom:CONN_Socket_01x04") (at 62.23 115.57 180) (unit 2)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid c06225de-2501-4e8b-b62d-43c1f6295388)
-    (property "Reference" "H2" (at 64.77 113.03 0)
+    (property "Reference" "H4" (at 64.77 113.03 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "BTM_4_SGL" (at 62.23 96.52 0)
+    (property "Value" "BTM_4_SGL_1" (at 62.23 96.52 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Footprint" "synth-custom:PinSocket_1x04_P2.00mm_Vertical" (at 62.23 113.03 0)
+    (property "Footprint" "synth-custom:PinSocket_1x04_P2.54mm_Vertical" (at 62.23 113.03 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "" (at 62.23 118.11 0)
@@ -4607,9 +4709,61 @@
     (pin "3" (uuid 473a46c1-d9e7-4c24-806b-b364d670dd92))
     (pin "4" (uuid 9b823a3b-9749-4bf6-aba8-c1df9763df52))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
-          (reference "H2") (unit 2)
+          (reference "H4") (unit 2)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Connector:TestPoint") (at 217.17 275.59 180) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid c22fd8ae-84f9-4988-aab0-762d6e4c08e8)
+    (property "Reference" "TP13" (at 219.71 277.622 0)
+      (effects (font (size 1.27 1.27)) (justify right))
+    )
+    (property "Value" "-12V" (at 219.71 280.162 0)
+      (effects (font (size 1.27 1.27)) (justify right))
+    )
+    (property "Footprint" "Connector_Pin:Pin_D1.0mm_L10.0mm" (at 212.09 275.59 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 212.09 275.59 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid f44cf4eb-3c19-4326-b901-51950fd36852))
+    (instances
+      (project "sparkle"
+        (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
+          (reference "TP13") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Transistor_BJT:BC548") (at 127 177.8 0) (mirror y) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid c6c09368-d128-4788-a1ed-4f0bd4ab0675)
+    (property "Reference" "Q4" (at 121.92 176.53 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Value" "BC548" (at 121.92 179.07 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "Package_TO_SOT_THT:TO-92_HandSolder" (at 121.92 179.705 0)
+      (effects (font (size 1.27 1.27) italic) (justify left) hide)
+    )
+    (property "Datasheet" "https://www.onsemi.com/pub/Collateral/BC550-D.pdf" (at 127 177.8 0)
+      (effects (font (size 1.27 1.27)) (justify left) hide)
+    )
+    (pin "2" (uuid 0971ed86-12bb-4660-9989-104d191d0db6))
+    (pin "1" (uuid d5f7a523-168f-4de1-a2c4-3488a94fc2b8))
+    (pin "3" (uuid 6860f433-fabb-45a1-9d04-754aa2847994))
+    (instances
+      (project "sparkle"
+        (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
+          (reference "Q4") (unit 1)
         )
       )
     )
@@ -4618,13 +4772,13 @@
   (symbol (lib_id "Device:R") (at 228.6 158.75 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid c90b7346-ba52-485a-a2b7-3856e8d68b12)
-    (property "Reference" "R34" (at 228.6 152.4 90)
+    (property "Reference" "R21" (at 228.6 152.4 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "1K" (at 228.6 154.94 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "synth-custom:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" (at 228.6 160.528 90)
+    (property "Footprint" "synth-custom:R_default" (at 228.6 160.528 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 228.6 158.75 0)
@@ -4633,9 +4787,9 @@
     (pin "1" (uuid f2aa3939-498a-4e2a-9d34-39c18bb1ebf4))
     (pin "2" (uuid 0bb56954-a31d-4a4f-92b3-9944ae5ea438))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
-          (reference "R34") (unit 1)
+          (reference "R21") (unit 1)
         )
       )
     )
@@ -4644,13 +4798,13 @@
   (symbol (lib_id "Synth_Custom:CONN_Socket_01x04") (at 64.77 234.95 180) (unit 4)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid c9f7ecb8-9d38-4cc9-af41-0cf21b8912c0)
-    (property "Reference" "H2" (at 67.31 232.41 0)
+    (property "Reference" "H4" (at 67.31 232.41 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "BTM_4_SGL" (at 64.77 215.9 0)
+    (property "Value" "BTM_4_SGL_1" (at 64.77 215.9 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Footprint" "synth-custom:PinSocket_1x04_P2.00mm_Vertical" (at 64.77 232.41 0)
+    (property "Footprint" "synth-custom:PinSocket_1x04_P2.54mm_Vertical" (at 64.77 232.41 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "" (at 64.77 237.49 0)
@@ -4661,24 +4815,24 @@
     (pin "3" (uuid 473a46c1-d9e7-4c24-806b-b364d670dd93))
     (pin "4" (uuid 897e36bb-8167-448b-9b2b-06b3f1e5be6f))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
-          (reference "H2") (unit 4)
+          (reference "H4") (unit 4)
         )
       )
     )
   )
 
-  (symbol (lib_id "Synth_Custom:AudioJack2_PJ398SM") (at 238.76 39.37 180) (unit 1)
+  (symbol (lib_id "Synth_Custom:Jack_default") (at 238.76 39.37 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid ca0d9e99-b1cd-48e1-aedc-c6d5cd7dadd1)
-    (property "Reference" "J3" (at 245.11 38.1635 0)
+    (property "Reference" "J1" (at 245.11 38.1635 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "OUT_1" (at 245.11 40.7035 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Footprint" "synth-custom:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles" (at 240.03 34.29 0)
+    (property "Footprint" "synth-custom:Jack_default" (at 240.03 34.29 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 237.49 33.02 0)
@@ -4688,34 +4842,34 @@
     (pin "TN" (uuid 358c96fe-e954-4d52-b738-c3caeaa0f8bb))
     (pin "T" (uuid 816d3c46-20f0-4232-b0c6-87a6af06b47e))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
-          (reference "J3") (unit 1)
+          (reference "J1") (unit 1)
         )
       )
     )
   )
 
-  (symbol (lib_id "power:GNDREF") (at 233.68 163.83 0) (unit 1)
+  (symbol (lib_id "power:GNDREF") (at 237.49 163.83 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid ca773639-73a6-4e1e-a37d-0a8068022c57)
-    (property "Reference" "#PWR038" (at 233.68 170.18 0)
+    (property "Reference" "#PWR015" (at 237.49 170.18 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Value" "GNDREF" (at 233.68 168.91 0)
+    (property "Value" "GNDREF" (at 237.49 168.91 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 233.68 163.83 0)
+    (property "Footprint" "" (at 237.49 163.83 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "" (at 233.68 163.83 0)
+    (property "Datasheet" "" (at 237.49 163.83 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 8c67489e-b029-434c-b0a4-1cabbc6f9710))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
-          (reference "#PWR038") (unit 1)
+          (reference "#PWR015") (unit 1)
         )
       )
     )
@@ -4724,7 +4878,7 @@
   (symbol (lib_id "power:+12V") (at 86.36 135.89 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid ca7e856f-e1ee-4f16-a6cb-12b5e3e7feff)
-    (property "Reference" "#PWR033" (at 90.17 135.89 0)
+    (property "Reference" "#PWR013" (at 90.17 135.89 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+12V" (at 82.55 135.89 90)
@@ -4738,9 +4892,9 @@
     )
     (pin "1" (uuid 903a6398-7d94-42c3-afa6-b60ae53a3d31))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
-          (reference "#PWR033") (unit 1)
+          (reference "#PWR013") (unit 1)
         )
       )
     )
@@ -4749,7 +4903,7 @@
   (symbol (lib_id "power:GNDREF") (at 170.18 142.24 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid ce485a0c-5d84-4b34-9ce7-9f823a8341e1)
-    (property "Reference" "#PWR037" (at 170.18 135.89 0)
+    (property "Reference" "#PWR014" (at 170.18 135.89 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GNDREF" (at 170.18 137.16 0)
@@ -4763,9 +4917,9 @@
     )
     (pin "1" (uuid 46ea0000-3ec0-404c-8c16-cb5dfef0a575))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
-          (reference "#PWR037") (unit 1)
+          (reference "#PWR014") (unit 1)
         )
       )
     )
@@ -4774,7 +4928,7 @@
   (symbol (lib_id "power:-12V") (at 168.91 191.77 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid d0a957b5-249f-42cb-a61a-4c35baad0ab3)
-    (property "Reference" "#PWR036" (at 168.91 194.31 0)
+    (property "Reference" "#PWR021" (at 168.91 194.31 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "-12V" (at 168.91 196.85 0)
@@ -4788,9 +4942,9 @@
     )
     (pin "1" (uuid 3bca0b03-2813-4739-a674-0bf7916e5aed))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
-          (reference "#PWR036") (unit 1)
+          (reference "#PWR021") (unit 1)
         )
       )
     )
@@ -4799,7 +4953,7 @@
   (symbol (lib_id "power:+12V") (at 144.78 68.58 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid d11974b1-bd26-40e4-8fad-d7dbba698eb6)
-    (property "Reference" "#PWR024" (at 144.78 72.39 0)
+    (property "Reference" "#PWR05" (at 144.78 72.39 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+12V" (at 144.78 63.5 0)
@@ -4813,9 +4967,9 @@
     )
     (pin "1" (uuid f00803b7-9c32-42c7-a4ec-0162c3d455fe))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
-          (reference "#PWR024") (unit 1)
+          (reference "#PWR05") (unit 1)
         )
       )
     )
@@ -4824,13 +4978,13 @@
   (symbol (lib_id "Device:R") (at 198.12 254 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid d39597cb-2c41-4a4b-aad7-b2680c33f950)
-    (property "Reference" "R1" (at 198.12 247.65 90)
+    (property "Reference" "R33" (at 198.12 247.65 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "10" (at 198.12 250.19 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "synth-custom:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" (at 198.12 255.778 90)
+    (property "Footprint" "synth-custom:R_default" (at 198.12 255.778 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 198.12 254 0)
@@ -4839,9 +4993,9 @@
     (pin "1" (uuid 1d134f10-7ae7-4089-9e0b-26a3386e2546))
     (pin "2" (uuid d9f87b8a-a706-427f-9fbb-9fce211fc00a))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
-          (reference "R1") (unit 1)
+          (reference "R33") (unit 1)
         )
       )
     )
@@ -4850,13 +5004,13 @@
   (symbol (lib_id "Device:R") (at 33.02 76.2 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid d8a4d35f-5c2e-4157-b93b-0cd65b3b4054)
-    (property "Reference" "R10" (at 35.56 74.93 0)
+    (property "Reference" "R12" (at 35.56 74.93 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "20K" (at 35.56 77.47 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Footprint" "synth-custom:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" (at 34.798 76.2 90)
+    (property "Footprint" "synth-custom:R_default" (at 34.798 76.2 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 33.02 76.2 0)
@@ -4865,15 +5019,15 @@
     (pin "1" (uuid 9765ef34-690a-421e-b3d3-961f9040d8de))
     (pin "2" (uuid 92e168bd-6d03-4308-be82-16700d76166a))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
-          (reference "R10") (unit 1)
+          (reference "R12") (unit 1)
         )
       )
     )
   )
 
-  (symbol (lib_id "Amplifier_Operational:TL074") (at 83.82 232.41 0) (unit 4)
+  (symbol (lib_id "Amplifier_Operational:TL074") (at 83.82 232.41 0) (unit 3)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid d8fc3d4d-b738-4c87-89cd-209d308fdf43)
     (property "Reference" "U1" (at 82.55 231.14 0)
@@ -4903,48 +5057,48 @@
     (pin "5" (uuid 895ad56d-ac7f-47b1-870e-415b9064ae14))
     (pin "3" (uuid fb8c562a-89a8-41de-bd05-a1a98087f389))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
-          (reference "U1") (unit 4)
+          (reference "U1") (unit 3)
         )
       )
     )
   )
 
-  (symbol (lib_id "Mechanical:MountingHole") (at 252.73 209.55 0) (unit 1)
+  (symbol (lib_id "Mechanical:MountingHole") (at 388.62 226.695 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid d93c4eb8-2d78-48c0-8c90-8d67da4ce7ff)
-    (property "Reference" "H12" (at 255.27 208.28 0)
+    (property "Reference" "H6" (at 391.16 225.425 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "MountingHole" (at 255.27 210.82 0)
+    (property "Value" "MountingHole" (at 391.16 227.965 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "MountingHole:MountingHole_2.5mm" (at 252.73 209.55 0)
+    (property "Footprint" "MountingHole:MountingHole_3.2mm_M3" (at 388.62 226.695 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "~" (at 252.73 209.55 0)
+    (property "Datasheet" "~" (at 388.62 226.695 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
-          (reference "H12") (unit 1)
+          (reference "H6") (unit 1)
         )
       )
     )
   )
 
-  (symbol (lib_id "Synth_Custom:AudioJack2_PJ398SM") (at 35.56 177.8 0) (unit 1)
+  (symbol (lib_id "Synth_Custom:Jack_default") (at 35.56 177.8 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid dc5ae77d-7c83-473e-88ec-458cd090742d)
-    (property "Reference" "J6" (at 34.6075 170.18 0)
+    (property "Reference" "J5" (at 34.6075 170.18 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Value" "IN_1" (at 34.6075 172.72 0)
+    (property "Value" "IN_2" (at 34.6075 172.72 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "synth-custom:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles" (at 34.29 182.88 0)
+    (property "Footprint" "synth-custom:Jack_default" (at 34.29 182.88 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 36.83 184.15 0)
@@ -4954,9 +5108,9 @@
     (pin "TN" (uuid a4da3799-f2e6-44cb-831c-65326476edd6))
     (pin "T" (uuid 92a11da4-fb66-4b11-9411-562dbd3ba952))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
-          (reference "J6") (unit 1)
+          (reference "J5") (unit 1)
         )
       )
     )
@@ -4992,7 +5146,7 @@
     (pin "5" (uuid 895ad56d-ac7f-47b1-870e-415b9064ae15))
     (pin "3" (uuid fb8c562a-89a8-41de-bd05-a1a98087f38a))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
           (reference "U1") (unit 2)
         )
@@ -5003,7 +5157,7 @@
   (symbol (lib_id "power:+12V") (at 35.56 190.5 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid df7c7454-be56-4319-a871-e6b84755fff1)
-    (property "Reference" "#PWR027" (at 35.56 194.31 0)
+    (property "Reference" "#PWR018" (at 35.56 194.31 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+12V" (at 35.56 185.42 0)
@@ -5017,9 +5171,9 @@
     )
     (pin "1" (uuid a8d11f1d-1e91-4d9c-88f7-0677cd111fec))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
-          (reference "#PWR027") (unit 1)
+          (reference "#PWR018") (unit 1)
         )
       )
     )
@@ -5028,7 +5182,7 @@
   (symbol (lib_id "power:PWR_FLAG") (at 233.68 275.59 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid e0f330f2-8c4a-47de-b89b-2f98cb8e6fb6)
-    (property "Reference" "#FLG02" (at 233.68 277.495 0)
+    (property "Reference" "#FLG03" (at 233.68 277.495 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "PWR_FLAG" (at 233.68 280.67 0)
@@ -5042,9 +5196,9 @@
     )
     (pin "1" (uuid bba20545-906c-47af-91fb-4966de5ba61c))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
-          (reference "#FLG02") (unit 1)
+          (reference "#FLG03") (unit 1)
         )
       )
     )
@@ -5059,7 +5213,7 @@
     (property "Value" "100" (at 137.16 186.69 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Footprint" "synth-custom:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" (at 136.398 185.42 90)
+    (property "Footprint" "synth-custom:R_default" (at 136.398 185.42 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 134.62 185.42 0)
@@ -5068,7 +5222,7 @@
     (pin "1" (uuid c492851a-3e8e-4294-878c-87be303d64c8))
     (pin "2" (uuid 24315ac0-ec16-49a4-8dd6-0e373eeecf13))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
           (reference "R27") (unit 1)
         )
@@ -5079,13 +5233,13 @@
   (symbol (lib_id "Device:R") (at 121.92 26.67 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid e21f8ac8-36eb-4e36-80ae-1775b990a7e5)
-    (property "Reference" "R13" (at 124.46 25.4 0)
+    (property "Reference" "R2" (at 124.46 25.4 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Value" "20K" (at 124.46 27.94 0)
+    (property "Value" "20K 1%" (at 124.46 27.94 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Footprint" "synth-custom:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" (at 123.698 26.67 90)
+    (property "Footprint" "synth-custom:R_default" (at 123.698 26.67 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 121.92 26.67 0)
@@ -5094,9 +5248,9 @@
     (pin "1" (uuid 4d88334a-5675-4dc4-b553-28676bc18d5d))
     (pin "2" (uuid 4e4ba8ad-6405-480a-b93b-1bfa94c7a0cc))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
-          (reference "R13") (unit 1)
+          (reference "R2") (unit 1)
         )
       )
     )
@@ -5105,13 +5259,13 @@
   (symbol (lib_id "Device:R") (at 144.78 58.42 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid e258a2e9-0947-493c-9afe-6cad6004d6fa)
-    (property "Reference" "R6" (at 144.78 52.07 90)
+    (property "Reference" "R9" (at 144.78 52.07 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "100K" (at 144.78 54.61 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "synth-custom:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" (at 144.78 60.198 90)
+    (property "Footprint" "synth-custom:R_default" (at 144.78 60.198 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 144.78 58.42 0)
@@ -5120,9 +5274,9 @@
     (pin "1" (uuid 3fd38554-3c2a-4743-89e1-98a66a0c7028))
     (pin "2" (uuid 0ccae7de-64fb-4da7-b942-1d79d6e400f4))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
-          (reference "R6") (unit 1)
+          (reference "R9") (unit 1)
         )
       )
     )
@@ -5131,13 +5285,13 @@
   (symbol (lib_id "Device:R") (at 81.28 121.92 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid e28b84b7-a01e-4a28-a63a-a4a599c47856)
-    (property "Reference" "R15" (at 81.28 119.38 90)
+    (property "Reference" "R16" (at 81.28 119.38 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "82K" (at 81.28 124.46 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "synth-custom:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" (at 81.28 123.698 90)
+    (property "Footprint" "synth-custom:R_default" (at 81.28 123.698 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 81.28 121.92 0)
@@ -5146,9 +5300,9 @@
     (pin "1" (uuid e98bc16b-5f96-4961-87ff-497868368e7a))
     (pin "2" (uuid 258f111e-2eba-4574-9c18-7bb2be1f3841))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
-          (reference "R15") (unit 1)
+          (reference "R16") (unit 1)
         )
       )
     )
@@ -5157,13 +5311,13 @@
   (symbol (lib_id "Connector:TestPoint") (at 82.55 50.8 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid e6bd50b9-c067-4c10-9ea6-7784fb6a89ae)
-    (property "Reference" "TP1" (at 77.47 48.26 0)
+    (property "Reference" "TP4" (at 77.47 48.26 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "A" (at 83.82 48.26 0)
+    (property "Value" "IN_1" (at 83.82 48.26 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 87.63 50.8 0)
+    (property "Footprint" "Connector_Pin:Pin_D1.0mm_L10.0mm" (at 87.63 50.8 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 87.63 50.8 0)
@@ -5171,15 +5325,15 @@
     )
     (pin "1" (uuid afa34822-4fa4-40c3-b3a0-b30fcbba35cb))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
-          (reference "TP1") (unit 1)
+          (reference "TP4") (unit 1)
         )
       )
     )
   )
 
-  (symbol (lib_id "Synth_Custom:AudioJack2_PJ398SM") (at 33.02 58.42 0) (unit 1)
+  (symbol (lib_id "Synth_Custom:Jack_default") (at 33.02 58.42 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid e7137a5b-e865-4462-94a1-6588ea1b9688)
     (property "Reference" "J2" (at 32.0675 50.8 0)
@@ -5188,7 +5342,7 @@
     (property "Value" "IN_1" (at 32.0675 53.34 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "synth-custom:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles" (at 31.75 63.5 0)
+    (property "Footprint" "synth-custom:Jack_default" (at 31.75 63.5 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 34.29 64.77 0)
@@ -5198,7 +5352,7 @@
     (pin "TN" (uuid 07c8803c-f467-4431-babd-30f3add13b31))
     (pin "T" (uuid 09319e42-93d8-4c7e-8706-c76349a44c7a))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
           (reference "J2") (unit 1)
         )
@@ -5209,7 +5363,7 @@
   (symbol (lib_id "power:+12V") (at 285.75 261.62 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid e749b20c-a453-40c7-8e08-6ef3b74dcf37)
-    (property "Reference" "#PWR06" (at 285.75 265.43 0)
+    (property "Reference" "#PWR028" (at 285.75 265.43 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+12V" (at 283.21 257.81 0)
@@ -5223,9 +5377,9 @@
     )
     (pin "1" (uuid 259286d4-1a05-47ca-a209-2db17b6f7323))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
-          (reference "#PWR06") (unit 1)
+          (reference "#PWR028") (unit 1)
         )
       )
     )
@@ -5234,7 +5388,7 @@
   (symbol (lib_id "Device:R_Potentiometer_Trim") (at 156.21 69.85 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid e750f56e-2ff5-4f04-97a4-986d77dac737)
-    (property "Reference" "RV3" (at 156.21 73.66 90)
+    (property "Reference" "RV1" (at 156.21 73.66 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "100K" (at 156.21 76.2 90)
@@ -5250,9 +5404,9 @@
     (pin "1" (uuid 9288f437-a661-4a23-8afc-791a4890cba4))
     (pin "3" (uuid 8a6a17b9-8dad-4c73-af3c-0800d27c1c81))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
-          (reference "RV3") (unit 1)
+          (reference "RV1") (unit 1)
         )
       )
     )
@@ -5261,13 +5415,13 @@
   (symbol (lib_id "Device:R") (at 45.72 204.47 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid e7914839-e569-454a-aab4-41a5b657581b)
-    (property "Reference" "R16" (at 45.72 198.12 90)
+    (property "Reference" "R29" (at 45.72 198.12 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "100K" (at 45.72 200.66 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "synth-custom:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" (at 45.72 206.248 90)
+    (property "Footprint" "synth-custom:R_default" (at 45.72 206.248 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 45.72 204.47 0)
@@ -5276,9 +5430,9 @@
     (pin "1" (uuid ea5bd5e2-b931-44b3-b597-eabdef4ae707))
     (pin "2" (uuid 46cbf7cb-321a-477d-90de-3115722c024c))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
-          (reference "R16") (unit 1)
+          (reference "R29") (unit 1)
         )
       )
     )
@@ -5287,13 +5441,13 @@
   (symbol (lib_id "Device:R") (at 83.82 241.3 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid e957ee3d-f869-489e-b577-5b71bbfc9baf)
-    (property "Reference" "R20" (at 83.82 238.76 90)
+    (property "Reference" "R32" (at 83.82 238.76 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "82K" (at 83.82 243.84 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "synth-custom:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" (at 83.82 243.078 90)
+    (property "Footprint" "synth-custom:R_default" (at 83.82 243.078 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 83.82 241.3 0)
@@ -5302,9 +5456,9 @@
     (pin "1" (uuid c5f4a2b0-0687-42f4-9bd6-a95e61613c6d))
     (pin "2" (uuid 8eaaa6ba-c249-40a5-b388-272c9137793c))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
-          (reference "R20") (unit 1)
+          (reference "R32") (unit 1)
         )
       )
     )
@@ -5313,7 +5467,7 @@
   (symbol (lib_id "power:GNDREF") (at 72.39 224.79 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid ea4773af-2357-4c6e-8827-c90b85bf3f77)
-    (property "Reference" "#PWR031" (at 72.39 218.44 0)
+    (property "Reference" "#PWR023" (at 72.39 218.44 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GNDREF" (at 72.39 219.71 0)
@@ -5327,15 +5481,15 @@
     )
     (pin "1" (uuid 3ece1bee-c63e-48ad-a83c-3093d90db6f4))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
-          (reference "#PWR031") (unit 1)
+          (reference "#PWR023") (unit 1)
         )
       )
     )
   )
 
-  (symbol (lib_id "Amplifier_Operational:TL074") (at 191.77 158.75 0) (unit 3)
+  (symbol (lib_id "Amplifier_Operational:TL074") (at 191.77 158.75 0) (unit 4)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid edf798c3-f1e7-4f8a-b08e-dec653bba457)
     (property "Reference" "U1" (at 190.5 157.48 0)
@@ -5365,9 +5519,9 @@
     (pin "5" (uuid 895ad56d-ac7f-47b1-870e-415b9064ae16))
     (pin "3" (uuid ad7d4abf-c294-470d-b634-d6fa625ee469))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
-          (reference "U1") (unit 3)
+          (reference "U1") (unit 4)
         )
       )
     )
@@ -5376,13 +5530,13 @@
   (symbol (lib_id "Connector:TestPoint") (at 132.08 156.21 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid ee9d0be7-48ca-4817-9078-747beee8fa15)
-    (property "Reference" "TP7" (at 134.62 151.638 0)
+    (property "Reference" "TP6" (at 134.62 151.638 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "C" (at 134.62 154.178 0)
+    (property "Value" "IN_2_UP" (at 134.62 154.178 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 137.16 156.21 0)
+    (property "Footprint" "Connector_Pin:Pin_D1.0mm_L10.0mm" (at 137.16 156.21 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 137.16 156.21 0)
@@ -5390,27 +5544,27 @@
     )
     (pin "1" (uuid 66f28dad-0ebb-45a5-9773-a3cc3dd5cd77))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
-          (reference "TP7") (unit 1)
+          (reference "TP6") (unit 1)
         )
       )
     )
   )
 
-  (symbol (lib_id "Synth_Custom:CONN_Header_01x04") (at 215.9 158.75 180) (unit 4)
+  (symbol (lib_id "Synth_Custom:CONN_Header_01x04") (at 217.805 158.75 180) (unit 4)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid eea90762-d70a-4931-b8f3-a220c231758f)
-    (property "Reference" "H4" (at 218.44 161.29 0)
+    (property "Reference" "H2" (at 220.345 161.29 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "TOP_4_SGL" (at 215.9 161.29 0)
+    (property "Value" "TOP_4_SGL_2" (at 217.805 161.29 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Footprint" "synth-custom:PinHeader_1x04_P2.00mm_Vertical" (at 215.9 156.21 0)
+    (property "Footprint" "synth-custom:PinHeader_1x04_P2.54mm_Vertical" (at 217.805 156.21 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "" (at 215.9 161.29 0)
+    (property "Datasheet" "" (at 217.805 161.29 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid d990189d-635b-4aae-aa84-6795514a2393))
@@ -5418,9 +5572,9 @@
     (pin "2" (uuid ec959852-6425-42a8-9a99-a8780ae7cdd6))
     (pin "3" (uuid a4bbb640-83f7-4ee5-81a5-05cd9288a482))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
-          (reference "H4") (unit 4)
+          (reference "H2") (unit 4)
         )
       )
     )
@@ -5429,13 +5583,13 @@
   (symbol (lib_id "Device:R") (at 167.64 30.48 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid eedff8d4-202d-4799-ae14-a0533c3d3eb4)
-    (property "Reference" "R8" (at 165.1 31.75 0)
-      (effects (font (size 1.27 1.27)) (justify right))
+    (property "Reference" "R3" (at 170.18 29.21 0)
+      (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "100K" (at 165.1 29.21 0)
-      (effects (font (size 1.27 1.27)) (justify right))
+    (property "Value" "100K 1%" (at 170.18 31.75 0)
+      (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "synth-custom:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" (at 165.862 30.48 90)
+    (property "Footprint" "synth-custom:R_default" (at 165.862 30.48 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 167.64 30.48 0)
@@ -5444,24 +5598,24 @@
     (pin "1" (uuid d90ce6ee-7548-4e0b-9ba4-2c7be6717172))
     (pin "2" (uuid 6ce310b4-8830-4bcd-92cb-4dd09f730276))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
-          (reference "R8") (unit 1)
+          (reference "R3") (unit 1)
         )
       )
     )
   )
 
-  (symbol (lib_id "Synth_Custom:AudioJack2_PJ398SM") (at 31.75 115.57 0) (unit 1)
+  (symbol (lib_id "Synth_Custom:Jack_default") (at 31.75 115.57 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid f3a5fac5-d771-43a4-b7ad-0caca40726bb)
-    (property "Reference" "J4" (at 30.7975 107.95 0)
+    (property "Reference" "J3" (at 30.7975 107.95 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "CV_1" (at 30.7975 110.49 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "synth-custom:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles" (at 30.48 120.65 0)
+    (property "Footprint" "synth-custom:Jack_default" (at 30.48 120.65 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 33.02 121.92 0)
@@ -5471,9 +5625,9 @@
     (pin "TN" (uuid 3c2f5662-6a79-43df-94ac-f2dc5f76eca2))
     (pin "T" (uuid ccb4c625-0c3e-4e2b-bcf4-f6a4edfdafb2))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
-          (reference "J4") (unit 1)
+          (reference "J3") (unit 1)
         )
       )
     )
@@ -5482,7 +5636,7 @@
   (symbol (lib_id "power:GNDREF") (at 35.56 212.09 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid fc50fc6b-21c5-473e-a3a7-98754cd44078)
-    (property "Reference" "#PWR028" (at 35.56 218.44 0)
+    (property "Reference" "#PWR022" (at 35.56 218.44 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GNDREF" (at 35.56 217.17 0)
@@ -5496,9 +5650,9 @@
     )
     (pin "1" (uuid daa11314-a927-4c8e-b86a-13e56758a1e4))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
-          (reference "#PWR028") (unit 1)
+          (reference "#PWR022") (unit 1)
         )
       )
     )
@@ -5507,13 +5661,13 @@
   (symbol (lib_id "Synth_Custom:CONN_Socket_01x04") (at 209.55 39.37 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid fe21afbc-0d0a-43ca-9d50-59b56be3d2b3)
-    (property "Reference" "H3" (at 207.01 41.91 0)
+    (property "Reference" "H1" (at 207.01 41.91 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "BTM_4_SGL" (at 209.55 36.83 0)
+    (property "Value" "BTM_4_SGL_2" (at 209.55 36.83 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Footprint" "synth-custom:PinSocket_1x04_P2.00mm_Vertical" (at 209.55 41.91 0)
+    (property "Footprint" "synth-custom:PinSocket_1x04_P2.54mm_Vertical" (at 209.55 41.91 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "" (at 209.55 36.83 0)
@@ -5524,9 +5678,9 @@
     (pin "3" (uuid 473a46c1-d9e7-4c24-806b-b364d670dd94))
     (pin "4" (uuid 327e8a72-e37d-47bf-ad4e-83b4e984f4b7))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
-          (reference "H3") (unit 1)
+          (reference "H1") (unit 1)
         )
       )
     )
@@ -5535,7 +5689,7 @@
   (symbol (lib_id "power:+12V") (at 83.82 16.51 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid fec3d098-44f0-4b55-89fb-8d21d57627f6)
-    (property "Reference" "#PWR022" (at 87.63 16.51 0)
+    (property "Reference" "#PWR01" (at 87.63 16.51 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+12V" (at 80.01 16.51 90)
@@ -5549,9 +5703,9 @@
     )
     (pin "1" (uuid 8281133f-331b-40f8-8616-67aa03564caf))
     (instances
-      (project "VCA"
+      (project "sparkle"
         (path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
-          (reference "#PWR022") (unit 1)
+          (reference "#PWR01") (unit 1)
         )
       )
     )

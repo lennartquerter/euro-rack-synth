@@ -134,7 +134,7 @@
       (property "Value" "" (at 0 2.54 0)
         (effects (font (size 1.27 1.27)))
       )
-      (property "Footprint" "synth-custom:PinHeader_1x04_P2.00mm_Vertical" (at 0 -2.54 0)
+      (property "Footprint" "synth-custom:PinHeader_1x04_P2.54mm_Vertical" (at 0 -2.54 0)
         (effects (font (size 1.27 1.27)) hide)
       )
       (property "Datasheet" "" (at 0 2.54 0)
@@ -213,7 +213,7 @@
       (property "Value" "" (at 0 2.54 0)
         (effects (font (size 1.27 1.27)))
       )
-      (property "Footprint" "synth-custom:PinSocket_1x04_P2.00mm_Vertical" (at 0 -2.54 0)
+      (property "Footprint" "synth-custom:PinSocket_1x04_P2.54mm_Vertical" (at 0 -2.54 0)
         (effects (font (size 1.27 1.27)) hide)
       )
       (property "Datasheet" "" (at 0 2.54 0)
@@ -417,11 +417,11 @@
         )
       )
     )
-    (symbol "power:GNDD" (power) (pin_names (offset 0)) (in_bom yes) (on_board yes)
+    (symbol "power:GNDREF" (power) (pin_names (offset 0)) (in_bom yes) (on_board yes)
       (property "Reference" "#PWR" (at 0 -6.35 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (property "Value" "GNDD" (at 0 -3.175 0)
+      (property "Value" "GNDREF" (at 0 -3.81 0)
         (effects (font (size 1.27 1.27)))
       )
       (property "Footprint" "" (at 0 0 0)
@@ -433,26 +433,46 @@
       (property "ki_keywords" "global power" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (property "ki_description" "Power symbol creates a global label with name \"GNDD\" , digital ground" (at 0 0 0)
+      (property "ki_description" "Power symbol creates a global label with name \"GNDREF\" , reference supply ground" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (symbol "GNDD_0_1"
-        (rectangle (start -1.27 -1.524) (end 1.27 -2.032)
-          (stroke (width 0.254) (type default))
-          (fill (type outline))
+      (symbol "GNDREF_0_1"
+        (polyline
+          (pts
+            (xy -0.635 -1.905)
+            (xy 0.635 -1.905)
+          )
+          (stroke (width 0) (type default))
+          (fill (type none))
         )
         (polyline
           (pts
+            (xy -0.127 -2.54)
+            (xy 0.127 -2.54)
+          )
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy 0 -1.27)
             (xy 0 0)
-            (xy 0 -1.524)
+          )
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy 1.27 -1.27)
+            (xy -1.27 -1.27)
           )
           (stroke (width 0) (type default))
           (fill (type none))
         )
       )
-      (symbol "GNDD_1_1"
+      (symbol "GNDREF_1_1"
         (pin power_in line (at 0 0 270) (length 0) hide
-          (name "GNDD" (effects (font (size 1.27 1.27))))
+          (name "GNDREF" (effects (font (size 1.27 1.27))))
           (number "1" (effects (font (size 1.27 1.27))))
         )
       )
@@ -822,17 +842,6 @@
     (uuid fbdc05e4-1c13-4c66-b4b1-953f56b80ed1)
   )
 
-  (text "each of these drivers should actually have a 100K resistor, to limit the current they drain from the main board..."
-    (at 116.205 38.735 0)
-    (effects (font (size 1.27 1.27)) (justify left bottom))
-    (uuid 4d2e3b97-872b-49e1-add1-f9eaca81938f)
-  )
-  (text "LED Driver Schematic\nRESERVED 10-20\nR11 - R18\nD11 - D18\nQ11 - Q18\n\nDecoupled with header pins"
-    (at 88.9 30.48 0)
-    (effects (font (size 1.27 1.27)) (justify left bottom))
-    (uuid 8bdae347-f2c5-4c66-a376-dc68d5ae8cb0)
-  )
-
   (hierarchical_label "LED_DRIVER_5" (shape input) (at 203.2 66.04 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid 2b5c67ea-b40b-43c0-9210-2b70605106d9)
@@ -869,13 +878,13 @@
   (symbol (lib_id "Device:R") (at 184.785 69.85 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 00c34f21-2774-499a-a3d1-aa3361328bdc)
-    (property "Reference" "R16" (at 184.785 63.5 90)
+    (property "Reference" "R24" (at 184.785 63.5 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "100K" (at 184.785 66.04 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" (at 184.785 68.072 90)
+    (property "Footprint" "synth-custom:R_default" (at 184.785 68.072 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 184.785 69.85 0)
@@ -886,7 +895,7 @@
     (instances
       (project "sensei"
         (path "/718b9138-0c8b-4579-bddd-25a563f23d90/3b08deef-406e-4da8-a65f-8b018a69ddf9"
-          (reference "R16") (unit 1)
+          (reference "R24") (unit 1)
         )
       )
     )
@@ -895,13 +904,13 @@
   (symbol (lib_id "Synth_Custom:CONN_Socket_01x04") (at 107.95 77.47 180) (unit 3)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 051c4065-6f25-42aa-92ec-8fd96be16165)
-    (property "Reference" "H13" (at 104.14 77.47 0)
+    (property "Reference" "H21" (at 104.14 77.47 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "BTM_LED_RW_1" (at 107.95 73.66 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Footprint" "synth-custom:PinSocket_1x04_P2.00mm_Vertical" (at 107.95 74.93 0)
+    (property "Footprint" "synth-custom:PinSocket_1x04_P2.54mm_Vertical" (at 107.95 74.93 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 107.95 80.01 0)
@@ -914,20 +923,20 @@
     (instances
       (project "sensei"
         (path "/718b9138-0c8b-4579-bddd-25a563f23d90/3b08deef-406e-4da8-a65f-8b018a69ddf9"
-          (reference "H13") (unit 3)
+          (reference "H21") (unit 3)
         )
       )
     )
   )
 
-  (symbol (lib_id "power:GNDD") (at 161.29 86.36 180) (unit 1)
+  (symbol (lib_id "power:GNDREF") (at 161.29 86.36 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 08b73c31-77a6-448f-a983-8987d1ad1794)
-    (property "Reference" "#PWR09" (at 161.29 80.01 0)
+    (property "Reference" "#PWR038" (at 161.29 80.01 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Value" "GNDD" (at 161.29 82.55 0)
-      (effects (font (size 1.27 1.27)))
+    (property "Value" "GNDD" (at 163.83 85.09 0)
+      (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Footprint" "" (at 161.29 86.36 0)
       (effects (font (size 1.27 1.27)) hide)
@@ -939,20 +948,20 @@
     (instances
       (project "sensei"
         (path "/718b9138-0c8b-4579-bddd-25a563f23d90/3b08deef-406e-4da8-a65f-8b018a69ddf9"
-          (reference "#PWR09") (unit 1)
+          (reference "#PWR038") (unit 1)
         )
       )
     )
   )
 
-  (symbol (lib_id "power:GNDD") (at 181.61 106.68 180) (unit 1)
+  (symbol (lib_id "power:GNDREF") (at 181.61 106.68 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 0ebdf7cd-476f-4c38-b98c-544e06349aeb)
-    (property "Reference" "#PWR011" (at 181.61 100.33 0)
+    (property "Reference" "#PWR040" (at 181.61 100.33 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Value" "GNDD" (at 181.61 102.87 0)
-      (effects (font (size 1.27 1.27)))
+    (property "Value" "GNDD" (at 184.15 105.41 0)
+      (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Footprint" "" (at 181.61 106.68 0)
       (effects (font (size 1.27 1.27)) hide)
@@ -964,7 +973,7 @@
     (instances
       (project "sensei"
         (path "/718b9138-0c8b-4579-bddd-25a563f23d90/3b08deef-406e-4da8-a65f-8b018a69ddf9"
-          (reference "#PWR011") (unit 1)
+          (reference "#PWR040") (unit 1)
         )
       )
     )
@@ -973,13 +982,13 @@
   (symbol (lib_id "Synth_Custom:CONN_Socket_01x04") (at 107.95 85.09 180) (unit 2)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 1c4a09c6-870c-43a4-9b3f-8641e70c0df6)
-    (property "Reference" "H14" (at 104.14 85.09 0)
+    (property "Reference" "H22" (at 104.14 85.09 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "BTM_LED_RW_2" (at 107.95 81.28 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Footprint" "synth-custom:PinSocket_1x04_P2.00mm_Vertical" (at 107.95 82.55 0)
+    (property "Footprint" "synth-custom:PinSocket_1x04_P2.54mm_Vertical" (at 107.95 82.55 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 107.95 87.63 0)
@@ -992,7 +1001,7 @@
     (instances
       (project "sensei"
         (path "/718b9138-0c8b-4579-bddd-25a563f23d90/3b08deef-406e-4da8-a65f-8b018a69ddf9"
-          (reference "H14") (unit 2)
+          (reference "H22") (unit 2)
         )
       )
     )
@@ -1001,13 +1010,13 @@
   (symbol (lib_id "Device:R") (at 194.945 73.66 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 212802cb-9404-4e63-a83c-b3c1453f73f4)
-    (property "Reference" "R17" (at 194.945 67.31 90)
+    (property "Reference" "R25" (at 194.945 67.31 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "100K" (at 194.945 69.85 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" (at 194.945 71.882 90)
+    (property "Footprint" "synth-custom:R_default" (at 194.945 71.882 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 194.945 73.66 0)
@@ -1018,7 +1027,7 @@
     (instances
       (project "sensei"
         (path "/718b9138-0c8b-4579-bddd-25a563f23d90/3b08deef-406e-4da8-a65f-8b018a69ddf9"
-          (reference "R17") (unit 1)
+          (reference "R25") (unit 1)
         )
       )
     )
@@ -1027,13 +1036,13 @@
   (symbol (lib_id "Transistor_BJT:2N3904") (at 184.15 111.76 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 2190f8f7-0b44-4716-9adc-0111ca0ed6e7)
-    (property "Reference" "Q17" (at 179.07 113.03 0)
+    (property "Reference" "Q8" (at 179.07 113.03 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "2N3904" (at 179.07 110.49 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Package_TO_SOT_THT:TO-92_Inline" (at 179.07 109.855 0)
+    (property "Footprint" "Package_TO_SOT_THT:TO-92_HandSolder" (at 179.07 109.855 0)
       (effects (font (size 1.27 1.27) italic) (justify left) hide)
     )
     (property "Datasheet" "https://www.onsemi.com/pub/Collateral/2N3903-D.PDF" (at 184.15 111.76 0)
@@ -1045,7 +1054,7 @@
     (instances
       (project "sensei"
         (path "/718b9138-0c8b-4579-bddd-25a563f23d90/3b08deef-406e-4da8-a65f-8b018a69ddf9"
-          (reference "Q17") (unit 1)
+          (reference "Q8") (unit 1)
         )
       )
     )
@@ -1054,13 +1063,13 @@
   (symbol (lib_id "Synth_Custom:CONN_Socket_01x04") (at 107.95 82.55 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 25aee903-c7ed-4732-a839-25fc20e8cf50)
-    (property "Reference" "H14" (at 104.14 82.55 0)
+    (property "Reference" "H22" (at 104.14 82.55 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "BTM_LED_RW_2" (at 111.76 92.71 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "synth-custom:PinSocket_1x04_P2.00mm_Vertical" (at 107.95 80.01 0)
+    (property "Footprint" "synth-custom:PinSocket_1x04_P2.54mm_Vertical" (at 107.95 80.01 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 107.95 85.09 0)
@@ -1073,7 +1082,7 @@
     (instances
       (project "sensei"
         (path "/718b9138-0c8b-4579-bddd-25a563f23d90/3b08deef-406e-4da8-a65f-8b018a69ddf9"
-          (reference "H14") (unit 1)
+          (reference "H22") (unit 1)
         )
       )
     )
@@ -1082,13 +1091,13 @@
   (symbol (lib_id "Device:R") (at 199.39 85.725 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 354645ca-202c-4797-a9cb-f0a693ce3d17)
-    (property "Reference" "R18" (at 201.295 84.455 0)
+    (property "Reference" "R26" (at 201.295 84.455 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100K" (at 201.295 86.995 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" (at 197.612 85.725 90)
+    (property "Footprint" "synth-custom:R_default" (at 197.612 85.725 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 199.39 85.725 0)
@@ -1099,7 +1108,7 @@
     (instances
       (project "sensei"
         (path "/718b9138-0c8b-4579-bddd-25a563f23d90/3b08deef-406e-4da8-a65f-8b018a69ddf9"
-          (reference "R18") (unit 1)
+          (reference "R26") (unit 1)
         )
       )
     )
@@ -1108,7 +1117,7 @@
   (symbol (lib_id "power:+12V") (at 41.91 24.13 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 3b0e093a-3b1a-438f-b016-e1197c51693e)
-    (property "Reference" "#PWR013" (at 41.91 27.94 0)
+    (property "Reference" "#PWR033" (at 41.91 27.94 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+12V" (at 41.91 19.05 0)
@@ -1124,7 +1133,7 @@
     (instances
       (project "sensei"
         (path "/718b9138-0c8b-4579-bddd-25a563f23d90/3b08deef-406e-4da8-a65f-8b018a69ddf9"
-          (reference "#PWR013") (unit 1)
+          (reference "#PWR033") (unit 1)
         )
       )
     )
@@ -1133,13 +1142,13 @@
   (symbol (lib_id "Device:R") (at 41.91 34.29 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 3e54424e-b0c6-4cf7-aeee-f3fb5a78f7ea)
-    (property "Reference" "R10" (at 44.45 33.02 0)
+    (property "Reference" "R18" (at 44.45 33.02 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "1K" (at 44.45 35.56 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" (at 40.132 34.29 90)
+    (property "Footprint" "synth-custom:R_default" (at 40.132 34.29 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 41.91 34.29 0)
@@ -1150,7 +1159,7 @@
     (instances
       (project "sensei"
         (path "/718b9138-0c8b-4579-bddd-25a563f23d90/3b08deef-406e-4da8-a65f-8b018a69ddf9"
-          (reference "R10") (unit 1)
+          (reference "R18") (unit 1)
         )
       )
     )
@@ -1159,13 +1168,13 @@
   (symbol (lib_id "Synth_Custom:CONN_Header_01x04") (at 95.25 85.09 0) (unit 2)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 3e61b0c9-7bc0-418c-9903-d617be650d41)
-    (property "Reference" "H10" (at 96.52 85.09 0)
+    (property "Reference" "H20" (at 96.52 85.09 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "TOP_LED_RW_2" (at 97.79 86.36 0)
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
-    (property "Footprint" "synth-custom:PinHeader_1x04_P2.00mm_Vertical" (at 95.25 87.63 0)
+    (property "Footprint" "synth-custom:PinHeader_1x04_P2.54mm_Vertical" (at 95.25 87.63 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 95.25 82.55 0)
@@ -1178,7 +1187,7 @@
     (instances
       (project "sensei"
         (path "/718b9138-0c8b-4579-bddd-25a563f23d90/3b08deef-406e-4da8-a65f-8b018a69ddf9"
-          (reference "H10") (unit 2)
+          (reference "H20") (unit 2)
         )
       )
     )
@@ -1187,7 +1196,7 @@
   (symbol (lib_id "Device:LED") (at 60.96 76.2 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 40868f13-9761-4b90-9da5-170f9d781a63)
-    (property "Reference" "D14" (at 62.5475 68.58 0)
+    (property "Reference" "D17" (at 62.5475 68.58 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "LED" (at 62.5475 71.12 0)
@@ -1204,7 +1213,7 @@
     (instances
       (project "sensei"
         (path "/718b9138-0c8b-4579-bddd-25a563f23d90/3b08deef-406e-4da8-a65f-8b018a69ddf9"
-          (reference "D14") (unit 1)
+          (reference "D17") (unit 1)
         )
       )
     )
@@ -1213,13 +1222,13 @@
   (symbol (lib_id "Transistor_BJT:2N3904") (at 123.19 50.8 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 4478707e-de1d-4860-8cb9-ba691c9c5952)
-    (property "Reference" "Q11" (at 118.11 52.07 0)
+    (property "Reference" "Q2" (at 118.11 52.07 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "2N3904" (at 118.11 49.53 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Package_TO_SOT_THT:TO-92_Inline" (at 118.11 48.895 0)
+    (property "Footprint" "Package_TO_SOT_THT:TO-92_HandSolder" (at 118.11 48.895 0)
       (effects (font (size 1.27 1.27) italic) (justify left) hide)
     )
     (property "Datasheet" "https://www.onsemi.com/pub/Collateral/2N3903-D.PDF" (at 123.19 50.8 0)
@@ -1231,7 +1240,7 @@
     (instances
       (project "sensei"
         (path "/718b9138-0c8b-4579-bddd-25a563f23d90/3b08deef-406e-4da8-a65f-8b018a69ddf9"
-          (reference "Q11") (unit 1)
+          (reference "Q2") (unit 1)
         )
       )
     )
@@ -1240,7 +1249,7 @@
   (symbol (lib_id "Device:LED") (at 60.96 41.91 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 51b933c9-2013-4e38-aad4-20555be97cc7)
-    (property "Reference" "D11" (at 62.5475 34.29 0)
+    (property "Reference" "D14" (at 62.5475 34.29 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "LED" (at 62.5475 36.83 0)
@@ -1257,7 +1266,7 @@
     (instances
       (project "sensei"
         (path "/718b9138-0c8b-4579-bddd-25a563f23d90/3b08deef-406e-4da8-a65f-8b018a69ddf9"
-          (reference "D11") (unit 1)
+          (reference "D14") (unit 1)
         )
       )
     )
@@ -1266,13 +1275,13 @@
   (symbol (lib_id "Transistor_BJT:2N3904") (at 163.83 91.44 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 60216497-8f0a-482a-8746-dbafd5fc68e6)
-    (property "Reference" "Q15" (at 158.75 92.71 0)
+    (property "Reference" "Q6" (at 158.75 92.71 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "2N3904" (at 158.75 90.17 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Package_TO_SOT_THT:TO-92_Inline" (at 158.75 89.535 0)
+    (property "Footprint" "Package_TO_SOT_THT:TO-92_HandSolder" (at 158.75 89.535 0)
       (effects (font (size 1.27 1.27) italic) (justify left) hide)
     )
     (property "Datasheet" "https://www.onsemi.com/pub/Collateral/2N3903-D.PDF" (at 163.83 91.44 0)
@@ -1284,7 +1293,7 @@
     (instances
       (project "sensei"
         (path "/718b9138-0c8b-4579-bddd-25a563f23d90/3b08deef-406e-4da8-a65f-8b018a69ddf9"
-          (reference "Q15") (unit 1)
+          (reference "Q6") (unit 1)
         )
       )
     )
@@ -1293,13 +1302,13 @@
   (symbol (lib_id "Synth_Custom:CONN_Header_01x04") (at 95.25 82.55 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 609159cc-9341-45f2-9d57-b9181bdb957b)
-    (property "Reference" "H10" (at 96.52 82.55 0)
+    (property "Reference" "H20" (at 96.52 82.55 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "TOP_LED_RW_2" (at 85.09 92.71 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "synth-custom:PinHeader_1x04_P2.00mm_Vertical" (at 95.25 85.09 0)
+    (property "Footprint" "synth-custom:PinHeader_1x04_P2.54mm_Vertical" (at 95.25 85.09 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 95.25 80.01 0)
@@ -1312,7 +1321,7 @@
     (instances
       (project "sensei"
         (path "/718b9138-0c8b-4579-bddd-25a563f23d90/3b08deef-406e-4da8-a65f-8b018a69ddf9"
-          (reference "H10") (unit 1)
+          (reference "H20") (unit 1)
         )
       )
     )
@@ -1321,13 +1330,13 @@
   (symbol (lib_id "Device:R") (at 150.495 54.61 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 62d76f4f-2b7a-41e2-92d0-f1dde412384a)
-    (property "Reference" "R12" (at 150.495 48.26 90)
+    (property "Reference" "R20" (at 150.495 48.26 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "100K" (at 150.495 50.8 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" (at 150.495 52.832 90)
+    (property "Footprint" "synth-custom:R_default" (at 150.495 52.832 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 150.495 54.61 0)
@@ -1338,7 +1347,7 @@
     (instances
       (project "sensei"
         (path "/718b9138-0c8b-4579-bddd-25a563f23d90/3b08deef-406e-4da8-a65f-8b018a69ddf9"
-          (reference "R12") (unit 1)
+          (reference "R20") (unit 1)
         )
       )
     )
@@ -1347,7 +1356,7 @@
   (symbol (lib_id "Device:LED") (at 60.96 87.63 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 669d0830-6c59-4eec-a4fa-bffdb0e80239)
-    (property "Reference" "D15" (at 62.5475 80.01 0)
+    (property "Reference" "D18" (at 62.5475 80.01 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "LED" (at 62.5475 82.55 0)
@@ -1364,7 +1373,7 @@
     (instances
       (project "sensei"
         (path "/718b9138-0c8b-4579-bddd-25a563f23d90/3b08deef-406e-4da8-a65f-8b018a69ddf9"
-          (reference "D15") (unit 1)
+          (reference "D18") (unit 1)
         )
       )
     )
@@ -1373,13 +1382,13 @@
   (symbol (lib_id "Synth_Custom:CONN_Header_01x04") (at 95.25 74.93 0) (unit 2)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 688e60e8-9187-41a1-ad26-afcffc87ca0c)
-    (property "Reference" "H5" (at 96.52 74.93 0)
+    (property "Reference" "H19" (at 96.52 74.93 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "TOP_LED_RW_1" (at 97.79 76.2 0)
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
-    (property "Footprint" "synth-custom:PinHeader_1x04_P2.00mm_Vertical" (at 95.25 77.47 0)
+    (property "Footprint" "synth-custom:PinHeader_1x04_P2.54mm_Vertical" (at 95.25 77.47 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 95.25 72.39 0)
@@ -1392,7 +1401,7 @@
     (instances
       (project "sensei"
         (path "/718b9138-0c8b-4579-bddd-25a563f23d90/3b08deef-406e-4da8-a65f-8b018a69ddf9"
-          (reference "H5") (unit 2)
+          (reference "H19") (unit 2)
         )
       )
     )
@@ -1401,13 +1410,13 @@
   (symbol (lib_id "Synth_Custom:CONN_Header_01x04") (at 95.25 72.39 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 693d4ac4-6f6f-4578-8e06-4a8e81666952)
-    (property "Reference" "H5" (at 96.52 72.39 0)
+    (property "Reference" "H19" (at 96.52 72.39 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "TOP_LED_RW_1" (at 85.09 69.85 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "synth-custom:PinHeader_1x04_P2.00mm_Vertical" (at 95.25 74.93 0)
+    (property "Footprint" "synth-custom:PinHeader_1x04_P2.54mm_Vertical" (at 95.25 74.93 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 95.25 69.85 0)
@@ -1420,7 +1429,7 @@
     (instances
       (project "sensei"
         (path "/718b9138-0c8b-4579-bddd-25a563f23d90/3b08deef-406e-4da8-a65f-8b018a69ddf9"
-          (reference "H5") (unit 1)
+          (reference "H19") (unit 1)
         )
       )
     )
@@ -1429,13 +1438,13 @@
   (symbol (lib_id "Synth_Custom:CONN_Socket_01x04") (at 107.95 74.93 180) (unit 2)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 6b98d049-e331-4163-9468-832f86864b3f)
-    (property "Reference" "H13" (at 104.14 74.93 0)
+    (property "Reference" "H21" (at 104.14 74.93 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "BTM_LED_RW_1" (at 107.95 71.12 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Footprint" "synth-custom:PinSocket_1x04_P2.00mm_Vertical" (at 107.95 72.39 0)
+    (property "Footprint" "synth-custom:PinSocket_1x04_P2.54mm_Vertical" (at 107.95 72.39 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 107.95 77.47 0)
@@ -1448,7 +1457,7 @@
     (instances
       (project "sensei"
         (path "/718b9138-0c8b-4579-bddd-25a563f23d90/3b08deef-406e-4da8-a65f-8b018a69ddf9"
-          (reference "H13") (unit 2)
+          (reference "H21") (unit 2)
         )
       )
     )
@@ -1457,13 +1466,13 @@
   (symbol (lib_id "Transistor_BJT:2N3904") (at 194.31 121.92 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 72c74c67-0a35-4c26-945c-05ab7da51a87)
-    (property "Reference" "Q18" (at 189.23 123.19 0)
+    (property "Reference" "Q9" (at 189.23 123.19 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "2N3904" (at 189.23 120.65 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Package_TO_SOT_THT:TO-92_Inline" (at 189.23 120.015 0)
+    (property "Footprint" "Package_TO_SOT_THT:TO-92_HandSolder" (at 189.23 120.015 0)
       (effects (font (size 1.27 1.27) italic) (justify left) hide)
     )
     (property "Datasheet" "https://www.onsemi.com/pub/Collateral/2N3903-D.PDF" (at 194.31 121.92 0)
@@ -1475,7 +1484,7 @@
     (instances
       (project "sensei"
         (path "/718b9138-0c8b-4579-bddd-25a563f23d90/3b08deef-406e-4da8-a65f-8b018a69ddf9"
-          (reference "Q18") (unit 1)
+          (reference "Q9") (unit 1)
         )
       )
     )
@@ -1484,13 +1493,13 @@
   (symbol (lib_id "Synth_Custom:CONN_Socket_01x04") (at 107.95 90.17 180) (unit 4)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 87d507a3-c522-4606-8f9e-fe3713e4037b)
-    (property "Reference" "H14" (at 104.14 90.17 0)
+    (property "Reference" "H22" (at 104.14 90.17 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "BTM_LED_RW_2" (at 107.95 86.36 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Footprint" "synth-custom:PinSocket_1x04_P2.00mm_Vertical" (at 107.95 87.63 0)
+    (property "Footprint" "synth-custom:PinSocket_1x04_P2.54mm_Vertical" (at 107.95 87.63 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 107.95 92.71 0)
@@ -1503,7 +1512,7 @@
     (instances
       (project "sensei"
         (path "/718b9138-0c8b-4579-bddd-25a563f23d90/3b08deef-406e-4da8-a65f-8b018a69ddf9"
-          (reference "H14") (unit 4)
+          (reference "H22") (unit 4)
         )
       )
     )
@@ -1512,13 +1521,13 @@
   (symbol (lib_id "Synth_Custom:CONN_Socket_01x04") (at 107.95 72.39 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 89a53f22-79bb-4018-9bfa-544d175baf85)
-    (property "Reference" "H13" (at 104.14 72.39 0)
+    (property "Reference" "H21" (at 104.14 72.39 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "BTM_LED_RW_1" (at 111.76 69.85 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "synth-custom:PinSocket_1x04_P2.00mm_Vertical" (at 107.95 69.85 0)
+    (property "Footprint" "synth-custom:PinSocket_1x04_P2.54mm_Vertical" (at 107.95 69.85 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 107.95 74.93 0)
@@ -1531,7 +1540,7 @@
     (instances
       (project "sensei"
         (path "/718b9138-0c8b-4579-bddd-25a563f23d90/3b08deef-406e-4da8-a65f-8b018a69ddf9"
-          (reference "H13") (unit 1)
+          (reference "H21") (unit 1)
         )
       )
     )
@@ -1540,13 +1549,13 @@
   (symbol (lib_id "Device:R") (at 142.875 50.8 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 8d762491-50c4-4e0b-9008-f9466bcfebb4)
-    (property "Reference" "R11" (at 142.875 44.45 90)
+    (property "Reference" "R19" (at 142.875 44.45 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "100K" (at 142.875 46.99 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" (at 142.875 49.022 90)
+    (property "Footprint" "synth-custom:R_default" (at 142.875 49.022 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 142.875 50.8 0)
@@ -1557,20 +1566,20 @@
     (instances
       (project "sensei"
         (path "/718b9138-0c8b-4579-bddd-25a563f23d90/3b08deef-406e-4da8-a65f-8b018a69ddf9"
-          (reference "R11") (unit 1)
+          (reference "R19") (unit 1)
         )
       )
     )
   )
 
-  (symbol (lib_id "power:GNDD") (at 140.97 66.04 180) (unit 1)
+  (symbol (lib_id "power:GNDREF") (at 140.97 66.04 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 8e6cfca2-a695-461a-9cfe-75e05a1d7c71)
-    (property "Reference" "#PWR07" (at 140.97 59.69 0)
+    (property "Reference" "#PWR036" (at 140.97 59.69 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Value" "GNDD" (at 140.97 62.23 0)
-      (effects (font (size 1.27 1.27)))
+    (property "Value" "GNDD" (at 143.51 64.77 0)
+      (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Footprint" "" (at 140.97 66.04 0)
       (effects (font (size 1.27 1.27)) hide)
@@ -1582,20 +1591,20 @@
     (instances
       (project "sensei"
         (path "/718b9138-0c8b-4579-bddd-25a563f23d90/3b08deef-406e-4da8-a65f-8b018a69ddf9"
-          (reference "#PWR07") (unit 1)
+          (reference "#PWR036") (unit 1)
         )
       )
     )
   )
 
-  (symbol (lib_id "power:GNDD") (at 171.45 96.52 180) (unit 1)
+  (symbol (lib_id "power:GNDREF") (at 171.45 96.52 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 94cdcb02-2a10-4cb6-b999-7a42dacb2ef1)
-    (property "Reference" "#PWR010" (at 171.45 90.17 0)
+    (property "Reference" "#PWR039" (at 171.45 90.17 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Value" "GNDD" (at 171.45 92.71 0)
-      (effects (font (size 1.27 1.27)))
+    (property "Value" "GNDD" (at 173.99 95.25 0)
+      (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Footprint" "" (at 171.45 96.52 0)
       (effects (font (size 1.27 1.27)) hide)
@@ -1607,7 +1616,7 @@
     (instances
       (project "sensei"
         (path "/718b9138-0c8b-4579-bddd-25a563f23d90/3b08deef-406e-4da8-a65f-8b018a69ddf9"
-          (reference "#PWR010") (unit 1)
+          (reference "#PWR039") (unit 1)
         )
       )
     )
@@ -1616,13 +1625,13 @@
   (symbol (lib_id "Device:R") (at 158.75 58.42 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 9d4266af-feaa-416e-882a-54af1f6f915f)
-    (property "Reference" "R13" (at 158.75 52.07 90)
+    (property "Reference" "R21" (at 158.75 52.07 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "100K" (at 158.75 54.61 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" (at 158.75 56.642 90)
+    (property "Footprint" "synth-custom:R_default" (at 158.75 56.642 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 158.75 58.42 0)
@@ -1633,20 +1642,20 @@
     (instances
       (project "sensei"
         (path "/718b9138-0c8b-4579-bddd-25a563f23d90/3b08deef-406e-4da8-a65f-8b018a69ddf9"
-          (reference "R13") (unit 1)
+          (reference "R21") (unit 1)
         )
       )
     )
   )
 
-  (symbol (lib_id "power:GNDD") (at 191.77 116.84 180) (unit 1)
+  (symbol (lib_id "power:GNDREF") (at 191.77 116.84 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 9e3a0e0a-dfaa-4e57-bf69-393f4c696b50)
-    (property "Reference" "#PWR012" (at 191.77 110.49 0)
+    (property "Reference" "#PWR041" (at 191.77 110.49 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Value" "GNDD" (at 191.77 113.03 0)
-      (effects (font (size 1.27 1.27)))
+    (property "Value" "GNDD" (at 194.31 115.57 0)
+      (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Footprint" "" (at 191.77 116.84 0)
       (effects (font (size 1.27 1.27)) hide)
@@ -1658,7 +1667,7 @@
     (instances
       (project "sensei"
         (path "/718b9138-0c8b-4579-bddd-25a563f23d90/3b08deef-406e-4da8-a65f-8b018a69ddf9"
-          (reference "#PWR012") (unit 1)
+          (reference "#PWR041") (unit 1)
         )
       )
     )
@@ -1667,7 +1676,7 @@
   (symbol (lib_id "Device:LED") (at 60.96 64.77 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid a0556da3-196c-422e-b48a-48bb0a4b5946)
-    (property "Reference" "D13" (at 62.5475 57.15 0)
+    (property "Reference" "D16" (at 62.5475 57.15 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "LED" (at 62.5475 59.69 0)
@@ -1684,7 +1693,7 @@
     (instances
       (project "sensei"
         (path "/718b9138-0c8b-4579-bddd-25a563f23d90/3b08deef-406e-4da8-a65f-8b018a69ddf9"
-          (reference "D13") (unit 1)
+          (reference "D16") (unit 1)
         )
       )
     )
@@ -1693,7 +1702,7 @@
   (symbol (lib_id "Device:LED") (at 60.96 110.49 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid a4245624-f9d0-42a7-8975-2f1e84b48432)
-    (property "Reference" "D17" (at 62.5475 102.87 0)
+    (property "Reference" "D20" (at 62.5475 102.87 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "LED" (at 62.5475 105.41 0)
@@ -1710,7 +1719,7 @@
     (instances
       (project "sensei"
         (path "/718b9138-0c8b-4579-bddd-25a563f23d90/3b08deef-406e-4da8-a65f-8b018a69ddf9"
-          (reference "D17") (unit 1)
+          (reference "D20") (unit 1)
         )
       )
     )
@@ -1719,13 +1728,13 @@
   (symbol (lib_id "Synth_Custom:CONN_Header_01x04") (at 95.25 87.63 0) (unit 3)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid a5a80529-55cf-454e-b318-5e104631b342)
-    (property "Reference" "H10" (at 96.52 87.63 0)
+    (property "Reference" "H20" (at 96.52 87.63 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "TOP_LED_RW_2" (at 97.79 88.9 0)
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
-    (property "Footprint" "synth-custom:PinHeader_1x04_P2.00mm_Vertical" (at 95.25 90.17 0)
+    (property "Footprint" "synth-custom:PinHeader_1x04_P2.54mm_Vertical" (at 95.25 90.17 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 95.25 85.09 0)
@@ -1738,20 +1747,20 @@
     (instances
       (project "sensei"
         (path "/718b9138-0c8b-4579-bddd-25a563f23d90/3b08deef-406e-4da8-a65f-8b018a69ddf9"
-          (reference "H10") (unit 3)
+          (reference "H20") (unit 3)
         )
       )
     )
   )
 
-  (symbol (lib_id "power:GNDD") (at 151.13 76.2 180) (unit 1)
+  (symbol (lib_id "power:GNDREF") (at 151.13 76.2 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid ac0bfdb1-266c-4622-bca5-86d55df45ae8)
-    (property "Reference" "#PWR08" (at 151.13 69.85 0)
+    (property "Reference" "#PWR037" (at 151.13 69.85 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Value" "GNDD" (at 151.13 72.39 0)
-      (effects (font (size 1.27 1.27)))
+    (property "Value" "GNDD" (at 153.67 74.93 0)
+      (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Footprint" "" (at 151.13 76.2 0)
       (effects (font (size 1.27 1.27)) hide)
@@ -1763,7 +1772,7 @@
     (instances
       (project "sensei"
         (path "/718b9138-0c8b-4579-bddd-25a563f23d90/3b08deef-406e-4da8-a65f-8b018a69ddf9"
-          (reference "#PWR08") (unit 1)
+          (reference "#PWR037") (unit 1)
         )
       )
     )
@@ -1772,7 +1781,7 @@
   (symbol (lib_id "Device:LED") (at 60.96 53.34 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid ae9ffca1-9780-4ccd-8e41-c8e0f4dab998)
-    (property "Reference" "D12" (at 62.5475 45.72 0)
+    (property "Reference" "D15" (at 62.5475 45.72 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "LED" (at 62.5475 48.26 0)
@@ -1789,7 +1798,7 @@
     (instances
       (project "sensei"
         (path "/718b9138-0c8b-4579-bddd-25a563f23d90/3b08deef-406e-4da8-a65f-8b018a69ddf9"
-          (reference "D12") (unit 1)
+          (reference "D15") (unit 1)
         )
       )
     )
@@ -1798,13 +1807,13 @@
   (symbol (lib_id "Synth_Custom:CONN_Socket_01x04") (at 107.95 87.63 180) (unit 3)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid b17e2705-281b-4f0d-a5b2-b2fcbae2fb58)
-    (property "Reference" "H14" (at 104.14 87.63 0)
+    (property "Reference" "H22" (at 104.14 87.63 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "BTM_LED_RW_2" (at 107.95 83.82 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Footprint" "synth-custom:PinSocket_1x04_P2.00mm_Vertical" (at 107.95 85.09 0)
+    (property "Footprint" "synth-custom:PinSocket_1x04_P2.54mm_Vertical" (at 107.95 85.09 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 107.95 90.17 0)
@@ -1817,7 +1826,7 @@
     (instances
       (project "sensei"
         (path "/718b9138-0c8b-4579-bddd-25a563f23d90/3b08deef-406e-4da8-a65f-8b018a69ddf9"
-          (reference "H14") (unit 3)
+          (reference "H22") (unit 3)
         )
       )
     )
@@ -1826,7 +1835,7 @@
   (symbol (lib_id "Device:LED") (at 60.96 121.92 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid b2fe5766-c199-4b5b-9c25-ee95e5dff8f0)
-    (property "Reference" "D18" (at 62.5475 114.3 0)
+    (property "Reference" "D21" (at 62.5475 114.3 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "LED" (at 62.5475 116.84 0)
@@ -1843,7 +1852,7 @@
     (instances
       (project "sensei"
         (path "/718b9138-0c8b-4579-bddd-25a563f23d90/3b08deef-406e-4da8-a65f-8b018a69ddf9"
-          (reference "D18") (unit 1)
+          (reference "D21") (unit 1)
         )
       )
     )
@@ -1852,7 +1861,7 @@
   (symbol (lib_id "Device:LED") (at 60.96 99.06 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid c4cf7fe7-d9cd-4433-8aed-e3876486de74)
-    (property "Reference" "D16" (at 62.5475 91.44 0)
+    (property "Reference" "D19" (at 62.5475 91.44 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "LED" (at 62.5475 93.98 0)
@@ -1869,7 +1878,7 @@
     (instances
       (project "sensei"
         (path "/718b9138-0c8b-4579-bddd-25a563f23d90/3b08deef-406e-4da8-a65f-8b018a69ddf9"
-          (reference "D16") (unit 1)
+          (reference "D19") (unit 1)
         )
       )
     )
@@ -1878,13 +1887,13 @@
   (symbol (lib_id "Transistor_BJT:2N3904") (at 153.67 81.28 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid ca701553-921b-4b45-90bc-4b9b0d7c8f5a)
-    (property "Reference" "Q14" (at 148.59 82.55 0)
+    (property "Reference" "Q5" (at 148.59 82.55 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "2N3904" (at 148.59 80.01 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Package_TO_SOT_THT:TO-92_Inline" (at 148.59 79.375 0)
+    (property "Footprint" "Package_TO_SOT_THT:TO-92_HandSolder" (at 148.59 79.375 0)
       (effects (font (size 1.27 1.27) italic) (justify left) hide)
     )
     (property "Datasheet" "https://www.onsemi.com/pub/Collateral/2N3903-D.PDF" (at 153.67 81.28 0)
@@ -1896,20 +1905,20 @@
     (instances
       (project "sensei"
         (path "/718b9138-0c8b-4579-bddd-25a563f23d90/3b08deef-406e-4da8-a65f-8b018a69ddf9"
-          (reference "Q14") (unit 1)
+          (reference "Q5") (unit 1)
         )
       )
     )
   )
 
-  (symbol (lib_id "power:GNDD") (at 130.81 55.88 180) (unit 1)
+  (symbol (lib_id "power:GNDREF") (at 130.81 55.88 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid cafb2b48-4e60-4c4d-9d54-e36a25815264)
-    (property "Reference" "#PWR06" (at 130.81 49.53 0)
+    (property "Reference" "#PWR035" (at 130.81 49.53 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Value" "GNDD" (at 130.81 52.07 0)
-      (effects (font (size 1.27 1.27)))
+    (property "Value" "GNDD" (at 133.35 54.61 0)
+      (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Footprint" "" (at 130.81 55.88 0)
       (effects (font (size 1.27 1.27)) hide)
@@ -1921,7 +1930,7 @@
     (instances
       (project "sensei"
         (path "/718b9138-0c8b-4579-bddd-25a563f23d90/3b08deef-406e-4da8-a65f-8b018a69ddf9"
-          (reference "#PWR06") (unit 1)
+          (reference "#PWR035") (unit 1)
         )
       )
     )
@@ -1930,13 +1939,13 @@
   (symbol (lib_id "Transistor_BJT:2N3904") (at 173.99 101.6 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid d0fd5832-6623-44d8-8701-950a7467405c)
-    (property "Reference" "Q16" (at 168.91 102.87 0)
+    (property "Reference" "Q7" (at 168.91 102.87 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "2N3904" (at 168.91 100.33 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Package_TO_SOT_THT:TO-92_Inline" (at 168.91 99.695 0)
+    (property "Footprint" "Package_TO_SOT_THT:TO-92_HandSolder" (at 168.91 99.695 0)
       (effects (font (size 1.27 1.27) italic) (justify left) hide)
     )
     (property "Datasheet" "https://www.onsemi.com/pub/Collateral/2N3903-D.PDF" (at 173.99 101.6 0)
@@ -1948,7 +1957,7 @@
     (instances
       (project "sensei"
         (path "/718b9138-0c8b-4579-bddd-25a563f23d90/3b08deef-406e-4da8-a65f-8b018a69ddf9"
-          (reference "Q16") (unit 1)
+          (reference "Q7") (unit 1)
         )
       )
     )
@@ -1957,13 +1966,13 @@
   (symbol (lib_id "Device:R") (at 175.26 66.04 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid d3045fe8-2d07-4732-aff3-aa1ea4f179aa)
-    (property "Reference" "R15" (at 175.26 59.69 90)
+    (property "Reference" "R23" (at 175.26 59.69 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "100K" (at 175.26 62.23 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" (at 175.26 64.262 90)
+    (property "Footprint" "synth-custom:R_default" (at 175.26 64.262 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 175.26 66.04 0)
@@ -1974,7 +1983,7 @@
     (instances
       (project "sensei"
         (path "/718b9138-0c8b-4579-bddd-25a563f23d90/3b08deef-406e-4da8-a65f-8b018a69ddf9"
-          (reference "R15") (unit 1)
+          (reference "R23") (unit 1)
         )
       )
     )
@@ -1983,13 +1992,13 @@
   (symbol (lib_id "Synth_Custom:CONN_Header_01x04") (at 95.25 80.01 0) (unit 4)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid d493d6fb-d23b-4f02-9f9e-c4e00c7da1a2)
-    (property "Reference" "H5" (at 96.52 80.01 0)
+    (property "Reference" "H19" (at 96.52 80.01 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "TOP_LED_RW_1" (at 97.79 81.28 0)
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
-    (property "Footprint" "synth-custom:PinHeader_1x04_P2.00mm_Vertical" (at 95.25 82.55 0)
+    (property "Footprint" "synth-custom:PinHeader_1x04_P2.54mm_Vertical" (at 95.25 82.55 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 95.25 77.47 0)
@@ -2002,7 +2011,7 @@
     (instances
       (project "sensei"
         (path "/718b9138-0c8b-4579-bddd-25a563f23d90/3b08deef-406e-4da8-a65f-8b018a69ddf9"
-          (reference "H5") (unit 4)
+          (reference "H19") (unit 4)
         )
       )
     )
@@ -2011,13 +2020,13 @@
   (symbol (lib_id "Synth_Custom:CONN_Header_01x04") (at 95.25 90.17 0) (unit 4)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid dc74bf78-1868-4aa8-b0dd-262aad11cbe3)
-    (property "Reference" "H10" (at 96.52 90.17 0)
+    (property "Reference" "H20" (at 96.52 90.17 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "TOP_LED_RW_2" (at 97.79 91.44 0)
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
-    (property "Footprint" "synth-custom:PinHeader_1x04_P2.00mm_Vertical" (at 95.25 92.71 0)
+    (property "Footprint" "synth-custom:PinHeader_1x04_P2.54mm_Vertical" (at 95.25 92.71 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 95.25 87.63 0)
@@ -2030,7 +2039,7 @@
     (instances
       (project "sensei"
         (path "/718b9138-0c8b-4579-bddd-25a563f23d90/3b08deef-406e-4da8-a65f-8b018a69ddf9"
-          (reference "H10") (unit 4)
+          (reference "H20") (unit 4)
         )
       )
     )
@@ -2039,13 +2048,13 @@
   (symbol (lib_id "Device:R") (at 166.37 62.23 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid f26ccc06-7b36-46b6-8f3d-85a85f5e2b90)
-    (property "Reference" "R14" (at 166.37 55.88 90)
+    (property "Reference" "R22" (at 166.37 55.88 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "100K" (at 166.37 58.42 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" (at 166.37 60.452 90)
+    (property "Footprint" "synth-custom:R_default" (at 166.37 60.452 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 166.37 62.23 0)
@@ -2056,19 +2065,19 @@
     (instances
       (project "sensei"
         (path "/718b9138-0c8b-4579-bddd-25a563f23d90/3b08deef-406e-4da8-a65f-8b018a69ddf9"
-          (reference "R14") (unit 1)
+          (reference "R22") (unit 1)
         )
       )
     )
   )
 
-  (symbol (lib_id "power:GNDD") (at 120.65 45.72 180) (unit 1)
+  (symbol (lib_id "power:GNDREF") (at 120.65 45.72 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid fa1d3da2-23e5-47c4-b0b1-435bece74f5d)
-    (property "Reference" "#PWR05" (at 120.65 39.37 0)
+    (property "Reference" "#PWR034" (at 120.65 39.37 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Value" "GNDD" (at 120.65 41.91 0)
+    (property "Value" "GNDD" (at 120.65 40.64 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Footprint" "" (at 120.65 45.72 0)
@@ -2081,7 +2090,7 @@
     (instances
       (project "sensei"
         (path "/718b9138-0c8b-4579-bddd-25a563f23d90/3b08deef-406e-4da8-a65f-8b018a69ddf9"
-          (reference "#PWR05") (unit 1)
+          (reference "#PWR034") (unit 1)
         )
       )
     )
@@ -2090,13 +2099,13 @@
   (symbol (lib_id "Synth_Custom:CONN_Socket_01x04") (at 107.95 80.01 180) (unit 4)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid fb43bfeb-6a17-4552-9246-88c0dd14c20c)
-    (property "Reference" "H13" (at 104.14 80.01 0)
+    (property "Reference" "H21" (at 104.14 80.01 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "BTM_LED_RW_1" (at 107.95 76.2 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Footprint" "synth-custom:PinSocket_1x04_P2.00mm_Vertical" (at 107.95 77.47 0)
+    (property "Footprint" "synth-custom:PinSocket_1x04_P2.54mm_Vertical" (at 107.95 77.47 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 107.95 82.55 0)
@@ -2109,7 +2118,7 @@
     (instances
       (project "sensei"
         (path "/718b9138-0c8b-4579-bddd-25a563f23d90/3b08deef-406e-4da8-a65f-8b018a69ddf9"
-          (reference "H13") (unit 4)
+          (reference "H21") (unit 4)
         )
       )
     )
@@ -2118,13 +2127,13 @@
   (symbol (lib_id "Synth_Custom:CONN_Header_01x04") (at 95.25 77.47 0) (unit 3)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid fc18494f-89e2-4e57-a867-82f492ef4312)
-    (property "Reference" "H5" (at 96.52 77.47 0)
+    (property "Reference" "H19" (at 96.52 77.47 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "TOP_LED_RW_1" (at 97.79 78.74 0)
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
-    (property "Footprint" "synth-custom:PinHeader_1x04_P2.00mm_Vertical" (at 95.25 80.01 0)
+    (property "Footprint" "synth-custom:PinHeader_1x04_P2.54mm_Vertical" (at 95.25 80.01 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 95.25 74.93 0)
@@ -2137,7 +2146,7 @@
     (instances
       (project "sensei"
         (path "/718b9138-0c8b-4579-bddd-25a563f23d90/3b08deef-406e-4da8-a65f-8b018a69ddf9"
-          (reference "H5") (unit 3)
+          (reference "H19") (unit 3)
         )
       )
     )
@@ -2146,13 +2155,13 @@
   (symbol (lib_id "Transistor_BJT:2N3904") (at 143.51 71.12 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid fe5b11af-6259-4909-9cba-75f2cd0a5fba)
-    (property "Reference" "Q13" (at 138.43 72.39 0)
+    (property "Reference" "Q4" (at 138.43 72.39 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "2N3904" (at 138.43 69.85 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Package_TO_SOT_THT:TO-92_Inline" (at 138.43 69.215 0)
+    (property "Footprint" "Package_TO_SOT_THT:TO-92_HandSolder" (at 138.43 69.215 0)
       (effects (font (size 1.27 1.27) italic) (justify left) hide)
     )
     (property "Datasheet" "https://www.onsemi.com/pub/Collateral/2N3903-D.PDF" (at 143.51 71.12 0)
@@ -2164,7 +2173,7 @@
     (instances
       (project "sensei"
         (path "/718b9138-0c8b-4579-bddd-25a563f23d90/3b08deef-406e-4da8-a65f-8b018a69ddf9"
-          (reference "Q13") (unit 1)
+          (reference "Q4") (unit 1)
         )
       )
     )
@@ -2173,13 +2182,13 @@
   (symbol (lib_id "Transistor_BJT:2N3904") (at 133.35 60.96 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid ff5bf465-39a8-4926-bf60-351e07799d25)
-    (property "Reference" "Q12" (at 128.27 62.23 0)
+    (property "Reference" "Q3" (at 128.27 62.23 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "2N3904" (at 128.27 59.69 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Package_TO_SOT_THT:TO-92_Inline" (at 128.27 59.055 0)
+    (property "Footprint" "Package_TO_SOT_THT:TO-92_HandSolder" (at 128.27 59.055 0)
       (effects (font (size 1.27 1.27) italic) (justify left) hide)
     )
     (property "Datasheet" "https://www.onsemi.com/pub/Collateral/2N3903-D.PDF" (at 133.35 60.96 0)
@@ -2191,7 +2200,7 @@
     (instances
       (project "sensei"
         (path "/718b9138-0c8b-4579-bddd-25a563f23d90/3b08deef-406e-4da8-a65f-8b018a69ddf9"
-          (reference "Q12") (unit 1)
+          (reference "Q3") (unit 1)
         )
       )
     )
