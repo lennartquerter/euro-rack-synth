@@ -32,6 +32,8 @@
 
 ## Build Guide
 
+Schematics can be [found here](./img/vixen_schematic_a3.pdf)
+
 - Potentiometers: I use the Alpha (D-shaft) 9mm fom THONKICONN (https://www.thonk.co.uk/shop/alpha-9mm-pots-dshaft/)
 - Jacks: I use the PJ398SM from THONKICONN (https://www.thonk.co.uk/shop/thonkiconn/)
 - All mounting holes are M3 (3.2mm), and pick an offset that you feel good with
@@ -39,7 +41,6 @@
 ### Bill Of Material
 
 See [Bill Of Material](./kiCad/BOM.csv) for a full list of material and where to solder the components
-
 
 ### Soldering
 
