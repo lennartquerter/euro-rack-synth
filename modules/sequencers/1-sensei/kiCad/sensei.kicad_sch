@@ -1044,142 +1044,6 @@
 				)
 			)
 		)
-		(symbol "Device:C"
-			(pin_numbers hide)
-			(pin_names
-				(offset 0.254)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "C"
-				(at 0.635 2.54 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Value" "C"
-				(at 0.635 -2.54 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Footprint" ""
-				(at 0.9652 -3.81 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "~"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Unpolarized capacitor"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "cap capacitor"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "C_*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "C_0_1"
-				(polyline
-					(pts
-						(xy -2.032 -0.762) (xy 2.032 -0.762)
-					)
-					(stroke
-						(width 0.508)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -2.032 0.762) (xy 2.032 0.762)
-					)
-					(stroke
-						(width 0.508)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "C_1_1"
-				(pin passive line
-					(at 0 3.81 270)
-					(length 2.794)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -3.81 90)
-					(length 2.794)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-		)
 		(symbol "Device:C_Polarized"
 			(pin_numbers hide)
 			(pin_names
@@ -1329,167 +1193,6 @@
 						)
 					)
 					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-		)
-		(symbol "Device:R_Potentiometer"
-			(pin_names
-				(offset 1.016) hide)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "RV"
-				(at -4.445 0 90)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "R_Potentiometer"
-				(at -2.54 0 90)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "~"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Potentiometer"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "resistor variable"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "Potentiometer*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "R_Potentiometer_0_1"
-				(polyline
-					(pts
-						(xy 2.54 0) (xy 1.524 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.143 0) (xy 2.286 0.508) (xy 2.286 -0.508) (xy 1.143 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(rectangle
-					(start 1.016 2.54)
-					(end -1.016 -2.54)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "R_Potentiometer_1_1"
-				(pin passive line
-					(at 0 3.81 270)
-					(length 1.27)
-					(name "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 3.81 0 180)
-					(length 1.27)
-					(name "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -3.81 90)
-					(length 1.27)
-					(name "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2408,7 +2111,7 @@
 					)
 				)
 			)
-			(property "Footprint" "Connector_Audio:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles"
+			(property "Footprint" "Synth:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles"
 				(at 0 -4.572 0)
 				(effects
 					(font
@@ -2551,6 +2254,142 @@
 						)
 					)
 					(number "TN"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "synth:C_1uF (MKS)"
+			(pin_numbers hide)
+			(pin_names
+				(offset 0.254)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "C"
+				(at 3.048 1.016 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "C_1uF (MKS)"
+				(at 3.048 -1.016 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" "Synth:C_RECT_MKT_1uF"
+				(at 0.508 -13.208 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Unpolarized capacitor"
+				(at 0 -11.176 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "cap capacitor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "C_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "C_1uF (MKS)_0_1"
+				(polyline
+					(pts
+						(xy -2.032 -0.762) (xy 2.032 -0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.032 0.762) (xy 2.032 0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "C_1uF (MKS)_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 2.794)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 2.794)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -4813,6 +4652,167 @@
 				)
 			)
 		)
+		(symbol "synth:R_Potentiometer (P0915N)"
+			(pin_names
+				(offset 1.016) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "RV"
+				(at -4.445 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "R_Potentiometer"
+				(at -2.54 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "Synth:Potentiometer_TT_P0915N"
+				(at 0 -13.716 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 -10.668 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Potentiometer"
+				(at 0 -11.938 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "resistor variable"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "Potentiometer*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "R_Potentiometer (P0915N)_0_1"
+				(rectangle
+					(start -1.016 2.54)
+					(end 1.016 -2.54)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 0) (xy 1.524 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.143 0) (xy 2.286 0.508) (xy 2.286 -0.508) (xy 1.143 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+			)
+			(symbol "R_Potentiometer (P0915N)_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 1.27)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 3.81 0 180)
+					(length 1.27)
+					(name "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 1.27)
+					(name "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
 		(symbol "synth:SW_SPDT"
 			(pin_names
 				(offset 0) hide)
@@ -5049,6 +5049,12 @@
 		(uuid "2fdd1d8e-b59e-4b04-a128-87e5850b565c")
 	)
 	(junction
+		(at 485.14 358.14)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "3a655479-d11d-4af8-885a-6dce3a98935b")
+	)
+	(junction
 		(at 287.02 135.89)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -5259,7 +5265,7 @@
 		(uuid "9f80a032-eed0-41b1-a387-35166033f07a")
 	)
 	(junction
-		(at 471.17 184.15)
+		(at 478.79 184.15)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "a4ad4e2d-4958-4136-a9ae-be3db0333230")
@@ -5301,7 +5307,7 @@
 		(uuid "b85a1715-366d-4bba-b4b3-56974107dac1")
 	)
 	(junction
-		(at 471.17 196.85)
+		(at 478.79 196.85)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "bda0b017-951b-4838-9fe3-38a4fde05107")
@@ -5377,6 +5383,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "d552efaf-a953-4fed-8cd3-fb6e0dc2d339")
+	)
+	(junction
+		(at 506.73 358.14)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d6385873-2610-4358-a29b-9b98784858f1")
 	)
 	(junction
 		(at 415.29 373.38)
@@ -5532,6 +5544,16 @@
 	)
 	(wire
 		(pts
+			(xy 466.09 196.85) (xy 469.9 196.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0200fbf0-e0e8-4b21-a183-6efb4d64679b")
+	)
+	(wire
+		(pts
 			(xy 231.14 325.12) (xy 237.49 325.12)
 		)
 		(stroke
@@ -5572,7 +5594,7 @@
 	)
 	(wire
 		(pts
-			(xy 471.17 180.34) (xy 471.17 184.15)
+			(xy 478.79 180.34) (xy 478.79 184.15)
 		)
 		(stroke
 			(width 0)
@@ -5812,6 +5834,16 @@
 	)
 	(wire
 		(pts
+			(xy 378.46 323.85) (xy 378.46 321.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1603eddb-0a1b-468b-b1c6-5d27fb82fa09")
+	)
+	(wire
+		(pts
 			(xy 195.58 334.01) (xy 195.58 325.12)
 		)
 		(stroke
@@ -5882,7 +5914,7 @@
 	)
 	(wire
 		(pts
-			(xy 469.9 184.15) (xy 471.17 184.15)
+			(xy 477.52 184.15) (xy 478.79 184.15)
 		)
 		(stroke
 			(width 0)
@@ -5982,7 +6014,7 @@
 	)
 	(wire
 		(pts
-			(xy 449.58 184.15) (xy 449.58 187.96)
+			(xy 438.15 184.15) (xy 438.15 187.96)
 		)
 		(stroke
 			(width 0)
@@ -6102,13 +6134,13 @@
 	)
 	(wire
 		(pts
-			(xy 435.61 190.5) (xy 439.42 190.5)
+			(xy 449.58 184.15) (xy 452.12 184.15)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "2eb2adbe-eab2-4b25-82f0-9e2ccb564f1e")
+		(uuid "2fa69b1b-3d13-4443-9d7a-7ab96b92283d")
 	)
 	(wire
 		(pts
@@ -6142,7 +6174,7 @@
 	)
 	(wire
 		(pts
-			(xy 466.09 193.04) (xy 471.17 193.04)
+			(xy 473.71 193.04) (xy 478.79 193.04)
 		)
 		(stroke
 			(width 0)
@@ -6352,7 +6384,7 @@
 	)
 	(wire
 		(pts
-			(xy 454.66 196.85) (xy 449.58 196.85)
+			(xy 441.96 196.85) (xy 438.15 196.85)
 		)
 		(stroke
 			(width 0)
@@ -6862,13 +6894,23 @@
 	)
 	(wire
 		(pts
-			(xy 471.17 193.04) (xy 471.17 196.85)
+			(xy 478.79 193.04) (xy 478.79 196.85)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "72448971-f2eb-41db-92f7-38e129e330ad")
+	)
+	(wire
+		(pts
+			(xy 485.14 358.14) (xy 485.14 361.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "737d734c-23c7-418f-a9eb-438091b17171")
 	)
 	(wire
 		(pts
@@ -7182,7 +7224,7 @@
 	)
 	(wire
 		(pts
-			(xy 471.17 196.85) (xy 473.71 196.85)
+			(xy 478.79 196.85) (xy 481.33 196.85)
 		)
 		(stroke
 			(width 0)
@@ -7392,7 +7434,7 @@
 	)
 	(wire
 		(pts
-			(xy 454.66 184.15) (xy 449.58 184.15)
+			(xy 441.96 184.15) (xy 438.15 184.15)
 		)
 		(stroke
 			(width 0)
@@ -7509,6 +7551,16 @@
 			(type default)
 		)
 		(uuid "9c2a99a2-71f2-4d24-a932-a7a5f3d07614")
+	)
+	(wire
+		(pts
+			(xy 364.49 323.85) (xy 364.49 321.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9ce899a6-126f-4f15-a940-79c937d9934a")
 	)
 	(wire
 		(pts
@@ -7649,6 +7701,16 @@
 			(type default)
 		)
 		(uuid "aa5c387b-d735-4cc8-a3ec-0a29d0f356ef")
+	)
+	(wire
+		(pts
+			(xy 506.73 358.14) (xy 506.73 361.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ab7bca41-7e03-4640-b7a2-ae9e5f1ec1a5")
 	)
 	(wire
 		(pts
@@ -7832,7 +7894,7 @@
 	)
 	(wire
 		(pts
-			(xy 449.58 196.85) (xy 449.58 193.04)
+			(xy 438.15 196.85) (xy 438.15 193.04)
 		)
 		(stroke
 			(width 0)
@@ -7862,7 +7924,7 @@
 	)
 	(wire
 		(pts
-			(xy 469.9 196.85) (xy 471.17 196.85)
+			(xy 477.52 196.85) (xy 478.79 196.85)
 		)
 		(stroke
 			(width 0)
@@ -7942,6 +8004,16 @@
 	)
 	(wire
 		(pts
+			(xy 326.39 288.29) (xy 326.39 290.83)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c937b2d7-6f95-4d9a-b463-36d248362c56")
+	)
+	(wire
+		(pts
 			(xy 191.77 146.05) (xy 231.14 146.05)
 		)
 		(stroke
@@ -8012,6 +8084,16 @@
 	)
 	(wire
 		(pts
+			(xy 449.58 196.85) (xy 452.755 196.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cf97da9c-bf86-46db-a7eb-e67a077e8125")
+	)
+	(wire
+		(pts
 			(xy 426.72 160.02) (xy 431.8 160.02)
 		)
 		(stroke
@@ -8029,16 +8111,6 @@
 			(type default)
 		)
 		(uuid "d05056a7-4464-47bf-8df9-a57283c1509b")
-	)
-	(wire
-		(pts
-			(xy 414.02 190.5) (xy 406.4 190.5)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d06974ed-1cac-4357-a6b4-cca739842fc2")
 	)
 	(wire
 		(pts
@@ -8102,7 +8174,7 @@
 	)
 	(wire
 		(pts
-			(xy 471.17 184.15) (xy 473.71 184.15)
+			(xy 478.79 184.15) (xy 481.33 184.15)
 		)
 		(stroke
 			(width 0)
@@ -8272,6 +8344,16 @@
 	)
 	(wire
 		(pts
+			(xy 482.6 358.14) (xy 485.14 358.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e1ba529e-53f0-4fdb-9202-e78a716a7116")
+	)
+	(wire
+		(pts
 			(xy 426.72 170.18) (xy 426.72 160.02)
 		)
 		(stroke
@@ -8342,7 +8424,7 @@
 	)
 	(wire
 		(pts
-			(xy 466.09 180.34) (xy 471.17 180.34)
+			(xy 473.71 180.34) (xy 478.79 180.34)
 		)
 		(stroke
 			(width 0)
@@ -8482,6 +8564,16 @@
 	)
 	(wire
 		(pts
+			(xy 466.09 184.15) (xy 469.9 184.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f4e8fe53-7c22-4f43-ac4e-bb1c38a74bc2")
+	)
+	(wire
+		(pts
 			(xy 316.23 383.54) (xy 316.23 382.27)
 		)
 		(stroke
@@ -8539,6 +8631,16 @@
 			(type default)
 		)
 		(uuid "f7f54d24-b726-40e7-96e3-c71bc196ccd1")
+	)
+	(wire
+		(pts
+			(xy 508 358.14) (xy 506.73 358.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f81aa93e-2fe1-47f3-8b22-da19247af14d")
 	)
 	(wire
 		(pts
@@ -8958,6 +9060,73 @@
 	)
 	(symbol
 		(lib_id "power:GNDREF")
+		(at 482.6 358.14 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "057dfccb-986d-4c00-bd6c-1669052912a4")
+		(property "Reference" "#PWR044"
+			(at 476.25 358.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GNDREF"
+			(at 478.79 358.1399 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 482.6 358.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 482.6 358.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GNDREF\" , reference supply ground"
+			(at 482.6 358.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "fce86626-166a-481f-b664-3dadb4452f59")
+		)
+		(instances
+			(project "sensei"
+				(path "/718b9138-0c8b-4579-bddd-25a563f23d90"
+					(reference "#PWR044")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GNDREF")
 		(at 68.58 307.34 270)
 		(unit 1)
 		(exclude_from_sim no)
@@ -9312,7 +9481,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R_Potentiometer")
+		(lib_id "synth:R_Potentiometer (P0915N)")
 		(at 349.25 165.1 90)
 		(unit 1)
 		(exclude_from_sim no)
@@ -9337,8 +9506,8 @@
 				)
 			)
 		)
-		(property "Footprint" "Potentiometer_THT:Potentiometer_TT_P0915N"
-			(at 349.25 165.1 0)
+		(property "Footprint" "Synth:Potentiometer_TT_P0915N"
+			(at 362.966 165.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9347,7 +9516,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 349.25 165.1 0)
+			(at 359.918 165.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9356,7 +9525,7 @@
 			)
 		)
 		(property "Description" "Potentiometer"
-			(at 349.25 165.1 0)
+			(at 361.188 165.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9473,7 +9642,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector_Audio:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles"
+		(property "Footprint" "Synth:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles"
 			(at 119.38 341.122 0)
 			(effects
 				(font
@@ -9513,6 +9682,82 @@
 			(project "sensei"
 				(path "/718b9138-0c8b-4579-bddd-25a563f23d90"
 					(reference "J1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "synth:PinHeader_01x04")
+		(at 461.01 196.85 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "0d226862-b4e7-4c1e-b79b-e97bd5297d8d")
+		(property "Reference" "J8"
+			(at 463.296 194.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "CV_LVL_BTM"
+			(at 458.47 195.5801 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Synth:PinHeader_1x04_P2.54mm_Vertical"
+			(at 461.01 189.738 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 461.01 196.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 461.01 192.024 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "4"
+			(uuid "5136a8e9-ab92-45cb-9d0c-73161cd037de")
+		)
+		(pin "3"
+			(uuid "d30c296f-1892-4ddb-8a40-c8235f0fed79")
+		)
+		(pin "1"
+			(uuid "c694530e-9a77-42a9-a8f5-a32afb7ebee8")
+		)
+		(pin "2"
+			(uuid "7bfa109d-0aeb-4eed-a334-1388b8d2616b")
+		)
+		(instances
+			(project "sensei"
+				(path "/718b9138-0c8b-4579-bddd-25a563f23d90"
+					(reference "J8")
 					(unit 1)
 				)
 			)
@@ -9755,7 +10000,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Connector_Audio:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles"
+		(property "Footprint" "Synth:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles"
 			(at 425.45 306.578 0)
 			(effects
 				(font
@@ -10262,7 +10507,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Connector_Audio:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles"
+		(property "Footprint" "Synth:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles"
 			(at 242.57 320.548 0)
 			(effects
 				(font
@@ -10843,6 +11088,94 @@
 		)
 	)
 	(symbol
+		(lib_id "synth:PinSocket_01x08")
+		(at 411.48 190.5 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "22056766-97b3-4d2d-a091-3f746007e81d")
+		(property "Reference" "H3"
+			(at 412.75 190.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "BTM_CTRL"
+			(at 407.67 186.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Synth:PinSocket_1x08_P2.54mm_Vertical"
+			(at 411.48 197.612 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 411.48 190.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 411.48 195.326 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "baddaffc-b873-4c47-ad47-2d4b5ba497ed")
+		)
+		(pin "7"
+			(uuid "76e8adcd-6785-4c46-9d31-7c21c7dcc174")
+		)
+		(pin "8"
+			(uuid "3d7c3661-edfb-4230-af86-b45f5cdb31cd")
+		)
+		(pin "1"
+			(uuid "215b2d9b-7715-4cf2-92b7-cde32e9b0644")
+		)
+		(pin "5"
+			(uuid "2adaa2b5-24d0-4559-a024-fd5a1b6fb3b3")
+		)
+		(pin "6"
+			(uuid "7ee7ba83-43ea-42a6-a5ce-9be7f6d7ed9f")
+		)
+		(pin "2"
+			(uuid "b19c894d-2e5a-407f-b7fb-6e1157890705")
+		)
+		(pin "4"
+			(uuid "96f19a59-8aa6-419c-8522-4b9a4b3d709d")
+		)
+		(instances
+			(project "sensei"
+				(path "/718b9138-0c8b-4579-bddd-25a563f23d90"
+					(reference "H3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "synth:D_Signal (1N4148)")
 		(at 365.76 138.43 180)
 		(unit 1)
@@ -11003,7 +11336,7 @@
 	)
 	(symbol
 		(lib_id "power:GNDREF")
-		(at 326.39 290.83 180)
+		(at 326.39 288.29 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -11012,7 +11345,7 @@
 		(fields_autoplaced yes)
 		(uuid "268a1bf6-e542-4595-83e5-d67ff1f1abc6")
 		(property "Reference" "#PWR012"
-			(at 326.39 284.48 0)
+			(at 326.39 281.94 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11021,7 +11354,7 @@
 			)
 		)
 		(property "Value" "GNDREF"
-			(at 328.93 289.56 0)
+			(at 328.93 287.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11030,7 +11363,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 326.39 290.83 0)
+			(at 326.39 288.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11039,7 +11372,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 326.39 290.83 0)
+			(at 326.39 288.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11048,7 +11381,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GNDREF\" , reference supply ground"
-			(at 326.39 290.83 0)
+			(at 326.39 288.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11348,6 +11681,80 @@
 				(path "/718b9138-0c8b-4579-bddd-25a563f23d90"
 					(reference "#PWR023")
 					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "synth:PinSocket_01x04")
+		(at 490.22 361.95 0)
+		(unit 3)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "2b66dcac-af6a-47e9-a4a5-c906e22cd3cb")
+		(property "Reference" "J9"
+			(at 493.522 361.696 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "CV_LVL_TOP"
+			(at 490.22 365.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Synth:PinSocket_1x04_P2.54mm_Vertical"
+			(at 490.474 369.062 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 490.22 361.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 490.22 366.776 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "af5fd5e6-a86f-4b29-b2cc-c11254cd095e")
+		)
+		(pin "4"
+			(uuid "071778a9-87e3-4d4d-bdfc-b81e2db88610")
+		)
+		(pin "1"
+			(uuid "fd451e3a-84ad-44d8-86ca-7e2493253aa0")
+		)
+		(pin "2"
+			(uuid "2362cb2c-db9f-4d6c-b3ee-488f4caf75b1")
+		)
+		(instances
+			(project "sensei"
+				(path "/718b9138-0c8b-4579-bddd-25a563f23d90"
+					(reference "J9")
+					(unit 3)
 				)
 			)
 		)
@@ -11696,6 +12103,82 @@
 		)
 	)
 	(symbol
+		(lib_id "synth:PinHeader_01x04")
+		(at 501.65 361.95 180)
+		(unit 3)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "3c733b4c-4e29-4e75-bf60-1b225fff8678")
+		(property "Reference" "J8"
+			(at 499.872 362.204 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "CV_LVL_BTM"
+			(at 499.11 360.6801 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Synth:PinHeader_1x04_P2.54mm_Vertical"
+			(at 501.65 354.838 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 501.65 361.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 501.65 357.124 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "4"
+			(uuid "5136a8e9-ab92-45cb-9d0c-73161cd037df")
+		)
+		(pin "3"
+			(uuid "d30c296f-1892-4ddb-8a40-c8235f0fed7a")
+		)
+		(pin "1"
+			(uuid "c694530e-9a77-42a9-a8f5-a32afb7ebee9")
+		)
+		(pin "2"
+			(uuid "7bfa109d-0aeb-4eed-a334-1388b8d2616c")
+		)
+		(instances
+			(project "sensei"
+				(path "/718b9138-0c8b-4579-bddd-25a563f23d90"
+					(reference "J8")
+					(unit 3)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "synth:D_Schottky (1N5819)")
 		(at 336.55 393.7 0)
 		(unit 1)
@@ -11974,7 +12457,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R_Potentiometer")
+		(lib_id "synth:R_Potentiometer (P0915N)")
 		(at 349.25 187.96 90)
 		(unit 1)
 		(exclude_from_sim no)
@@ -11999,8 +12482,8 @@
 				)
 			)
 		)
-		(property "Footprint" "Potentiometer_THT:Potentiometer_TT_P0915N"
-			(at 349.25 187.96 0)
+		(property "Footprint" "Synth:Potentiometer_TT_P0915N"
+			(at 362.966 187.96 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12009,7 +12492,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 349.25 187.96 0)
+			(at 359.918 187.96 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12018,7 +12501,7 @@
 			)
 		)
 		(property "Description" "Potentiometer"
-			(at 349.25 187.96 0)
+			(at 361.188 187.96 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12115,6 +12598,92 @@
 		)
 	)
 	(symbol
+		(lib_id "synth:PinHeader_01x08")
+		(at 422.91 190.5 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "42ce1a11-dbf7-4fbe-94e9-c5076f50dd9a")
+		(property "Reference" "H4"
+			(at 419.1 190.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TOP_CTRL"
+			(at 422.91 186.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Synth:PinHeader_1x08_P2.54mm_Vertical"
+			(at 422.91 183.388 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 422.91 190.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 422.91 185.674 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "189b0f21-9d97-4005-a8c4-b928914d271f")
+		)
+		(pin "3"
+			(uuid "061db4d2-1bfd-453c-9f9d-ec1eafe70c50")
+		)
+		(pin "4"
+			(uuid "7cd40cb6-f90a-4592-999f-43390c7a67f5")
+		)
+		(pin "5"
+			(uuid "c4bc89e1-4b0b-445a-8b32-cda29ed1f749")
+		)
+		(pin "6"
+			(uuid "0c981ae8-1b77-451f-a297-e9e286bf9bcb")
+		)
+		(pin "7"
+			(uuid "e602d214-0321-40d5-909e-162626a496de")
+		)
+		(pin "8"
+			(uuid "1ade3d0c-9e2e-4472-b107-8f81a69038db")
+		)
+		(pin "1"
+			(uuid "b6ce9033-4037-41ec-ac72-16a3bfc42f99")
+		)
+		(instances
+			(project "sensei"
+				(path "/718b9138-0c8b-4579-bddd-25a563f23d90"
+					(reference "H4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "synth:PinSocket_01x08")
 		(at 466.09 387.35 90)
 		(unit 8)
@@ -12203,7 +12772,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R_Potentiometer")
+		(lib_id "synth:R_Potentiometer (P0915N)")
 		(at 349.25 210.82 90)
 		(unit 1)
 		(exclude_from_sim no)
@@ -12228,8 +12797,8 @@
 				)
 			)
 		)
-		(property "Footprint" "Potentiometer_THT:Potentiometer_TT_P0915N"
-			(at 349.25 210.82 0)
+		(property "Footprint" "Synth:Potentiometer_TT_P0915N"
+			(at 362.966 210.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12238,7 +12807,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 349.25 210.82 0)
+			(at 359.918 210.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12247,7 +12816,7 @@
 			)
 		)
 		(property "Description" "Potentiometer"
-			(at 349.25 210.82 0)
+			(at 361.188 210.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12409,6 +12978,73 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GNDREF")
+		(at 508 358.14 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "4729fc75-9387-4219-9451-186d23f88f6c")
+		(property "Reference" "#PWR045"
+			(at 514.35 358.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GNDREF"
+			(at 511.81 358.1399 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 508 358.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 508 358.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GNDREF\" , reference supply ground"
+			(at 508 358.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "29df0404-9a6d-44d2-8ffc-3255bdd326cf")
+		)
+		(instances
+			(project "sensei"
+				(path "/718b9138-0c8b-4579-bddd-25a563f23d90"
+					(reference "#PWR045")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "synth:PinHeader_01x04")
 		(at 269.24 143.51 180)
 		(unit 3)
@@ -12480,94 +13116,6 @@
 				(path "/718b9138-0c8b-4579-bddd-25a563f23d90"
 					(reference "H8")
 					(unit 3)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "synth:PinSocket_01x08")
-		(at 419.1 190.5 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "48e4030b-215b-46ac-b7a0-6d568c677972")
-		(property "Reference" "H3"
-			(at 420.37 190.5 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "BTM_CTRL"
-			(at 415.29 186.69 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "Synth:PinSocket_1x08_P2.54mm_Vertical"
-			(at 419.1 197.612 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 419.1 190.5 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Generic connector, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 419.1 195.326 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "3"
-			(uuid "baddaffc-b873-4c47-ad47-2d4b5ba497ed")
-		)
-		(pin "7"
-			(uuid "76e8adcd-6785-4c46-9d31-7c21c7dcc174")
-		)
-		(pin "8"
-			(uuid "3d7c3661-edfb-4230-af86-b45f5cdb31cd")
-		)
-		(pin "1"
-			(uuid "c1ce0591-402c-4013-840d-acfdff29247e")
-		)
-		(pin "5"
-			(uuid "2adaa2b5-24d0-4559-a024-fd5a1b6fb3b3")
-		)
-		(pin "6"
-			(uuid "7ee7ba83-43ea-42a6-a5ce-9be7f6d7ed9f")
-		)
-		(pin "2"
-			(uuid "b19c894d-2e5a-407f-b7fb-6e1157890705")
-		)
-		(pin "4"
-			(uuid "96f19a59-8aa6-419c-8522-4b9a4b3d709d")
-		)
-		(instances
-			(project "sensei"
-				(path "/718b9138-0c8b-4579-bddd-25a563f23d90"
-					(reference "H3")
-					(unit 1)
 				)
 			)
 		)
@@ -12933,7 +13481,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R_Potentiometer")
+		(lib_id "synth:R_Potentiometer (P0915N)")
 		(at 349.25 142.24 90)
 		(unit 1)
 		(exclude_from_sim no)
@@ -12958,8 +13506,8 @@
 				)
 			)
 		)
-		(property "Footprint" "Potentiometer_THT:Potentiometer_TT_P0915N"
-			(at 349.25 142.24 0)
+		(property "Footprint" "Synth:Potentiometer_TT_P0915N"
+			(at 362.966 142.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12968,7 +13516,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 349.25 142.24 0)
+			(at 359.918 142.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12977,7 +13525,7 @@
 			)
 		)
 		(property "Description" "Potentiometer"
-			(at 349.25 142.24 0)
+			(at 361.188 142.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13159,7 +13707,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R_Potentiometer")
+		(lib_id "synth:R_Potentiometer (P0915N)")
 		(at 95.25 361.95 90)
 		(unit 1)
 		(exclude_from_sim no)
@@ -13184,8 +13732,8 @@
 				)
 			)
 		)
-		(property "Footprint" "Potentiometer_THT:Potentiometer_TT_P0915N"
-			(at 95.25 361.95 0)
+		(property "Footprint" "Synth:Potentiometer_TT_P0915N"
+			(at 108.966 361.95 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13194,7 +13742,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 95.25 361.95 0)
+			(at 105.918 361.95 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13203,7 +13751,7 @@
 			)
 		)
 		(property "Description" "Potentiometer"
-			(at 95.25 361.95 0)
+			(at 107.188 361.95 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13317,7 +13865,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R_Potentiometer")
+		(lib_id "synth:R_Potentiometer (P0915N)")
 		(at 349.25 153.67 90)
 		(unit 1)
 		(exclude_from_sim no)
@@ -13342,8 +13890,8 @@
 				)
 			)
 		)
-		(property "Footprint" "Potentiometer_THT:Potentiometer_TT_P0915N"
-			(at 349.25 153.67 0)
+		(property "Footprint" "Synth:Potentiometer_TT_P0915N"
+			(at 362.966 153.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13352,7 +13900,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 349.25 153.67 0)
+			(at 359.918 153.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13361,7 +13909,7 @@
 			)
 		)
 		(property "Description" "Potentiometer"
-			(at 349.25 153.67 0)
+			(at 361.188 153.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13741,7 +14289,7 @@
 	)
 	(symbol
 		(lib_id "power:GNDREF")
-		(at 473.71 184.15 90)
+		(at 481.33 184.15 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -13750,7 +14298,7 @@
 		(fields_autoplaced yes)
 		(uuid "67ada5cd-59dd-49d8-9f5c-7409bc90d9cd")
 		(property "Reference" "#PWR031"
-			(at 480.06 184.15 0)
+			(at 487.68 184.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13759,7 +14307,7 @@
 			)
 		)
 		(property "Value" "GNDREF"
-			(at 477.52 184.15 90)
+			(at 485.14 184.15 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13768,7 +14316,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 473.71 184.15 0)
+			(at 481.33 184.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13777,7 +14325,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 473.71 184.15 0)
+			(at 481.33 184.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13786,7 +14334,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GNDREF\" , reference supply ground"
-			(at 473.71 184.15 0)
+			(at 481.33 184.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14212,6 +14760,82 @@
 	)
 	(symbol
 		(lib_id "synth:PinHeader_01x04")
+		(at 461.01 184.15 180)
+		(unit 2)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "6bae9dbe-5955-4bd7-937f-14b530219dc0")
+		(property "Reference" "J8"
+			(at 463.042 181.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "CV_LVL_BTM"
+			(at 458.47 182.8801 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Synth:PinHeader_1x04_P2.54mm_Vertical"
+			(at 461.01 177.038 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 461.01 184.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 461.01 179.324 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "4"
+			(uuid "5136a8e9-ab92-45cb-9d0c-73161cd037e0")
+		)
+		(pin "3"
+			(uuid "d30c296f-1892-4ddb-8a40-c8235f0fed7b")
+		)
+		(pin "1"
+			(uuid "c694530e-9a77-42a9-a8f5-a32afb7ebeea")
+		)
+		(pin "2"
+			(uuid "7bfa109d-0aeb-4eed-a334-1388b8d2616d")
+		)
+		(instances
+			(project "sensei"
+				(path "/718b9138-0c8b-4579-bddd-25a563f23d90"
+					(reference "J8")
+					(unit 2)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "synth:PinHeader_01x04")
 		(at 269.24 148.59 180)
 		(unit 1)
 		(exclude_from_sim no)
@@ -14353,7 +14977,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C")
+		(lib_id "synth:C_1uF (MKS)")
 		(at 72.39 335.28 90)
 		(unit 1)
 		(exclude_from_sim no)
@@ -14378,8 +15002,8 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_THT:C_Rect_L7.2mm_W3.5mm_P5.00mm_FKS2_FKP2_MKS2_MKP2"
-			(at 76.2 334.3148 0)
+		(property "Footprint" "Synth:C_RECT_MKT_1uF"
+			(at 85.598 334.772 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14397,7 +15021,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 72.39 335.28 0)
+			(at 83.566 335.28 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14651,6 +15275,82 @@
 		)
 	)
 	(symbol
+		(lib_id "synth:PinSocket_01x04")
+		(at 501.65 358.14 180)
+		(unit 4)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "794c06d8-5dee-4fe2-a17f-f30b39b0ae44")
+		(property "Reference" "J8"
+			(at 499.618 358.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "CV_LVL_BTM"
+			(at 499.11 356.8701 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Synth:PinSocket_1x04_P2.54mm_Vertical"
+			(at 501.396 351.028 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 501.65 358.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 501.65 353.314 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "4"
+			(uuid "5136a8e9-ab92-45cb-9d0c-73161cd037e1")
+		)
+		(pin "3"
+			(uuid "d30c296f-1892-4ddb-8a40-c8235f0fed7c")
+		)
+		(pin "1"
+			(uuid "c694530e-9a77-42a9-a8f5-a32afb7ebeeb")
+		)
+		(pin "2"
+			(uuid "7bfa109d-0aeb-4eed-a334-1388b8d2616e")
+		)
+		(instances
+			(project "sensei"
+				(path "/718b9138-0c8b-4579-bddd-25a563f23d90"
+					(reference "J8")
+					(unit 4)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Amplifier_Operational:TL074")
 		(at 88.9 320.04 0)
 		(unit 1)
@@ -14754,8 +15454,82 @@
 		)
 	)
 	(symbol
+		(lib_id "synth:PinSocket_01x04")
+		(at 457.2 184.15 0)
+		(unit 2)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "7cb8e2e4-92c4-435a-a748-9ecd066ff9f5")
+		(property "Reference" "J9"
+			(at 456.819 181.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "CV_LVL_TOP"
+			(at 457.2 187.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Synth:PinSocket_1x04_P2.54mm_Vertical"
+			(at 457.454 191.262 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 457.2 184.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 457.2 188.976 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "af5fd5e6-a86f-4b29-b2cc-c11254cd095f")
+		)
+		(pin "4"
+			(uuid "071778a9-87e3-4d4d-bdfc-b81e2db88611")
+		)
+		(pin "1"
+			(uuid "fd451e3a-84ad-44d8-86ca-7e2493253aa1")
+		)
+		(pin "2"
+			(uuid "2362cb2c-db9f-4d6c-b3ee-488f4caf75b2")
+		)
+		(instances
+			(project "sensei"
+				(path "/718b9138-0c8b-4579-bddd-25a563f23d90"
+					(reference "J9")
+					(unit 2)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GNDREF")
-		(at 473.71 196.85 90)
+		(at 481.33 196.85 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -14764,7 +15538,7 @@
 		(fields_autoplaced yes)
 		(uuid "7d2a071e-4a61-4891-8f1d-31362f4b1a22")
 		(property "Reference" "#PWR032"
-			(at 480.06 196.85 0)
+			(at 487.68 196.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14773,7 +15547,7 @@
 			)
 		)
 		(property "Value" "GNDREF"
-			(at 477.52 196.85 90)
+			(at 485.14 196.85 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14782,7 +15556,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 473.71 196.85 0)
+			(at 481.33 196.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14791,7 +15565,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 473.71 196.85 0)
+			(at 481.33 196.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14800,7 +15574,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GNDREF\" , reference supply ground"
-			(at 473.71 196.85 0)
+			(at 481.33 196.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15322,7 +16096,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R_Potentiometer")
+		(lib_id "synth:R_Potentiometer (P0915N)")
 		(at 349.25 199.39 90)
 		(unit 1)
 		(exclude_from_sim no)
@@ -15347,8 +16121,8 @@
 				)
 			)
 		)
-		(property "Footprint" "Potentiometer_THT:Potentiometer_TT_P0915N"
-			(at 349.25 199.39 0)
+		(property "Footprint" "Synth:Potentiometer_TT_P0915N"
+			(at 362.966 199.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15357,7 +16131,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 349.25 199.39 0)
+			(at 359.918 199.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15366,7 +16140,7 @@
 			)
 		)
 		(property "Description" "Potentiometer"
-			(at 349.25 199.39 0)
+			(at 361.188 199.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16749,7 +17523,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Connector_Audio:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles"
+		(property "Footprint" "Synth:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles"
 			(at 473.71 155.448 0)
 			(effects
 				(font
@@ -16796,7 +17570,7 @@
 	)
 	(symbol
 		(lib_id "synth:SW_SPDT")
-		(at 444.5 190.5 0)
+		(at 433.07 190.5 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -16805,7 +17579,7 @@
 		(fields_autoplaced yes)
 		(uuid "ae9a577e-06d6-4c8d-92a7-fe63de94bfcf")
 		(property "Reference" "CV_LVL1"
-			(at 444.5 184.15 0)
+			(at 433.07 184.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16813,7 +17587,7 @@
 			)
 		)
 		(property "Value" "~"
-			(at 444.5 185.42 0)
+			(at 433.07 185.42 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16821,7 +17595,7 @@
 			)
 		)
 		(property "Footprint" "Synth:SW_default"
-			(at 444.5 201.422 0)
+			(at 433.07 201.422 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16830,7 +17604,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 444.5 198.12 0)
+			(at 433.07 198.12 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16839,7 +17613,7 @@
 			)
 		)
 		(property "Description" "Switch, single pole double throw"
-			(at 444.246 199.39 0)
+			(at 432.816 199.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16932,7 +17706,7 @@
 	)
 	(symbol
 		(lib_id "synth:R_Default")
-		(at 458.47 184.15 270)
+		(at 445.77 184.15 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -16941,7 +17715,7 @@
 		(fields_autoplaced yes)
 		(uuid "b15b55e8-d7c2-4e4b-b8ef-094939a13cf2")
 		(property "Reference" "R16"
-			(at 458.47 177.8 90)
+			(at 445.77 177.8 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16949,7 +17723,7 @@
 			)
 		)
 		(property "Value" "18K"
-			(at 458.47 180.34 90)
+			(at 445.77 180.34 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16957,7 +17731,7 @@
 			)
 		)
 		(property "Footprint" "Synth:R_Default (DIN0207)"
-			(at 444.246 184.15 0)
+			(at 431.546 184.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16966,7 +17740,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 458.47 184.15 90)
+			(at 445.77 184.15 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16975,7 +17749,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 447.294 184.15 0)
+			(at 434.594 184.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17363,35 +18137,33 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R_Potentiometer_Trim")
-		(at 466.09 196.85 90)
+		(lib_id "synth:PinSocket_01x04")
+		(at 457.835 196.85 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "b9acf7da-cc78-43d6-b28e-87b2154c1a6c")
-		(property "Reference" "RV10"
-			(at 464.82 199.39 0)
+		(uuid "b8ad46aa-a2a4-4944-ab86-3e0610de3dca")
+		(property "Reference" "J9"
+			(at 457.2 194.564 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
 			)
 		)
-		(property "Value" "5K"
-			(at 467.36 199.39 0)
+		(property "Value" "CV_LVL_TOP"
+			(at 457.835 200.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(hide yes)
 			)
 		)
-		(property "Footprint" "Potentiometer_THT:Potentiometer_Bourns_3296W_Vertical"
-			(at 466.09 196.85 0)
+		(property "Footprint" "Synth:PinSocket_1x04_P2.54mm_Vertical"
+			(at 458.089 203.962 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17400,7 +18172,83 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 466.09 196.85 0)
+			(at 457.835 196.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 457.835 201.676 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "af5fd5e6-a86f-4b29-b2cc-c11254cd0960")
+		)
+		(pin "4"
+			(uuid "071778a9-87e3-4d4d-bdfc-b81e2db88612")
+		)
+		(pin "1"
+			(uuid "fd451e3a-84ad-44d8-86ca-7e2493253aa2")
+		)
+		(pin "2"
+			(uuid "2362cb2c-db9f-4d6c-b3ee-488f4caf75b3")
+		)
+		(instances
+			(project "sensei"
+				(path "/718b9138-0c8b-4579-bddd-25a563f23d90"
+					(reference "J9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Potentiometer_Trim")
+		(at 473.71 196.85 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b9acf7da-cc78-43d6-b28e-87b2154c1a6c")
+		(property "Reference" "RV10"
+			(at 472.44 199.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "5K"
+			(at 474.98 199.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Potentiometer_THT:Potentiometer_Bourns_3296W_Vertical"
+			(at 473.71 196.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 473.71 196.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17409,7 +18257,7 @@
 			)
 		)
 		(property "Description" "Trim-potentiometer"
-			(at 466.09 196.85 0)
+			(at 473.71 196.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17574,7 +18422,7 @@
 	)
 	(symbol
 		(lib_id "synth:R_Default")
-		(at 458.47 196.85 270)
+		(at 445.77 196.85 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -17583,7 +18431,7 @@
 		(fields_autoplaced yes)
 		(uuid "bc4d5ea2-4f7b-4830-bb2e-698d0a3ca4ae")
 		(property "Reference" "R17"
-			(at 458.47 190.5 90)
+			(at 445.77 190.5 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17591,7 +18439,7 @@
 			)
 		)
 		(property "Value" "51K"
-			(at 458.47 193.04 90)
+			(at 445.77 193.04 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17599,7 +18447,7 @@
 			)
 		)
 		(property "Footprint" "Synth:R_Default (DIN0207)"
-			(at 444.246 196.85 0)
+			(at 431.546 196.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17608,7 +18456,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 458.47 196.85 90)
+			(at 445.77 196.85 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17617,7 +18465,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 447.294 196.85 0)
+			(at 434.594 196.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18081,7 +18929,7 @@
 	)
 	(symbol
 		(lib_id "power:GNDREF")
-		(at 378.46 321.31 0)
+		(at 378.46 323.85 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -18089,7 +18937,7 @@
 		(dnp no)
 		(uuid "c74b3845-7db4-4c4f-9191-0bb734de4788")
 		(property "Reference" "#PWR019"
-			(at 378.46 327.66 0)
+			(at 378.46 330.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18098,7 +18946,7 @@
 			)
 		)
 		(property "Value" "GNDREF"
-			(at 378.46 325.12 0)
+			(at 378.46 327.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18106,7 +18954,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 378.46 321.31 0)
+			(at 378.46 323.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18115,7 +18963,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 378.46 321.31 0)
+			(at 378.46 323.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18124,7 +18972,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GNDREF\" , reference supply ground"
-			(at 378.46 321.31 0)
+			(at 378.46 323.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18621,92 +19469,6 @@
 			(project "sensei"
 				(path "/718b9138-0c8b-4579-bddd-25a563f23d90"
 					(reference "#FLG02")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "synth:PinHeader_01x08")
-		(at 430.53 190.5 180)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "cdb8820a-d4f1-4be5-a9bc-d27752ef0cf1")
-		(property "Reference" "H4"
-			(at 426.72 190.5 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "TOP_CTRL"
-			(at 430.53 186.69 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "Synth:PinHeader_1x08_P2.54mm_Vertical"
-			(at 430.53 183.388 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 430.53 190.5 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Generic connector, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 430.53 185.674 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "189b0f21-9d97-4005-a8c4-b928914d271f")
-		)
-		(pin "3"
-			(uuid "061db4d2-1bfd-453c-9f9d-ec1eafe70c50")
-		)
-		(pin "4"
-			(uuid "7cd40cb6-f90a-4592-999f-43390c7a67f5")
-		)
-		(pin "5"
-			(uuid "c4bc89e1-4b0b-445a-8b32-cda29ed1f749")
-		)
-		(pin "6"
-			(uuid "0c981ae8-1b77-451f-a297-e9e286bf9bcb")
-		)
-		(pin "7"
-			(uuid "e602d214-0321-40d5-909e-162626a496de")
-		)
-		(pin "8"
-			(uuid "1ade3d0c-9e2e-4472-b107-8f81a69038db")
-		)
-		(pin "1"
-			(uuid "e07dae65-f032-426e-95dc-9aa4c7805b80")
-		)
-		(instances
-			(project "sensei"
-				(path "/718b9138-0c8b-4579-bddd-25a563f23d90"
-					(reference "H4")
 					(unit 1)
 				)
 			)
@@ -19256,6 +20018,80 @@
 	)
 	(symbol
 		(lib_id "synth:PinHeader_01x04")
+		(at 490.22 358.14 0)
+		(unit 4)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "d5788734-5daf-4b73-a33a-77a563f5c168")
+		(property "Reference" "J9"
+			(at 494.03 358.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "CV_LVL_TOP"
+			(at 490.22 361.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Synth:PinHeader_1x04_P2.54mm_Vertical"
+			(at 490.22 365.252 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 490.22 358.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 490.22 362.966 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "af5fd5e6-a86f-4b29-b2cc-c11254cd0961")
+		)
+		(pin "4"
+			(uuid "071778a9-87e3-4d4d-bdfc-b81e2db88613")
+		)
+		(pin "1"
+			(uuid "fd451e3a-84ad-44d8-86ca-7e2493253aa3")
+		)
+		(pin "2"
+			(uuid "2362cb2c-db9f-4d6c-b3ee-488f4caf75b4")
+		)
+		(instances
+			(project "sensei"
+				(path "/718b9138-0c8b-4579-bddd-25a563f23d90"
+					(reference "J9")
+					(unit 4)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "synth:PinHeader_01x04")
 		(at 115.57 320.04 180)
 		(unit 4)
 		(exclude_from_sim no)
@@ -19330,7 +20166,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R_Potentiometer")
+		(lib_id "synth:R_Potentiometer (P0915N)")
 		(at 349.25 130.81 90)
 		(unit 1)
 		(exclude_from_sim no)
@@ -19355,8 +20191,8 @@
 				)
 			)
 		)
-		(property "Footprint" "Potentiometer_THT:Potentiometer_TT_P0915N"
-			(at 349.25 130.81 0)
+		(property "Footprint" "Synth:Potentiometer_TT_P0915N"
+			(at 362.966 130.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19365,7 +20201,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 349.25 130.81 0)
+			(at 359.918 130.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19374,7 +20210,7 @@
 			)
 		)
 		(property "Description" "Potentiometer"
-			(at 349.25 130.81 0)
+			(at 361.188 130.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20642,7 +21478,7 @@
 	)
 	(symbol
 		(lib_id "power:GNDREF")
-		(at 364.49 321.31 0)
+		(at 364.49 323.85 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -20650,7 +21486,7 @@
 		(dnp no)
 		(uuid "ebadcc4d-5dae-41da-8998-5f39e744baf2")
 		(property "Reference" "#PWR017"
-			(at 364.49 327.66 0)
+			(at 364.49 330.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20659,7 +21495,7 @@
 			)
 		)
 		(property "Value" "GNDREF"
-			(at 364.49 325.12 0)
+			(at 364.49 327.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20667,7 +21503,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 364.49 321.31 0)
+			(at 364.49 323.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20676,7 +21512,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 364.49 321.31 0)
+			(at 364.49 323.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20685,7 +21521,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GNDREF\" , reference supply ground"
-			(at 364.49 321.31 0)
+			(at 364.49 323.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20951,7 +21787,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_Potentiometer_Trim")
-		(at 466.09 184.15 90)
+		(at 473.71 184.15 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -20960,7 +21796,7 @@
 		(fields_autoplaced yes)
 		(uuid "ee1b5801-4b55-46da-8962-a222d2166ff2")
 		(property "Reference" "RV9"
-			(at 464.82 186.69 0)
+			(at 472.44 186.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20969,7 +21805,7 @@
 			)
 		)
 		(property "Value" "2K"
-			(at 467.36 186.69 0)
+			(at 474.98 186.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20978,7 +21814,7 @@
 			)
 		)
 		(property "Footprint" "Potentiometer_THT:Potentiometer_Bourns_3296W_Vertical"
-			(at 466.09 184.15 0)
+			(at 473.71 184.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20987,7 +21823,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 466.09 184.15 0)
+			(at 473.71 184.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20996,7 +21832,7 @@
 			)
 		)
 		(property "Description" "Trim-potentiometer"
-			(at 466.09 184.15 0)
+			(at 473.71 184.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21810,7 +22646,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R_Potentiometer")
+		(lib_id "synth:R_Potentiometer (P0915N)")
 		(at 349.25 176.53 90)
 		(unit 1)
 		(exclude_from_sim no)
@@ -21835,8 +22671,8 @@
 				)
 			)
 		)
-		(property "Footprint" "Potentiometer_THT:Potentiometer_TT_P0915N"
-			(at 349.25 176.53 0)
+		(property "Footprint" "Synth:Potentiometer_TT_P0915N"
+			(at 362.966 176.53 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21845,7 +22681,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 349.25 176.53 0)
+			(at 359.918 176.53 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21854,7 +22690,7 @@
 			)
 		)
 		(property "Description" "Potentiometer"
-			(at 349.25 176.53 0)
+			(at 361.188 176.53 0)
 			(effects
 				(font
 					(size 1.27 1.27)
