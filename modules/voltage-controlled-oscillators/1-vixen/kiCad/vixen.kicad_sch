@@ -1236,142 +1236,6 @@
 				)
 			)
 		)
-		(symbol "Device:C"
-			(pin_numbers hide)
-			(pin_names
-				(offset 0.254)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "C"
-				(at 0.635 2.54 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Value" "C"
-				(at 0.635 -2.54 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Footprint" ""
-				(at 0.9652 -3.81 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "~"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Unpolarized capacitor"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "cap capacitor"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "C_*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "C_0_1"
-				(polyline
-					(pts
-						(xy -2.032 -0.762) (xy 2.032 -0.762)
-					)
-					(stroke
-						(width 0.508)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -2.032 0.762) (xy 2.032 0.762)
-					)
-					(stroke
-						(width 0.508)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "C_1_1"
-				(pin passive line
-					(at 0 3.81 270)
-					(length 2.794)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -3.81 90)
-					(length 2.794)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-		)
 		(symbol "Device:C_Polarized"
 			(pin_numbers hide)
 			(pin_names
@@ -1521,167 +1385,6 @@
 						)
 					)
 					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-		)
-		(symbol "Device:R_Potentiometer"
-			(pin_names
-				(offset 1.016) hide)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "RV"
-				(at -4.445 0 90)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "R_Potentiometer"
-				(at -2.54 0 90)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "~"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Potentiometer"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "resistor variable"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "Potentiometer*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "R_Potentiometer_0_1"
-				(polyline
-					(pts
-						(xy 2.54 0) (xy 1.524 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.143 0) (xy 2.286 0.508) (xy 2.286 -0.508) (xy 1.143 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(rectangle
-					(start 1.016 2.54)
-					(end -1.016 -2.54)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "R_Potentiometer_1_1"
-				(pin passive line
-					(at 0 3.81 270)
-					(length 1.27)
-					(name "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 3.81 0 180)
-					(length 1.27)
-					(name "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -3.81 90)
-					(length 1.27)
-					(name "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3044,7 +2747,7 @@
 					)
 				)
 			)
-			(property "Footprint" "Connector_Audio:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles"
+			(property "Footprint" "Synth:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles"
 				(at 0 -4.572 0)
 				(effects
 					(font
@@ -3187,6 +2890,278 @@
 						)
 					)
 					(number "TN"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "synth:C_1uF (MKS)"
+			(pin_numbers hide)
+			(pin_names
+				(offset 0.254)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "C"
+				(at 3.048 1.016 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "C_1uF (MKS)"
+				(at 3.048 -1.016 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" "Synth:C_RECT_MKT_1uF"
+				(at 0.508 -13.208 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Unpolarized capacitor"
+				(at 0 -11.176 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "cap capacitor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "C_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "C_1uF (MKS)_0_1"
+				(polyline
+					(pts
+						(xy -2.032 -0.762) (xy 2.032 -0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.032 0.762) (xy 2.032 0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "C_1uF (MKS)_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 2.794)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 2.794)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "synth:C_sm (MKS)"
+			(pin_numbers hide)
+			(pin_names
+				(offset 0.254)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "C"
+				(at 2.794 1.27 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "C_sm (MKS)"
+				(at 2.794 -1.016 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" "Synth:C_RECT_WIMA_0.1uF"
+				(at 1.016 -13.462 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Unpolarized capacitor"
+				(at -0.254 -11.43 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "cap capacitor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "C_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "C_sm (MKS)_0_1"
+				(polyline
+					(pts
+						(xy -2.032 -0.762) (xy 2.032 -0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.032 0.762) (xy 2.032 0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "C_sm (MKS)_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 2.794)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 2.794)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -4968,6 +4943,328 @@
 						)
 					)
 					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "synth:R_Potentiometer (Alpha_9mm)"
+			(pin_names
+				(offset 1.016) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "RV"
+				(at -4.826 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "R_Potentiometer"
+				(at -2.794 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "Synth:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical_CircularHoles"
+				(at 0 -13.97 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 -10.668 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Potentiometer"
+				(at 0 -11.938 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "resistor variable"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "Potentiometer*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "R_Potentiometer (Alpha_9mm)_0_1"
+				(rectangle
+					(start -1.016 2.54)
+					(end 1.016 -2.54)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 0) (xy 1.524 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.143 0) (xy 2.286 0.508) (xy 2.286 -0.508) (xy 1.143 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+			)
+			(symbol "R_Potentiometer (Alpha_9mm)_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 1.27)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 3.81 0 180)
+					(length 1.27)
+					(name "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 1.27)
+					(name "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "synth:R_Potentiometer (P0915N)"
+			(pin_names
+				(offset 1.016) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "RV"
+				(at -4.445 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "R_Potentiometer"
+				(at -2.54 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "Synth:Potentiometer_TT_P0915N"
+				(at 0 -13.716 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 -10.668 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Potentiometer"
+				(at 0 -11.938 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "resistor variable"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "Potentiometer*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "R_Potentiometer (P0915N)_0_1"
+				(rectangle
+					(start -1.016 2.54)
+					(end 1.016 -2.54)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 0) (xy 1.524 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.143 0) (xy 2.286 0.508) (xy 2.286 -0.508) (xy 1.143 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+			)
+			(symbol "R_Potentiometer (P0915N)_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 1.27)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 3.81 0 180)
+					(length 1.27)
+					(name "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 1.27)
+					(name "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -9608,7 +9905,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R_Potentiometer")
+		(lib_id "synth:R_Potentiometer (P0915N)")
 		(at 73.66 40.64 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -9618,7 +9915,7 @@
 		(fields_autoplaced yes)
 		(uuid "45859874-86ec-4161-80cc-7313ced5dfce")
 		(property "Reference" "COURSE1"
-			(at 71.12 39.37 0)
+			(at 71.12 39.3699 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9627,7 +9924,7 @@
 			)
 		)
 		(property "Value" "B100K"
-			(at 71.12 41.91 0)
+			(at 71.12 41.9099 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9635,8 +9932,8 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Potentiometer_THT:Potentiometer_TT_P0915N"
-			(at 73.66 40.64 0)
+		(property "Footprint" "Synth:Potentiometer_TT_P0915N"
+			(at 73.66 54.356 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9645,7 +9942,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 73.66 40.64 0)
+			(at 73.66 51.308 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9654,7 +9951,7 @@
 			)
 		)
 		(property "Description" "Potentiometer"
-			(at 73.66 40.64 0)
+			(at 73.66 52.578 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11377,7 +11674,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-92_HandSolder"
+		(property "Footprint" "Package_TO_SOT_THT:TO-92_Inline"
 			(at 187.96 155.575 0)
 			(effects
 				(font
@@ -12035,7 +12332,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C")
+		(lib_id "synth:C_sm (MKS)")
 		(at 179.07 107.95 270)
 		(unit 1)
 		(exclude_from_sim no)
@@ -12061,7 +12358,7 @@
 			)
 		)
 		(property "Footprint" "Synth:C_RECT_WIMA_0.1uF"
-			(at 175.26 108.9152 0)
+			(at 165.608 108.966 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12079,7 +12376,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 179.07 107.95 0)
+			(at 167.64 107.696 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12645,7 +12942,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R_Potentiometer")
+		(lib_id "synth:R_Potentiometer (Alpha_9mm)")
 		(at 234.95 173.99 90)
 		(unit 1)
 		(exclude_from_sim no)
@@ -12670,8 +12967,8 @@
 				)
 			)
 		)
-		(property "Footprint" "Potentiometer_THT:Potentiometer_TT_P0915N"
-			(at 234.95 173.99 0)
+		(property "Footprint" "Synth:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical_CircularHoles"
+			(at 248.92 173.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12680,7 +12977,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 234.95 173.99 0)
+			(at 245.618 173.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12689,7 +12986,7 @@
 			)
 		)
 		(property "Description" "Potentiometer"
-			(at 234.95 173.99 0)
+			(at 246.888 173.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13809,7 +14106,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector_Audio:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles"
+		(property "Footprint" "Synth:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles"
 			(at 217.17 178.562 0)
 			(effects
 				(font
@@ -14233,7 +14530,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R_Potentiometer")
+		(lib_id "synth:R_Potentiometer (P0915N)")
 		(at 295.91 173.99 180)
 		(unit 1)
 		(exclude_from_sim no)
@@ -14243,7 +14540,7 @@
 		(fields_autoplaced yes)
 		(uuid "add96e3e-0718-4e6e-9806-8c798b36e7fd")
 		(property "Reference" "PWM_AMT1"
-			(at 298.45 172.72 0)
+			(at 298.45 172.7199 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14252,7 +14549,7 @@
 			)
 		)
 		(property "Value" "B100K"
-			(at 298.45 175.26 0)
+			(at 298.45 175.2599 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14260,8 +14557,8 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Potentiometer_THT:Potentiometer_TT_P0915N"
-			(at 295.91 173.99 0)
+		(property "Footprint" "Synth:Potentiometer_TT_P0915N"
+			(at 295.91 160.274 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14270,7 +14567,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 295.91 173.99 0)
+			(at 295.91 163.322 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14279,7 +14576,7 @@
 			)
 		)
 		(property "Description" "Potentiometer"
-			(at 295.91 173.99 0)
+			(at 295.91 162.052 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14333,7 +14630,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Connector_Audio:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles"
+		(property "Footprint" "Synth:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles"
 			(at 387.35 42.418 0)
 			(effects
 				(font
@@ -17158,7 +17455,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-92_HandSolder"
+		(property "Footprint" "Package_TO_SOT_THT:TO-92_Inline"
 			(at 161.29 151.765 0)
 			(effects
 				(font
@@ -17299,7 +17596,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector_Audio:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles"
+		(property "Footprint" "Synth:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles"
 			(at 68.58 158.242 0)
 			(effects
 				(font
@@ -17482,7 +17779,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R_Potentiometer")
+		(lib_id "synth:R_Potentiometer (P0915N)")
 		(at 73.66 87.63 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -17492,7 +17789,7 @@
 		(fields_autoplaced yes)
 		(uuid "ec643a26-d788-4c86-913e-b43418dd0629")
 		(property "Reference" "FINE1"
-			(at 71.12 86.36 0)
+			(at 71.12 86.3599 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17501,7 +17798,7 @@
 			)
 		)
 		(property "Value" "B100K"
-			(at 71.12 88.9 0)
+			(at 71.12 88.8999 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17509,8 +17806,8 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Potentiometer_THT:Potentiometer_TT_P0915N"
-			(at 73.66 87.63 0)
+		(property "Footprint" "Synth:Potentiometer_TT_P0915N"
+			(at 73.66 101.346 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17519,7 +17816,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 73.66 87.63 0)
+			(at 73.66 98.298 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17528,7 +17825,7 @@
 			)
 		)
 		(property "Description" "Potentiometer"
-			(at 73.66 87.63 0)
+			(at 73.66 99.568 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17667,7 +17964,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector_Audio:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles"
+		(property "Footprint" "Synth:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles"
 			(at 68.58 131.572 0)
 			(effects
 				(font
@@ -17905,7 +18202,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C")
+		(lib_id "synth:C_1uF (MKS)")
 		(at 218.44 44.45 90)
 		(unit 1)
 		(exclude_from_sim no)
@@ -17931,7 +18228,7 @@
 			)
 		)
 		(property "Footprint" "Synth:C_RECT_MKT_1uF"
-			(at 222.25 43.4848 0)
+			(at 231.648 43.942 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17949,7 +18246,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 218.44 44.45 0)
+			(at 229.616 44.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18000,7 +18297,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Connector_Audio:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles"
+		(property "Footprint" "Synth:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles"
 			(at 386.08 112.268 0)
 			(effects
 				(font
@@ -18839,7 +19136,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R_Potentiometer")
+		(lib_id "synth:R_Potentiometer (P0915N)")
 		(at 106.68 153.67 90)
 		(unit 1)
 		(exclude_from_sim no)
@@ -18863,8 +19160,8 @@
 				)
 			)
 		)
-		(property "Footprint" "Potentiometer_THT:Potentiometer_TT_P0915N"
-			(at 106.68 153.67 0)
+		(property "Footprint" "Synth:Potentiometer_TT_P0915N"
+			(at 120.396 153.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18873,7 +19170,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 106.68 153.67 0)
+			(at 117.348 153.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18882,7 +19179,7 @@
 			)
 		)
 		(property "Description" "Potentiometer"
-			(at 106.68 153.67 0)
+			(at 118.618 153.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
