@@ -49,9 +49,9 @@ In general: use the Bill Of Material and solder each component. Start from the l
 
 ## Images (3D)
 
-![vixen_3D_front.png](./img/vixen_3D_front.png)
+![Front Panel](./img/vixen_3D_front.png)
 
-![vixen_3D_back.png](./img/vixen_3D_back.png)
+![Back Panel](./img/vixen_3D_back.png)
 
 
 ## Previous versions & Issues

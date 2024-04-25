@@ -41,6 +41,11 @@ In general: use the Bill Of Material and solder each component. Start from the l
 
 ## Images (3D)
 
+![Front Panel](./img/sparkle_3D_front.png)
+
+![Back Panel](./img/sparkle_3D_back.png)
+
+
 
 ## Previous versions & Issues
 
