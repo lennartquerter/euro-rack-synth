@@ -39,6 +39,7 @@ I moved into
 after my studies in Film. 
 Not having a computer science or electronics degree, I always felt that I needed to 
 explore the connection with the hardware on which my software ran. 
+
 I started following a YouTube series by 
 [Ben Eater](https://www.youtube.com/watch?v=HyznrdDSSGM&list=PLowKtXNTBypGqImE405J2565dvjafglHU),
 showing how to build an 8-bit computer on breadboards. 
@@ -57,7 +58,7 @@ It was then that I made a firm decision-I was going to build my own synthesizer!
 
 I started watching more in-depth tutorials on YouTube and came across
 [Moritz Klein's](https://www.youtube.com/@MoritzKlein0) channel. 
-He explains the process in great detail and I could follow along at home. (Thank you, Mortiz!)
+He explains the process in great detail and I could follow along at home. (Thank you, Moritz!)
 
 I still had ample chips, resistors, and capacitors from my previous 8-bit computer build,
 so I started looking into the more specialized equipment I needed. 
@@ -77,6 +78,7 @@ Some on the schematic (like I connected the wrong inputs on the op-amp on the EG
 (my first attempt at an SPDT switch footprint didn't fit my switches at all).
 
 ![PCB hack](./img/missing-resistor-hack.png)
+
 (example of a hack on the V1 boards because I forgot the resistors)
 
 As I'm learning, I will keep updating the modules in this repository. I hope it inspires
