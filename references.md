@@ -32,6 +32,9 @@ Mentioned somewhere: DO NOT USE A PLAIN VANILLA NE555! --> 7555 CMOS version is 
 - [MFOS](https://musicfromouterspace.com/analogsynth_new/ADSR001/ADSR001.html)
 
 
+### Filters (CEM3320)
+- https://www.youtube.com/watch?v=4HOfT6GCY84
+
 ### LFO
 
 - [benjiaomodular](https://benjiaomodular.com/post/minilfo/)

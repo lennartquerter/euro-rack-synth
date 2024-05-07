@@ -1,7 +1,6 @@
 # Sequencer
 (a chat-gpt generated poem about an 8-step sequencer)
 
-
 In the heart of circuits, where electrons dance,<br>
 Lies a realm of sound, a realm of chance.<br>
 Within a Euro rack synth's labyrinthine sprawl,<br>
