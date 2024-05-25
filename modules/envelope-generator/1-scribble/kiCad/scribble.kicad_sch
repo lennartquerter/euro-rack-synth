@@ -496,6 +496,174 @@
 				)
 			)
 		)
+		(symbol "Connector_Generic:Conn_01x03"
+			(pin_names
+				(offset 1.016) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "J"
+				(at 0 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Conn_01x03"
+				(at 0 -5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "connector"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "Connector*:*_1x??_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Conn_01x03_1_1"
+				(rectangle
+					(start -1.27 -2.413)
+					(end 0 -2.667)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 0.127)
+					(end 0 -0.127)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 2.667)
+					(end 0 2.413)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 3.81)
+					(end 1.27 -3.81)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(pin passive line
+					(at -5.08 2.54 0)
+					(length 3.81)
+					(name "Pin_1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 3.81)
+					(name "Pin_2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 -2.54 0)
+					(length 3.81)
+					(name "Pin_3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
 		(symbol "Device:C_Polarized"
 			(pin_numbers hide)
 			(pin_names
@@ -3915,6 +4083,10 @@
 		(uuid "8d20c2ea-cc2d-4349-b81a-da58123ee1b1")
 	)
 	(no_connect
+		(at 95.25 226.06)
+		(uuid "d54ba1d6-3838-4863-a6fd-17b11c48bd5e")
+	)
+	(no_connect
 		(at 388.62 226.06)
 		(uuid "db4b6b39-4196-49b2-8209-f462ca670244")
 	)
@@ -4336,7 +4508,7 @@
 	)
 	(wire
 		(pts
-			(xy 21.59 93.98) (xy 21.59 229.87)
+			(xy 21.59 93.98) (xy 21.59 228.6)
 		)
 		(stroke
 			(width 0)
@@ -4636,6 +4808,16 @@
 	)
 	(wire
 		(pts
+			(xy 100.33 233.68) (xy 157.48 233.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "75e144ef-4243-4c00-accf-61144fbdee72")
+	)
+	(wire
+		(pts
 			(xy 125.73 275.59) (xy 139.7 275.59)
 		)
 		(stroke
@@ -4746,7 +4928,7 @@
 	)
 	(wire
 		(pts
-			(xy 21.59 229.87) (xy 157.48 229.87)
+			(xy 21.59 228.6) (xy 97.79 228.6)
 		)
 		(stroke
 			(width 0)
@@ -4843,6 +5025,16 @@
 			(type default)
 		)
 		(uuid "a3d2c11a-3c10-4055-ab5f-8ed68e1b106b")
+	)
+	(wire
+		(pts
+			(xy 100.33 226.06) (xy 100.33 233.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a469540c-7feb-4aba-b3a4-16f01b37f044")
 	)
 	(wire
 		(pts
@@ -4963,6 +5155,16 @@
 			(type default)
 		)
 		(uuid "bc7123b4-3ed0-41fc-882c-c0c676f99155")
+	)
+	(wire
+		(pts
+			(xy 97.79 228.6) (xy 97.79 226.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "be43387c-59c6-46db-b821-157a8531a8d1")
 	)
 	(wire
 		(pts
@@ -5316,7 +5518,7 @@
 	)
 	(wire
 		(pts
-			(xy 157.48 229.87) (xy 157.48 246.38)
+			(xy 157.48 233.68) (xy 157.48 246.38)
 		)
 		(stroke
 			(width 0)
@@ -5461,17 +5663,6 @@
 			(type none)
 		)
 		(uuid e913b2b4-f25b-4255-809a-f0cb63a8101a)
-	)
-	(text "Maybe this requires a diode & resistor to pull down?"
-		(exclude_from_sim no)
-		(at 125.095 228.6 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "569ee692-504e-4d5b-b8ef-abb639867fbd")
 	)
 	(text "Scribble"
 		(exclude_from_sim no)
@@ -9740,6 +9931,79 @@
 			(project "scribble"
 				(path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
 					(reference "H4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector_Generic:Conn_01x03")
+		(at 97.79 220.98 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "8ff8827a-0ce1-48f5-a96d-4435a1327e69")
+		(property "Reference" "J5"
+			(at 102.87 219.7099 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "Conn_01x03"
+			(at 102.87 222.2499 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical"
+			(at 97.79 220.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 97.79 220.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 97.79 220.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "8304cd30-e3da-4aa4-bfc4-ccf305f64419")
+		)
+		(pin "1"
+			(uuid "bb5295ee-ccdf-4a5b-bed2-42d92f33e6f8")
+		)
+		(pin "3"
+			(uuid "d9e173b3-1dc6-4889-a322-66a74b461766")
+		)
+		(instances
+			(project "scribble"
+				(path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
+					(reference "J5")
 					(unit 1)
 				)
 			)

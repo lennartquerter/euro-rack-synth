@@ -1,0 +1,1642 @@
+(kicad_sch
+	(version 20231120)
+	(generator "eeschema")
+	(generator_version "8.0")
+	(uuid "ffcc7acb-943e-4c85-833d-d9691a289ebb")
+	(paper "A3")
+	(lib_symbols
+		(symbol "power:GNDREF"
+			(power)
+			(pin_numbers hide)
+			(pin_names
+				(offset 0) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#PWR"
+				(at 0 -6.35 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" "GNDREF"
+				(at 0 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"GNDREF\" , reference supply ground"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "global power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "GNDREF_0_1"
+				(polyline
+					(pts
+						(xy -0.635 -1.905) (xy 0.635 -1.905)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.127 -2.54) (xy 0.127 -2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -1.27) (xy 0 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -1.27) (xy -1.27 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "GNDREF_1_1"
+				(pin power_in line
+					(at 0 0 270)
+					(length 0)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "synth:AudioJack_Mono_3.5mm"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "J"
+				(at 0 8.89 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "AudioJack_Mono_3.5mm"
+				(at 0 6.35 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "Synth:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles"
+				(at 0 -4.572 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Audio Jack, 2 Poles (Mono / TS), Switched T Pole (Normalling)"
+				(at 0 -7.112 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "audio jack receptacle mono headphones phone TS connector"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "Jack*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "AudioJack_Mono_3.5mm_0_1"
+				(polyline
+					(pts
+						(xy 1.778 -0.254) (xy 2.032 -0.762)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0) (xy 0.635 -0.635) (xy 1.27 0) (xy 2.54 0)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 -2.54) (xy 1.778 -2.54) (xy 1.778 -0.254) (xy 1.524 -0.762)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 2.54) (xy -0.635 2.54) (xy -0.635 0) (xy -1.27 -0.635) (xy -1.905 0)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "AudioJack_Mono_3.5mm_1_1"
+				(pin passive line
+					(at 5.08 2.54 180)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "S"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 0 180)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "T"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 -2.54 180)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "TN"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+	)
+	(junction
+		(at 67.31 55.88)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "663ab527-714f-4eb2-9a60-a693318ab968")
+	)
+	(junction
+		(at 67.31 78.74)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "7741772e-231a-41de-827d-64bfa9ffc65e")
+	)
+	(junction
+		(at 67.31 88.9)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a6ee83c7-ed0c-4f97-be74-0308067bb0c0")
+	)
+	(junction
+		(at 67.31 66.04)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ac4e961f-fbb2-4497-8031-9e56515dc5eb")
+	)
+	(junction
+		(at 67.31 45.72)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "e9efb6d0-823c-446c-9d3a-96d290bbbdb5")
+	)
+	(no_connect
+		(at 55.88 48.26)
+		(uuid "3f90d3eb-d93b-4da3-a9b8-d7a0874f3a74")
+	)
+	(no_connect
+		(at 82.55 86.36)
+		(uuid "58fb1f3d-f85f-4cfc-882b-60ea235b6f9d")
+	)
+	(no_connect
+		(at 82.55 96.52)
+		(uuid "59cd1d79-7b01-42ab-ac4a-1c7241f7697c")
+	)
+	(no_connect
+		(at 82.55 43.18)
+		(uuid "aa468b6a-b63c-40ec-8eec-06f0e11fd6b0")
+	)
+	(no_connect
+		(at 82.55 63.5)
+		(uuid "aa8a8c59-ab31-4ee3-b107-abfa6cbd8e1b")
+	)
+	(no_connect
+		(at 82.55 53.34)
+		(uuid "aac3a3a1-0702-4096-9210-c0336a3ad095")
+	)
+	(no_connect
+		(at 82.55 76.2)
+		(uuid "c8bfbefb-bec6-4c07-af22-e0db17cb3271")
+	)
+	(wire
+		(pts
+			(xy 67.31 55.88) (xy 82.55 55.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0529a705-0293-4938-8dd9-aebf5e45cbb3")
+	)
+	(wire
+		(pts
+			(xy 82.55 99.06) (xy 67.31 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1d122120-6731-4af7-9728-625a1120f161")
+	)
+	(wire
+		(pts
+			(xy 67.31 99.06) (xy 67.31 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "20915a5c-c879-4e3a-93e9-634dcf1bf987")
+	)
+	(wire
+		(pts
+			(xy 55.88 45.72) (xy 67.31 45.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3513c5ea-6313-40ec-b0b3-9614e65fa722")
+	)
+	(wire
+		(pts
+			(xy 55.88 78.74) (xy 67.31 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4a305415-11b7-4c6d-bff4-c1329d656094")
+	)
+	(wire
+		(pts
+			(xy 62.23 81.28) (xy 62.23 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4cf8842c-8668-4e96-8340-3e047bc625e0")
+	)
+	(wire
+		(pts
+			(xy 67.31 66.04) (xy 67.31 55.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "63bbb2e7-a892-47a0-8218-210e54ae8baf")
+	)
+	(wire
+		(pts
+			(xy 55.88 81.28) (xy 62.23 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6c4b5ca7-d145-4088-8093-eb1551feb071")
+	)
+	(wire
+		(pts
+			(xy 67.31 88.9) (xy 67.31 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "94742bfe-8f7b-473f-b890-0c17c3d07224")
+	)
+	(wire
+		(pts
+			(xy 67.31 88.9) (xy 82.55 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a1bc7209-fec3-4031-8990-a44033666aa6")
+	)
+	(wire
+		(pts
+			(xy 62.23 66.04) (xy 67.31 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c2e0ea1d-0bd1-4148-bbb4-80ef5ff36667")
+	)
+	(wire
+		(pts
+			(xy 67.31 78.74) (xy 82.55 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c3cd2ff5-a522-4d21-a0cd-ce8aa57b5700")
+	)
+	(wire
+		(pts
+			(xy 67.31 55.88) (xy 67.31 45.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f37e56c5-8157-4a41-9629-a466b4c0aeb0")
+	)
+	(wire
+		(pts
+			(xy 82.55 66.04) (xy 67.31 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f8cbf175-44c2-4b17-8b96-b98df0273efe")
+	)
+	(wire
+		(pts
+			(xy 67.31 45.72) (xy 82.55 45.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fb1bfa9c-0a99-4649-9088-6a373f62ad98")
+	)
+	(symbol
+		(lib_id "synth:AudioJack_Mono_3.5mm")
+		(at 50.8 78.74 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "0599a068-683c-47c0-82be-bdfeb3b931d4")
+		(property "Reference" "J2"
+			(at 51.1175 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "INPUT"
+			(at 51.1175 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Synth:Jack_3.5mm_QingPu_WQP-PJ398SM_tight-fit"
+			(at 50.8 83.312 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 50.8 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Audio Jack, 2 Poles (Mono / TS), Switched T Pole (Normalling)"
+			(at 50.8 85.852 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "S"
+			(uuid "7ff19383-4570-4611-87e2-f008db1301a8")
+		)
+		(pin "TN"
+			(uuid "1ebd78fc-4777-4168-a607-6963f9536c5c")
+		)
+		(pin "T"
+			(uuid "d9bf5242-f529-4fc7-b607-7a192a44e006")
+		)
+		(instances
+			(project "passive-mult"
+				(path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
+					(reference "J2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "synth:AudioJack_Mono_3.5mm")
+		(at 87.63 78.74 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "300e9fc2-13e3-4a6f-bfaa-bfff7bd5deb7")
+		(property "Reference" "J6"
+			(at 91.44 77.5334 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "OUTPUT"
+			(at 91.44 80.0734 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Synth:Jack_3.5mm_QingPu_WQP-PJ398SM_tight-fit"
+			(at 87.63 74.168 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 87.63 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Audio Jack, 2 Poles (Mono / TS), Switched T Pole (Normalling)"
+			(at 87.63 71.628 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "S"
+			(uuid "23103df9-741c-494e-96c0-4a46517a60b0")
+		)
+		(pin "TN"
+			(uuid "e3613d6f-90f2-40a7-85c7-40ff288d1469")
+		)
+		(pin "T"
+			(uuid "406fed7e-8beb-46b3-8903-d74b39126931")
+		)
+		(instances
+			(project "passive-mult"
+				(path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
+					(reference "J6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GNDREF")
+		(at 82.55 81.28 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "32e4da29-a795-4b68-8f06-c07843c89d1b")
+		(property "Reference" "#PWR06"
+			(at 76.2 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GNDREF"
+			(at 78.74 81.2799 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 82.55 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 82.55 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GNDREF\" , reference supply ground"
+			(at 82.55 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "966e8099-0011-46d9-be9c-075580ee76e1")
+		)
+		(instances
+			(project "passive-mult"
+				(path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
+					(reference "#PWR06")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "synth:AudioJack_Mono_3.5mm")
+		(at 87.63 66.04 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "55d02b6f-dd66-4c83-8e72-36d772d00081")
+		(property "Reference" "J5"
+			(at 91.44 64.8334 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "OUTPUT"
+			(at 91.44 67.3734 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Synth:Jack_3.5mm_QingPu_WQP-PJ398SM_tight-fit"
+			(at 87.63 61.468 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 87.63 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Audio Jack, 2 Poles (Mono / TS), Switched T Pole (Normalling)"
+			(at 87.63 58.928 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "S"
+			(uuid "3196d443-cd32-4745-94d0-c9f9fb7ef850")
+		)
+		(pin "TN"
+			(uuid "734a1a7d-37cc-4489-9ca3-635bc8085dbc")
+		)
+		(pin "T"
+			(uuid "e0f4241d-e506-406c-9a5c-c78e43bc6974")
+		)
+		(instances
+			(project "passive-mult"
+				(path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
+					(reference "J5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GNDREF")
+		(at 55.88 43.18 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "6bf15dce-4cb7-4f59-88d5-b1d4129ee62e")
+		(property "Reference" "#PWR01"
+			(at 62.23 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GNDREF"
+			(at 59.69 43.1799 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 55.88 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 55.88 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GNDREF\" , reference supply ground"
+			(at 55.88 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c679e2b3-ee80-49c8-99fd-f5873602736c")
+		)
+		(instances
+			(project "passive-mult"
+				(path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
+					(reference "#PWR01")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GNDREF")
+		(at 82.55 58.42 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "7147c7fd-3b5c-4c2c-b231-a25a6daf9b0e")
+		(property "Reference" "#PWR04"
+			(at 76.2 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GNDREF"
+			(at 78.74 58.4199 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 82.55 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 82.55 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GNDREF\" , reference supply ground"
+			(at 82.55 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "d58e82ac-0494-4e1f-a87c-fd6284d22d92")
+		)
+		(instances
+			(project "passive-mult"
+				(path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
+					(reference "#PWR04")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GNDREF")
+		(at 82.55 68.58 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "7cfd4472-ea64-40e3-8d2d-6c0f99fdc3d0")
+		(property "Reference" "#PWR05"
+			(at 76.2 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GNDREF"
+			(at 78.74 68.5799 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 82.55 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 82.55 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GNDREF\" , reference supply ground"
+			(at 82.55 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "7d6882d3-e82b-4bce-b93d-08e7bcb53b8f")
+		)
+		(instances
+			(project "passive-mult"
+				(path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
+					(reference "#PWR05")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "synth:AudioJack_Mono_3.5mm")
+		(at 87.63 99.06 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "7de441c3-7a9b-49e5-8a90-daae3849eb90")
+		(property "Reference" "J8"
+			(at 91.44 97.8534 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "OUTPUT"
+			(at 91.44 100.3934 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Synth:Jack_3.5mm_QingPu_WQP-PJ398SM_tight-fit"
+			(at 87.63 94.488 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 87.63 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Audio Jack, 2 Poles (Mono / TS), Switched T Pole (Normalling)"
+			(at 87.63 91.948 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "S"
+			(uuid "04a656c5-2597-47f7-91c1-4d3a6ae929db")
+		)
+		(pin "TN"
+			(uuid "8049512c-7687-407c-8dcf-7ca290249735")
+		)
+		(pin "T"
+			(uuid "2fc0a7f1-2f2a-4617-816d-17c259b1adfc")
+		)
+		(instances
+			(project "passive-mult"
+				(path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
+					(reference "J8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GNDREF")
+		(at 82.55 48.26 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b32bf751-1b06-4e7d-a418-6c6f5152b4dc")
+		(property "Reference" "#PWR03"
+			(at 76.2 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GNDREF"
+			(at 78.74 48.2599 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 82.55 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 82.55 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GNDREF\" , reference supply ground"
+			(at 82.55 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "242df262-25a5-4e5c-8d57-c8126faea5b8")
+		)
+		(instances
+			(project "passive-mult"
+				(path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
+					(reference "#PWR03")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "synth:AudioJack_Mono_3.5mm")
+		(at 87.63 88.9 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b8a90bc3-227b-455c-b830-c4c349398ec0")
+		(property "Reference" "J7"
+			(at 91.44 87.6934 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "OUTPUT"
+			(at 91.44 90.2334 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Synth:Jack_3.5mm_QingPu_WQP-PJ398SM_tight-fit"
+			(at 87.63 84.328 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 87.63 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Audio Jack, 2 Poles (Mono / TS), Switched T Pole (Normalling)"
+			(at 87.63 81.788 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "S"
+			(uuid "34651af4-7c2e-4043-834c-48df3456a9f8")
+		)
+		(pin "TN"
+			(uuid "f5b99ed2-1d28-4182-b052-f3488d8e82c8")
+		)
+		(pin "T"
+			(uuid "4c97de95-4f48-4abe-995f-405c440e691a")
+		)
+		(instances
+			(project "passive-mult"
+				(path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
+					(reference "J7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GNDREF")
+		(at 55.88 76.2 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c30b5d4d-480c-40d3-a246-05dc4fd3e1b4")
+		(property "Reference" "#PWR02"
+			(at 62.23 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GNDREF"
+			(at 59.69 76.1999 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 55.88 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 55.88 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GNDREF\" , reference supply ground"
+			(at 55.88 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "77824373-6d20-4544-a4bb-9256f253c6fe")
+		)
+		(instances
+			(project "passive-mult"
+				(path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
+					(reference "#PWR02")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "synth:AudioJack_Mono_3.5mm")
+		(at 87.63 45.72 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ca0d9e99-b1cd-48e1-aedc-c6d5cd7dadd1")
+		(property "Reference" "J3"
+			(at 91.44 44.5134 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "OUTPUT"
+			(at 91.44 47.0534 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Synth:Jack_3.5mm_QingPu_WQP-PJ398SM_tight-fit"
+			(at 87.63 41.148 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 87.63 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Audio Jack, 2 Poles (Mono / TS), Switched T Pole (Normalling)"
+			(at 87.63 38.608 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "S"
+			(uuid "d98b196f-210c-4ef1-acea-508d05e06ba8")
+		)
+		(pin "TN"
+			(uuid "358c96fe-e954-4d52-b738-c3caeaa0f8bb")
+		)
+		(pin "T"
+			(uuid "816d3c46-20f0-4232-b0c6-87a6af06b47e")
+		)
+		(instances
+			(project "passive-mult"
+				(path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
+					(reference "J3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GNDREF")
+		(at 82.55 91.44 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d450783b-207b-4abb-b1f9-52b6235f79b1")
+		(property "Reference" "#PWR07"
+			(at 76.2 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GNDREF"
+			(at 78.74 91.4399 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 82.55 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 82.55 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GNDREF\" , reference supply ground"
+			(at 82.55 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "8316a3ea-e50e-4d39-97ce-b8493bd6f2c4")
+		)
+		(instances
+			(project "passive-mult"
+				(path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
+					(reference "#PWR07")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GNDREF")
+		(at 82.55 101.6 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "dc684a95-e41b-4010-ba96-1b1e45bd6cb6")
+		(property "Reference" "#PWR08"
+			(at 76.2 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GNDREF"
+			(at 78.74 101.5999 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 82.55 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 82.55 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GNDREF\" , reference supply ground"
+			(at 82.55 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "72ed2b9a-9aae-44e4-80a8-1df13677c4aa")
+		)
+		(instances
+			(project "passive-mult"
+				(path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
+					(reference "#PWR08")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "synth:AudioJack_Mono_3.5mm")
+		(at 87.63 55.88 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e0bd940b-85cf-4a64-9593-8578b397540e")
+		(property "Reference" "J4"
+			(at 91.44 54.6734 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "OUTPUT"
+			(at 91.44 57.2134 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Synth:Jack_3.5mm_QingPu_WQP-PJ398SM_tight-fit"
+			(at 87.63 51.308 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 87.63 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Audio Jack, 2 Poles (Mono / TS), Switched T Pole (Normalling)"
+			(at 87.63 48.768 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "S"
+			(uuid "6da865d6-142d-4532-b71d-ecee9e60f08a")
+		)
+		(pin "TN"
+			(uuid "76720bd0-de28-48fc-a037-b195754e6550")
+		)
+		(pin "T"
+			(uuid "cbde9af7-26ae-4769-b9ed-158781c78dce")
+		)
+		(instances
+			(project "passive-mult"
+				(path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
+					(reference "J4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "synth:AudioJack_Mono_3.5mm")
+		(at 50.8 45.72 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e7137a5b-e865-4462-94a1-6588ea1b9688")
+		(property "Reference" "J1"
+			(at 51.1175 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "INPUT"
+			(at 51.1175 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Synth:Jack_3.5mm_QingPu_WQP-PJ398SM_tight-fit"
+			(at 50.8 50.292 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 50.8 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Audio Jack, 2 Poles (Mono / TS), Switched T Pole (Normalling)"
+			(at 50.8 52.832 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "S"
+			(uuid "8a76caad-6eda-4515-bacd-c03ae87c9f61")
+		)
+		(pin "TN"
+			(uuid "07c8803c-f467-4431-babd-30f3add13b31")
+		)
+		(pin "T"
+			(uuid "09319e42-93d8-4c7e-8706-c76349a44c7a")
+		)
+		(instances
+			(project "passive-mult"
+				(path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
+					(reference "J1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+)

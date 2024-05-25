@@ -5,8 +5,6 @@ I'm not an expert, but I'm learning as I go and I'm happy to share what I've lea
 
 [First Jam Session](https://youtu.be/sQ6iWkeZPVc)
 
-
-
 ![Version 1](./img/synth-version-1.png)
 
 (First version without panels)
@@ -228,8 +226,10 @@ This is important because you don't want to burn your IC because there is too mu
 
 If you are following my schematics, you will see I use header/socket pins to connect my boards.
 I first started with the 2.00mm pins. I could not easily find tall sockets, so I ended having to
-always stack 2 on top of eachother, this was not super stable in the end, and I had to solder 
+always stack 2 on top of each other, this was not super stable in the end, and I had to solder 
 all the cap's to the back of the board because I didn't want to use 3 stacked socket pins.
+
+I currently use the more standard 2.56mm pins.
 
 #### Mounting holes
 
@@ -249,39 +249,48 @@ I use Fusion 360 for the designs (there is a free non-commercial license!).
 ### Voltage Controlled Oscillators
 
 - [VIXEN 3000.014](modules/voltage-controlled-oscillators/1-vixen/README.md)
+- [VCO: CEM 3340](modules/voltage-controlled-oscillators/2-3340/README.md)
 
 ### Voltage Controlled Amplifiers
 
-- [Sparkle](modules/voltage-controlled-oscillators/1-vixen/README.md)
+- [Sparkle](modules/voltage-controlled-amplifiers/1-sparkle/README.md)
 
 ### Sequencer
 
-- [Sensei](modules/voltage-controlled-oscillators/1-vixen/README.md)
+- [Sensei](modules/sequencers/1-sensei/README.md)
 
 ### Envelope Generator
 
-- [Scribble](modules/voltage-controlled-oscillators/1-vixen/README.md)
+- [Scribble](modules/envelope-generator/1-scribble/README.md)
+
+### Filters
+
+- [Low Orbit (ladder)](modules/filters/2-low-orbit/README.md)
 
 ### Active Mixer
 
-- [Distorted Daisy](modules/voltage-controlled-oscillators/1-vixen/README.md)
+- [Distorted Daisy](modules/active-mixers/1-distored-daisy/README.md)
 
+### Utility
+
+- [Active Mult](modules/utility/4-active-mult/README.md)
+- [Passive Mult](modules/utility/5-passive-mult/README.md)
 
 ## Next
 
-- [VCO: CEM 3340](modules/voltage-controlled-oscillators/2-cem-3340/README.md)
 - [LFO](modules/voltage-controlled-oscillators/3-lfo/README.md)
-- [Digital Sequencer](./modules/sequencers/2-digital/README.md)
 
-- [Filter: CEM 3320](modules/filters/1-cem-3320/README.md)
-- [Filter: Ladder](modules/filters/2-ladder/README.md)
-- [Digital Quantizer](modules/utility/1-quantizer/README.md)
-- [Midi to CV](modules/utility/1-midi-2-cv/README.md)
+- [Filter: CEM 3320](modules/filters/1-3320/README.md)
 
 - Binary counter (or clock splitter)
-- Simple Mult
-- Simple Math
+- Simple Math (OR / AND)
+- [Midi to CV](modules/utility/1-midi-2-cv/README.md)
+- [Digital Quantizer](modules/utility/2-quantizer/README.md)
 
+- [Digital Sequencer](./modules/sequencers/2-digital/README.md)
+
+- 1v/oct tuner (just 8 holes each 1v?)
+- SemiTone generator?
 
 - [Kick](modules/drum-kit/1-kicks/README.md)
 - [Snare/clap](modules/drum-kit/2-claps/README.md)
@@ -293,11 +302,5 @@ I use Fusion 360 for the designs (there is a free non-commercial license!).
 - Sample & Hold
 - White/pink noise module
 
-
 - Cool input device (keyboard or something similar)
 
-
-### Tooling
-
-- 1v/oct tuner (just 8 holes each 1v)
-- SemiTone generator?
