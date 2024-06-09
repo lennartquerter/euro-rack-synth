@@ -250,7 +250,7 @@ I use Fusion 360 for the designs (there is a free non-commercial license!).
 
 - [VIXEN 3000.014](modules/voltage-controlled-oscillators/1-vixen/README.md) [Ready for V2 Production]
 - [VCO: CEM 3340](modules/voltage-controlled-oscillators/2-3340/README.md) [Ready for V1 Production]
-- [LFO](modules/voltage-controlled-oscillators/3-lfo/README.md) [Ready for Schematics]
+- [LFO](modules/voltage-controlled-oscillators/3-lfo/README.md) [Ready for V1 Production]
 
 ### Voltage Controlled Amplifiers
 
@@ -263,7 +263,7 @@ I use Fusion 360 for the designs (there is a free non-commercial license!).
 ### Envelope Generator
 
 - [Scribble](modules/envelope-generator/1-scribble/README.md) [Ready for V2 Production]
-- [Scribble](modules/envelope-generator/2-7555/README.md) [Ready for Prototype]
+- [Scribble](modules/envelope-generator/2-7555/README.md) [Ready for V1 Production]
 
 ### Filters
 
