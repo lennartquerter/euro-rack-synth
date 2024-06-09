@@ -10,6 +10,7 @@ This page is a collection of links and schematics I refer to from time to time.
 
 ### ADSR Envelope Generator
 
+
 #### 555 timer versions
 
 Mentioned somewhere: DO NOT USE A PLAIN VANILLA NE555! --> 7555 CMOS version is needed
@@ -18,6 +19,7 @@ Mentioned somewhere: DO NOT USE A PLAIN VANILLA NE555! --> 7555 CMOS version is 
 - [eddy bergman 7555](https://www.eddybergman.com/2020/03/synthesizer-build-part-24-adsr-with.html)
 - [yusynth](https://yusynth.net/Modular/index_en.html)
 - [m0xpd](https://github.com/m0xpd/ADSR?tab=readme-ov-file)
+- [M0xpd Schematic](https://github.com/m0xpd/ADSR/blob/main/Images/m0xpd%20Looping%20ADSR%20v2.0%20Schematic.png)
 - [benjiaomodular](https://benjiaomodular.com/post/2022-02-02-mini-adsr/)
   (seems to be cleanest schematic?)
 
@@ -45,8 +47,9 @@ Mentioned somewhere: DO NOT USE A PLAIN VANILLA NE555! --> 7555 CMOS version is 
 - [benjiaomodular](https://benjiaomodular.com/post/2022-10-29-midi2cv/)
 
 
-
 ### Random
 
 - [Decision Tree](https://robaux.io/products/dcsn3)
 - [benjiaomodular](https://benjiaomodular.com/post/2021-06-04-random-triggers-and-cv/)
+- [DSO138 Oscilloscope](https://www.youtube.com/watch?v=HYGTyooFwKo)
+- [experimentalistsanonymous - sheets & schematics](https://experimentalistsanonymous.com/diy/)

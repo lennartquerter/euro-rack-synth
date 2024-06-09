@@ -248,43 +248,46 @@ I use Fusion 360 for the designs (there is a free non-commercial license!).
 
 ### Voltage Controlled Oscillators
 
-- [VIXEN 3000.014](modules/voltage-controlled-oscillators/1-vixen/README.md)
-- [VCO: CEM 3340](modules/voltage-controlled-oscillators/2-3340/README.md)
+- [VIXEN 3000.014](modules/voltage-controlled-oscillators/1-vixen/README.md) [Ready for V2 Production]
+- [VCO: CEM 3340](modules/voltage-controlled-oscillators/2-3340/README.md) [Ready for V1 Production]
+- [LFO](modules/voltage-controlled-oscillators/3-lfo/README.md) [Ready for Schematics]
 
 ### Voltage Controlled Amplifiers
 
-- [Sparkle](modules/voltage-controlled-amplifiers/1-sparkle/README.md)
+- [Sparkle](modules/voltage-controlled-amplifiers/1-sparkle/README.md) [Ready for V2 Production]
 
 ### Sequencer
 
-- [Sensei](modules/sequencers/1-sensei/README.md)
+- [Sensei](modules/sequencers/1-sensei/README.md) [Ready for V2 Production]
 
 ### Envelope Generator
 
-- [Scribble](modules/envelope-generator/1-scribble/README.md)
+- [Scribble](modules/envelope-generator/1-scribble/README.md) [Ready for V2 Production]
+- [Scribble](modules/envelope-generator/2-7555/README.md) [Ready for Prototype]
 
 ### Filters
 
-- [Low Orbit (ladder)](modules/filters/2-low-orbit/README.md)
+- [Low Orbit (ladder)](modules/filters/2-low-orbit/README.md) [Ready for V1 Production]
 
 ### Active Mixer
 
-- [Distorted Daisy](modules/active-mixers/1-distored-daisy/README.md)
+- [Distorted Daisy](modules/active-mixers/1-distored-daisy/README.md) [Ready for V2 Production]
 
 ### Utility
 
-- [Active Mult](modules/utility/4-active-mult/README.md)
-- [Passive Mult](modules/utility/5-passive-mult/README.md)
+- [Active Mult](modules/utility/4-active-mult/README.md) [Ready for V1 Production]
+- [Passive Mult](modules/utility/5-passive-mult/README.md) [Ready for V1 Production]
+- [Passive Mult](modules/utility/3-clock-divider/README.md) [Ready for Prototype]
+- [Midi to CV](modules/utility/1-midi-2-cv/README.md) [Ready for Schematics]
+- White/pink noise module [Ready for Schematics]
 
 ## Next
 
-- [LFO](modules/voltage-controlled-oscillators/3-lfo/README.md)
 
 - [Filter: CEM 3320](modules/filters/1-3320/README.md)
 
 - Binary counter (or clock splitter)
 - Simple Math (OR / AND)
-- [Midi to CV](modules/utility/1-midi-2-cv/README.md)
 - [Digital Quantizer](modules/utility/2-quantizer/README.md)
 
 - [Digital Sequencer](./modules/sequencers/2-digital/README.md)
@@ -300,7 +303,6 @@ I use Fusion 360 for the designs (there is a free non-commercial license!).
 - Delay/Reverb (Analog/Spring)
 - Delay/Reverb (Digital)
 - Sample & Hold
-- White/pink noise module
 
 - Cool input device (keyboard or something similar)
 
