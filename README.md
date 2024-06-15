@@ -258,15 +258,16 @@ I use Fusion 360 for the designs (there is a free non-commercial license!).
 
 ### Sequencer
 
-- [Sensei](modules/sequencers/1-sensei/README.md) [Ready for V2 Production]
+- [Sensei / Baby 8 SEQ](modules/sequencers/1-sensei/README.md) [Ready for V2 Production]
 
 ### Envelope Generator
 
 - [Scribble](modules/envelope-generator/1-scribble/README.md) [Ready for V2 Production]
-- [Scribble](modules/envelope-generator/2-7555/README.md) [Ready for V1 Production]
+- [7555](modules/envelope-generator/2-7555/README.md) [Ready for V1 Production]
 
 ### Filters
 
+- [Filter: CEM 3320](modules/filters/1-3320/README.md) [Ready for V1 Production]
 - [Low Orbit (ladder)](modules/filters/2-low-orbit/README.md) [Ready for V1 Production]
 
 ### Active Mixer
@@ -277,19 +278,14 @@ I use Fusion 360 for the designs (there is a free non-commercial license!).
 
 - [Active Mult](modules/utility/4-active-mult/README.md) [Ready for V1 Production]
 - [Passive Mult](modules/utility/5-passive-mult/README.md) [Ready for V1 Production]
-- [Passive Mult](modules/utility/3-clock-divider/README.md) [Ready for Prototype]
-- [Midi to CV](modules/utility/1-midi-2-cv/README.md) [Ready for Schematics]
-- White/pink noise module [Ready for Schematics]
+- [Clock Divider](modules/utility/3-clock-divider/README.md) [Ready for Prototype]
 
 ## Next
 
-
-- [Filter: CEM 3320](modules/filters/1-3320/README.md)
-
-- Binary counter (or clock splitter)
 - Simple Math (OR / AND)
+- White/pink noise module
+- [Midi to CV](modules/utility/1-midi-2-cv/README.md) [Waiting For Components]
 - [Digital Quantizer](modules/utility/2-quantizer/README.md)
-
 - [Digital Sequencer](./modules/sequencers/2-digital/README.md)
 
 - 1v/oct tuner (just 8 holes each 1v?)
@@ -298,7 +294,6 @@ I use Fusion 360 for the designs (there is a free non-commercial license!).
 - [Kick](modules/drum-kit/1-kicks/README.md)
 - [Snare/clap](modules/drum-kit/2-claps/README.md)
 - [HiHat](modules/drum-kit/3-hats/README.md)
-
 
 - Delay/Reverb (Analog/Spring)
 - Delay/Reverb (Digital)
