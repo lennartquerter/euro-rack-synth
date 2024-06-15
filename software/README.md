@@ -1,5 +1,9 @@
 # Software (for MCU)
 
+THIS SOFTWARE DOES NOT WORK AND IS NOT WORTH LOOKING INTO
+
+I'm still in the progress of setting these Digital parts up...
+
 
 ## Boards
 
