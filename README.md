@@ -246,58 +246,87 @@ I use Fusion 360 for the designs (there is a free non-commercial license!).
 
 ## Modules
 
+### Confirmed/Ready
+
+All v1 versions of the module are not available any more in the git repo. 
+There will be tags on the main branch when components are ordered starting from V2.
+
+
+| Type    | Module          | Version | Status          | Tested             |
+|---------|-----------------|---------|-----------------|--------------------|
+| VCO     | Vixen           | 1       | Built           | Yes - Minor issues |
+| VCO     | Vixen           | 2       | Ready for Order | No                 |
+| VCO     | 3340            | 1       | Ready for Order | No                 |
+| LFO     | XOF             | 1       | Ready for Order | No                 |
+| VCA     | Sparkle         | 1       | Built           | Yes - No issues    |
+| VCA     | Sparkle         | 2       | Ready for Order | No                 |
+| SEQ     | Sensei          | 1       | Built           | Yes - Minor issues |
+| SEQ     | Sensei          | 2       | Ready for Order | No                 |
+| EG      | Scribble        | 1       | Built           | Yes - OpAmp Issues |
+| EG      | Scribble        | 2       | Ready for Order | No                 |
+| EG      | 7555            | 1       | Ready for Order | No                 |
+| Filter  | 3320            | 1       | Ready for Order | No                 |
+| Filter  | Low Orbit       | 1       | Ready for Order | No                 |
+| Mixer   | Distorted Daisy | 1       | Built           | yes - No issues    |
+| Mixer   | Distorted Daisy | 2       | Ready for Order | No                 |
+| Utility | Passive Mult    | 1       | Ready for Order | No                 |
+| Utility | Active Mult     | 1       | Ready for Order | No                 |
+
+
+### In progress
+
+
+| Type    | Module          | Version  | Status                 | Tested |
+|---------|-----------------|----------|------------------------|--------|
+| Utility | Chrono Divider  | 1        | Waiting for components | No     |
+| Utility | Midi-2-cv       | 1        | Waiting for components | No     |
+| Utility | Noise Module    | 1        | Prototype phase        | No     |
+| Utility | AND/OR          | 1        | Prototype phase        | No     |
+| Utility | Math?           | 1        | Prototype phase        | No     |
+| Utility | 1v/oct tuner    | 1        | Prototype phase        | No     |
+| Utility | Quantizer       | 1        | Prototype phase        | No     |
+| SEQ     | STM32 Sequencer | 1        | Prototype phase        | No     |
+| Drums   | Kick            | 1        | Prototype phase        | No     |
+| Drums   | Clap/Snare      | 1        | Prototype phase        | No     |
+| Drums   | Hats            | 1        | Prototype phase        | No     |
+| Drums   | Toms            | 1        | Prototype phase        | No     |
+| FX      | Delay (DBB)     | 1        | Prototype phase        | No     |
+| FX      | Delay (PT-chip) | 1        | Prototype phase        | No     |
+| FX      | Reverb (Spring) | 1        | Prototype phase        | No     |
+| FX      | Sample&Hold     | 1        | Prototype phase        | No     |
+
+## Module links
+
 ### Voltage Controlled Oscillators
 
-- [VIXEN 3000.014](modules/voltage-controlled-oscillators/1-vixen/README.md) [Ready for V2 Production]
-- [VCO: CEM 3340](modules/voltage-controlled-oscillators/2-3340/README.md) [Ready for V1 Production]
-- [LFO](modules/voltage-controlled-oscillators/3-lfo/README.md) [Ready for V1 Production]
+- [VIXEN 3000.014](modules/voltage-controlled-oscillators/1-vixen/README.md)
+- [VCO: CEM 3340](modules/voltage-controlled-oscillators/2-3340/README.md)
+- [LFO](modules/voltage-controlled-oscillators/3-lfo/README.md)
 
 ### Voltage Controlled Amplifiers
 
-- [Sparkle](modules/voltage-controlled-amplifiers/1-sparkle/README.md) [Ready for V2 Production]
+- [Sparkle](modules/voltage-controlled-amplifiers/1-sparkle/README.md)
 
 ### Sequencer
 
-- [Sensei / Baby 8 SEQ](modules/sequencers/1-sensei/README.md) [Ready for V2 Production]
+- [Sensei / Baby 8 SEQ](modules/sequencers/1-sensei/README.md)
 
 ### Envelope Generator
 
-- [Scribble](modules/envelope-generator/1-scribble/README.md) [Ready for V2 Production]
-- [7555](modules/envelope-generator/2-7555/README.md) [Ready for V1 Production]
+- [Scribble](modules/envelope-generator/1-scribble/README.md)
+- [7555](modules/envelope-generator/2-7555/README.md)
 
 ### Filters
 
-- [Filter: CEM 3320](modules/filters/1-3320/README.md) [Ready for V1 Production]
-- [Low Orbit (ladder)](modules/filters/2-low-orbit/README.md) [Ready for V1 Production]
+- [Filter: CEM 3320](modules/filters/1-3320/README.md)
+- [Low Orbit (ladder)](modules/filters/2-low-orbit/README.md)
 
 ### Active Mixer
 
-- [Distorted Daisy](modules/active-mixers/1-distored-daisy/README.md) [Ready for V2 Production]
+- [Distorted Daisy](modules/active-mixers/1-distored-daisy/README.md)
 
 ### Utility
 
-- [Active Mult](modules/utility/4-active-mult/README.md) [Ready for V1 Production]
-- [Passive Mult](modules/utility/5-passive-mult/README.md) [Ready for V1 Production]
-- [Clock Divider](modules/utility/3-clock-divider/README.md) [Ready for Prototype]
-
-## Next
-
-- Simple Math (OR / AND)
-- White/pink noise module
-- [Midi to CV](modules/utility/1-midi-2-cv/README.md) [Waiting For Components]
-- [Digital Quantizer](modules/utility/2-quantizer/README.md)
-- [Digital Sequencer](./modules/sequencers/2-digital/README.md)
-
-- 1v/oct tuner (just 8 holes each 1v?)
-- SemiTone generator?
-
-- [Kick](modules/drum-kit/1-kicks/README.md)
-- [Snare/clap](modules/drum-kit/2-claps/README.md)
-- [HiHat](modules/drum-kit/3-hats/README.md)
-
-- Delay/Reverb (Analog/Spring)
-- Delay/Reverb (Digital)
-- Sample & Hold
-
-- Cool input device (keyboard or something similar)
-
+- [Active Mult](modules/utility/4-active-mult/README.md)
+- [Passive Mult](modules/utility/5-passive-mult/README.md)
+- [Clock Divider](modules/utility/3-clock-divider/README.md)
