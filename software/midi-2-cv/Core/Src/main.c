@@ -18,6 +18,8 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+#include "mcp4728.h"
+#include "notes.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -72,6 +74,22 @@ static void MX_USART2_UART_Init(void);
 
 /* USER CODE END 0 */
 
+void sendTrigger(uint16_t gatePin, uint32_t gateLength) {
+    HAL_GPIO_WritePin(GATE_A_GPIO_Port, gatePin, GPIO_PIN_SET);
+    HAL_Delay(gateLength),
+            HAL_GPIO_WritePin(GATE_A_GPIO_Port, gatePin, GPIO_PIN_RESET);
+}
+
+void setNoteValue(uint8_t octave, uint8_t note) {
+    uint16_t value = (octave * OCT_VALUE) + (note * (OCT_VALUE / 12));
+    MCP4728_Write_Voltage(&hi2c1, MCP4728_CHANNEL_A, value);
+}
+
+void stepGateA(uint8_t octave, uint8_t note, uint32_t gateLength) {
+    setNoteValue(octave, note);
+    sendTrigger(GATE_A_Pin, gateLength);
+}
+
 /**
   * @brief  The application entry point.
   * @retval int
@@ -106,29 +124,33 @@ int main(void) {
     MX_USART2_UART_Init();
     /* USER CODE BEGIN 2 */
 
+
+    MCP4728_Init(&hi2c1);
+
     /* USER CODE END 2 */
 
     /* Infinite loop */
     /* USER CODE BEGIN WHILE */
+    HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, 0);
+    MCP4728_Write_Voltage(&hi2c1, MCP4728_CHANNEL_A, BASE_NOTE);
+
+    uint16_t clockSpeed = 250;
+
     while (1) {
         /* USER CODE END WHILE */
 
         /* USER CODE BEGIN 3 */
+        stepGateA(OCTAVE_1, NOTE_C, 10);
+        HAL_Delay(clockSpeed - 10);
 
-        uint8_t buffer[10];
-        HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, 0);
-        HAL_Delay(100);
-        HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, 1);
-        HAL_Delay(100);
+        stepGateA(OCTAVE_2, NOTE_C, 10);
+        HAL_Delay(clockSpeed - 10);
 
-        if (HAL_OK == HAL_UART_Receive(&huart1, buffer, 4, 1000)) {
-            HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, 1);
-            HAL_Delay(1000);
-            HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, 0);
-            HAL_Delay(1000);
-        }
+        stepGateA(OCTAVE_3, NOTE_C, 10);
+        HAL_Delay(clockSpeed - 10);
 
-        HAL_Delay(100);
+        stepGateA(OCTAVE_4, NOTE_C, 10);
+        HAL_Delay(clockSpeed - 10);
     }
     /* USER CODE END 3 */
 }
