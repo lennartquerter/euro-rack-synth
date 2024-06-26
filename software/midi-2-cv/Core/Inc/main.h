@@ -49,6 +49,8 @@ extern "C" {
 
 /* USER CODE END EM */
 
+void HAL_TIM_MspPostInit(TIM_HandleTypeDef *htim);
+
 /* Exported functions prototypes ---------------------------------------------*/
 void Error_Handler(void);
 
@@ -57,8 +59,16 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
-#define ONBOARD_LED_Pin GPIO_PIN_13
-#define ONBOARD_LED_GPIO_Port GPIOC
+#define GATE_A_CONNECTED_Pin GPIO_PIN_0
+#define GATE_A_CONNECTED_GPIO_Port GPIOA
+#define GATE_B_CONNECTED_Pin GPIO_PIN_1
+#define GATE_B_CONNECTED_GPIO_Port GPIOA
+#define GATE_C_CONNECTED_Pin GPIO_PIN_2
+#define GATE_C_CONNECTED_GPIO_Port GPIOA
+#define GATE_D_CONNECTED_Pin GPIO_PIN_3
+#define GATE_D_CONNECTED_GPIO_Port GPIOA
+#define MIDI_CLOCK_OUT_Pin GPIO_PIN_7
+#define MIDI_CLOCK_OUT_GPIO_Port GPIOA
 #define GATE_A_Pin GPIO_PIN_12
 #define GATE_A_GPIO_Port GPIOB
 #define GATE_B_Pin GPIO_PIN_13
@@ -67,6 +77,8 @@ void Error_Handler(void);
 #define GATE_C_GPIO_Port GPIOB
 #define GATE_D_Pin GPIO_PIN_15
 #define GATE_D_GPIO_Port GPIOB
+#define MIDI_CLOCK_OUT_PWM_Pin GPIO_PIN_9
+#define MIDI_CLOCK_OUT_PWM_GPIO_Port GPIOA
 
 /* USER CODE BEGIN Private defines */
 

@@ -5,10 +5,6 @@
 
 #include "mcp4728.h"
 #include "stdio.h"
-/*
- * Calls the I2CHandler with a command
- */
-
 
 void MCP4728_Write_GeneralCall(I2C_HandleTypeDef *I2CHandler, uint8_t command) {
     HAL_I2C_Master_Transmit(I2CHandler, 0x00, &command, 1, HAL_MAX_DELAY);
@@ -37,7 +33,6 @@ void MCP4728_Write_Voltage(I2C_HandleTypeDef *I2CHandler, uint16_t channel, uint
  * Initialize the MCP4728
  * Resets & wakes up the I2C handler
  */
-
 void MCP4728_Init(I2C_HandleTypeDef *I2CHandler) {
     MCP4728_Write_GeneralCall(I2CHandler, MCP4728_GENERAL_RESET);
     MCP4728_Write_GeneralCall(I2CHandler, MCP4728_GENERAL_WAKEUP);
