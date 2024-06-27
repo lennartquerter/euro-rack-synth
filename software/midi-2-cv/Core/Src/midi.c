@@ -6,6 +6,7 @@
  */
 
 #include "midi.h"
+#include "main.h"
 #include "buffer.h"
 
 // ***********
@@ -210,11 +211,16 @@ void midi_handle_note_on() {
     // midi_handle_note_off()
     // handle voltage setting
     // start gate for channel
+
+    HAL_GPIO_WritePin(GPIOB, GPIO_PIN_12, GPIO_PIN_SET);
+//    HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, GPIO_PIN_RESET);
 }
 
 void midi_handle_note_off() {
     // handle voltage setting
     // stop gate for channel
+    HAL_GPIO_WritePin(GPIOB, GPIO_PIN_12, GPIO_PIN_RESET);
+//    HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, GPIO_PIN_SET);
 }
 
 void midi_handle_pitch() {

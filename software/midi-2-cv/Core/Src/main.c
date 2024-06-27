@@ -184,9 +184,10 @@ int main(void) {
     while (1) {
         /* USER CODE END WHILE */
 
-        midi_run();
 
         /* USER CODE BEGIN 3 */
+
+        midi_run();
     }
     /* USER CODE END 3 */
 }

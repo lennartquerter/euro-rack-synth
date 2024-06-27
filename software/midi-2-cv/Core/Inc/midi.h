@@ -15,6 +15,8 @@
 #include <stdint.h>
 #include <stdbool.h>
 
+#include "stm32f4xx_hal.h"
+
 typedef enum {
     START_ANALYSIS,    // Initial Status, including exception.
     WAIT_DATA1,        // Waiting data byte(1st byte)
