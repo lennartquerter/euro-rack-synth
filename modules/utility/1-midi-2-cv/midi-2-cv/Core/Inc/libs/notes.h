@@ -20,6 +20,8 @@
 #define OCTAVE_2                0x2
 #define OCTAVE_3                0x3
 #define OCTAVE_4                0x4
+#define OCTAVE_5                0x5
+#define OCTAVE_6                0x6
 
 #define NOTE_C                   0x0
 #define NOTE_CS                  0x1
