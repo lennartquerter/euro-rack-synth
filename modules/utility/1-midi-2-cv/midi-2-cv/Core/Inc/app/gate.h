@@ -1,7 +1,3 @@
-//
-// Created by Lennart Querter on 27.06.24.
-//
-
 #ifndef MIDI_2_CV_GATE_H
 #define MIDI_2_CV_GATE_H
 

@@ -15,12 +15,6 @@
 void MCP4728_Init(I2C_HandleTypeDef *I2CHandler);
 void MCP4728_Write_Voltage(I2C_HandleTypeDef *I2CHandler, uint16_t channel, uint16_t output);
 
-
-/* Private defines -----------------------------------------------------------*/
-/* USER CODE BEGIN Private defines */
-
-// Why <<1 here?
-// 1100 A2 A1 A0 0 --> documentation reads here that 1100 is the address is uses
 #define MCP4728_BASE_ADDR			0x60<<1
 
 #define MCP4728_CHANNEL_A			0x0

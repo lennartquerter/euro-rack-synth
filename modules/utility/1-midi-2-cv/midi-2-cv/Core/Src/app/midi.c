@@ -15,7 +15,6 @@
 // ***********
 
 MidiAnalysisStatus analyzed_status;
-MIDI_event midi_event;    // received midi data
 ExtendCCEvent rpn_event;
 Buffer rx_buffer;
 uint8_t midi_buffer;
@@ -24,15 +23,7 @@ uint8_t midi_buffer;
 // Private functions
 // ***********
 
-bool midi_is_event_generated();
-
-void midi_execute_command();
-
-void midi_handle_note_on();
-
-void midi_handle_note_off();
-
-void midi_handle_pitch();
+bool midi_is_event_generated(MIDI_event *midi_event);
 
 // ***********
 // Implementation
@@ -56,13 +47,14 @@ bool midi_init() {
     return true;
 }
 
-MIDI_event midi_run() {
+bool midi_run(MIDI_event *midi_event) {
     while (1 == midi_pop_buffer()) {
         // will keep returning false when not all events are read
-        if (midi_is_event_generated()) {
-            return midi_event;
+        if (midi_is_event_generated(midi_event)) {
+            return true;
         }
     }
+    return false;
 }
 
 bool midi_push_buffer(uint8_t *input) {
@@ -73,7 +65,7 @@ bool midi_pop_buffer() {
     return buffer_pop(&rx_buffer, &midi_buffer) == BUFFER_SUCCESS;
 }
 
-bool midi_is_event_generated() {
+bool midi_is_event_generated(MIDI_event *midi_event) {
     uint8_t upper_half_byte = (midi_buffer) & 0xF0;
     uint8_t lower_half_byte = (midi_buffer) & 0x0F;
 
@@ -83,7 +75,7 @@ bool midi_is_event_generated() {
         if (0xF0 == upper_half_byte) {
             switch (lower_half_byte) {
                 case 0x00://SysEx Start
-                    midi_event.type = analyzed_status.type = MSG_SYSEX;
+                    midi_event->type = analyzed_status.type = MSG_SYSEX;
                     analyzed_status.data_idx = 0;
                     analyzed_status.stat = WAIT_SYSTEM_DATA;
                     break;
@@ -96,42 +88,42 @@ bool midi_is_event_generated() {
             switch (upper_half_byte) {
 
                 case 0x90: //Note On Message.
-                    midi_event.type = analyzed_status.type = MSG_NOTE_ON;
+                    midi_event->type = analyzed_status.type = MSG_NOTE_ON;
                     analyzed_status.stat = WAIT_DATA1;
-                    midi_event.channel = lower_half_byte;
+                    midi_event->channel = lower_half_byte;
                     analyzed_status.channel = lower_half_byte;
                     break;
 
                 case 0x80: //Note Off Message.
-                    midi_event.type = analyzed_status.type = MSG_NOTE_OFF;
+                    midi_event->type = analyzed_status.type = MSG_NOTE_OFF;
                     analyzed_status.stat = WAIT_DATA1;
-                    midi_event.channel = lower_half_byte;
+                    midi_event->channel = lower_half_byte;
                     analyzed_status.channel = lower_half_byte;
                     break;
 
                 case 0xE0: //Pitch Bend.
-                    midi_event.type = analyzed_status.type = MSG_PITCH;
+                    midi_event->type = analyzed_status.type = MSG_PITCH;
                     analyzed_status.stat = WAIT_DATA1;
-                    midi_event.channel = lower_half_byte;
+                    midi_event->channel = lower_half_byte;
                     analyzed_status.channel = lower_half_byte;
                     break;
 
                 case 0xB0: //Control Change
-                    midi_event.type = analyzed_status.type = MSG_CC;
+                    midi_event->type = analyzed_status.type = MSG_CC;
                     analyzed_status.stat = WAIT_DATA1;
-                    midi_event.channel = lower_half_byte;
+                    midi_event->channel = lower_half_byte;
                     analyzed_status.channel = lower_half_byte;
                     break;
 
                 case 0xC0: //Program Change
-                    midi_event.type = analyzed_status.type = MSG_PROG;
+                    midi_event->type = analyzed_status.type = MSG_PROG;
                     analyzed_status.stat = WAIT_DATA1;
-                    midi_event.channel = lower_half_byte;
+                    midi_event->channel = lower_half_byte;
                     analyzed_status.channel = lower_half_byte;
                     break;
 
                 default:
-                    midi_event.type = analyzed_status.type = MSG_NOTHING;
+                    midi_event->type = analyzed_status.type = MSG_NOTHING;
                     analyzed_status.stat = START_ANALYSIS;
                     break;
             }
@@ -141,7 +133,7 @@ bool midi_is_event_generated() {
         switch (analyzed_status.stat) {
 
             case WAIT_DATA1:
-                midi_event.data_byte[0] = (midi_buffer);
+                midi_event->data_byte[0] = (midi_buffer);
                 if (MSG_NOTE_ON == analyzed_status.type || MSG_NOTE_OFF == analyzed_status.type ||
                     MSG_PITCH == analyzed_status.type || MSG_CC == analyzed_status.type) {
                     analyzed_status.stat = WAIT_DATA2;
@@ -153,12 +145,12 @@ bool midi_is_event_generated() {
                 break;
 
             case WAIT_DATA2:
-                midi_event.data_byte[1] = (midi_buffer);
+                midi_event->data_byte[1] = (midi_buffer);
                 analyzed_status.stat = END_ANALYSIS;
                 break;
 
             case WAIT_SYSTEM_DATA:
-                midi_event.data_byte[analyzed_status.data_idx++] = (midi_buffer);
+                midi_event->data_byte[analyzed_status.data_idx++] = (midi_buffer);
 
                 if (analyzed_status.data_idx > (MIDI_DATABYTE_MAX - 1)) {
                     analyzed_status.stat = END_ANALYSIS;
@@ -166,7 +158,7 @@ bool midi_is_event_generated() {
                 break;
 
             case END_ANALYSIS:
-                midi_event.data_byte[0] = (midi_buffer);
+                midi_event->data_byte[0] = (midi_buffer);
                 analyzed_status.stat = WAIT_DATA2;
                 break;
 
@@ -178,6 +170,8 @@ bool midi_is_event_generated() {
         }
     }
 
+    midi_event->type;
+
     if (END_ANALYSIS == analyzed_status.stat) {
         return true;
     } else {
@@ -185,46 +179,3 @@ bool midi_is_event_generated() {
     }
 
 }
-//
-//void midi_execute_command() {
-//    switch (midi_event.type) {
-//
-//        case MSG_NOTE_ON:
-//            midi_handle_note_on();
-//            break;
-//
-//        case MSG_NOTE_OFF:
-//            midi_handle_note_off();
-//            break;
-//
-//        case MSG_PITCH:
-//            midi_handle_pitch();
-//            break;
-//
-//        default:
-//            break;
-//    }
-//}
-//
-//void midi_handle_note_on() {
-//    // check velocity (probably in WAIT_DATA_1)
-//    // if === 0
-//    // midi_handle_note_off()
-//    // handle voltage setting
-//    // start gate for channel
-//
-//    HAL_GPIO_WritePin(GPIOB, GPIO_PIN_12, GPIO_PIN_SET);
-////    HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, GPIO_PIN_RESET);
-//}
-//
-//void midi_handle_note_off() {
-//    // handle voltage setting
-//    // stop gate for channel
-//    HAL_GPIO_WritePin(GPIOB, GPIO_PIN_12, GPIO_PIN_RESET);
-////    HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, GPIO_PIN_SET);
-//}
-//
-//void midi_handle_pitch() {
-//    // handle voltage setting
-//    // stop gate for channel
-//}

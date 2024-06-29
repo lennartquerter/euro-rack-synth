@@ -63,7 +63,7 @@ typedef struct {
 
 extern uint8_t midi_buffer;
 
-MIDI_event midi_run();
+bool midi_run(MIDI_event *midi_event);
 
 bool midi_init();
 
