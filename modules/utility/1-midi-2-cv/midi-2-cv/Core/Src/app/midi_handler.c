@@ -56,7 +56,14 @@ void midi_handler_run(MIDI_event *midi_event) {
 
 void midi_handle_note_on(MIDI_event *midi_event) {
     // check velocity (probably in WAIT_DATA_1)
-    // if === 0 ???
+    // if === 0 --> send note_off
+    uint8_t velocity = midi_event->data_byte[1];
+
+    if (velocity == 0) {
+        midi_handle_note_off(midi_event);
+        return;
+    }
+
     uint8_t midi_note = midi_event->data_byte[0];
     uint8_t midi_channel = midi_event->channel;
 
@@ -154,6 +161,10 @@ void midi_handle_note_on(MIDI_event *midi_event) {
 
     // -- Write all values
     MCP4728_Write_Voltage(cv_i2c_ref, channel, value);
+    // velocity goes from 1 --> 127
+    // Output goes from 0 --> 2000
+    // 2000 / 127 = 15 --> we use a 15x translation for a wide velocity amount
+    MCP4728_Write_Voltage(vel_i2c_ref, channel, velocity * 15);
 
     HAL_GPIO_WritePin(port, pin, GPIO_PIN_RESET);
     HAL_Delay(10);
@@ -162,12 +173,54 @@ void midi_handle_note_on(MIDI_event *midi_event) {
 }
 
 void midi_handle_note_off(MIDI_event *midi_event) {
-    // handle voltage setting
-    // stop gate for channel
-    HAL_GPIO_WritePin(GPIOB, GPIO_PIN_12, GPIO_PIN_RESET);
+
+    uint8_t midi_channel = midi_event->channel;
+
+    GPIO_TypeDef *port = GATE_1_OUT_GPIO_Port;
+    uint16_t pin = GATE_1_OUT_Pin;
+
+    if (midi_channel == 0) {
+        port = GATE_1_OUT_GPIO_Port;
+        pin = GATE_1_OUT_Pin;
+    } else if (midi_channel == 1) {
+        port = GATE_2_OUT_GPIO_Port;
+        pin = GATE_2_OUT_Pin;
+    } else if (midi_channel == 2) {
+        port = GATE_3_OUT_GPIO_Port;
+        pin = GATE_3_OUT_Pin;
+    } else if (midi_channel == 3) {
+        port = GATE_4_OUT_GPIO_Port;
+        pin = GATE_4_OUT_Pin;
+    } else {
+        port = CH_16_OUT_GPIO_Port;
+        pin = CH_16_OUT_Pin;
+    }
+
+    HAL_GPIO_WritePin(port, pin, GPIO_PIN_RESET);
+    HAL_Delay(10);
 }
 
 void midi_handle_pitch(MIDI_event *midi_event) {
-    // handle voltage setting
-    // stop gate for channel
+    uint8_t midi_channel = midi_event->channel;
+
+    // todo: Check what value pitch actually is
+    uint8_t pitch = midi_event->data_byte[0];
+    uint8_t channel = MCP4728_CHANNEL_A;
+
+    if (midi_channel == 0) {
+        channel = MCP4728_CHANNEL_A;
+    } else if (midi_channel == 1) {
+        channel = MCP4728_CHANNEL_B;
+    } else if (midi_channel == 2) {
+        channel = MCP4728_CHANNEL_C;
+    } else if (midi_channel == 3) {
+        channel = MCP4728_CHANNEL_D;
+    }
+
+    // pitch goes from 1 --> 127
+    // Output goes from 0 --> 2000
+    // Todo: settings to scale this up or down?
+    // 2000 / 127 = 15 --> we use a 15x translation for a wide velocity amount
+    MCP4728_Write_Voltage(vel_i2c_ref, channel, pitch * 15);
+
 }
