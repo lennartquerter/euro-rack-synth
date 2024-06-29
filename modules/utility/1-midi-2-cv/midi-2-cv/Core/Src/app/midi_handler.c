@@ -14,6 +14,8 @@ I2C_HandleTypeDef *mod_i2c_ref;
 
 void midi_handle_note_on(MIDI_event *midi_event);
 
+void midi_handle_cc(MIDI_event *midi_event);
+
 void midi_handle_note_off(MIDI_event *midi_event);
 
 void midi_handle_pitch(MIDI_event *midi_event);
@@ -48,6 +50,9 @@ void midi_handler_run(MIDI_event *midi_event) {
         case MSG_PITCH:
             midi_handle_pitch(midi_event);
             break;
+        case MSG_CC:
+            midi_handle_cc(midi_event);
+            break;
 
         default:
             break;
@@ -59,14 +64,16 @@ void midi_handle_note_on(MIDI_event *midi_event) {
     // if === 0 --> send note_off
     uint8_t velocity = midi_event->data_byte[1];
 
+    // early return for 0 velocity
     if (velocity == 0) {
         midi_handle_note_off(midi_event);
         return;
     }
 
+    // START Note selection
     uint8_t midi_note = midi_event->data_byte[0];
-    uint8_t midi_channel = midi_event->channel;
 
+    // I think midi-note --> octave, note should be a dedicated function within notes.c that does not exist (yet)
     uint8_t octave = OCTAVE_0;
     uint8_t note = NOTE_C;
 
@@ -131,7 +138,13 @@ void midi_handle_note_on(MIDI_event *midi_event) {
         octave = OCTAVE_6;
     }
 
+
     uint16_t value = (octave * OCT_VALUE) + (note * (OCT_VALUE / 12));
+
+    // END Note selection
+
+    // START Channel selection
+    uint8_t midi_channel = midi_event->channel;
 
     uint8_t channel = MCP4728_CHANNEL_A;
 
@@ -159,20 +172,37 @@ void midi_handle_note_on(MIDI_event *midi_event) {
         pin = CH_16_OUT_Pin;
     }
 
+    // END Channel selection
+
     // -- Write all values
     MCP4728_Write_Voltage(cv_i2c_ref, channel, value);
     // velocity goes from 1 --> 127
     // Output goes from 0 --> 2000
     // 2000 / 127 = 15 --> we use a 15x translation for a wide velocity amount
+    // Todo: check if this actually makes sense, or set a bit for high/low range?
     MCP4728_Write_Voltage(vel_i2c_ref, channel, velocity * 15);
 
+    // this is because I would always like to trigger a note,
+    // regardless if it was the one played first (maybe this should also be a bit)
     HAL_GPIO_WritePin(port, pin, GPIO_PIN_RESET);
     HAL_Delay(10);
     HAL_GPIO_WritePin(port, pin, GPIO_PIN_SET);
     HAL_Delay(10);
 }
 
+void midi_handle_cc(MIDI_event *midi_event) {
+    uint8_t midi_channel = midi_event->channel;
+
+    // CC sends on data_byte[0] to control knob
+    // CC sends on data_byte[1] to value
+    uint8_t control = midi_event->data_byte[0];
+    uint8_t value = midi_event->data_byte[1];
+
+    // Todo: Find something fun to do with midi-cc?
+}
+
 void midi_handle_note_off(MIDI_event *midi_event) {
+    // Channel selection should be a function
 
     uint8_t midi_channel = midi_event->channel;
 
@@ -196,6 +226,7 @@ void midi_handle_note_off(MIDI_event *midi_event) {
         pin = CH_16_OUT_Pin;
     }
 
+    // set correct channel pin to low
     HAL_GPIO_WritePin(port, pin, GPIO_PIN_RESET);
     HAL_Delay(10);
 }
@@ -219,7 +250,7 @@ void midi_handle_pitch(MIDI_event *midi_event) {
 
     // pitch goes from 1 --> 127
     // Output goes from 0 --> 2000
-    // Todo: settings to scale this up or down?
+    // Todo: check if this actually makes sense, or set a bit for high/low range?
     // 2000 / 127 = 15 --> we use a 15x translation for a wide velocity amount
     MCP4728_Write_Voltage(vel_i2c_ref, channel, pitch * 15);
 
