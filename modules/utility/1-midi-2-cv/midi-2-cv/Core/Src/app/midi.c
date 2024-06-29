@@ -2,10 +2,8 @@
  * Midi implementation of midi.h
  *
  * Contains logic to drive the handling of the Midi Commands
- * Todo: Move this logic to the main-loop, this file should not know anything about driving the DAC's
+ * Inspired by CureSynth
  */
-
-#include "main.h"
 
 #include "app/midi.h"
 #include "app/buffer.h"
@@ -163,14 +161,10 @@ bool midi_is_event_generated(MIDI_event *midi_event) {
                 break;
 
             case START_ANALYSIS:
-                break;
-
             default:
                 break;
         }
     }
-
-    midi_event->type;
 
     if (END_ANALYSIS == analyzed_status.stat) {
         return true;

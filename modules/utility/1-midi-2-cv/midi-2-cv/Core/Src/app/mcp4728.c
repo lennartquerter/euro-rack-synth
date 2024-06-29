@@ -1,3 +1,8 @@
+/*
+ * Datasheet: https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/DataSheets/22187E.pdf
+ *
+ */
+
 #include "app/mcp4728.h"
 
 void MCP4728_Write_GeneralCall(I2C_HandleTypeDef *I2CHandler, uint8_t command) {
@@ -7,6 +12,7 @@ void MCP4728_Write_GeneralCall(I2C_HandleTypeDef *I2CHandler, uint8_t command) {
 void MCP4728_Write_Voltage(I2C_HandleTypeDef *I2CHandler, uint16_t channel, uint16_t output) {
     uint8_t buf[3];
     uint8_t command = MCP4728_CMD_DACWRITE_SINGLE;
+
     // MASK only the 8 LSB
     uint8_t lowByte = output & 0xff;
     // SHIFT RIGHT (12 bit shift --> 4 MSB)
