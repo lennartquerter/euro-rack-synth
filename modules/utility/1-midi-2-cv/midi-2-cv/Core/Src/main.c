@@ -137,6 +137,10 @@ int main(void) {
     config.mode = MH_SINGLE_DAC;
     config.trigger_mode = MH_TRIGGER_ON;
 
+    // bit mask of channels available
+    // 0000ABCD;
+    config.available_channels = 0b00001000;
+
     midi_handler_init(&config);
 
     /* USER CODE END 2 */

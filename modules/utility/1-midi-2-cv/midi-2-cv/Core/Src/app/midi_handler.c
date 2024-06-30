@@ -11,6 +11,7 @@
 
 struct midi_handler_state {
     struct midi_handler_config cfg;
+    uint8_t current_channel;
 };
 
 static struct midi_handler_state state;
@@ -22,7 +23,8 @@ static struct midi_handler_state state;
 typedef struct {
     GPIO_TypeDef *port;
     uint16_t pin;
-} MIDI_HANDLER_GATE_CHANNEL;
+    uint8_t channel;
+} midi_handler_trigger_channel;
 
 void midi_handle_note_on(MIDI_event *midi_event);
 
@@ -32,9 +34,7 @@ void midi_handle_note_off(MIDI_event *midi_event);
 
 void midi_handle_pitch(MIDI_event *midi_event);
 
-uint8_t midi_get_midi_CV_channel(uint8_t midi_channel);
-
-void midi_get_midi_GATE_channel(uint8_t midi_channel, MIDI_HANDLER_GATE_CHANNEL *midiGateChannel);
+void midi_channel_to_trigger_channel(uint8_t midi_channel, midi_handler_trigger_channel *trigger_channel);
 
 uint8_t midi_get_note(uint8_t midi_note);
 
@@ -51,6 +51,9 @@ uint32_t midi_handler_init(struct midi_handler_config *cfg) {
 
     memset(&state, 0, sizeof(state));
     state.cfg = *cfg;
+
+    // used to track channel mode
+    state.current_channel = 0x00;
 
     // CV output
     MCP4728_Init(state.cfg.cv_dac1);
@@ -87,6 +90,10 @@ void midi_handler_run(MIDI_event *midi_event) {
     }
 }
 
+void midi_handler_set_available_channels(uint8_t available_channels) {
+    state.cfg.available_channels = available_channels;
+}
+
 // ********************
 // Private functions
 // ********************
@@ -100,6 +107,12 @@ void midi_handle_note_on(MIDI_event *midi_event) {
     if (velocity == 0) {
         midi_handle_note_off(midi_event);
         return;
+    }
+
+    if (state.cfg.assignment_mode == MH_SEQUENCE) {
+        // todo: check for next available channel
+        // assign next channel
+        state.current_channel = 0;
     }
 
     // get Note/Octave for midi note
@@ -131,19 +144,22 @@ void midi_handle_note_on(MIDI_event *midi_event) {
 
     } else {
         // Assign right channel for the midi-channel
-        uint8_t channel = midi_get_midi_CV_channel(midi_event->channel);
+
+        midi_handler_trigger_channel trigger_channel;
+        midi_channel_to_trigger_channel(midi_event->channel, &trigger_channel);
+
         // -- Write all values
         // -- Todo, the MCP shoudld have a bulk write for 2 channels?
-        MCP4728_Write_Voltage(state.cfg.cv_dac1, channel, value);
+        MCP4728_Write_Voltage(state.cfg.cv_dac1, trigger_channel.channel, value);
 
         // velocity goes from 1 --> 127
         // Output goes from 0 --> 2000
         // 2000 / 127 = 15 --> we use a 15x translation for a wide velocity amount
         // Todo: check if this actually makes sense, or set a bit for high/low range?
-        MCP4728_Write_Voltage(state.cfg.vel_dac2, channel, velocity * 4);
+        MCP4728_Write_Voltage(state.cfg.vel_dac2, trigger_channel.channel, velocity * 4);
 
-        MIDI_HANDLER_GATE_CHANNEL gate_channel;
-        midi_get_midi_GATE_channel(midi_event->channel, &gate_channel);
+        midi_handler_trigger_channel gate_channel;
+        midi_channel_to_trigger_channel(midi_event->channel, &gate_channel);
 
         if (state.cfg.trigger_mode == MH_TRIGGER_ON) {
             HAL_GPIO_WritePin(gate_channel.port, gate_channel.pin, GPIO_PIN_RESET);
@@ -165,10 +181,10 @@ void midi_handle_note_off(MIDI_event *midi_event) {
         HAL_GPIO_WritePin(GATE_1_OUT_GPIO_Port, GATE_1_OUT_Pin, GPIO_PIN_RESET);
         HAL_Delay(10);
     } else {
-        MIDI_HANDLER_GATE_CHANNEL gate_channel;
-        midi_get_midi_GATE_channel(midi_event->channel, &gate_channel);
+        midi_handler_trigger_channel trigger_channel;
+        midi_channel_to_trigger_channel(midi_event->channel, &trigger_channel);
 
-        HAL_GPIO_WritePin(gate_channel.port, gate_channel.pin, GPIO_PIN_RESET);
+        HAL_GPIO_WritePin(trigger_channel.port, trigger_channel.pin, GPIO_PIN_RESET);
         HAL_Delay(10);
     }
 }
@@ -183,14 +199,15 @@ void midi_handle_pitch(MIDI_event *midi_event) {
     if (state.cfg.mode == MH_SINGLE_DAC) {
         MCP4728_Write_Voltage(state.cfg.cv_dac1, MCP4728_CHANNEL_C, pitch * multiplier);
     } else {
-        uint8_t channel = midi_get_midi_CV_channel(midi_event->channel);
+        midi_handler_trigger_channel trigger_channel;
+        midi_channel_to_trigger_channel(midi_event->channel, &trigger_channel);
 
         // return if no channel assigned
-        if (channel > 0x04) {
+        if (trigger_channel.channel > 0x04) {
             return;
         }
 
-        MCP4728_Write_Voltage(state.cfg.vel_dac2, channel, pitch * multiplier);
+        MCP4728_Write_Voltage(state.cfg.vel_dac2, trigger_channel.channel, pitch * multiplier);
     }
 }
 
@@ -210,8 +227,10 @@ void midi_handle_cc(MIDI_event *midi_event) {
         if (state.cfg.mode == MH_SINGLE_DAC) {
             MCP4728_Write_Voltage(state.cfg.cv_dac1, MCP4728_CHANNEL_D, value * multiplier);
         } else {
-            uint8_t channel = midi_get_midi_CV_channel(midi_event->channel);
-            MCP4728_Write_Voltage(state.cfg.mod_dac3, channel, value * multiplier);
+            midi_handler_trigger_channel trigger_channel;
+            midi_channel_to_trigger_channel(midi_event->channel, &trigger_channel);
+
+            MCP4728_Write_Voltage(state.cfg.mod_dac3, trigger_channel.channel, value * multiplier);
         }
     }
 }
@@ -293,36 +312,38 @@ uint8_t midi_get_octave(uint8_t midi_note) {
     return octave;
 }
 
-uint8_t midi_get_midi_CV_channel(uint8_t midi_channel) {
-    if (midi_channel == 0) {
-        return MCP4728_CHANNEL_A;
-    } else if (midi_channel == 1) {
-        return MCP4728_CHANNEL_B;
-    } else if (midi_channel == 2) {
-        return MCP4728_CHANNEL_C;
-    } else if (midi_channel == 3) {
-        return MCP4728_CHANNEL_D;
+void midi_channel_to_trigger_channel(uint8_t midi_channel, midi_handler_trigger_channel *trigger_channel) {
+    uint8_t channel_to_select;
+
+    if (state.cfg.assignment_mode == MH_CHANNEL) {
+        channel_to_select = midi_channel;
+    } else {
+        // will be incremented by each note trigger
+        // based on available channels
+        channel_to_select = state.current_channel;
     }
 
-    // this returns nothing actually, the MCP can not process this channel
-    return 0x4;
-}
-
-void midi_get_midi_GATE_channel(uint8_t midi_channel, MIDI_HANDLER_GATE_CHANNEL *midiGateChannel) {
-    if (midi_channel == 0) {
-        midiGateChannel->port = GATE_1_OUT_GPIO_Port;
-        midiGateChannel->pin = GATE_1_OUT_Pin;
-    } else if (midi_channel == 1) {
-        midiGateChannel->port = GATE_2_OUT_GPIO_Port;
-        midiGateChannel->pin = GATE_2_OUT_Pin;
-    } else if (midi_channel == 2) {
-        midiGateChannel->port = GATE_3_OUT_GPIO_Port;
-        midiGateChannel->pin = GATE_3_OUT_Pin;
-    } else if (midi_channel == 3) {
-        midiGateChannel->port = GATE_4_OUT_GPIO_Port;
-        midiGateChannel->pin = GATE_4_OUT_Pin;
+    if (channel_to_select == 0) {
+        trigger_channel->port = GATE_1_OUT_GPIO_Port;
+        trigger_channel->pin = GATE_1_OUT_Pin;
+        trigger_channel->channel = MCP4728_CHANNEL_A;
+    } else if (channel_to_select == 1) {
+        trigger_channel->port = GATE_2_OUT_GPIO_Port;
+        trigger_channel->pin = GATE_2_OUT_Pin;
+        trigger_channel->channel = MCP4728_CHANNEL_B;
+    } else if (channel_to_select == 2) {
+        trigger_channel->port = GATE_3_OUT_GPIO_Port;
+        trigger_channel->pin = GATE_3_OUT_Pin;
+        trigger_channel->channel = MCP4728_CHANNEL_C;
+    } else if (channel_to_select == 3) {
+        trigger_channel->port = GATE_4_OUT_GPIO_Port;
+        trigger_channel->pin = GATE_4_OUT_Pin;
+        trigger_channel->channel = MCP4728_CHANNEL_D;
     } else {
-        midiGateChannel->port = CH_16_OUT_GPIO_Port;
-        midiGateChannel->pin = CH_16_OUT_Pin;
+        trigger_channel->port = CH_16_OUT_GPIO_Port;
+        trigger_channel->pin = CH_16_OUT_Pin;
+
+        // channel does not exists on the MCP4728
+        trigger_channel->channel = 0x04;
     }
 }
