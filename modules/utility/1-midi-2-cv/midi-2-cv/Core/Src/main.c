@@ -127,7 +127,17 @@ int main(void) {
 
     // Init midi system
     midi_init();
-    midi_handler_init(&hi2c1, &hi2c2, &hi2c3);
+
+    // Init midi handler
+    struct midi_handler_config config;
+    config.cv_dac1 = &hi2c1;
+    config.vel_dac2 = &hi2c2;
+    config.mod_dac3 = &hi2c3;
+    config.assignment_mode = MH_CHANNEL;
+    config.mode = MH_SINGLE_DAC;
+    config.trigger_mode = MH_TRIGGER_ON;
+
+    midi_handler_init(&config);
 
     /* USER CODE END 2 */
 
@@ -144,7 +154,6 @@ int main(void) {
         if (midi_run(&midi_event) == true) {
             midi_handler_run(&midi_event);
         }
-
     }
     /* USER CODE END 3 */
 }

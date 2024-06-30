@@ -27,10 +27,10 @@ bool midi_is_event_generated(MIDI_event *midi_event);
 // Implementation
 // ***********
 
-bool midi_init() {
+int32_t midi_init() {
     // I guess this means that the ring buffer is not initialized well
     if (!buffer_init(&rx_buffer, MIDI_BUFFER_LENGTH)) {
-        return false;
+        return MOD_ERR_ARG;
     }
 
     // Initialize variables for RPN
@@ -42,17 +42,17 @@ bool midi_init() {
             = rpn_event.param_msb
             = 0x00;
 
-    return true;
+    return 0;
 }
 
-bool midi_run(MIDI_event *midi_event) {
+int32_t midi_run(MIDI_event *midi_event) {
     while (1 == midi_pop_buffer()) {
         // will keep returning false when not all events are read
         if (midi_is_event_generated(midi_event)) {
-            return true;
+            return 1;
         }
     }
-    return false;
+    return 0;
 }
 
 bool midi_push_buffer(uint8_t *input) {

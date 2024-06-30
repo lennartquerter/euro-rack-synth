@@ -15,6 +15,7 @@
 #include <stdint.h>
 #include <stdbool.h>
 
+#include "app.h"
 #include "stm32f4xx_hal.h"
 
 typedef enum {
@@ -63,9 +64,9 @@ typedef struct {
 
 extern uint8_t midi_buffer;
 
-bool midi_run(MIDI_event *midi_event);
+int32_t midi_init();
 
-bool midi_init();
+int32_t midi_run(MIDI_event *midi_event);
 
 bool midi_push_buffer(uint8_t *input);
 
