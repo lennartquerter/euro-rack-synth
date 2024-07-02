@@ -211,7 +211,6 @@ void midi_handle_pitch(MIDI_event *midi_event) {
     }
 }
 
-
 void midi_handle_cc(MIDI_event *midi_event) {
     // CC sends on data_byte[0] to control knob
     // CC sends on data_byte[1] to value
