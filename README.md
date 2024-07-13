@@ -26,6 +26,30 @@ If you proceed to copy or use any file within this repository, **you are doing t
 These modules are also not perfect 1v/oct or temperature controlled. This project should be
 seen as a fun hobby project and not as professional advice on how to build synthesisers.
 
+## Modules
+
+### Confirmed/Ready
+
+There are tags on the commit that was ordered (for the exact gerber files)
+
+If there are issues, they will be reported in the README for each module.
+
+| Type    | Module          | Version | Status           | Tested | Issues? |
+|---------|-----------------|---------|------------------|--------|---------|
+| VCO     | Vixen           | 2       | Pending Assembly | No     | -       |
+| VCO     | 3340            | 1       | Built            | Yes    | No      |
+| LFO     | XOF             | 1       | Built            | Yes    | No      |
+| VCA     | Sparkle         | 2       | Built            | Yes    | No      |
+| SEQ     | Sensei          | 2       | Pending Assembly | No     | -       |
+| EG      | Scribble        | 2       | Pending Assembly | No     | -       |
+| EG      | 7555            | 1       | Pending Assembly | No     | -       |
+| Filter  | 3320            | 1       | Pending Assembly | No     | -       |
+| Filter  | Low Orbit       | 1       | Pending Assembly | No     | -       |
+| Mixer   | Distorted Daisy | 2       | Pending Assembly | No     | -       |
+| Utility | Passive Mult    | 1       | Built            | Yes    | No      |
+| Utility | Active Mult     | 1       | Pending Assembly | No     | -       |
+| Utility | Chrono Divider  | 1       | Pending Assembly | No     | -       |
+
 ## The story
 
 Since young, I have always been interested in 2 things: Electronics & Music. I have played many
@@ -241,35 +265,9 @@ I have a 3D printer accessible at the office, so I use it to build and prototype
 designs. At some point I might turn to a professional milling company but for now, it works well.
 I use Fusion 360 for the designs (there is a free non-commercial license!).
 
+
 ## Modules
 
-### Confirmed/Ready
-
-All v1 versions of the module are not available any more in the git repo.
-There will be tags on the main branch when components are ordered starting from V2.
-
-If there are issues, they will be reported in the README for each module.
-
-| Type    | Module          | Version | Status           | Tested | Issues? |
-|---------|-----------------|---------|------------------|--------|---------|
-| VCO     | Vixen           | 1       | Built            | Yes    | Minor   | 
-| VCO     | Vixen           | 2       | Pending Assembly | No     | -       |
-| VCO     | 3340            | 1       | Built            | Yes    | No      |
-| LFO     | XOF             | 1       | Built            | Yes    | No      |
-| VCA     | Sparkle         | 1       | Built            | Yes    | No      |
-| VCA     | Sparkle         | 2       | Built            | Yes    | No      |
-| SEQ     | Sensei          | 1       | Built            | Yes    | Minor   |
-| SEQ     | Sensei          | 2       | Pending Assembly | No     | -       |
-| EG      | Scribble        | 1       | Built            | Yes    | Yes     |
-| EG      | Scribble        | 2       | Pending Assembly | No     | -       |
-| EG      | 7555            | 1       | Pending Assembly | No     | -       |
-| Filter  | 3320            | 1       | Pending Assembly | No     | -       |
-| Filter  | Low Orbit       | 1       | Pending Assembly | No     | -       |
-| Mixer   | Distorted Daisy | 1       | Built            | yes    | No      |
-| Mixer   | Distorted Daisy | 2       | Pending Assembly | No     | -       |
-| Utility | Passive Mult    | 1       | Built            | Yes    | No      |
-| Utility | Active Mult     | 1       | Pending Assembly | No     | -       |
-| Utility | Chrono Divider  | 1       | Pending Assembly | No     | -       |
 
 ### In progress
 
@@ -290,6 +288,17 @@ If there are issues, they will be reported in the README for each module.
 | FX      | Delay (PT-chip) | 1       | Prototype phase | No            |
 | FX      | Reverb (Spring) | 1       | Prototype phase | No            |
 | FX      | Sample&Hold     | 1       | Prototype phase | No            |
+
+
+### Previous versions
+
+| Type    | Module          | Version | Status           | Tested | Issues? |
+|---------|-----------------|---------|------------------|--------|---------|
+| VCO     | Vixen           | 1       | Built            | Yes    | Minor   | 
+| VCA     | Sparkle         | 1       | Built            | Yes    | No      |
+| SEQ     | Sensei          | 1       | Built            | Yes    | Minor   |
+| EG      | Scribble        | 1       | Built            | Yes    | Yes     |
+| Mixer   | Distorted Daisy | 1       | Built            | yes    | No      |
 
 ## Module links
 
