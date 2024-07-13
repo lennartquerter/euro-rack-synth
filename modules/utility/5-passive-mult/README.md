@@ -1,33 +1,33 @@
-# TBD
-(Passive mult)
+# Passive Mult
+(Just a passive mult)
 
-!! The current version has not been built or tested
+#### Current Version: 1
 
-## Current Version: 1
+## Inputs (2x)
 
-| Field  | status  |
-|--------|---------|
-| Tested | No      |
-| Built  | No      |
-| Length | 111 mm  |
-| Width  | 40.3 mm |
+| type | value |
+|------|-------|
+| jack | input |
 
-## Inputs
+## Output (2x)
 
+| type | value    |
+|------|----------|
+| jack | output_1 |
+| jack | output_2 |
+| jack | output_3 |
 
-## Output
+## Bill Of Material
 
-## Build Guide
+[BOM.csv](BOM.csv)
 
-### Bill Of Material
+## Build Notes
 
-### Soldering
+### Version: 1
+PCB Tested: Yes
 
-In general: use the Bill Of Material and solder each component. Start from the lower components and go to the higher ones.
+Built: Yes
 
+Issues:
+- No issues found!
 
-## Images (3D)
-
-![Front Panel](./img/vixen_3D_front.png)
-
-![Back Panel](./img/vixen_3D_back.png)

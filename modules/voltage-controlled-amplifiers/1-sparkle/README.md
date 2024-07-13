@@ -1,53 +1,40 @@
 # Sparkle
 (Voltage Controlled Amplifier)
 
-!! The current version has not been built or tested
+#### Current Version: 2
 
+## Inputs (2x)
 
-## Current Version: 2
+| type | value  |
+|------|--------|
+| jack | input  |
+| jack | CV     |
+| knob | volume |
 
-| Field  | status |
-|--------|--------|
-| Tested | No     |
-| Built  | No     |
-| Length | 111 mm |
-| Width  | 40 mm  |
+## Output (2x)
 
+| type | value  |
+|------|--------|
+| jack | output |
 
-## Inputs
+## Bill Of Material
 
-- 
+[IBOM](https://htmlpreview.github.io/?https://github.com/lennartquerter/euro-rack-synth/tree/main/modules/voltage-controlled-amplifiers/1-sparkle/ibom.html)
 
-## Output
+## Images
 
-- 
+![sparkle_3D_front.png](img/sparkle_3D_front.png)
+![sparkle_3D_back.png](img/sparkle_3D_back.png)
 
+## Build Notes
 
-## Build Guide
+### Version: 2
+PCB Tested: Yes
 
-- Potentiometers: I use the Alpha (D-shaft) 9mm fom THONKICONN (https://www.thonk.co.uk/shop/alpha-9mm-pots-dshaft/)
-- Jacks: I use the PJ398SM from THONKICONN (https://www.thonk.co.uk/shop/thonkiconn/)
-- All mounting holes are M3 (3.2mm), and pick an offset that you feel good with
+Built: Yes
 
-### Bill Of Material
-
-See [Bill Of Material](./kiCad/BOM.csv) for a full list of material and where to solder the components
-
-
-### Soldering
-
-In general: use the Bill Of Material and solder each component. Start from the lower components and go to the higher ones.
-
-
-## Images (3D)
-
-![Front Panel](./img/sparkle_3D_front.png)
-
-![Back Panel](./img/sparkle_3D_back.png)
-
-
-
-## Previous versions & Issues
+Issues:
+- No issues found!
 
 ### Version: 1
 PCB Tested: Yes
@@ -57,3 +44,5 @@ Built: Yes
 Issues:
 - 2mm sockets are a bit too small and required layering to make it high enough
 - Capacitors were on the front, making the height of the bottom board too high
+
+

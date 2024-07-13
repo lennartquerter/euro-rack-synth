@@ -40,7 +40,7 @@ Schematics can be [found here](./img/distorted_daisy_schematic_a3.pdf)
 
 ### Bill Of Material
 
-See [Bill Of Material](./kiCad/BOM.csv) for a full list of material and where to solder the components
+See [Bill Of Material](./BOM.csv) for a full list of material and where to solder the components
 
 ### Soldering
 

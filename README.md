@@ -1,6 +1,6 @@
 # Building a Eurorack synth
 
-This is a collection of notes and resources for building a Eurorack synth. 
+This is a collection of notes and resources for building a Eurorack synth.
 I'm not an expert, but I'm learning as I go and I'm happy to share what I've learned.
 
 [First Jam Session](https://youtu.be/sQ6iWkeZPVc)
@@ -17,13 +17,13 @@ I'm not an expert, but I'm learning as I go and I'm happy to share what I've lea
 
 I am not responsible for any damage to any of your modules. The modules
 within this repository have been tested and built by myself and used only
-with the other modules in this system. 
+with the other modules in this system.
 
-There is a chance they work well with other off-the-shelf modules, 
-but I do not own any, so I can not test it out. 
+There is a chance they work well with other off-the-shelf modules,
+but I do not own any, so I can not test it out.
 If you proceed to copy or use any file within this repository, **you are doing this at your own risk**.
 
-These modules are also not perfect 1v/oct or temperature controlled. This project should be 
+These modules are also not perfect 1v/oct or temperature controlled. This project should be
 seen as a fun hobby project and not as professional advice on how to build synthesisers.
 
 ## The story
@@ -33,14 +33,14 @@ instruments over the years (drums, guitar, and a bit of piano). When I was a tee
 electronic music production. I DJ'ed (as Lenimal) for about 10 years in and around Belgium.
 
 I moved into
-[software engineering](https://medium.com/forto-tech-blog/how-being-a-dj-prepared-me-to-become-a-staff-engineer-5712df294461) 
-after my studies in Film. 
-Not having a computer science or electronics degree, I always felt that I needed to 
-explore the connection with the hardware on which my software ran. 
+[software engineering](https://medium.com/forto-tech-blog/how-being-a-dj-prepared-me-to-become-a-staff-engineer-5712df294461)
+after my studies in Film.
+Not having a computer science or electronics degree, I always felt that I needed to
+explore the connection with the hardware on which my software ran.
 
-I started following a YouTube series by 
+I started following a YouTube series by
 [Ben Eater](https://www.youtube.com/watch?v=HyznrdDSSGM&list=PLowKtXNTBypGqImE405J2565dvjafglHU),
-showing how to build an 8-bit computer on breadboards. 
+showing how to build an 8-bit computer on breadboards.
 I got pretty far until my cat, being the cat he is, decided that
 the computer would look better on the ground, destroying most of the connections.
 The motivation to continue was lost after seeing the work it would take to repair it.
@@ -50,16 +50,16 @@ I got the opportunity to visit the MOOG factory in Ashville, NC. I didn't buy a 
 [MFOS book](https://shop.musicfromouterspace.com/cart/ray-wilson-make-analog-synthesizers) on
 how to build an analog synth.
 
-After immersing myself in the MFOS book, I was filled with a sense of determination. 
+After immersing myself in the MFOS book, I was filled with a sense of determination.
 I read the book cover to cover at least four times, absorbing every detail.
 It was then that I made a firm decision-I was going to build my own synthesizer!
 
 I started watching more in-depth tutorials on YouTube and came across
-[Moritz Klein's](https://www.youtube.com/@MoritzKlein0) channel. 
+[Moritz Klein's](https://www.youtube.com/@MoritzKlein0) channel.
 He explains the process in great detail and I could follow along at home. (Thank you, Moritz!)
 
 I still had ample chips, resistors, and capacitors from my previous 8-bit computer build,
-so I started looking into the more specialized equipment I needed. 
+so I started looking into the more specialized equipment I needed.
 It was clear very soon that I needed a reasonable Oscilloscope and some other things (described below).
 
 Once I had collected all the needed items, I made a goal. In 2024, I would build a modular
@@ -82,9 +82,8 @@ Some on the schematic (like I connected the wrong inputs on the op-amp on the EG
 As I'm learning, I will keep updating the modules in this repository. I hope it inspires
 and helps others create awesome modules & start their adventure into DIY Synths!
 
-As my creativity ends with designing PCB's, I call upon my (very beautiful) wife to name the modules, 
+As my creativity ends with designing PCB's, I call upon my (very beautiful) wife to name the modules,
 this is why they might sound like the name of unicorns.
-
 
 ## Getting Started
 
@@ -115,7 +114,8 @@ The quantity is just a guideline for how many I got to get started.
 
 Most of the items I got in bulk while travelling in Asia. I kept space in my suitcase for these components as I could
 get them pretty cheap there. I didn't have any problems with flying when checking them in, and no issues with customs.
-(this is not a promise that you will not have problems, always read guidelines and regulations of the country you are flying from/to)
+(this is not a promise that you will not have problems, always read guidelines and regulations of the country you are
+flying from/to)
 
 ![suitcase](./img/component-suitcase.png)
 
@@ -144,7 +144,7 @@ Here is the list of my most used resistor values:
 ### Potentiometers
 
 I have been looking for cheap (but good) ones that fit on PCB's vertically for a long time.
-The best I can found are the ALPHA 9mm (I buy them on thonk.co.uk). You can find some on digiKey, 
+The best I can found are the ALPHA 9mm (I buy them on thonk.co.uk). You can find some on digiKey,
 but the ALPHA's are my recomendation. I bought some with a D-shaft, and others just as a long shaft.
 
 - A1M (10x)
@@ -163,7 +163,8 @@ but the ALPHA's are my recomendation. I bought some with a D-shaft, and others j
 
 It's also good to have some of every value. I got a box of electrolytic, ceramic and film
 
-For the film capacitor's I try to use [WIMA](https://www.wima.de/en/our-product-range/capacitors-in-pcm-2-5/mks-02/) Caps
+For the film capacitor's I try to use [WIMA](https://www.wima.de/en/our-product-range/capacitors-in-pcm-2-5/mks-02/)
+Caps
 
 - 1uF MKS
 - 0.1uF MKS
@@ -189,7 +190,6 @@ There are some general NPN and PNP transistors you can get, I mainly got some va
 - CD4016 [decade counter]
 - CD4040 [binary counter]
 
-
 ## Schematics & PCB creation
 
 I use [kiCad](https://www.kicad.org/), open-source software to design all my schematics. It's pretty easy to get a hang
@@ -214,7 +214,6 @@ PCB and the component just does not fit. I tried to make a SPDT switch footprint
 Make sure when you are giving the pins a number, the correspond to the correct number on the whole. I had the issue
 with my SPDT switch, that they just didn't work. I got the holes mixed up and ended with the wrong pin out.
 
-
 #### LED's
 
 When using an LED, never connect it directly to an IC to drive it. Always use a transistor to drive the LED.
@@ -226,7 +225,7 @@ This is important because you don't want to burn your IC because there is too mu
 
 If you are following my schematics, you will see I use header/socket pins to connect my boards.
 I first started with the 2.00mm pins. I could not easily find tall sockets, so I ended having to
-always stack 2 on top of each other, this was not super stable in the end, and I had to solder 
+always stack 2 on top of each other, this was not super stable in the end, and I had to solder
 all the cap's to the back of the board because I didn't want to use 3 stacked socket pins.
 
 I currently use the more standard 2.56mm pins.
@@ -236,64 +235,61 @@ I currently use the more standard 2.56mm pins.
 Make sure you place 4 mounting holes on your board, and that they match the coordinates of the
 top board. I got simple 3mm & 2mm spacers from nylon.
 
-
 ## Front Panels
 
 I have a 3D printer accessible at the office, so I use it to build and prototype the
 designs. At some point I might turn to a professional milling company but for now, it works well.
 I use Fusion 360 for the designs (there is a free non-commercial license!).
 
-
 ## Modules
 
 ### Confirmed/Ready
 
-All v1 versions of the module are not available any more in the git repo. 
+All v1 versions of the module are not available any more in the git repo.
 There will be tags on the main branch when components are ordered starting from V2.
 
+If there are issues, they will be reported in the README for each module.
 
-| Type    | Module          | Version | Status          | Tested             |
-|---------|-----------------|---------|-----------------|--------------------|
-| VCO     | Vixen           | 1       | Built           | Yes - Minor issues |
-| VCO     | Vixen           | 2       | Ready for Order | No                 |
-| VCO     | 3340            | 1       | Ready for Order | No                 |
-| LFO     | XOF             | 1       | Ready for Order | No                 |
-| VCA     | Sparkle         | 1       | Built           | Yes - No issues    |
-| VCA     | Sparkle         | 2       | Ready for Order | No                 |
-| SEQ     | Sensei          | 1       | Built           | Yes - Minor issues |
-| SEQ     | Sensei          | 2       | Ready for Order | No                 |
-| EG      | Scribble        | 1       | Built           | Yes - OpAmp Issues |
-| EG      | Scribble        | 2       | Ready for Order | No                 |
-| EG      | 7555            | 1       | Ready for Order | No                 |
-| Filter  | 3320            | 1       | Ready for Order | No                 |
-| Filter  | Low Orbit       | 1       | Ready for Order | No                 |
-| Mixer   | Distorted Daisy | 1       | Built           | yes - No issues    |
-| Mixer   | Distorted Daisy | 2       | Ready for Order | No                 |
-| Utility | Passive Mult    | 1       | Ready for Order | No                 |
-| Utility | Active Mult     | 1       | Ready for Order | No                 |
-
+| Type    | Module          | Version | Status           | Tested | Issues? |
+|---------|-----------------|---------|------------------|--------|---------|
+| VCO     | Vixen           | 1       | Built            | Yes    | Minor   | 
+| VCO     | Vixen           | 2       | Pending Assembly | No     | -       |
+| VCO     | 3340            | 1       | Built            | Yes    | No      |
+| LFO     | XOF             | 1       | Built            | Yes    | No      |
+| VCA     | Sparkle         | 1       | Built            | Yes    | No      |
+| VCA     | Sparkle         | 2       | Built            | Yes    | No      |
+| SEQ     | Sensei          | 1       | Built            | Yes    | Minor   |
+| SEQ     | Sensei          | 2       | Pending Assembly | No     | -       |
+| EG      | Scribble        | 1       | Built            | Yes    | Yes     |
+| EG      | Scribble        | 2       | Pending Assembly | No     | -       |
+| EG      | 7555            | 1       | Pending Assembly | No     | -       |
+| Filter  | 3320            | 1       | Pending Assembly | No     | -       |
+| Filter  | Low Orbit       | 1       | Pending Assembly | No     | -       |
+| Mixer   | Distorted Daisy | 1       | Built            | yes    | No      |
+| Mixer   | Distorted Daisy | 2       | Pending Assembly | No     | -       |
+| Utility | Passive Mult    | 1       | Built            | Yes    | No      |
+| Utility | Active Mult     | 1       | Pending Assembly | No     | -       |
+| Utility | Chrono Divider  | 1       | Pending Assembly | No     | -       |
 
 ### In progress
 
-
-| Type    | Module          | Version  | Status                 | Tested |
-|---------|-----------------|----------|------------------------|--------|
-| Utility | Chrono Divider  | 1        | Waiting for components | No     |
-| Utility | Midi-2-cv       | 1        | Waiting for components | No     |
-| Utility | Noise Module    | 1        | Prototype phase        | No     |
-| Utility | AND/OR          | 1        | Prototype phase        | No     |
-| Utility | Math?           | 1        | Prototype phase        | No     |
-| Utility | 1v/oct tuner    | 1        | Prototype phase        | No     |
-| Utility | Quantizer       | 1        | Prototype phase        | No     |
-| SEQ     | STM32 Sequencer | 1        | Prototype phase        | No     |
-| Drums   | Kick            | 1        | Prototype phase        | No     |
-| Drums   | Clap/Snare      | 1        | Prototype phase        | No     |
-| Drums   | Hats            | 1        | Prototype phase        | No     |
-| Drums   | Toms            | 1        | Prototype phase        | No     |
-| FX      | Delay (DBB)     | 1        | Prototype phase        | No     |
-| FX      | Delay (PT-chip) | 1        | Prototype phase        | No     |
-| FX      | Reverb (Spring) | 1        | Prototype phase        | No     |
-| FX      | Sample&Hold     | 1        | Prototype phase        | No     |
+| Type    | Module          | Version | Status          | Tested        |
+|---------|-----------------|---------|-----------------|---------------|
+| Utility | Midi-2-cv       | 1       | Protoboard done | yes - Working |
+| Utility | Noise Module    | 1       | Prototype phase | No            |
+| Utility | AND/OR          | 1       | Prototype phase | No            |
+| Utility | Math?           | 1       | Prototype phase | No            |
+| Utility | 1v/oct tuner    | 1       | Prototype phase | No            |
+| Utility | Quantizer       | 1       | Prototype phase | No            |
+| SEQ     | STM32 Sequencer | 1       | Prototype phase | No            |
+| Drums   | Kick            | 1       | Prototype phase | No            |
+| Drums   | Clap/Snare      | 1       | Prototype phase | No            |
+| Drums   | Hats            | 1       | Prototype phase | No            |
+| Drums   | Toms            | 1       | Prototype phase | No            |
+| FX      | Delay (DBB)     | 1       | Prototype phase | No            |
+| FX      | Delay (PT-chip) | 1       | Prototype phase | No            |
+| FX      | Reverb (Spring) | 1       | Prototype phase | No            |
+| FX      | Sample&Hold     | 1       | Prototype phase | No            |
 
 ## Module links
 

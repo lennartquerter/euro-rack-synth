@@ -1,33 +1,36 @@
-# TBD
-(LFO, low rate VCO)
+# XOF LFO
+(Low Frequency Oscillator)
 
-!! The current version has not been built or tested
-
-## Current Version: 1
-
-| Field  | status  |
-|--------|---------|
-| Tested | No      |
-| Built  | No      |
-| Length | 111 mm  |
-| Width  | 40.3 mm |
+#### Current Version: 1
 
 ## Inputs
 
+| type   | value       |
+|--------|-------------|
+| knob   | rate        |
+| knob   | tri range   |
+| knob   | pulse range |
+| switch | fast/slow   |
 
 ## Output
 
-## Build Guide
+| type | value |
+|------|-------|
+| jack | PULSE |
+| jack | SINE  |
+| jack | TRI   |
 
-### Bill Of Material
+## Bill Of Material
 
-### Soldering
+[IBOM](https://htmlpreview.github.io/?https://github.com/lennartquerter/euro-rack-synth/tree/main/modules/voltage-controlled-oscillators/3-lfo/ibom.html)
 
-In general: use the Bill Of Material and solder each component. Start from the lower components and go to the higher ones.
+## Build Notes
 
+### Version: 1
+PCB Tested: Yes
 
-## Images (3D)
+Built: Yes
 
-![Front Panel](./img/vixen_3D_front.png)
+Issues:
+- No issues found!
 
-![Back Panel](./img/vixen_3D_back.png)
