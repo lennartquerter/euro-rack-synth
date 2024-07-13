@@ -23,7 +23,7 @@
 
 ## Bill Of Material
 
-[IBOM](https://htmlpreview.github.io/?https://github.com/lennartquerter/euro-rack-synth/tree/main/modules/filters/2-low-orbit/ibom.html)
+[IBOM](https://htmlpreview.github.io/?https://github.com/lennartquerter/euro-rack-synth/blob/main/modules/filters/2-low-orbit/ibom.html)
 
 ## Build Notes
 

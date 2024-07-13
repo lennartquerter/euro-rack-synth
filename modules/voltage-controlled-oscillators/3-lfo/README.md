@@ -22,7 +22,7 @@
 
 ## Bill Of Material
 
-[IBOM](https://htmlpreview.github.io/?https://github.com/lennartquerter/euro-rack-synth/tree/main/modules/voltage-controlled-oscillators/3-lfo/ibom.html)
+[IBOM](https://htmlpreview.github.io/?https://github.com/lennartquerter/euro-rack-synth/blob/main/modules/voltage-controlled-oscillators/3-lfo/ibom.html)
 
 ## Build Notes
 

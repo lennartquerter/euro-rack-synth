@@ -19,7 +19,7 @@
 
 ## Bill Of Material
 
-[IBOM](https://htmlpreview.github.io/?https://github.com/lennartquerter/euro-rack-synth/tree/main/modules/voltage-controlled-amplifiers/1-sparkle/ibom.html)
+[IBOM](https://htmlpreview.github.io/?https://github.com/lennartquerter/euro-rack-synth/blob/main/modules/voltage-controlled-amplifiers/1-sparkle/ibom.html)
 
 ## Images
 
