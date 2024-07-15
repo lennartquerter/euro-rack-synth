@@ -1,0 +1,118 @@
+const panelWidth = 50;
+const panelHeight = 128.5;
+
+const pcbWidth = 50;
+const pcbHeight = 110;
+
+const topOffset = (panelHeight - pcbHeight) / 2;
+const rightOffset = (panelWidth - pcbWidth) / 2;
+
+const holePositions = [
+    {
+        label: 'power_led',
+        fromTop: 12,
+        fromRight: 46.27,
+        diameter: 5
+    },
+    {
+        label: 'power_led',
+        fromTop: 3.5,
+        fromRight: 25,
+        diameter: 5
+    },
+    {
+        label: 'cut-off',
+        fromTop: 16.225,
+        fromRight: 25,
+        diameter: 7.2
+    },
+    {
+        label: 'res-intensity',
+        fromTop: 36.5,
+        fromRight: 32,
+        diameter: 7.2
+    },
+    {
+        label: 'res-amount',
+        fromTop: 36.5,
+        fromRight: 17,
+        diameter: 7.2
+    },
+    {
+        label: 'input_jack',
+        fromTop: 59,
+        fromRight: 41,
+        diameter: 6.2
+    },
+    {
+        label: 'input_ctrl',
+        fromTop: 59,
+        fromRight: 27,
+        diameter: 7.2
+    },
+    {
+        label: 'cv-input-1',
+        fromTop: 75,
+        fromRight: 41,
+        diameter: 6.2
+    },
+    {
+        label: 'cv_amt_1',
+        fromTop: 75,
+        fromRight: 27,
+        diameter: 7.2
+    },
+    {
+        label: 'cv-input-2',
+        fromTop: 90,
+        fromRight: 41,
+        diameter: 6.2
+    },
+    {
+        label: 'cv_amt_2',
+        fromTop: 90,
+        fromRight: 27,
+        diameter: 7.2
+    },
+
+    {
+        label: 'sw_lp_001',
+        fromTop: 60,
+        fromRight: 12,
+        diameter: 6.2
+    },
+    {
+        label: 'sw_bp_002',
+        fromTop: 69,
+        fromRight: 12,
+        diameter: 6.2
+    },
+    {
+        label: 'sw_hp_002',
+        fromTop: 78,
+        fromRight: 12,
+        diameter: 6.2
+    },
+
+    {
+        label: 'audio_output',
+        fromTop: 92,
+        fromRight: 12,
+        diameter: 6.2
+    },
+]
+
+class PanelConverter {
+
+    convert() {
+        holePositions.forEach((hole) => {
+                const fromTop = topOffset + hole.fromTop;
+                const fromRight = rightOffset + hole.fromRight;
+                console.log(`${hole.label} \t top: ${fromTop}\t  right: ${fromRight}\t  diameter: ${hole.diameter}`);
+            }
+        );
+    }
+}
+
+const panelConverter = new PanelConverter();
+panelConverter.convert();
