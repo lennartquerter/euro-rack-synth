@@ -1,17 +1,144 @@
 # Author: Lennart Querter
-# Description: Sets up a Front Panel in autodesk fusion
+# Description: This script can be used to generate euro-rack front-panels based on JSON files stored in this repository.
+import os
 
 import adsk.core, adsk.fusion, adsk.cam, traceback
+
+import json
 
 full_height = 12.85
 fillet_size = 0.12
 panel_offset_z = 0.2
+hp_to_mm = 5.08
+
+hole_size_map = {
+    "jacks": 0.62,
+    "pots": 0.72,
+    "switches": 0.65,
+    "leds": 0.50,
+    "sm_leds": 0.30,
+}
+
+
+def run(context):
+    ui = None
+
+    try:
+        app = adsk.core.Application.get()
+        ui = app.userInterface
+        design = app.activeProduct
+        root_comp = design.rootComponent
+
+        module_name, cancelled = ui.inputBox(
+            'Module name?',
+            'module',
+            '7555')
+
+        if cancelled:
+            return 1
+
+        with open(os.path.dirname(os.path.realpath(__file__)) + "/modules/" + module_name + '.json') as f:
+            d = json.load(f)
+
+            create_panel(root_comp, d["hp"])
+            add_mounting_holes(root_comp, d["hp"])
+
+            add_points(ui, root_comp, d, 'pots')
+            add_points(ui, root_comp, d, 'jacks')
+            add_points(ui, root_comp, d, 'switches')
+            add_points(ui, root_comp, d, 'leds')
+            add_points(ui, root_comp, d, 'sm_leds')
+
+    except:
+        if ui:
+            ui.messageBox('Failed:\n{}'.format(traceback.format_exc()))
+
+
+def create_panel(root_comp, hp_size):
+    # Create a new sketch on the xy plane.
+    sketches = root_comp.sketches
+    xyPlane = root_comp.xYConstructionPlane
+    sketch = sketches.add(xyPlane)
+    sketch.name = 'front-panel'
+
+    lines = sketch.sketchCurves.sketchLines
+
+    lines.addTwoPointRectangle(adsk.core.Point3D.create(0, 0, 0),
+                               adsk.core.Point3D.create((hp_size * hp_to_mm) / 10, full_height, 0))
+
+    panel = extrude(root_comp, sketch.profiles.item(0), panel_offset_z,
+                    adsk.fusion.FeatureOperations.NewBodyFeatureOperation)
+    body = panel.bodies.item(0)
+    body.name = "panel"
 
 
 def extrude(root_comp, prof, distance, operation):
     distance = adsk.core.ValueInput.createByReal(distance)
     extrudes = root_comp.features.extrudeFeatures
     return extrudes.addSimple(prof, distance, operation)
+
+
+def add_mounting_holes(root_comp, hp_size):
+    sketches = root_comp.sketches
+    xyPlane = root_comp.xYConstructionPlane
+    sketch = sketches.add(xyPlane)
+    sketch.name = 'mounting-holes'
+
+    lines = sketch.sketchCurves.sketchLines
+
+    full_width = (hp_size * 5.08) / 10
+
+    # CONFIG
+    # ==============
+    # X Axis
+    side_margin = 0.45
+    hole_width = 0.8
+
+    # Y Axis
+    height_margin = 0.2
+    hole_height = 0.32
+
+    # ============== Create Mounting holes
+
+    mounting_hole_1 = lines.addTwoPointRectangle(adsk.core.Point3D.create(side_margin, height_margin, panel_offset_z),
+                                                 adsk.core.Point3D.create(side_margin + hole_width,
+                                                                          height_margin + hole_height, panel_offset_z))
+
+    add_fillet(sketch, mounting_hole_1, fillet_size)
+
+    extrude(root_comp, sketch.profiles.item(0), -panel_offset_z,
+            adsk.fusion.FeatureOperations.CutFeatureOperation)
+
+    mounting_hole_2 = lines.addTwoPointRectangle(
+        adsk.core.Point3D.create(full_width - side_margin, full_height - height_margin, panel_offset_z),
+        adsk.core.Point3D.create(full_width - (side_margin + hole_width), full_height - (height_margin + hole_height),
+                                 panel_offset_z))
+
+    add_fillet(sketch, mounting_hole_2, fillet_size)
+
+    extrude(root_comp, sketch.profiles.item(1), -panel_offset_z,
+            adsk.fusion.FeatureOperations.CutFeatureOperation)
+
+    if hp_size >= 10:
+        mounting_hole_3 = lines.addTwoPointRectangle(
+            adsk.core.Point3D.create(full_width - side_margin, height_margin, panel_offset_z),
+            adsk.core.Point3D.create(full_width - (side_margin + hole_width), (height_margin + hole_height),
+                                     panel_offset_z))
+
+        add_fillet(sketch, mounting_hole_3, fillet_size)
+
+        extrude(root_comp, sketch.profiles.item(2), -panel_offset_z,
+                adsk.fusion.FeatureOperations.CutFeatureOperation)
+
+        mounting_hole_4 = lines.addTwoPointRectangle(
+            adsk.core.Point3D.create(side_margin, full_height - height_margin, panel_offset_z),
+            adsk.core.Point3D.create(side_margin + hole_width, full_height - (height_margin + hole_height),
+                                     panel_offset_z))
+
+        add_fillet(sketch, mounting_hole_4, fillet_size)
+
+        extrude(root_comp, sketch.profiles.item(3), -panel_offset_z,
+                adsk.fusion.FeatureOperations.CutFeatureOperation)
 
 
 def add_fillet(sketch, rectangle, size):
@@ -40,125 +167,31 @@ def add_fillet(sketch, rectangle, size):
                                              size)
 
 
-def create_panel(root_comp, hp_size):
-    # Create a new sketch on the xy plane.
-    sketches = root_comp.sketches
-    xyPlane = root_comp.xYConstructionPlane
-    sketch = sketches.add(xyPlane)
-    sketch.name = 'front-panel'
-
-    lines = sketch.sketchCurves.sketchLines
-
-    lines.addTwoPointRectangle(adsk.core.Point3D.create(0, 0, 0),
-                               adsk.core.Point3D.create((hp_size * 5.08) / 10, 12.85, 0))
-
-    panel_xtrude = extrude(root_comp, sketch.profiles.item(0), 0.2,
-                           adsk.fusion.FeatureOperations.NewBodyFeatureOperation)
-    body = panel_xtrude.bodies.item(0)
-    body.name = "panel"
-
-
-def add_mounting_holes(root_comp, hp_size):
-    sketches = root_comp.sketches
-    xyPlane = root_comp.xYConstructionPlane
-    sketch = sketches.add(xyPlane)
-    sketch.name = 'mounting-holes'
-
-    lines = sketch.sketchCurves.sketchLines
-
-    full_width = (hp_size * 5.08) / 10
-
-    mounting_hole_1 = lines.addTwoPointRectangle(adsk.core.Point3D.create(0.45, 0.2, panel_offset_z),
-                                                 adsk.core.Point3D.create(1.25, 0.52, panel_offset_z))
-
-    add_fillet(sketch, mounting_hole_1, fillet_size)
-
-    extrude(root_comp, sketch.profiles.item(0), -0.2,
-            adsk.fusion.FeatureOperations.CutFeatureOperation)
-
-    mounting_hole_2 = lines.addTwoPointRectangle(
-        adsk.core.Point3D.create(full_width - 0.45, full_height - 0.2, panel_offset_z),
-        adsk.core.Point3D.create(full_width - 1.25, full_height - 0.52, panel_offset_z))
-
-    add_fillet(sketch, mounting_hole_2, fillet_size)
-
-    extrude(root_comp, sketch.profiles.item(1), -0.2,
-            adsk.fusion.FeatureOperations.CutFeatureOperation)
-
-    if hp_size >= 10:
-        mounting_hole_3 = lines.addTwoPointRectangle(adsk.core.Point3D.create(full_width - 0.45, 0.2, panel_offset_z),
-                                                     adsk.core.Point3D.create(full_width - 1.25, 0.52, panel_offset_z))
-
-        add_fillet(sketch, mounting_hole_3, fillet_size)
-
-        extrude(root_comp, sketch.profiles.item(2), -0.2,
-                adsk.fusion.FeatureOperations.CutFeatureOperation)
-
-        mounting_hole_4 = lines.addTwoPointRectangle(adsk.core.Point3D.create(0.45, full_height - 0.2, panel_offset_z),
-                                                     adsk.core.Point3D.create(1.25, full_height - 0.52, panel_offset_z))
-
-        add_fillet(sketch, mounting_hole_4, fillet_size)
-
-        extrude(root_comp, sketch.profiles.item(3), -0.2,
-                adsk.fusion.FeatureOperations.CutFeatureOperation)
-
-
-def add_points(root_comp, hole_points, sketch_name):
+def add_points(ui, root_comp, module_file, type):
     sketches = root_comp.sketches
     xyPlane = root_comp.xYConstructionPlane
 
     sketch = sketches.add(xyPlane)
-    sketch.name = sketch_name
+    sketch.name = type
+    circles = sketch.sketchCurves.sketchCircles
 
-    points = sketch.sketchPoints
-    created = adsk.core.ObjectCollection.create()
+    hole_positions = module_file[type]
+    hole_size = hole_size_map[type]
 
-    for pot in hole_points:
-        point = adsk.core.Point3D.create(pot["x"] / 10, pot["y"] / 10, panel_offset_z)
-        created.add(points.add(point))
+    panel_width_in_mm = hp_to_mm * module_file['hp']
+    panel_height_in_mm = full_height * 10
 
-    return created
+    pcb_width_in_mm = module_file['pcb_width_in_mm']
+    pcb_height_in_mm = module_file['pcb_height_in_mm']
 
+    right_offset_in_mm = (panel_width_in_mm - pcb_width_in_mm) / 2
+    top_offset_in_mm = (panel_height_in_mm - pcb_height_in_mm) / 2
 
-def run(context):
-    ui = None
-    hp_size = 8
+    for idx, hole in enumerate(hole_positions):
+        x = panel_width_in_mm - hole["fromRight"] - right_offset_in_mm
+        y = panel_height_in_mm - hole["fromTop"] - top_offset_in_mm
 
-    pots = [
-        {
-            "x": 20,
-            "y": 20,
-        },
-    ]
-    jacks = []
-    sw = []
-    leds = []
+        center_point = adsk.core.Point3D.create(x / 10, y / 10, panel_offset_z)
+        circles.addByCenterRadius(center_point, hole_size / 2)
 
-    try:
-        app = adsk.core.Application.get()
-        ui = app.userInterface
-        design = app.activeProduct
-        root_comp = design.rootComponent
-        hole_distance = adsk.core.ValueInput.createByReal(-0.2)
-
-        create_panel(root_comp, hp_size)
-        add_mounting_holes(root_comp, hp_size)
-
-        created_pots = add_points(root_comp, pots, 'pot')
-
-        holes = root_comp.features.holeFeatures
-
-        # Does not work, maybe we should try circles and just extrude them out?
-        hole_input = holes.createSimpleInput(adsk.core.ValueInput.createByString('2 mm'))
-        hole_input.setPositionBySketchPoints(created_pots)
-        hole_input.setDistanceExtent(hole_distance)
-
-        hole = holes.add(hole_input)
-
-        created_jacks = add_points(root_comp, jacks, 'jack')
-        created_switches = add_points(root_comp, sw, 'switch')
-        created_leds = add_points(root_comp, leds, 'led')
-
-    except:
-        if ui:
-            ui.messageBox('Failed:\n{}'.format(traceback.format_exc()))
+        extrude(root_comp, sketch.profiles.item(idx), -panel_offset_z, adsk.fusion.FeatureOperations.CutFeatureOperation)
