@@ -1,9 +1,7 @@
 # Author: Lennart Querter
 # Description: This script can be used to generate euro-rack front-panels based on JSON files stored in this repository.
-import os
-
 import adsk.core, adsk.fusion, adsk.cam, traceback
-
+import os
 import json
 
 full_height = 12.85
@@ -32,7 +30,7 @@ def run(context):
         module_name, cancelled = ui.inputBox(
             'Module name?',
             'module',
-            '7555')
+            'example')
 
         if cancelled:
             return 1
@@ -43,11 +41,11 @@ def run(context):
             create_panel(root_comp, d["hp"])
             add_mounting_holes(root_comp, d["hp"])
 
-            add_points(ui, root_comp, d, 'pots')
-            add_points(ui, root_comp, d, 'jacks')
-            add_points(ui, root_comp, d, 'switches')
-            add_points(ui, root_comp, d, 'leds')
-            add_points(ui, root_comp, d, 'sm_leds')
+            add_points(root_comp, d, 'pots')
+            add_points(root_comp, d, 'jacks')
+            add_points(root_comp, d, 'switches')
+            add_points(root_comp, d, 'leds')
+            add_points(root_comp, d, 'sm_leds')
 
     except:
         if ui:
@@ -167,7 +165,7 @@ def add_fillet(sketch, rectangle, size):
                                              size)
 
 
-def add_points(ui, root_comp, module_file, type):
+def add_points(root_comp, module_file, type):
     sketches = root_comp.sketches
     xyPlane = root_comp.xYConstructionPlane
 
@@ -194,4 +192,5 @@ def add_points(ui, root_comp, module_file, type):
         center_point = adsk.core.Point3D.create(x / 10, y / 10, panel_offset_z)
         circles.addByCenterRadius(center_point, hole_size / 2)
 
-        extrude(root_comp, sketch.profiles.item(idx), -panel_offset_z, adsk.fusion.FeatureOperations.CutFeatureOperation)
+        extrude(root_comp, sketch.profiles.item(idx), -panel_offset_z,
+                adsk.fusion.FeatureOperations.CutFeatureOperation)

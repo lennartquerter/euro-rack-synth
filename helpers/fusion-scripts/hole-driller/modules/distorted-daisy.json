@@ -1,16 +1,4 @@
-const panelWidth = 32;
-const panelHeight = 129.5;
-
-const pcbWidth = 32;
-const pcbScoreOffset = 2;
-const pcbHeight = 111;
-
-const topOffset = (panelHeight - pcbHeight) / 2;
-const rightOffset = (panelWidth - pcbWidth) / 2;
-const bottomOffset = (panelHeight - pcbHeight) / 2;
-const leftOffset = (panelWidth - pcbWidth) / 2;
-
-const holePositions = [
+[
     {
         label: '1_input',
         name: '1_input',
@@ -122,26 +110,12 @@ const holePositions = [
         fromTop: 98,
         fromRight: 7.8,
         diameter: 6.1
-    }, {
+    },
+    {
         label: 'out_led',
         name: 'out_led',
         fromTop: 90.5,
         fromRight: 7.8,
         diameter: 3.0
-    },
-]
-
-class PanelConverter {
-
-    convert() {
-        holePositions.forEach((hole) => {
-                const fromTop = topOffset + hole.fromTop;
-                const fromRight = rightOffset + hole.fromRight;
-                console.log(`Hole ${hole.label} at top: ${fromTop}, right: ${fromRight}, diameter: ${hole.diameter}`);
-            }
-        );
     }
-}
-
-const panelConverter = new PanelConverter();
-panelConverter.convert();
+]

@@ -1,11 +1,10 @@
 # Euro rack Panel Creator (or hole-driller)
 
-This script is made for autodesk fusion and allows you to generate
-3D printable euro rack panels with a script.
+This script is made for autodesk fusion and allows you to generate 3D printable euro rack panels with a script.
 
 ## Usage
 
-1. Add a JSON file to modules, in the same format
+1. Make a copy of the example.json file. The name of the file must match your module (example: `sparkle.json`)
 2. Add the script to Autodesk Fusion
 3. Run the script from the utilities menu
 4. Enter your module name (same as your json file name)
