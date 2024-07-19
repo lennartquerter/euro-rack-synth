@@ -664,6 +664,142 @@
 				)
 			)
 		)
+		(symbol "Device:C"
+			(pin_numbers hide)
+			(pin_names
+				(offset 0.254)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "C"
+				(at 0.635 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "C"
+				(at 0.635 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 0.9652 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Unpolarized capacitor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "cap capacitor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "C_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "C_0_1"
+				(polyline
+					(pts
+						(xy -2.032 -0.762) (xy 2.032 -0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.032 0.762) (xy 2.032 0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "C_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 2.794)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 2.794)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
 		(symbol "Device:C_Polarized"
 			(pin_numbers hide)
 			(pin_names
@@ -5713,7 +5849,7 @@
 		(at 309.88 93.345 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(uuid "02228468-9570-4994-9120-52e3c96e8062")
@@ -5846,7 +5982,7 @@
 		(at 39.37 273.05 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -5910,7 +6046,7 @@
 		(at 227.965 262.89 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(uuid "0bbb9ef3-3565-423b-b97e-766755e69c21")
@@ -6264,7 +6400,7 @@
 				)
 			)
 		)
-		(property "Value" "BTM_OUT"
+		(property "Value" "PinSocket_1x04"
 			(at 245.11 95.25 0)
 			(effects
 				(font
@@ -6428,7 +6564,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C_Polarized")
+		(lib_id "Device:C")
 		(at 125.73 271.78 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -6438,7 +6574,7 @@
 		(fields_autoplaced yes)
 		(uuid "2473ef05-f70f-4f21-aec6-fc72966e22a7")
 		(property "Reference" "C4"
-			(at 129.54 269.621 0)
+			(at 129.54 270.5099 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6447,7 +6583,7 @@
 			)
 		)
 		(property "Value" "0.1uF"
-			(at 129.54 272.161 0)
+			(at 129.54 273.0499 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6455,7 +6591,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_THT:CP_Radial_D4.0mm_P2.00mm"
+		(property "Footprint" "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm"
 			(at 126.6952 275.59 0)
 			(effects
 				(font
@@ -6473,7 +6609,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Polarized capacitor"
+		(property "Description" "Unpolarized capacitor"
 			(at 125.73 271.78 0)
 			(effects
 				(font
@@ -6514,7 +6650,7 @@
 				)
 			)
 		)
-		(property "Value" "BTM_OUT"
+		(property "Value" "PinSocket_1x04"
 			(at 339.09 92.71 0)
 			(effects
 				(font
@@ -6659,7 +6795,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "TOP_PWR"
+		(property "Value" "PinHeader_1x04"
 			(at 266.065 266.7 0)
 			(effects
 				(font
@@ -6801,7 +6937,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "TOP_SW"
+		(property "Value" "PinHeader_1x04"
 			(at 175.895 99.06 0)
 			(effects
 				(font
@@ -6943,7 +7079,7 @@
 				)
 			)
 		)
-		(property "Value" "BTM_PWR"
+		(property "Value" "PinSocket_1x04"
 			(at 278.13 271.78 0)
 			(effects
 				(font
@@ -7005,7 +7141,7 @@
 		(at 20.32 267.97 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -7150,7 +7286,7 @@
 				)
 			)
 		)
-		(property "Value" "10"
+		(property "Value" "10R"
 			(at 198.12 278.765 90)
 			(effects
 				(font
@@ -7561,7 +7697,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "TOP_OUT"
+		(property "Value" "PinHeader_1x04"
 			(at 241.3 90.17 0)
 			(effects
 				(font
@@ -8010,7 +8146,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C_Polarized")
+		(lib_id "Device:C")
 		(at 82.55 254 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -8020,7 +8156,7 @@
 		(fields_autoplaced yes)
 		(uuid "5a9f6740-48c8-48eb-9709-f76530dd7937")
 		(property "Reference" "C1"
-			(at 86.36 251.841 0)
+			(at 86.36 252.7299 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8029,7 +8165,7 @@
 			)
 		)
 		(property "Value" "0.1uF"
-			(at 86.36 254.381 0)
+			(at 86.36 255.2699 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8037,7 +8173,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_THT:CP_Radial_D4.0mm_P2.00mm"
+		(property "Footprint" "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm"
 			(at 83.5152 257.81 0)
 			(effects
 				(font
@@ -8055,7 +8191,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Polarized capacitor"
+		(property "Description" "Unpolarized capacitor"
 			(at 82.55 254 0)
 			(effects
 				(font
@@ -8096,7 +8232,7 @@
 				)
 			)
 		)
-		(property "Value" "BTM_SW"
+		(property "Value" "PinSocket_1x04"
 			(at 170.18 91.44 0)
 			(effects
 				(font
@@ -8170,7 +8306,7 @@
 				)
 			)
 		)
-		(property "Value" "BTM_PWR"
+		(property "Value" "PinSocket_1x04"
 			(at 278.13 275.59 0)
 			(effects
 				(font
@@ -8245,7 +8381,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "470"
+		(property "Value" "470R"
 			(at 334.01 62.23 90)
 			(effects
 				(font
@@ -8434,7 +8570,7 @@
 		(at 39.37 257.81 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -8564,7 +8700,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C_Polarized")
+		(lib_id "Device:C")
 		(at 125.73 254 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -8574,7 +8710,7 @@
 		(fields_autoplaced yes)
 		(uuid "6f2523b7-74e9-4f03-9eb7-c6b3a046ca81")
 		(property "Reference" "C3"
-			(at 129.54 251.841 0)
+			(at 129.54 252.7299 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8583,7 +8719,7 @@
 			)
 		)
 		(property "Value" "0.1uF"
-			(at 129.54 254.381 0)
+			(at 129.54 255.2699 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8591,7 +8727,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_THT:CP_Radial_D4.0mm_P2.00mm"
+		(property "Footprint" "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm"
 			(at 126.6952 257.81 0)
 			(effects
 				(font
@@ -8609,7 +8745,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Polarized capacitor"
+		(property "Description" "Unpolarized capacitor"
 			(at 125.73 254 0)
 			(effects
 				(font
@@ -8650,7 +8786,7 @@
 				)
 			)
 		)
-		(property "Value" "BTM_SW"
+		(property "Value" "PinSocket_1x04"
 			(at 102.87 113.665 0)
 			(effects
 				(font
@@ -8725,7 +8861,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "TOP_PWR"
+		(property "Value" "PinHeader_1x04"
 			(at 266.065 270.51 0)
 			(effects
 				(font
@@ -8867,7 +9003,7 @@
 				)
 			)
 		)
-		(property "Value" "BTM_SW"
+		(property "Value" "PinSocket_1x04"
 			(at 124.46 99.06 0)
 			(effects
 				(font
@@ -9039,7 +9175,7 @@
 		(at 341.63 118.11 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(uuid "7279ef4f-9665-456a-bc9c-9c40e65a084c")
@@ -9287,7 +9423,7 @@
 				)
 			)
 		)
-		(property "Value" "BTM_OUT"
+		(property "Value" "PinSocket_1x04"
 			(at 316.23 62.23 0)
 			(effects
 				(font
@@ -9422,7 +9558,7 @@
 		(at 266.7 88.9 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(uuid "78ea1f52-2402-4826-b2cb-27517274febb")
@@ -9488,7 +9624,7 @@
 		(at 39.37 267.97 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -9548,7 +9684,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C_Polarized")
+		(lib_id "Device:C")
 		(at 82.55 271.78 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -9558,7 +9694,7 @@
 		(fields_autoplaced yes)
 		(uuid "88489647-d1e1-4df9-aa7e-ead55b842019")
 		(property "Reference" "C2"
-			(at 86.36 269.621 0)
+			(at 86.36 270.5099 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9567,7 +9703,7 @@
 			)
 		)
 		(property "Value" "0.1uF"
-			(at 86.36 272.161 0)
+			(at 86.36 273.0499 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9575,7 +9711,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_THT:CP_Radial_D4.0mm_P2.00mm"
+		(property "Footprint" "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm"
 			(at 83.5152 275.59 0)
 			(effects
 				(font
@@ -9593,7 +9729,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Polarized capacitor"
+		(property "Description" "Unpolarized capacitor"
 			(at 82.55 271.78 0)
 			(effects
 				(font
@@ -9738,7 +9874,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "TOP_SW"
+		(property "Value" "PinHeader_1x04"
 			(at 111.125 109.855 0)
 			(effects
 				(font
@@ -9800,7 +9936,7 @@
 		(at 223.52 276.225 180)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(uuid "8d1b8d55-b741-42a5-8525-b4cb2933b859")
@@ -9879,7 +10015,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "TOP_SW"
+		(property "Value" "PinHeader_1x04"
 			(at 120.65 85.09 0)
 			(effects
 				(font
@@ -9955,7 +10091,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Conn_01x03"
+		(property "Value" "PinHeader_1x03"
 			(at 102.87 222.2499 90)
 			(effects
 				(font
@@ -10027,7 +10163,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "TOP_PWR"
+		(property "Value" "PinHeader_1x04"
 			(at 266.065 274.32 0)
 			(effects
 				(font
@@ -10089,7 +10225,7 @@
 		(at 20.32 257.81 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -10301,7 +10437,7 @@
 				)
 			)
 		)
-		(property "Value" "BTM_PWR"
+		(property "Value" "PinSocket_1x04"
 			(at 278.13 279.4 0)
 			(effects
 				(font
@@ -10442,7 +10578,7 @@
 				)
 			)
 		)
-		(property "Value" "BTM_SW"
+		(property "Value" "PinSocket_1x04"
 			(at 278.13 261.62 0)
 			(effects
 				(font
@@ -10517,7 +10653,7 @@
 				)
 			)
 		)
-		(property "Value" "100"
+		(property "Value" "100R"
 			(at 157.48 90.17 90)
 			(effects
 				(font
@@ -10585,7 +10721,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "BTM_OUT"
+		(property "Value" "PinSocket_1x04"
 			(at 351.155 123.19 0)
 			(effects
 				(font
@@ -10735,7 +10871,7 @@
 				)
 			)
 		)
-		(property "Value" "BTM_PWR"
+		(property "Value" "PinSocket_1x04"
 			(at 278.13 267.97 0)
 			(effects
 				(font
@@ -10810,7 +10946,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "TOP_OUT"
+		(property "Value" "PinHeader_1x04"
 			(at 344.17 97.79 0)
 			(effects
 				(font
@@ -10943,7 +11079,7 @@
 		(at 20.32 262.89 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -11074,7 +11210,7 @@
 		(at 130.81 95.25 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(uuid "aebd024f-6702-49db-8e6c-2ed4700ed970")
@@ -11382,7 +11518,7 @@
 		(at 223.52 249.555 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(uuid "bb6e75f8-473b-48c9-afce-858ff678a690")
@@ -11461,7 +11597,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "TOP_OUT"
+		(property "Value" "PinHeader_1x04"
 			(at 356.235 128.27 0)
 			(effects
 				(font
@@ -11589,7 +11725,7 @@
 		(at 39.37 262.89 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -11666,7 +11802,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "TOP_SW"
+		(property "Value" "PinHeader_1x04"
 			(at 266.065 256.54 0)
 			(effects
 				(font
@@ -11741,7 +11877,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "TOP_OUT"
+		(property "Value" "PinHeader_1x04"
 			(at 320.04 67.31 0)
 			(effects
 				(font
@@ -11803,7 +11939,7 @@
 		(at 185.42 91.44 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(uuid "cd0fedf6-f025-461f-aa8b-bec2d61eec5f")
@@ -11941,15 +12077,15 @@
 		(fields_autoplaced yes)
 		(uuid "d39597cb-2c41-4a4b-aad7-b2680c33f950")
 		(property "Reference" "R2"
-			(at 198.12 243.205 90)
+			(at 198.12 243.84 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "10"
-			(at 198.12 245.745 90)
+		(property "Value" "10R"
+			(at 198.12 246.38 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12016,7 +12152,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "TOP_PWR"
+		(property "Value" "PinHeader_1x04"
 			(at 266.065 262.89 0)
 			(effects
 				(font
@@ -12277,7 +12413,7 @@
 		(at 20.32 273.05 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)

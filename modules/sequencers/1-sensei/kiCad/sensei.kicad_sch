@@ -1044,6 +1044,142 @@
 				)
 			)
 		)
+		(symbol "Device:C"
+			(pin_numbers hide)
+			(pin_names
+				(offset 0.254)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "C"
+				(at 0.635 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "C"
+				(at 0.635 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 0.9652 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Unpolarized capacitor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "cap capacitor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "C_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "C_0_1"
+				(polyline
+					(pts
+						(xy -2.032 -0.762) (xy 2.032 -0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.032 0.762) (xy 2.032 0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "C_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 2.794)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 2.794)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
 		(symbol "Device:C_Polarized"
 			(pin_numbers hide)
 			(pin_names
@@ -4983,12 +5119,6 @@
 		(uuid "03960402-00aa-4d6a-87ee-1cef800d0c88")
 	)
 	(junction
-		(at 347.98 384.81)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "04aaf973-368c-4eec-8c83-1c903b6934bd")
-	)
-	(junction
 		(at 458.47 369.57)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -5037,16 +5167,22 @@
 		(uuid "1e4d7c9c-a5d8-4594-8315-0b8dfe7bafd9")
 	)
 	(junction
+		(at 383.54 375.92)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "26bf2600-3496-41f8-8f53-303bbbf3e6b7")
+	)
+	(junction
 		(at 328.93 388.62)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "299608de-59f4-4d01-977c-16d537d1a428")
 	)
 	(junction
-		(at 201.93 336.55)
+		(at 383.54 393.7)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "2fdd1d8e-b59e-4b04-a128-87e5850b565c")
+		(uuid "2cb88419-9ed0-43f5-8775-eeaa6c1ef6aa")
 	)
 	(junction
 		(at 485.14 358.14)
@@ -5071,6 +5207,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "40705021-9860-4e56-8a04-6af48d4e8719")
+	)
+	(junction
+		(at 166.37 172.72)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "426b1b54-4c6d-4ed1-89ef-8f9fe6670223")
 	)
 	(junction
 		(at 227.33 143.51)
@@ -5217,12 +5359,6 @@
 		(uuid "87c42015-8769-4b79-97c8-bf29c7a21a48")
 	)
 	(junction
-		(at 378.46 375.92)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "87d9fe77-f5ee-4309-88f2-08c0019a5578")
-	)
-	(junction
 		(at 356.87 210.82)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -5253,12 +5389,6 @@
 		(uuid "97139ba6-bc4d-4fd0-88cb-70938120db75")
 	)
 	(junction
-		(at 378.46 393.7)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "99cc1186-0061-490b-b4ac-67fdbdc2f5fb")
-	)
-	(junction
 		(at 426.72 160.02)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -5275,6 +5405,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "a703ea7b-242b-48fd-a0d8-5601c99407b0")
+	)
+	(junction
+		(at 342.9 384.81)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ad739cc5-bdbd-4b15-96f8-175e72cf5f80")
 	)
 	(junction
 		(at 363.22 375.92)
@@ -5407,18 +5543,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "d9bc7377-c0ba-4b56-8e71-8708b6ab1a1a")
-	)
-	(junction
-		(at 166.37 151.13)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "db952615-40c0-4072-b17d-c4689eff2a94")
-	)
-	(junction
-		(at 201.93 325.12)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "dcbbd149-72af-4fbe-bd84-b7692643bdfa")
 	)
 	(junction
 		(at 212.09 133.35)
@@ -5574,7 +5698,7 @@
 	)
 	(wire
 		(pts
-			(xy 166.37 172.72) (xy 166.37 151.13)
+			(xy 166.37 138.43) (xy 166.37 172.72)
 		)
 		(stroke
 			(width 0)
@@ -5754,7 +5878,7 @@
 	)
 	(wire
 		(pts
-			(xy 213.36 368.3) (xy 201.93 368.3)
+			(xy 213.36 368.3) (xy 204.47 368.3)
 		)
 		(stroke
 			(width 0)
@@ -5791,16 +5915,6 @@
 			(type default)
 		)
 		(uuid "141443cf-715c-403e-ad7a-8b7ab2a96388")
-	)
-	(wire
-		(pts
-			(xy 201.93 336.55) (xy 201.93 368.3)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1465812d-8ca3-469d-8d62-9cc8683eefa4")
 	)
 	(wire
 		(pts
@@ -5874,7 +5988,7 @@
 	)
 	(wire
 		(pts
-			(xy 201.93 336.55) (xy 201.93 325.12)
+			(xy 204.47 325.12) (xy 204.47 368.3)
 		)
 		(stroke
 			(width 0)
@@ -6084,7 +6198,7 @@
 	)
 	(wire
 		(pts
-			(xy 374.65 375.92) (xy 378.46 375.92)
+			(xy 374.65 375.92) (xy 383.54 375.92)
 		)
 		(stroke
 			(width 0)
@@ -6184,7 +6298,7 @@
 	)
 	(wire
 		(pts
-			(xy 195.58 325.12) (xy 201.93 325.12)
+			(xy 195.58 325.12) (xy 204.47 325.12)
 		)
 		(stroke
 			(width 0)
@@ -6404,16 +6518,6 @@
 	)
 	(wire
 		(pts
-			(xy 166.37 151.13) (xy 166.37 138.43)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4aec91b9-467e-4342-98b0-b39c94282f5d")
-	)
-	(wire
-		(pts
 			(xy 349.25 172.72) (xy 361.95 172.72)
 		)
 		(stroke
@@ -6481,6 +6585,16 @@
 			(type default)
 		)
 		(uuid "4f871071-7eae-4627-874d-f03bd8c74f1b")
+	)
+	(wire
+		(pts
+			(xy 388.62 166.37) (xy 386.08 166.37)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4fafd1f6-a1a6-48f4-b621-40c533842dd6")
 	)
 	(wire
 		(pts
@@ -6641,6 +6755,16 @@
 			(type default)
 		)
 		(uuid "5f2dc0e4-1158-4635-a7d6-2388bd1bec05")
+	)
+	(wire
+		(pts
+			(xy 148.59 322.58) (xy 144.78 322.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "61397ec3-1cdd-450d-b62c-4c68a05f373d")
 	)
 	(wire
 		(pts
@@ -6841,16 +6965,6 @@
 			(type default)
 		)
 		(uuid "6bb2f56d-4357-48e7-8a58-2cea7bcfc8e8")
-	)
-	(wire
-		(pts
-			(xy 204.47 325.12) (xy 201.93 325.12)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6d7f5d8d-49ae-4b41-86fc-1cbeaee6138e")
 	)
 	(wire
 		(pts
@@ -7334,7 +7448,7 @@
 	)
 	(wire
 		(pts
-			(xy 120.65 320.04) (xy 134.62 320.04)
+			(xy 118.11 320.04) (xy 134.62 320.04)
 		)
 		(stroke
 			(width 0)
@@ -7474,7 +7588,7 @@
 	)
 	(wire
 		(pts
-			(xy 374.65 393.7) (xy 378.46 393.7)
+			(xy 374.65 393.7) (xy 383.54 393.7)
 		)
 		(stroke
 			(width 0)
@@ -7814,16 +7928,6 @@
 	)
 	(wire
 		(pts
-			(xy 347.98 384.81) (xy 356.87 384.81)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b7f0d77b-1604-48aa-b0c4-f759b37af09b")
-	)
-	(wire
-		(pts
 			(xy 353.06 199.39) (xy 356.87 199.39)
 		)
 		(stroke
@@ -8134,16 +8238,6 @@
 	)
 	(wire
 		(pts
-			(xy 378.46 393.7) (xy 383.54 393.7)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d274d2ec-1e7a-476d-815e-a3d05a88535d")
-	)
-	(wire
-		(pts
 			(xy 173.99 322.58) (xy 177.8 322.58)
 		)
 		(stroke
@@ -8311,16 +8405,6 @@
 			(type default)
 		)
 		(uuid "de9c44d2-0dd3-4540-bcd5-9f3e1d2fa2c7")
-	)
-	(wire
-		(pts
-			(xy 378.46 375.92) (xy 383.54 375.92)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "df2aaba3-38de-4dae-8621-7588ca6a6e91")
 	)
 	(wire
 		(pts
@@ -8494,7 +8578,7 @@
 	)
 	(wire
 		(pts
-			(xy 342.9 384.81) (xy 347.98 384.81)
+			(xy 342.9 384.81) (xy 356.87 384.81)
 		)
 		(stroke
 			(width 0)
@@ -8717,7 +8801,7 @@
 		(uuid 269f5196-41de-4df9-8110-39979da927f9)
 	)
 	(rectangle
-		(start 158.75 106.68)
+		(start 149.86 106.68)
 		(end 199.39 177.8)
 		(stroke
 			(width 0)
@@ -8778,7 +8862,7 @@
 	)
 	(text "Sequencer Clock System"
 		(exclude_from_sim no)
-		(at 218.44 280.67 0)
+		(at 227.33 271.272 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -8797,17 +8881,6 @@
 			(justify left bottom)
 		)
 		(uuid "31a86587-2972-4b9b-8596-4317067ab8be")
-	)
-	(text "I have 1uF here, and works pretty fine?"
-		(exclude_from_sim no)
-		(at 42.545 340.36 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "7bad8fd4-66db-4167-bbe7-11238a863b76")
 	)
 	(text "Control Voltage Levels"
 		(exclude_from_sim no)
@@ -8832,7 +8905,7 @@
 		(uuid "e7019cef-55cc-4e0a-b56b-27b75f937ae2")
 	)
 	(symbol
-		(lib_id "Device:C_Polarized")
+		(lib_id "Device:C")
 		(at 170.18 120.65 270)
 		(unit 1)
 		(exclude_from_sim no)
@@ -8842,7 +8915,7 @@
 		(fields_autoplaced yes)
 		(uuid "01ff5025-571b-4174-a86c-821aa27aa507")
 		(property "Reference" "C2"
-			(at 171.069 113.03 90)
+			(at 170.18 113.03 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8850,14 +8923,14 @@
 			)
 		)
 		(property "Value" "0.1uF"
-			(at 171.069 115.57 90)
+			(at 170.18 115.57 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_THT:CP_Radial_D4.0mm_P2.00mm"
+		(property "Footprint" "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm"
 			(at 166.37 121.6152 0)
 			(effects
 				(font
@@ -8875,7 +8948,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Polarized capacitor"
+		(property "Description" "Unpolarized capacitor"
 			(at 170.18 120.65 0)
 			(effects
 				(font
@@ -8907,6 +8980,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "02aac598-7fa8-4e03-9648-9d312f76c79a")
 		(property "Reference" "D11"
 			(at 365.76 177.8 0)
@@ -8992,16 +9066,18 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "04e5e010-5593-43b3-9bf5-9d9820e2b6ba")
 		(property "Reference" "H6"
-			(at 260.35 140.97 0)
+			(at 259.08 140.9699 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
-		(property "Value" "BTM_SGL_RW_1"
+		(property "Value" "PinSocket_1x04"
 			(at 256.54 144.78 0)
 			(effects
 				(font
@@ -9133,6 +9209,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "06dbc7ee-01dd-4ad0-ba5c-3a5b13c082f0")
 		(property "Reference" "#PWR01"
 			(at 62.23 307.34 0)
@@ -9144,12 +9221,12 @@
 			)
 		)
 		(property "Value" "GNDREF"
-			(at 57.912 307.34 90)
+			(at 64.77 307.3399 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
 		(property "Footprint" ""
@@ -9211,7 +9288,7 @@
 			)
 		)
 		(property "Value" "GNDREF"
-			(at 332.74 388.62 90)
+			(at 332.74 388.6199 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9263,13 +9340,13 @@
 		(at 440.69 151.13 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "0a1cfbee-950f-491d-a530-44c1287366e8")
 		(property "Reference" "TP1"
-			(at 443.23 146.558 0)
+			(at 443.23 146.5579 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9278,7 +9355,7 @@
 			)
 		)
 		(property "Value" "TestPoint"
-			(at 443.23 149.098 0)
+			(at 443.23 149.0979 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9345,7 +9422,7 @@
 			)
 		)
 		(property "Value" "-12V"
-			(at 387.35 393.7 90)
+			(at 387.35 393.6999 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9400,17 +9477,18 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "0c31bc46-62e8-471a-b86b-ad0a6e46cc0b")
 		(property "Reference" "H18"
-			(at 453.39 386.08 0)
+			(at 455.93 387.3499 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
-		(property "Value" "BTM_PWR"
+		(property "Value" "PinSocket_1x08"
 			(at 431.8 388.62 0)
 			(effects
 				(font
@@ -9625,9 +9703,10 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "0cd87f73-88fe-409e-83b4-b97bfa84712c")
 		(property "Reference" "J1"
-			(at 118.11 342.9 0)
+			(at 119.6975 328.93 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9635,7 +9714,7 @@
 			)
 		)
 		(property "Value" "CLK_IN"
-			(at 118.745 330.2 0)
+			(at 119.6975 331.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9695,17 +9774,17 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "0d226862-b4e7-4c1e-b79b-e97bd5297d8d")
 		(property "Reference" "H10"
-			(at 463.296 194.31 0)
+			(at 461.01 193.04 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
-		(property "Value" "CV_LVL_BTM"
+		(property "Value" "PinSocket_1x04"
 			(at 458.47 195.5801 0)
 			(effects
 				(font
@@ -9771,21 +9850,24 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "0ddd5854-c223-459e-bbdf-42379d9aae3d")
 		(property "Reference" "H1"
-			(at 106.68 344.17 0)
+			(at 104.14 345.4399 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
-		(property "Value" "BTM_CLK"
+		(property "Value" "PinSocket_1x04"
 			(at 104.14 342.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "Footprint" "Synth:PinSocket_1x04_P2.54mm_Vertical"
@@ -9856,12 +9938,11 @@
 			)
 		)
 		(property "Value" "GNDREF"
-			(at 459.74 364.49 0)
+			(at 457.2 360.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
 			)
 		)
 		(property "Footprint" ""
@@ -9981,9 +10062,10 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "0f8d47ac-c9cd-4e52-8209-06aecdc61e50")
 		(property "Reference" "J4"
-			(at 430.53 309.245 0)
+			(at 429.26 309.9434 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9992,7 +10074,7 @@
 			)
 		)
 		(property "Value" "GATE OUT"
-			(at 431.8 313.69 0)
+			(at 429.26 312.4834 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10053,9 +10135,10 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "0f930e3b-92e2-4aab-9a97-f7fb525a079b")
 		(property "Reference" "H3"
-			(at 400.05 308.61 0)
+			(at 405.13 311.1499 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10063,13 +10146,14 @@
 				(justify left)
 			)
 		)
-		(property "Value" "BTM_CTRL"
+		(property "Value" "PinSocket_1x08"
 			(at 396.24 306.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
+				(hide yes)
 			)
 		)
 		(property "Footprint" "Synth:PinSocket_1x08_P2.54mm_Vertical"
@@ -10244,21 +10328,24 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "148321b9-77c2-474f-b0f3-6d0c20341b5e")
 		(property "Reference" "H5"
-			(at 260.35 138.43 0)
+			(at 259.08 138.4299 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
-		(property "Value" "BTM_SGL_RW_2"
+		(property "Value" "PinSocket_1x04"
 			(at 252.73 128.27 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "Footprint" "Synth:PinSocket_1x04_P2.54mm_Vertical"
@@ -10317,21 +10404,23 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "14973d30-0996-4824-8e43-25e30ef7ecba")
 		(property "Reference" "H4"
-			(at 407.67 308.61 0)
+			(at 407.67 307.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "TOP_CTRL"
+		(property "Value" "PinHeader_1x08"
 			(at 410.21 306.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "Footprint" "Synth:PinHeader_1x08_P2.54mm_Vertical"
@@ -10488,9 +10577,10 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "15366981-a9ea-4b22-9019-9f3eb8677543")
 		(property "Reference" "J2"
-			(at 247.65 323.215 0)
+			(at 246.38 323.9134 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10499,7 +10589,7 @@
 			)
 		)
 		(property "Value" "CLK OUT"
-			(at 240.03 318.77 0)
+			(at 246.38 326.4534 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10572,12 +10662,11 @@
 			)
 		)
 		(property "Value" "GNDREF"
-			(at 422.91 316.23 0)
+			(at 420.37 320.04 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
 		(property "Footprint" ""
@@ -10799,9 +10888,10 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "1ba69981-59af-492f-bb8b-8e1242d227f9")
 		(property "Reference" "H8"
-			(at 267.97 146.05 0)
+			(at 266.7 146.0499 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10809,7 +10899,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "TOP_SGL_RW_1"
+		(property "Value" "PinHeader_1x04"
 			(at 266.7 144.78 0)
 			(effects
 				(font
@@ -10887,7 +10977,7 @@
 			)
 		)
 		(property "Value" "+12V"
-			(at 341.63 318.77 90)
+			(at 341.63 318.7699 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11040,12 +11130,11 @@
 			)
 		)
 		(property "Value" "GNDREF"
-			(at 176.53 308.61 0)
+			(at 173.99 304.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
 			)
 		)
 		(property "Footprint" ""
@@ -11095,9 +11184,10 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "22056766-97b3-4d2d-a091-3f746007e81d")
 		(property "Reference" "H3"
-			(at 412.75 190.5 0)
+			(at 414.02 190.4999 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11105,7 +11195,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "BTM_CTRL"
+		(property "Value" "PinSocket_1x08"
 			(at 407.67 186.69 0)
 			(effects
 				(font
@@ -11272,7 +11362,7 @@
 		(fields_autoplaced yes)
 		(uuid "265baa17-2a24-40f4-add7-c8e6e8a8930c")
 		(property "Reference" "J6"
-			(at 327.66 350.52 0)
+			(at 327.66 350.5199 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11280,8 +11370,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "GATE_BUS_ENABLE"
-			(at 327.66 353.06 0)
+		(property "Value" "PinHeader_1x03"
+			(at 327.66 353.0599 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11354,12 +11444,11 @@
 			)
 		)
 		(property "Value" "GNDREF"
-			(at 328.93 287.02 0)
+			(at 326.39 283.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
 			)
 		)
 		(property "Footprint" ""
@@ -11477,21 +11566,23 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "28b19ee9-cdff-48be-ba0b-ff77fa086e74")
 		(property "Reference" "H4"
-			(at 453.39 157.48 0)
+			(at 453.39 156.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "TOP_CTRL"
+		(property "Value" "PinHeader_1x08"
 			(at 455.93 162.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "Footprint" "Synth:PinHeader_1x08_P2.54mm_Vertical"
@@ -11559,7 +11650,7 @@
 		(at 563.245 369.57 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -11638,7 +11729,7 @@
 			)
 		)
 		(property "Value" "+12V"
-			(at 407.67 373.38 90)
+			(at 407.67 373.3799 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11693,16 +11784,18 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "2b66dcac-af6a-47e9-a4a5-c906e22cd3cb")
 		(property "Reference" "H9"
-			(at 493.522 361.696 0)
+			(at 492.76 361.9499 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
-		(property "Value" "CV_LVL_TOP"
+		(property "Value" "PinHeader_1x04"
 			(at 490.22 365.76 0)
 			(effects
 				(font
@@ -12019,31 +12112,34 @@
 	)
 	(symbol
 		(lib_id "synth:PinHeader_01x08")
-		(at 391.16 166.37 0)
+		(at 393.7 166.37 0)
 		(unit 5)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "3bd2e377-c181-4fdc-a9b9-375c4023b578")
 		(property "Reference" "H4"
-			(at 389.89 170.18 0)
+			(at 396.24 166.3699 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
-		(property "Value" "TOP_CTRL"
-			(at 388.62 172.72 0)
+		(property "Value" "PinHeader_1x08"
+			(at 391.16 172.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "Footprint" "Synth:PinHeader_1x08_P2.54mm_Vertical"
-			(at 391.16 173.482 0)
+			(at 393.7 173.482 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12052,7 +12148,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 391.16 166.37 0)
+			(at 393.7 166.37 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12061,7 +12157,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 391.16 171.196 0)
+			(at 393.7 171.196 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12110,9 +12206,10 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "3c733b4c-4e29-4e75-bf60-1b225fff8678")
 		(property "Reference" "H10"
-			(at 502.412 362.204 0)
+			(at 501.65 361.9499 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12120,7 +12217,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "CV_LVL_BTM"
+		(property "Value" "PinSocket_1x04"
 			(at 501.65 360.6801 0)
 			(effects
 				(font
@@ -12186,9 +12283,10 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "3de1aca6-d44e-4def-a2ac-71d65a8e8f9e")
 		(property "Reference" "D4"
-			(at 336.55 397.51 0)
+			(at 336.2325 387.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12196,7 +12294,7 @@
 			)
 		)
 		(property "Value" "1N5819"
-			(at 336.55 391.16 0)
+			(at 336.2325 389.89 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12253,9 +12351,10 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "3e04c6c8-bffb-4327-a470-2b14b9952fcd")
 		(property "Reference" "H7"
-			(at 267.97 135.89 0)
+			(at 266.7 135.8899 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12263,7 +12362,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "TOP_SGL_RW_2"
+		(property "Value" "PinHeader_1x04"
 			(at 266.7 134.62 0)
 			(effects
 				(font
@@ -12322,7 +12421,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C_Polarized")
+		(lib_id "Device:C")
 		(at 415.29 392.43 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -12332,7 +12431,7 @@
 		(fields_autoplaced yes)
 		(uuid "3fe020d5-3b3e-4719-9cfb-9c72105e3917")
 		(property "Reference" "C8"
-			(at 419.1 390.271 0)
+			(at 419.1 391.1599 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12341,7 +12440,7 @@
 			)
 		)
 		(property "Value" "0.1uF"
-			(at 419.1 392.811 0)
+			(at 419.1 393.6999 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12349,7 +12448,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_THT:CP_Radial_D4.0mm_P2.00mm"
+		(property "Footprint" "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm"
 			(at 416.2552 396.24 0)
 			(effects
 				(font
@@ -12367,7 +12466,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Polarized capacitor"
+		(property "Description" "Unpolarized capacitor"
 			(at 415.29 392.43 0)
 			(effects
 				(font
@@ -12399,6 +12498,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "401056b8-4967-4b0e-9cae-3103ddf0fb23")
 		(property "Reference" "#PWR043"
 			(at 350.52 344.17 0)
@@ -12410,11 +12510,12 @@
 			)
 		)
 		(property "Value" "GNDREF"
-			(at 347.98 344.17 0)
+			(at 347.98 344.1699 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify right)
 			)
 		)
 		(property "Footprint" ""
@@ -12605,16 +12706,17 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "42ce1a11-dbf7-4fbe-94e9-c5076f50dd9a")
 		(property "Reference" "H4"
-			(at 419.1 190.5 0)
+			(at 422.91 186.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "TOP_CTRL"
+		(property "Value" "PinHeader_1x08"
 			(at 422.91 186.69 0)
 			(effects
 				(font
@@ -12691,17 +12793,18 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "43e25362-463e-40be-a5b2-e82d1bb16232")
 		(property "Reference" "H18"
-			(at 466.09 386.08 0)
+			(at 468.63 387.3499 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
-		(property "Value" "BTM_PWR"
+		(property "Value" "PinSocket_1x08"
 			(at 444.5 388.62 0)
 			(effects
 				(font
@@ -12860,7 +12963,7 @@
 				)
 			)
 		)
-		(property "Value" "200"
+		(property "Value" "200R"
 			(at 389.89 307.34 90)
 			(effects
 				(font
@@ -12930,12 +13033,11 @@
 			)
 		)
 		(property "Value" "GNDREF"
-			(at 359.41 214.63 0)
+			(at 356.87 218.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
 		(property "Footprint" ""
@@ -13052,9 +13154,10 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "480a3871-d26e-4c69-8f84-c8d15323e490")
 		(property "Reference" "H8"
-			(at 267.97 143.51 0)
+			(at 266.7 143.5099 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13062,7 +13165,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "TOP_SGL_RW_1"
+		(property "Value" "PinHeader_1x04"
 			(at 266.7 142.24 0)
 			(effects
 				(font
@@ -13128,9 +13231,10 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "4b77f8e9-bc4a-4142-b409-ff340d48a678")
 		(property "Reference" "D10"
-			(at 365.76 167.64 0)
+			(at 365.76 166.37 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13138,7 +13242,7 @@
 			)
 		)
 		(property "Value" "1N4148"
-			(at 365.76 170.18 0)
+			(at 365.76 168.91 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13224,7 +13328,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "4017"
+		(property "Value" "CD4017"
 			(at 181.2641 125.73 0)
 			(effects
 				(font
@@ -13325,17 +13429,18 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "4dc7659a-cd13-45ca-b7e8-c49dfb8f5a40")
 		(property "Reference" "H18"
-			(at 458.47 386.08 0)
+			(at 461.01 387.3499 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
-		(property "Value" "BTM_PWR"
+		(property "Value" "PinSocket_1x08"
 			(at 436.88 388.62 0)
 			(effects
 				(font
@@ -13413,23 +13518,25 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "52aac6e7-174f-4e7a-8926-e005012da316")
 		(property "Reference" "H2"
-			(at 106.68 354.33 0)
+			(at 104.14 350.5199 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
-		(property "Value" "TOP_CLK"
+		(property "Value" "PinHeader_1x04"
 			(at 104.14 356.87 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
+				(hide yes)
 			)
 		)
 		(property "Footprint" "Synth:PinHeader_1x04_P2.54mm_Vertical"
@@ -13556,13 +13663,13 @@
 		(at 173.99 335.28 180)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "53660827-5baf-4056-8a5d-92993454c582")
 		(property "Reference" "TP7"
-			(at 176.53 337.312 0)
+			(at 176.53 337.3119 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13571,7 +13678,7 @@
 			)
 		)
 		(property "Value" "TestPoint"
-			(at 176.53 339.852 0)
+			(at 176.53 339.8519 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13626,17 +13733,18 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "5640af84-542b-4b5c-bc90-20f30eec85ef")
 		(property "Reference" "H18"
-			(at 463.55 386.08 0)
+			(at 466.09 387.3499 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
-		(property "Value" "BTM_PWR"
+		(property "Value" "PinSocket_1x08"
 			(at 441.96 388.62 0)
 			(effects
 				(font
@@ -13785,23 +13893,25 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "6219b1a8-085f-4aed-ba3d-4087f36166b5")
 		(property "Reference" "H3"
-			(at 274.32 256.54 90)
+			(at 270.51 255.2699 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
-		(property "Value" "BTM_CTRL"
-			(at 279.4 259.08 90)
+		(property "Value" "PinSocket_1x08"
+			(at 270.51 257.8099 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
+				(hide yes)
 			)
 		)
 		(property "Footprint" "Synth:PinSocket_1x08_P2.54mm_Vertical"
@@ -13943,16 +14053,18 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "62aef21d-ce4f-422f-9b19-def47d7251a6")
 		(property "Reference" "H17"
-			(at 453.39 378.46 0)
+			(at 455.93 374.6499 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
-		(property "Value" "TOP_PWR"
+		(property "Value" "PinHeader_1x08"
 			(at 453.39 381 0)
 			(effects
 				(font
@@ -14026,7 +14138,7 @@
 		(at 563.245 350.52 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -14096,7 +14208,7 @@
 		(fields_autoplaced yes)
 		(uuid "652999ef-d5d0-435e-bbc1-aaee9b1370c3")
 		(property "Reference" "C6"
-			(at 378.46 387.731 0)
+			(at 378.46 387.7309 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14105,7 +14217,7 @@
 			)
 		)
 		(property "Value" "0.1uF"
-			(at 378.46 390.271 0)
+			(at 378.46 390.2709 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14163,6 +14275,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "659cee88-a7be-4df0-82e4-0b8a56db565e")
 		(property "Reference" "#PWR024"
 			(at 405.13 384.81 0)
@@ -14174,12 +14287,12 @@
 			)
 		)
 		(property "Value" "GNDREF"
-			(at 401.955 384.81 90)
+			(at 407.67 384.8099 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
 		(property "Footprint" ""
@@ -14307,7 +14420,7 @@
 			)
 		)
 		(property "Value" "GNDREF"
-			(at 485.14 184.15 90)
+			(at 485.14 184.1499 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14362,9 +14475,10 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "67fd191e-2ff0-4f2b-9e43-af395082256d")
 		(property "Reference" "H3"
-			(at 444.5 157.48 0)
+			(at 449.58 160.0199 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14372,13 +14486,14 @@
 				(justify left)
 			)
 		)
-		(property "Value" "BTM_CTRL"
+		(property "Value" "PinSocket_1x08"
 			(at 440.69 162.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
+				(hide yes)
 			)
 		)
 		(property "Footprint" "Synth:PinSocket_1x08_P2.54mm_Vertical"
@@ -14449,16 +14564,18 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "684e0de2-f683-4cf5-808d-a4690c9a6c76")
 		(property "Reference" "H17"
-			(at 458.47 378.46 0)
+			(at 461.01 374.6499 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
-		(property "Value" "TOP_PWR"
+		(property "Value" "PinHeader_1x08"
 			(at 458.47 381 0)
 			(effects
 				(font
@@ -14535,17 +14652,18 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "6872f4bb-475a-4582-8a64-db9bdec820a7")
 		(property "Reference" "H18"
-			(at 450.85 386.08 0)
+			(at 453.39 387.3499 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
-		(property "Value" "BTM_PWR"
+		(property "Value" "PinSocket_1x08"
 			(at 429.26 388.62 0)
 			(effects
 				(font
@@ -14691,23 +14809,24 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "6b72afc3-3df7-4d01-9255-bfa53704240f")
 		(property "Reference" "H1"
-			(at 160.02 318.77 0)
+			(at 157.48 318.77 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
-		(property "Value" "BTM_CLK"
+		(property "Value" "PinSocket_1x04"
 			(at 161.29 316.23 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
+				(hide yes)
 			)
 		)
 		(property "Footprint" "Synth:PinSocket_1x04_P2.54mm_Vertical"
@@ -14766,17 +14885,17 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "6bae9dbe-5955-4bd7-937f-14b530219dc0")
 		(property "Reference" "H10"
-			(at 463.042 181.61 0)
+			(at 461.01 180.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
-		(property "Value" "CV_LVL_BTM"
+		(property "Value" "PinSocket_1x04"
 			(at 458.47 182.8801 0)
 			(effects
 				(font
@@ -14842,9 +14961,10 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "6c9acb23-b771-40c9-8931-5f7c615bd0dd")
 		(property "Reference" "H8"
-			(at 267.97 148.59 0)
+			(at 266.7 148.5899 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14852,13 +14972,14 @@
 				(justify left)
 			)
 		)
-		(property "Value" "TOP_SGL_RW_1"
+		(property "Value" "PinHeader_1x04"
 			(at 279.4 151.13 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
+				(hide yes)
 			)
 		)
 		(property "Footprint" "Synth:PinHeader_1x04_P2.54mm_Vertical"
@@ -14929,7 +15050,7 @@
 			)
 		)
 		(property "Value" "GNDREF"
-			(at 128.27 334.01 90)
+			(at 128.27 334.0099 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14994,7 +15115,7 @@
 				)
 			)
 		)
-		(property "Value" "0.1 uF"
+		(property "Value" "1uF"
 			(at 72.39 330.2 90)
 			(effects
 				(font
@@ -15064,12 +15185,12 @@
 			)
 		)
 		(property "Value" "GNDREF"
-			(at 317.5 388.62 90)
+			(at 312.42 388.6199 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
 		(property "Footprint" ""
@@ -15119,17 +15240,17 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "72ef986b-f9fd-4647-8a33-31aa95eaac8a")
 		(property "Reference" "H7"
-			(at 267.97 130.81 0)
+			(at 269.24 127 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
-		(property "Value" "TOP_SGL_RW_2"
+		(property "Value" "PinHeader_1x04"
 			(at 266.7 129.54 0)
 			(effects
 				(font
@@ -15195,23 +15316,25 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "73fd3e7b-1466-4e22-b846-26964b081c5e")
 		(property "Reference" "H18"
-			(at 448.31 386.08 0)
+			(at 450.85 387.3499 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
-		(property "Value" "BTM_PWR"
+		(property "Value" "PinSocket_1x08"
 			(at 444.5 391.16 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
+				(hide yes)
 			)
 		)
 		(property "Footprint" "Synth:PinSocket_1x08_P2.54mm_Vertical"
@@ -15282,17 +15405,17 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "794c06d8-5dee-4fe2-a17f-f30b39b0ae44")
 		(property "Reference" "H10"
-			(at 502.158 358.14 0)
+			(at 504.19 354.33 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
-		(property "Value" "CV_LVL_BTM"
+		(property "Value" "PinSocket_1x04"
 			(at 501.65 356.8701 0)
 			(effects
 				(font
@@ -15358,9 +15481,10 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "79891470-7ea1-48ec-84c5-bdb9f1ed75ee")
 		(property "Reference" "U1"
-			(at 88.9 325.12 0)
+			(at 88.9 309.88 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15461,16 +15585,18 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "7cb8e2e4-92c4-435a-a748-9ecd066ff9f5")
 		(property "Reference" "H9"
-			(at 456.819 181.61 0)
+			(at 459.74 184.1499 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
-		(property "Value" "CV_LVL_TOP"
+		(property "Value" "PinHeader_1x04"
 			(at 457.2 187.96 0)
 			(effects
 				(font
@@ -15547,7 +15673,7 @@
 			)
 		)
 		(property "Value" "GNDREF"
-			(at 485.14 196.85 90)
+			(at 485.14 196.8499 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15614,12 +15740,12 @@
 			)
 		)
 		(property "Value" "GNDREF"
-			(at 167.64 133.35 90)
+			(at 162.56 133.3499 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
 		(property "Footprint" ""
@@ -15681,7 +15807,7 @@
 			)
 		)
 		(property "Value" "-12V"
-			(at 406.4 396.24 90)
+			(at 406.4 396.2399 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15904,12 +16030,11 @@
 			)
 		)
 		(property "Value" "GNDREF"
-			(at 459.74 397.51 0)
+			(at 457.2 401.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
 		(property "Footprint" ""
@@ -15962,7 +16087,7 @@
 		(fields_autoplaced yes)
 		(uuid "86763400-a85b-4eff-95e0-dff6439e559e")
 		(property "Reference" "C5"
-			(at 378.46 377.571 0)
+			(at 378.46 377.5709 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15971,7 +16096,7 @@
 			)
 		)
 		(property "Value" "0.1uF"
-			(at 378.46 380.111 0)
+			(at 378.46 380.1109 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16029,16 +16154,18 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "881291e3-d31a-4aaa-a9a4-db42dd72a559")
 		(property "Reference" "H5"
-			(at 260.35 130.81 0)
+			(at 259.08 130.8099 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
-		(property "Value" "BTM_SGL_RW_2"
+		(property "Value" "PinSocket_1x04"
 			(at 256.54 134.62 0)
 			(effects
 				(font
@@ -16174,16 +16301,18 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "8f05e84b-b922-486c-83b0-924ee628eadb")
 		(property "Reference" "H17"
-			(at 450.85 378.46 0)
+			(at 453.39 374.6499 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
-		(property "Value" "TOP_PWR"
+		(property "Value" "PinHeader_1x08"
 			(at 450.85 381 0)
 			(effects
 				(font
@@ -16260,9 +16389,10 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "8f55a8ba-bd70-4e2a-af34-8c6e9d1d6559")
 		(property "Reference" "H3"
-			(at 354.33 335.28 0)
+			(at 355.6 335.2799 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16270,7 +16400,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "BTM_CTRL"
+		(property "Value" "PinSocket_1x08"
 			(at 349.25 339.09 0)
 			(effects
 				(font
@@ -16342,7 +16472,7 @@
 	)
 	(symbol
 		(lib_id "power:PWR_FLAG")
-		(at 347.98 384.81 0)
+		(at 342.9 384.81 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -16351,7 +16481,7 @@
 		(fields_autoplaced yes)
 		(uuid "8f65d170-6b73-49ef-a669-d4c7a5c26365")
 		(property "Reference" "#FLG01"
-			(at 347.98 382.905 0)
+			(at 342.9 382.905 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16360,7 +16490,7 @@
 			)
 		)
 		(property "Value" "PWR_FLAG"
-			(at 347.98 379.73 0)
+			(at 342.9 379.73 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16368,7 +16498,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 347.98 384.81 0)
+			(at 342.9 384.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16377,7 +16507,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 347.98 384.81 0)
+			(at 342.9 384.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16386,7 +16516,7 @@
 			)
 		)
 		(property "Description" "Special symbol for telling ERC where power comes from"
-			(at 347.98 384.81 0)
+			(at 342.9 384.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16482,21 +16612,24 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "932bba6d-6a2d-457f-8cd5-4368c951aa2f")
 		(property "Reference" "H17"
-			(at 448.31 378.46 0)
+			(at 450.85 374.6499 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
-		(property "Value" "TOP_PWR"
+		(property "Value" "PinHeader_1x08"
 			(at 444.5 374.65 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "Footprint" "Synth:PinHeader_1x08_P2.54mm_Vertical"
@@ -16564,7 +16697,7 @@
 		(at 540.385 350.52 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -16631,16 +16764,18 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "98700620-c264-488a-bb45-5eafca2562da")
 		(property "Reference" "H17"
-			(at 455.93 378.46 0)
+			(at 458.47 374.6499 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
-		(property "Value" "TOP_PWR"
+		(property "Value" "PinHeader_1x08"
 			(at 455.93 381 0)
 			(effects
 				(font
@@ -16777,16 +16912,16 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint")
-		(at 166.37 151.13 90)
+		(at 166.37 172.72 90)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "995b2c10-e88e-4714-a6a2-2c5b1f5c0c18")
 		(property "Reference" "TP5"
-			(at 163.068 146.05 90)
+			(at 163.068 167.64 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16794,7 +16929,7 @@
 			)
 		)
 		(property "Value" "TestPoint"
-			(at 163.068 148.59 90)
+			(at 163.068 170.18 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16802,7 +16937,7 @@
 			)
 		)
 		(property "Footprint" "Connector_Pin:Pin_D1.0mm_L10.0mm"
-			(at 166.37 146.05 0)
+			(at 166.37 167.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16811,7 +16946,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 166.37 146.05 0)
+			(at 166.37 167.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16820,7 +16955,7 @@
 			)
 		)
 		(property "Description" "test point"
-			(at 166.37 151.13 0)
+			(at 166.37 172.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16848,9 +16983,10 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "99cf155d-fd31-4219-8a74-f5fe5e345728")
 		(property "Reference" "H8"
-			(at 267.97 140.97 0)
+			(at 266.7 140.9699 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16858,7 +16994,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "TOP_SGL_RW_1"
+		(property "Value" "PinHeader_1x04"
 			(at 266.7 139.7 0)
 			(effects
 				(font
@@ -16924,17 +17060,18 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "9ed0f25a-5675-439a-8fb6-359cc5905e26")
 		(property "Reference" "R10"
-			(at 346.71 397.51 90)
+			(at 346.71 387.35 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "10"
-			(at 346.71 391.16 90)
+		(property "Value" "10R"
+			(at 346.71 389.89 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17074,7 +17211,7 @@
 		(at 540.385 363.22 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -17207,9 +17344,10 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "aac2e623-9e1a-437e-ab37-dc27a05ee3f2")
 		(property "Reference" "H1"
-			(at 85.09 341.63 0)
+			(at 92.71 345.4399 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17217,13 +17355,14 @@
 				(justify left)
 			)
 		)
-		(property "Value" "BTM_CLK"
+		(property "Value" "PinSocket_1x04"
 			(at 87.63 339.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
+				(hide yes)
 			)
 		)
 		(property "Footprint" "Synth:PinSocket_1x04_P2.54mm_Vertical"
@@ -17282,6 +17421,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "aac73454-1040-4fda-9931-388d2fceca18")
 		(property "Reference" "#PWR02"
 			(at 62.23 335.28 0)
@@ -17293,12 +17433,12 @@
 			)
 		)
 		(property "Value" "GNDREF"
-			(at 57.912 335.28 90)
+			(at 64.77 335.2799 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
 		(property "Footprint" ""
@@ -17348,17 +17488,18 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "ab1ea1ba-321a-46af-86f0-18ae5f1bd0eb")
 		(property "Reference" "H18"
-			(at 461.01 386.08 0)
+			(at 463.55 387.3499 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
-		(property "Value" "BTM_PWR"
+		(property "Value" "PinSocket_1x08"
 			(at 439.42 388.62 0)
 			(effects
 				(font
@@ -17448,7 +17589,7 @@
 			)
 		)
 		(property "Value" "+12V"
-			(at 387.35 375.92 90)
+			(at 387.35 375.9199 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17647,6 +17788,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "b059e78a-0c42-448b-95d4-8b55fcfd4d82")
 		(property "Reference" "#PWR030"
 			(at 466.09 172.72 0)
@@ -17658,7 +17800,7 @@
 			)
 		)
 		(property "Value" "GNDREF"
-			(at 466.09 170.18 0)
+			(at 466.09 171.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17851,16 +17993,18 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "b442f377-4bcb-4bf3-9f4a-c3899708e160")
 		(property "Reference" "H17"
-			(at 463.55 378.46 0)
+			(at 466.09 374.6499 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
-		(property "Value" "TOP_PWR"
+		(property "Value" "PinHeader_1x08"
 			(at 463.55 381 0)
 			(effects
 				(font
@@ -17931,16 +18075,16 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint")
-		(at 201.93 336.55 270)
+		(at 195.58 325.12 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b5ed266a-c65c-4d15-a03a-7d6664171a0e")
 		(property "Reference" "TP3"
-			(at 207.01 335.28 90)
+			(at 198.12 320.5479 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17949,7 +18093,7 @@
 			)
 		)
 		(property "Value" "TestPoint"
-			(at 207.01 337.82 90)
+			(at 198.12 323.0879 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17958,7 +18102,7 @@
 			)
 		)
 		(property "Footprint" "Connector_Pin:Pin_D1.0mm_L10.0mm"
-			(at 201.93 341.63 0)
+			(at 200.66 325.12 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17967,7 +18111,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 201.93 341.63 0)
+			(at 200.66 325.12 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17976,7 +18120,7 @@
 			)
 		)
 		(property "Description" "test point"
-			(at 201.93 336.55 0)
+			(at 195.58 325.12 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18004,9 +18148,10 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "b665e1fb-85c1-4aab-bbc4-4b9d426bb548")
 		(property "Reference" "H7"
-			(at 267.97 138.43 0)
+			(at 266.7 138.4299 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18014,13 +18159,14 @@
 				(justify left)
 			)
 		)
-		(property "Value" "TOP_SGL_RW_2"
+		(property "Value" "PinHeader_1x04"
 			(at 279.4 128.27 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
+				(hide yes)
 			)
 		)
 		(property "Footprint" "Synth:PinHeader_1x04_P2.54mm_Vertical"
@@ -18079,6 +18225,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "b89d59e3-2c59-4c56-b4ac-3ff28f990726")
 		(property "Reference" "#PWR04"
 			(at 160.02 120.65 0)
@@ -18090,11 +18237,12 @@
 			)
 		)
 		(property "Value" "GNDREF"
-			(at 162.56 120.65 0)
+			(at 162.56 120.6499 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify right)
 			)
 		)
 		(property "Footprint" ""
@@ -18144,16 +18292,18 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "b8ad46aa-a2a4-4944-ab86-3e0610de3dca")
 		(property "Reference" "H9"
-			(at 456.565 194.564 0)
+			(at 459.74 196.8499 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
-		(property "Value" "CV_LVL_TOP"
+		(property "Value" "PinHeader_1x04"
 			(at 457.2 200.66 0)
 			(effects
 				(font
@@ -18221,21 +18371,19 @@
 		(fields_autoplaced yes)
 		(uuid "b9acf7da-cc78-43d6-b28e-87b2154c1a6c")
 		(property "Reference" "RV10"
-			(at 472.44 199.39 0)
+			(at 473.71 200.66 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
 			)
 		)
 		(property "Value" "5K"
-			(at 474.98 199.39 0)
+			(at 473.71 203.2 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
 			)
 		)
 		(property "Footprint" "Potentiometer_THT:Potentiometer_Bourns_3296W_Vertical"
@@ -18291,23 +18439,24 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "bb011cb3-59fc-433f-8c77-ffaf1e012d27")
 		(property "Reference" "C4"
-			(at 353.06 391.16 0)
+			(at 360.68 387.7309 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
 			)
 		)
 		(property "Value" "47uF"
-			(at 353.06 388.62 0)
+			(at 360.68 390.2709 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
 			)
 		)
 		(property "Footprint" "Capacitor_THT:CP_Radial_D5.0mm_P2.00mm"
@@ -18496,16 +18645,18 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "bc6599b1-e496-4ffa-aaae-6da41f9402eb")
 		(property "Reference" "H5"
-			(at 260.35 135.89 0)
+			(at 259.08 135.8899 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
-		(property "Value" "BTM_SGL_RW_2"
+		(property "Value" "PinSocket_1x04"
 			(at 256.54 139.7 0)
 			(effects
 				(font
@@ -18570,9 +18721,10 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "bc71d45e-82ab-423c-915e-5f609a69a0b7")
 		(property "Reference" "H7"
-			(at 267.97 133.35 0)
+			(at 266.7 133.3499 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18580,7 +18732,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "TOP_SGL_RW_2"
+		(property "Value" "PinHeader_1x04"
 			(at 266.7 132.08 0)
 			(effects
 				(font
@@ -18646,16 +18798,18 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "bc8648b9-493d-4ae5-8c52-cdb9a2f53380")
 		(property "Reference" "H5"
-			(at 260.35 133.35 0)
+			(at 259.08 133.3499 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
-		(property "Value" "BTM_SGL_RW_2"
+		(property "Value" "PinSocket_1x04"
 			(at 256.54 137.16 0)
 			(effects
 				(font
@@ -18717,7 +18871,7 @@
 		(at 540.385 356.87 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -18784,16 +18938,18 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "c19c621a-255a-4b74-a22f-b4381ed88b70")
 		(property "Reference" "H4"
-			(at 361.95 337.82 0)
+			(at 363.22 337.8199 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
-		(property "Value" "TOP_CTRL"
+		(property "Value" "PinHeader_1x08"
 			(at 359.41 337.82 0)
 			(effects
 				(font
@@ -18870,6 +19026,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "c317153c-55fa-4dc7-84f2-a5af6a19bf91")
 		(property "Reference" "#PWR010"
 			(at 309.88 318.77 0)
@@ -18881,11 +19038,12 @@
 			)
 		)
 		(property "Value" "GNDREF"
-			(at 312.42 318.77 0)
+			(at 312.42 318.7699 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify right)
 			)
 		)
 		(property "Footprint" ""
@@ -18935,6 +19093,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "c74b3845-7db4-4c4f-9191-0bb734de4788")
 		(property "Reference" "#PWR019"
 			(at 378.46 330.2 0)
@@ -18946,7 +19105,7 @@
 			)
 		)
 		(property "Value" "GNDREF"
-			(at 378.46 327.66 0)
+			(at 378.46 328.93 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19000,16 +19159,18 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "c75b36a4-00d5-4b7d-9a1f-e3d6d0e757af")
 		(property "Reference" "H6"
-			(at 260.35 146.05 0)
+			(at 259.08 146.0499 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
-		(property "Value" "BTM_SGL_RW_1"
+		(property "Value" "PinSocket_1x04"
 			(at 256.54 149.86 0)
 			(effects
 				(font
@@ -19068,34 +19229,34 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint")
-		(at 363.22 393.7 0)
+		(at 363.22 393.7 180)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c8bc0a3e-fcf7-44a0-9fad-f57f539559e7")
 		(property "Reference" "TP11"
-			(at 365.76 389.128 0)
+			(at 365.76 395.7319 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
 		(property "Value" "TestPoint"
-			(at 365.76 391.668 0)
+			(at 365.76 398.2719 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
 		(property "Footprint" "Connector_Pin:Pin_D1.0mm_L10.0mm"
-			(at 368.3 393.7 0)
+			(at 358.14 393.7 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19104,7 +19265,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 368.3 393.7 0)
+			(at 358.14 393.7 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19151,7 +19312,7 @@
 				)
 			)
 		)
-		(property "Value" "10"
+		(property "Value" "10R"
 			(at 346.71 372.11 90)
 			(effects
 				(font
@@ -19206,13 +19367,13 @@
 		(at 267.97 266.7 270)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ca0a33dd-7e3c-4b65-ab96-6ee77328c8b5")
 		(property "Reference" "TP4"
-			(at 273.05 265.43 90)
+			(at 273.05 265.4299 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19221,7 +19382,7 @@
 			)
 		)
 		(property "Value" "TestPoint"
-			(at 273.05 267.97 90)
+			(at 273.05 267.9699 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19276,21 +19437,24 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "ca1b42f4-ebf5-401e-b89c-151447a8c4cc")
 		(property "Reference" "H6"
-			(at 260.35 148.59 0)
+			(at 259.08 148.5899 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
-		(property "Value" "BTM_SGL_RW_1"
+		(property "Value" "PinSocket_1x04"
 			(at 252.73 151.13 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "Footprint" "Synth:PinSocket_1x04_P2.54mm_Vertical"
@@ -19346,13 +19510,13 @@
 		(at 363.22 384.81 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "cd1f3a7c-ddeb-4a34-9214-564f6a204661")
 		(property "Reference" "TP10"
-			(at 365.125 380.238 0)
+			(at 365.76 380.2379 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19361,7 +19525,7 @@
 			)
 		)
 		(property "Value" "TestPoint"
-			(at 365.125 382.778 0)
+			(at 365.76 382.7779 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19410,7 +19574,7 @@
 	)
 	(symbol
 		(lib_id "power:PWR_FLAG")
-		(at 378.46 375.92 0)
+		(at 383.54 375.92 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -19419,7 +19583,7 @@
 		(fields_autoplaced yes)
 		(uuid "cdb63871-276e-44ab-925a-4dbba309d226")
 		(property "Reference" "#FLG02"
-			(at 378.46 374.015 0)
+			(at 383.54 374.015 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19428,7 +19592,7 @@
 			)
 		)
 		(property "Value" "PWR_FLAG"
-			(at 378.46 370.84 0)
+			(at 383.54 370.84 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19436,7 +19600,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 378.46 375.92 0)
+			(at 383.54 375.92 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19445,7 +19609,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 378.46 375.92 0)
+			(at 383.54 375.92 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19454,7 +19618,7 @@
 			)
 		)
 		(property "Description" "Special symbol for telling ERC where power comes from"
-			(at 378.46 375.92 0)
+			(at 383.54 375.92 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19482,6 +19646,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "ce06afcd-ffed-4e8e-b730-8add5ac85ca8")
 		(property "Reference" "#PWR042"
 			(at 320.04 339.09 0)
@@ -19493,7 +19658,7 @@
 			)
 		)
 		(property "Value" "GNDREF"
-			(at 320.04 341.63 0)
+			(at 320.04 340.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19550,7 +19715,7 @@
 		(fields_autoplaced yes)
 		(uuid "d0783b1d-7091-40c9-b4ac-92f199688f31")
 		(property "Reference" "U1"
-			(at 429.26 383.54 0)
+			(at 429.26 383.5399 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19559,7 +19724,7 @@
 			)
 		)
 		(property "Value" "TL074"
-			(at 429.26 386.08 0)
+			(at 429.26 386.0799 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19650,7 +19815,7 @@
 		(at 563.245 363.22 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -19717,21 +19882,23 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "d224f149-f0ef-435c-a113-fa1c9c7020c3")
 		(property "Reference" "H4"
-			(at 227.33 322.58 0)
+			(at 226.06 321.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "TOP_CTRL"
+		(property "Value" "PinHeader_1x08"
 			(at 228.6 320.04 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "Footprint" "Synth:PinHeader_1x08_P2.54mm_Vertical"
@@ -19802,17 +19969,18 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "d2a1fc35-3b3c-45e4-9814-3d62099b3218")
 		(property "Reference" "H18"
-			(at 455.93 386.08 0)
+			(at 458.47 387.3499 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
-		(property "Value" "BTM_PWR"
+		(property "Value" "PinSocket_1x08"
 			(at 434.34 388.62 0)
 			(effects
 				(font
@@ -19884,7 +20052,7 @@
 	)
 	(symbol
 		(lib_id "power:PWR_FLAG")
-		(at 378.46 393.7 180)
+		(at 383.54 393.7 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -19893,7 +20061,7 @@
 		(fields_autoplaced yes)
 		(uuid "d4704ab5-ea83-404a-bebe-b819de46a144")
 		(property "Reference" "#FLG03"
-			(at 378.46 395.605 0)
+			(at 383.54 395.605 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19902,7 +20070,7 @@
 			)
 		)
 		(property "Value" "PWR_FLAG"
-			(at 378.46 398.78 0)
+			(at 383.54 398.78 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19910,7 +20078,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 378.46 393.7 0)
+			(at 383.54 393.7 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19919,7 +20087,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 378.46 393.7 0)
+			(at 383.54 393.7 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19928,7 +20096,7 @@
 			)
 		)
 		(property "Description" "Special symbol for telling ERC where power comes from"
-			(at 378.46 393.7 0)
+			(at 383.54 393.7 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20024,16 +20192,18 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "d5788734-5daf-4b73-a33a-77a563f5c168")
 		(property "Reference" "H9"
-			(at 494.03 358.14 0)
+			(at 492.76 358.1399 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
-		(property "Value" "CV_LVL_TOP"
+		(property "Value" "PinHeader_1x04"
 			(at 490.22 361.95 0)
 			(effects
 				(font
@@ -20092,33 +20262,34 @@
 	)
 	(symbol
 		(lib_id "synth:PinHeader_01x04")
-		(at 115.57 320.04 180)
+		(at 113.03 320.04 180)
 		(unit 4)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "d64f732f-9e76-4a33-89c8-c74275e59f40")
 		(property "Reference" "H2"
-			(at 116.84 317.5 0)
+			(at 113.03 316.23 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
-		(property "Value" "TOP_CLK"
-			(at 119.38 314.96 0)
+		(property "Value" "PinHeader_1x04"
+			(at 116.84 314.96 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
+				(hide yes)
 			)
 		)
 		(property "Footprint" "Synth:PinHeader_1x04_P2.54mm_Vertical"
-			(at 115.57 312.928 0)
+			(at 113.03 312.928 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20127,7 +20298,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 115.57 320.04 0)
+			(at 113.03 320.04 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20136,7 +20307,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 115.57 315.214 0)
+			(at 113.03 315.214 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20241,13 +20412,13 @@
 		(at 363.22 375.92 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d83ff3e4-5c74-4525-ba9c-7668e9254c4b")
 		(property "Reference" "TP9"
-			(at 365.125 371.348 0)
+			(at 365.76 371.3479 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20256,7 +20427,7 @@
 			)
 		)
 		(property "Value" "TestPoint"
-			(at 365.125 373.888 0)
+			(at 365.76 373.8879 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20311,16 +20482,18 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "dbb9804a-ae42-472e-8b52-2ed9d6a87ddb")
 		(property "Reference" "H17"
-			(at 466.09 378.46 0)
+			(at 468.63 374.6499 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
-		(property "Value" "TOP_PWR"
+		(property "Value" "PinHeader_1x08"
 			(at 466.09 381 0)
 			(effects
 				(font
@@ -20397,23 +20570,24 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "dc10723b-f292-4b32-9890-ef11a26da75f")
 		(property "Reference" "H3"
-			(at 400.05 163.83 0)
+			(at 397.51 162.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
-		(property "Value" "BTM_CTRL"
+		(property "Value" "PinSocket_1x08"
 			(at 405.13 161.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
+				(hide yes)
 			)
 		)
 		(property "Footprint" "Synth:PinSocket_1x08_P2.54mm_Vertical"
@@ -20487,7 +20661,7 @@
 		(fields_autoplaced yes)
 		(uuid "dc25daaf-8783-4628-b99d-cea74ec32c2c")
 		(property "Reference" "J7"
-			(at 343.535 347.98 90)
+			(at 342.9 347.9799 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20495,8 +20669,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "CV_BUS_ENABLE"
-			(at 343.535 350.52 90)
+		(property "Value" "PinHeader_1x03"
+			(at 342.9 350.5199 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20557,9 +20731,10 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "dd6b950c-d336-418e-80de-adfbbf286583")
 		(property "Reference" "H3"
-			(at 354.33 337.82 0)
+			(at 355.6 337.8199 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20567,7 +20742,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "BTM_CTRL"
+		(property "Value" "PinSocket_1x08"
 			(at 351.79 316.23 0)
 			(effects
 				(font
@@ -20645,21 +20820,24 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "dd814448-849e-4820-b876-7a9fab08971e")
 		(property "Reference" "H1"
-			(at 109.22 326.39 0)
+			(at 111.76 320.0399 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
-		(property "Value" "BTM_CLK"
+		(property "Value" "PinSocket_1x04"
 			(at 109.22 323.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "Footprint" "Synth:PinSocket_1x04_P2.54mm_Vertical"
@@ -20718,9 +20896,10 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "dee586d7-05e1-485a-a927-5274c405e38a")
 		(property "Reference" "H3"
-			(at 218.44 322.58 0)
+			(at 223.52 325.1199 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20728,13 +20907,14 @@
 				(justify left)
 			)
 		)
-		(property "Value" "BTM_CTRL"
+		(property "Value" "PinSocket_1x08"
 			(at 213.36 320.04 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
+				(hide yes)
 			)
 		)
 		(property "Footprint" "Synth:PinSocket_1x08_P2.54mm_Vertical"
@@ -20943,16 +21123,18 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "e3e17aa3-fd56-4bee-b7b3-e3099c9bd89a")
 		(property "Reference" "H17"
-			(at 461.01 378.46 0)
+			(at 463.55 374.6499 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
-		(property "Value" "TOP_PWR"
+		(property "Value" "PinHeader_1x08"
 			(at 461.01 381 0)
 			(effects
 				(font
@@ -21029,16 +21211,17 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "e419e8f3-66bb-4721-a0bd-9f423c304300")
 		(property "Reference" "H4"
-			(at 361.95 335.28 0)
+			(at 365.76 331.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "TOP_CTRL"
+		(property "Value" "PinHeader_1x08"
 			(at 365.76 339.09 0)
 			(effects
 				(font
@@ -21198,13 +21381,13 @@
 		(at 364.49 302.26 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e50bc852-9ba7-4095-a3ac-75008913a4cf")
 		(property "Reference" "TP6"
-			(at 367.03 297.688 0)
+			(at 367.03 297.6879 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21213,7 +21396,7 @@
 			)
 		)
 		(property "Value" "TestPoint"
-			(at 367.03 300.228 0)
+			(at 367.03 300.2279 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21268,16 +21451,18 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "e5898b67-6b9f-4d61-9b3f-3c1afa200e8a")
 		(property "Reference" "H6"
-			(at 260.35 143.51 0)
+			(at 259.08 143.5099 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
-		(property "Value" "BTM_SGL_RW_1"
+		(property "Value" "PinSocket_1x04"
 			(at 256.54 147.32 0)
 			(effects
 				(font
@@ -21342,23 +21527,24 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "e897df9b-e38c-4e8f-bc79-50b242106718")
 		(property "Reference" "C3"
-			(at 353.06 381 0)
+			(at 360.68 377.5709 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
 			)
 		)
 		(property "Value" "47uF"
-			(at 353.06 378.46 0)
+			(at 360.68 380.1109 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
 			)
 		)
 		(property "Footprint" "Capacitor_THT:CP_Radial_D5.0mm_P2.00mm"
@@ -21405,31 +21591,34 @@
 	)
 	(symbol
 		(lib_id "synth:PinHeader_01x04")
-		(at 149.86 322.58 0)
+		(at 153.67 322.58 0)
 		(unit 3)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "eba0f18c-3fc7-47e1-813f-b24f3bbbd488")
 		(property "Reference" "H2"
-			(at 149.86 328.93 0)
+			(at 156.21 322.5799 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
-		(property "Value" "TOP_CLK"
-			(at 149.86 326.39 0)
+		(property "Value" "PinHeader_1x04"
+			(at 153.67 326.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "Footprint" "Synth:PinHeader_1x04_P2.54mm_Vertical"
-			(at 149.86 329.692 0)
+			(at 153.67 329.692 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21438,7 +21627,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 149.86 322.58 0)
+			(at 153.67 322.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21447,7 +21636,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 149.86 327.406 0)
+			(at 153.67 327.406 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21484,6 +21673,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "ebadcc4d-5dae-41da-8998-5f39e744baf2")
 		(property "Reference" "#PWR017"
 			(at 364.49 330.2 0)
@@ -21495,7 +21685,7 @@
 			)
 		)
 		(property "Value" "GNDREF"
-			(at 364.49 327.66 0)
+			(at 364.49 328.93 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21549,23 +21739,25 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "ec6412ac-956d-45fe-90ce-c3146aff280b")
 		(property "Reference" "H2"
-			(at 85.09 354.33 0)
+			(at 92.71 349.2499 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
-		(property "Value" "TOP_CLK"
+		(property "Value" "PinHeader_1x04"
 			(at 87.63 356.87 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
+				(hide yes)
 			)
 		)
 		(property "Footprint" "Synth:PinHeader_1x04_P2.54mm_Vertical"
@@ -21624,6 +21816,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "ed57ff27-d785-4b44-b9e6-dc8ca0a7426f")
 		(property "Reference" "#PWR08"
 			(at 179.07 172.72 0)
@@ -21635,7 +21828,7 @@
 			)
 		)
 		(property "Value" "GNDREF"
-			(at 179.07 170.18 0)
+			(at 179.07 171.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21796,21 +21989,19 @@
 		(fields_autoplaced yes)
 		(uuid "ee1b5801-4b55-46da-8962-a222d2166ff2")
 		(property "Reference" "RV9"
-			(at 472.44 186.69 0)
+			(at 473.71 187.96 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
 			)
 		)
 		(property "Value" "2K"
-			(at 474.98 186.69 0)
+			(at 473.71 190.5 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
 			)
 		)
 		(property "Footprint" "Potentiometer_THT:Potentiometer_Bourns_3296W_Vertical"
@@ -22124,12 +22315,11 @@
 			)
 		)
 		(property "Value" "GNDREF"
-			(at 240.03 330.2 0)
+			(at 237.49 334.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
 		(property "Footprint" ""
@@ -22176,7 +22366,7 @@
 		(at 394.97 317.5 180)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -22243,7 +22433,7 @@
 		(at 563.245 356.87 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -22303,7 +22493,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C_Polarized")
+		(lib_id "Device:C")
 		(at 415.29 377.19 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -22313,7 +22503,7 @@
 		(fields_autoplaced yes)
 		(uuid "fbbdb025-2893-4b9c-b732-fffe50f3db1a")
 		(property "Reference" "C7"
-			(at 419.1 375.031 0)
+			(at 419.1 375.9199 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -22322,7 +22512,7 @@
 			)
 		)
 		(property "Value" "0.1uF"
-			(at 419.1 377.571 0)
+			(at 419.1 378.4599 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -22330,7 +22520,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_THT:CP_Radial_D4.0mm_P2.00mm"
+		(property "Footprint" "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm"
 			(at 416.2552 381 0)
 			(effects
 				(font
@@ -22348,7 +22538,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Polarized capacitor"
+		(property "Description" "Unpolarized capacitor"
 			(at 415.29 377.19 0)
 			(effects
 				(font
@@ -22377,13 +22567,13 @@
 		(at 101.6 331.47 270)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "fbd76233-2c29-4195-b81a-1eee4b302dc4")
 		(property "Reference" "TP8"
-			(at 106.68 330.2 90)
+			(at 106.68 330.1999 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -22392,7 +22582,7 @@
 			)
 		)
 		(property "Value" "TestPoint"
-			(at 106.68 332.74 90)
+			(at 106.68 332.7399 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -22444,7 +22634,7 @@
 		(at 540.385 369.57 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -22511,6 +22701,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "fe0e68b2-4a16-426c-b50a-4ce157a293e3")
 		(property "Reference" "#PWR015"
 			(at 336.55 384.81 0)
@@ -22522,12 +22713,12 @@
 			)
 		)
 		(property "Value" "GNDREF"
-			(at 331.724 384.81 90)
+			(at 339.09 384.8099 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
 		(property "Footprint" ""
@@ -22580,7 +22771,7 @@
 		(fields_autoplaced yes)
 		(uuid "fe572900-0d96-4551-83e6-f3aba4b5a0b7")
 		(property "Reference" "Q1"
-			(at 381 303.53 0)
+			(at 381 303.5299 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -22589,7 +22780,7 @@
 			)
 		)
 		(property "Value" "BC547"
-			(at 381 306.07 0)
+			(at 381 306.0699 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -22724,21 +22915,25 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "fecbf214-85e5-43d9-b016-fd0fb6d903a8")
 		(property "Reference" "H4"
-			(at 271.78 252.73 90)
+			(at 265.43 251.4599 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify right)
 			)
 		)
-		(property "Value" "TOP_CTRL"
-			(at 274.32 250.19 90)
+		(property "Value" "PinHeader_1x08"
+			(at 265.43 253.9999 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify right)
+				(hide yes)
 			)
 		)
 		(property "Footprint" "Synth:PinHeader_1x08_P2.54mm_Vertical"

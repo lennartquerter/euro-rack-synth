@@ -70,10 +70,11 @@ def create_panel(root_comp, hp_size):
     body.name = "panel"
 
 
-def extrude(root_comp, prof, distance, operation):
+def extrude(root_comp, profile, distance, operation):
     distance = adsk.core.ValueInput.createByReal(distance)
     extrudes = root_comp.features.extrudeFeatures
-    return extrudes.addSimple(prof, distance, operation)
+
+    return extrudes.addSimple(profile, distance, operation)
 
 
 def add_mounting_holes(root_comp, hp_size):
@@ -95,6 +96,11 @@ def add_mounting_holes(root_comp, hp_size):
     # Y Axis
     height_margin = 0.2
     hole_height = 0.32
+
+    if hp_size == 2:
+        side_margin = 0.204
+        hole_width = 0.608
+
 
     # ============== Create Mounting holes
 
@@ -118,14 +124,19 @@ def add_mounting_holes(root_comp, hp_size):
             adsk.fusion.FeatureOperations.CutFeatureOperation)
 
     if hp_size >= 10:
+        extra_hole_sketch = sketches.add(xyPlane)
+        extra_hole_sketch.name = 'mounting-holes-extra'
+
+        lines = extra_hole_sketch.sketchCurves.sketchLines
+
         mounting_hole_3 = lines.addTwoPointRectangle(
             adsk.core.Point3D.create(full_width - side_margin, height_margin, panel_offset_z),
             adsk.core.Point3D.create(full_width - (side_margin + hole_width), (height_margin + hole_height),
                                      panel_offset_z))
 
-        add_fillet(sketch, mounting_hole_3, fillet_size)
+        add_fillet(extra_hole_sketch, mounting_hole_3, fillet_size)
 
-        extrude(root_comp, sketch.profiles.item(2), -panel_offset_z,
+        extrude(root_comp, extra_hole_sketch.profiles.item(0), -panel_offset_z,
                 adsk.fusion.FeatureOperations.CutFeatureOperation)
 
         mounting_hole_4 = lines.addTwoPointRectangle(
@@ -133,9 +144,9 @@ def add_mounting_holes(root_comp, hp_size):
             adsk.core.Point3D.create(side_margin + hole_width, full_height - (height_margin + hole_height),
                                      panel_offset_z))
 
-        add_fillet(sketch, mounting_hole_4, fillet_size)
+        add_fillet(extra_hole_sketch, mounting_hole_4, fillet_size)
 
-        extrude(root_comp, sketch.profiles.item(3), -panel_offset_z,
+        extrude(root_comp, extra_hole_sketch.profiles.item(1), -panel_offset_z,
                 adsk.fusion.FeatureOperations.CutFeatureOperation)
 
 
