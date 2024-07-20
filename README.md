@@ -34,21 +34,21 @@ There are tags on the commit that was ordered (for the exact gerber files)
 
 If there are issues, they will be reported in the README for each module.
 
-| Type    | Module          | Version | Status           | Tested | Issues? |
-|---------|-----------------|---------|------------------|--------|---------|
-| VCO     | Vixen           | 2       | Pending Assembly | No     | -       |
-| VCO     | 3340            | 1       | Built            | Yes    | No      |
-| LFO     | XOF             | 1       | Built            | Yes    | No      |
-| VCA     | Sparkle         | 2       | Built            | Yes    | No      |
-| SEQ     | Sensei          | 2       | Pending Assembly | No     | -       |
-| EG      | Scribble        | 2       | Pending Assembly | No     | -       |
-| EG      | 7555            | 1       | Pending Assembly | No     | -       |
-| Filter  | 3320            | 1       | Pending Assembly | No     | -       |
-| Filter  | Low Orbit       | 1       | Pending Assembly | No     | -       |
-| Mixer   | Distorted Daisy | 2       | Pending Assembly | No     | -       |
-| Utility | Passive Mult    | 1       | Built            | Yes    | No      |
-| Utility | Active Mult     | 1       | Pending Assembly | No     | -       |
-| Utility | Chrono Divider  | 1       | Pending Assembly | No     | -       |
+| Type    | Module          | Version | Status           | Tested | Issues?  | Panel available |
+|---------|-----------------|---------|------------------|--------|----------|-----------------|
+| VCO     | Vixen           | 2       | Built            | yes    | No       | Yes             |
+| VCO     | 3340            | 1       | Built            | Yes    | No       | Yes             |
+| LFO     | XOF             | 1       | Built            | Yes    | No       | Yes             |
+| VCA     | Sparkle         | 2       | Built            | Yes    | No       | Yes             |
+| SEQ     | Sensei          | 2       | Built            | yes    | No       | Yes             |
+| EG      | Scribble        | 2       | Built            | yes    | No       | Yes             |
+| EG      | 7555            | 1       | Built            | yes    | No       | Yes             |
+| Filter  | 3320            | 1       | Pending Assembly | No     | -        | Yes             |
+| Filter  | Low Orbit       | 1       | Built            | yes    | No       | Yes             |
+| Mixer   | Distorted Daisy | 2       | Built            | yes    | No       | Yes             |
+| Utility | Passive Mult    | 1       | Built            | Yes    | No       | Yes             |
+| Utility | Active Mult     | 1       | Pending Assembly | No     | -        | Yes             |
+| Utility | Chrono Divider  | 1       | Built            | yes    | No       | Yes             |
 
 ## The story
 
