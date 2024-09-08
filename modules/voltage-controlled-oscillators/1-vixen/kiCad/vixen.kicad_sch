@@ -1236,6 +1236,142 @@
 				)
 			)
 		)
+		(symbol "Device:C"
+			(pin_numbers hide)
+			(pin_names
+				(offset 0.254)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "C"
+				(at 0.635 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "C"
+				(at 0.635 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 0.9652 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Unpolarized capacitor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "cap capacitor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "C_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "C_0_1"
+				(polyline
+					(pts
+						(xy -2.032 -0.762) (xy 2.032 -0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.032 0.762) (xy 2.032 0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "C_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 2.794)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 2.794)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
 		(symbol "Device:C_Polarized"
 			(pin_numbers hide)
 			(pin_names
@@ -7807,7 +7943,7 @@
 				)
 			)
 		)
-		(property "Value" "TOP_SGN"
+		(property "Value" "Conn_01x08"
 			(at 372.11 240.03 0)
 			(effects
 				(font
@@ -7894,7 +8030,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "BTN_SGN"
+		(property "Value" "Conn_01x08"
 			(at 129.54 156.21 90)
 			(effects
 				(font
@@ -7968,7 +8104,7 @@
 		(at 257.175 252.73 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -8247,7 +8383,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "BTN_SGN"
+		(property "Value" "Conn_01x08"
 			(at 269.24 139.7 90)
 			(effects
 				(font
@@ -8606,7 +8742,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "1.5K"
+		(property "Value" "1K5"
 			(at 143.51 163.8299 0)
 			(effects
 				(font
@@ -8675,7 +8811,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "TOP_PWR"
+		(property "Value" "Conn_01x08"
 			(at 397.51 231.14 0)
 			(effects
 				(font
@@ -9033,7 +9169,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "TOP_PWR"
+		(property "Value" "Conn_01x08"
 			(at 400.05 231.14 0)
 			(effects
 				(font
@@ -9188,7 +9324,7 @@
 				)
 			)
 		)
-		(property "Value" "TOP_SGN"
+		(property "Value" "Conn_01x08"
 			(at 372.11 237.49 0)
 			(effects
 				(font
@@ -9543,7 +9679,7 @@
 				)
 			)
 		)
-		(property "Value" "BTM_PWR"
+		(property "Value" "Conn_01x08"
 			(at 386.08 219.71 0)
 			(effects
 				(font
@@ -9698,7 +9834,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "BTN_SGN"
+		(property "Value" "Conn_01x08"
 			(at 36.83 135.89 0)
 			(effects
 				(font
@@ -9769,7 +9905,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C_Polarized")
+		(lib_id "Device:C")
 		(at 158.75 266.7 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -9779,7 +9915,7 @@
 		(fields_autoplaced yes)
 		(uuid "3fe020d5-3b3e-4719-9cfb-9c72105e3917")
 		(property "Reference" "C6"
-			(at 162.56 264.541 0)
+			(at 162.56 265.4299 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9787,8 +9923,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "0.1uF"
-			(at 162.56 267.081 0)
+		(property "Value" "100nF"
+			(at 162.56 267.9699 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9796,7 +9932,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_THT:CP_Radial_D4.0mm_P2.00mm"
+		(property "Footprint" "Synth:C_RECT_WIMA_0.1uF"
 			(at 159.7152 270.51 0)
 			(effects
 				(font
@@ -9814,7 +9950,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Polarized capacitor"
+		(property "Description" "Unpolarized capacitor"
 			(at 158.75 266.7 0)
 			(effects
 				(font
@@ -9995,7 +10131,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "BTN_SGN"
+		(property "Value" "Conn_01x08"
 			(at 356.87 240.03 0)
 			(effects
 				(font
@@ -10150,7 +10286,7 @@
 				)
 			)
 		)
-		(property "Value" "TOP_SGN"
+		(property "Value" "Conn_01x08"
 			(at 351.79 123.19 90)
 			(effects
 				(font
@@ -10235,7 +10371,7 @@
 				)
 			)
 		)
-		(property "Value" "BTM_PWR"
+		(property "Value" "Conn_01x08"
 			(at 398.78 219.71 0)
 			(effects
 				(font
@@ -10322,7 +10458,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "TOP_PWR"
+		(property "Value" "Conn_01x08"
 			(at 405.13 231.14 0)
 			(effects
 				(font
@@ -10397,7 +10533,7 @@
 		(at 185.42 144.78 270)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(uuid "54790c5a-9fb7-44f9-9722-7f8b9c7bb408")
@@ -10531,7 +10667,7 @@
 		(at 237.49 44.45 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -10677,7 +10813,7 @@
 				)
 			)
 		)
-		(property "Value" "BTM_PWR"
+		(property "Value" "Conn_01x08"
 			(at 388.62 219.71 0)
 			(effects
 				(font
@@ -10751,7 +10887,7 @@
 		(at 257.175 247.65 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -10881,7 +11017,7 @@
 		(at 170.18 143.51 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -11577,7 +11713,7 @@
 				)
 			)
 		)
-		(property "Value" "BTM_PWR"
+		(property "Value" "Conn_01x08"
 			(at 383.54 219.71 0)
 			(effects
 				(font
@@ -11805,7 +11941,7 @@
 				)
 			)
 		)
-		(property "Value" "BTM_PWR"
+		(property "Value" "Conn_01x08"
 			(at 396.24 219.71 0)
 			(effects
 				(font
@@ -12064,7 +12200,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "TOP_PWR"
+		(property "Value" "Conn_01x08"
 			(at 392.43 231.14 0)
 			(effects
 				(font
@@ -12139,7 +12275,7 @@
 		(at 238.125 259.08 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -12404,7 +12540,7 @@
 		(at 85.09 271.78 180)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(uuid "8572b971-182f-4cd0-ac76-2c71fc2b901b")
@@ -13295,7 +13431,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "TOP_PWR"
+		(property "Value" "Conn_01x08"
 			(at 402.59 231.14 0)
 			(effects
 				(font
@@ -13382,7 +13518,7 @@
 				)
 			)
 		)
-		(property "Value" "BTM_PWR"
+		(property "Value" "Conn_01x08"
 			(at 393.7 219.71 0)
 			(effects
 				(font
@@ -13573,7 +13709,7 @@
 				)
 			)
 		)
-		(property "Value" "10"
+		(property "Value" "10R"
 			(at 67.31 267.97 90)
 			(effects
 				(font
@@ -13696,7 +13832,7 @@
 		(at 85.09 256.54 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(uuid "a2279665-8a4f-467b-801b-78858bf2a3cc")
@@ -13840,7 +13976,7 @@
 				)
 			)
 		)
-		(property "Value" "TOP_SGN"
+		(property "Value" "Conn_01x08"
 			(at 372.11 242.57 0)
 			(effects
 				(font
@@ -14226,7 +14362,7 @@
 		(at 238.125 264.16 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -14913,7 +15049,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "BTN_SGN"
+		(property "Value" "Conn_01x08"
 			(at 342.9 57.15 90)
 			(effects
 				(font
@@ -15066,7 +15202,7 @@
 				)
 			)
 		)
-		(property "Value" "TOP_SGN"
+		(property "Value" "Conn_01x08"
 			(at 124.46 160.02 90)
 			(effects
 				(font
@@ -15286,7 +15422,7 @@
 				)
 			)
 		)
-		(property "Value" "TOP_SGN"
+		(property "Value" "Conn_01x08"
 			(at 346.71 53.34 90)
 			(effects
 				(font
@@ -15371,7 +15507,7 @@
 				)
 			)
 		)
-		(property "Value" "TOP_SGN"
+		(property "Value" "Conn_01x08"
 			(at 273.05 143.51 90)
 			(effects
 				(font
@@ -15444,7 +15580,7 @@
 		(at 86.36 241.3 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(uuid "c08d6a3d-5405-4b23-aaa2-f1971784edaf")
@@ -15522,12 +15658,13 @@
 				)
 			)
 		)
-		(property "Value" "BTM_PWR"
+		(property "Value" "Conn_01x08"
 			(at 381 219.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "Footprint" "Synth:PinSocket_1x08_P2.54mm_Vertical"
@@ -15810,7 +15947,7 @@
 				)
 			)
 		)
-		(property "Value" "10"
+		(property "Value" "10R"
 			(at 67.31 237.49 90)
 			(effects
 				(font
@@ -15878,7 +16015,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "TOP_PWR"
+		(property "Value" "Conn_01x08"
 			(at 394.97 231.14 0)
 			(effects
 				(font
@@ -16031,7 +16168,7 @@
 				)
 			)
 		)
-		(property "Value" "BTM_PWR"
+		(property "Value" "Conn_01x08"
 			(at 391.16 219.71 0)
 			(effects
 				(font
@@ -16278,7 +16415,7 @@
 		(at 266.7 165.1 270)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(uuid "d167f502-878e-413b-bb09-7b1d6779ec76")
@@ -16477,7 +16614,7 @@
 		(at 257.175 264.16 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -16689,7 +16826,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "BTN_SGN"
+		(property "Value" "Conn_01x08"
 			(at 346.71 127 90)
 			(effects
 				(font
@@ -16776,7 +16913,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "BTN_SGN"
+		(property "Value" "Conn_01x08"
 			(at 356.87 242.57 0)
 			(effects
 				(font
@@ -17127,7 +17264,7 @@
 		(at 339.09 116.84 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(uuid "db20e719-bc40-4523-9460-aafda74ef110")
@@ -17869,13 +18006,14 @@
 				(justify left)
 			)
 		)
-		(property "Value" "TOP_PWR"
+		(property "Value" "Conn_01x08"
 			(at 381 237.49 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
+				(hide yes)
 			)
 		)
 		(property "Footprint" "Synth:PinHeader_1x08_P2.54mm_Vertical"
@@ -18131,7 +18269,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "TOP_PWR"
+		(property "Value" "Conn_01x08"
 			(at 389.89 231.14 0)
 			(effects
 				(font
@@ -18219,7 +18357,7 @@
 				)
 			)
 		)
-		(property "Value" "1 uF"
+		(property "Value" "1uF"
 			(at 218.44 39.37 90)
 			(effects
 				(font
@@ -18347,7 +18485,7 @@
 		(at 257.175 259.08 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -18534,7 +18672,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "BTN_SGN"
+		(property "Value" "Conn_01x08"
 			(at 356.87 237.49 0)
 			(effects
 				(font
@@ -18609,7 +18747,7 @@
 		(at 238.125 247.65 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -18850,7 +18988,7 @@
 		(at 238.125 252.73 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -18910,7 +19048,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C_Polarized")
+		(lib_id "Device:C")
 		(at 158.75 254 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -18920,7 +19058,7 @@
 		(fields_autoplaced yes)
 		(uuid "fbbdb025-2893-4b9c-b732-fffe50f3db1a")
 		(property "Reference" "C5"
-			(at 162.56 251.841 0)
+			(at 162.56 252.7299 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18928,8 +19066,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "0.1uF"
-			(at 162.56 254.381 0)
+		(property "Value" "100nF"
+			(at 162.56 255.2699 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18937,7 +19075,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_THT:CP_Radial_D4.0mm_P2.00mm"
+		(property "Footprint" "Synth:C_RECT_WIMA_0.1uF"
 			(at 159.7152 257.81 0)
 			(effects
 				(font
@@ -18955,7 +19093,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Polarized capacitor"
+		(property "Description" "Unpolarized capacitor"
 			(at 158.75 254 0)
 			(effects
 				(font
@@ -18980,7 +19118,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C_Polarized")
+		(lib_id "Device:C")
 		(at 199.39 255.27 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -18990,7 +19128,7 @@
 		(fields_autoplaced yes)
 		(uuid "fbd8eb5f-90dc-4bbf-9cbb-e2077e2e102c")
 		(property "Reference" "C8"
-			(at 203.2 253.111 0)
+			(at 203.2 253.9999 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18998,8 +19136,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "0.1uF"
-			(at 203.2 255.651 0)
+		(property "Value" "100nF"
+			(at 203.2 256.5399 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19007,7 +19145,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_THT:CP_Radial_D4.0mm_P2.00mm"
+		(property "Footprint" "Synth:C_RECT_WIMA_0.1uF"
 			(at 200.3552 259.08 0)
 			(effects
 				(font
@@ -19025,7 +19163,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Polarized capacitor"
+		(property "Description" "Unpolarized capacitor"
 			(at 199.39 255.27 0)
 			(effects
 				(font
@@ -19066,7 +19204,7 @@
 				)
 			)
 		)
-		(property "Value" "TOP_SGN"
+		(property "Value" "Conn_01x08"
 			(at 52.07 135.89 0)
 			(effects
 				(font
