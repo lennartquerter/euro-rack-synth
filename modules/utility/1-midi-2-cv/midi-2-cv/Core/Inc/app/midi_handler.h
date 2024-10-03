@@ -1,7 +1,6 @@
 #ifndef _MIDI_HANDLER_H_
 #define _MIDI_HANDLER_H_
 
-#include "app.h"
 #include "midi.h"
 
 typedef enum {
