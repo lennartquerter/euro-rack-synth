@@ -120,6 +120,8 @@ int main(void)
     /* Infinite loop */
     /* USER CODE BEGIN WHILE */
     uint16_t value = 0;
+    uint32_t time = 0;
+    uint32_t current_time = __HAL_TIM_GET_COUNTER(&htim3);
     while (1)
     {
         if (value > MCP4822_DAC_MAX)
@@ -127,25 +129,38 @@ int main(void)
             value = (uint16_t)0;
         }
 
+        if (__HAL_TIM_GET_COUNTER(&htim3) - current_time >= sequencer_config.usec_to_wait)
+        {
+            // ***** START DEBUG --> increase value & set gates to active
+            sequencer_config.channel_a.sequence_notes[sequencer_config.current_index] = value;
+            sequencer_config.channel_a.sequence_is_trigger[sequencer_config.current_index] = 1;
 
-        sequencer_config.channel_a.sequence_notes[sequencer_config.current_index] = value;
-        sequencer_config.channel_a.sequence_is_trigger[sequencer_config.current_index] = 1;
+            sequencer_config.channel_b.sequence_notes[sequencer_config.current_index] = value;
+            sequencer_config.channel_b.sequence_is_trigger[sequencer_config.current_index] = 1;
 
-        sequencer_config.channel_b.sequence_notes[sequencer_config.current_index] = value;
-        sequencer_config.channel_b.sequence_is_trigger[sequencer_config.current_index] = 1;
+            value += (uint16_t)1;
+            // ***** END DEBUG
 
-        sequencer_run(&sequencer_config);
+
+            // Run Sequencer Code
+            sequencer_run(&sequencer_config);
+
+            // Set current index to the next step
+            sequencer_config.current_index++;
+
+            // Reset index when we reach the end of the sequence
+            if (sequencer_config.current_index >= sequencer_config.sequence_length)
+            {
+                sequencer_config.current_index = 0;
+            }
+
+            // reset time value
+            current_time = __HAL_TIM_GET_COUNTER(&htim3);
+        }
+
         /* USER CODE END WHILE */
 
         /* USER CODE BEGIN 3 */
-        value += (uint16_t)1;
-        HAL_Delay(250);
-
-        sequencer_config.current_index++;
-        if (sequencer_config.current_index >= sequencer_config.sequence_length)
-        {
-            sequencer_config.current_index = 0;
-        }
     }
     /* USER CODE END 3 */
 }
@@ -383,36 +398,26 @@ static void MX_GPIO_Init(void)
     GPIO_InitStruct.Pin = DAC_ENABLE_Pin;
     GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
     GPIO_InitStruct.Pull = GPIO_NOPULL;
-    GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+    GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
     HAL_GPIO_Init(DAC_ENABLE_GPIO_Port, &GPIO_InitStruct);
 
     /*Configure GPIO pins : GATE_B_OUT_Pin GATE_A_OUT_Pin */
     GPIO_InitStruct.Pin = GATE_B_OUT_Pin | GATE_A_OUT_Pin;
     GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
     GPIO_InitStruct.Pull = GPIO_NOPULL;
-    GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+    GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_MEDIUM;
     HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
     /* USER CODE BEGIN MX_GPIO_Init_2 */
     GPIO_InitTypeDef gpio_init = {0};
 
-    // Init CS [chip selector] pin
-    HAL_GPIO_WritePin(DAC_ENABLE_GPIO_Port, DAC_ENABLE_Pin, GPIO_PIN_RESET);
-
-    gpio_init.Pin = DAC_ENABLE_Pin;
-    gpio_init.Speed = GPIO_SPEED_FREQ_LOW;
-    gpio_init.Pull = GPIO_NOPULL;
-    gpio_init.Mode = GPIO_MODE_OUTPUT_PP;
-
-    HAL_GPIO_Init(DAC_ENABLE_GPIO_Port, &gpio_init);
-
     // Init SCK & MOSI pins
     HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5 | GPIO_PIN_7, GPIO_PIN_RESET);
 
     gpio_init.Pin = GPIO_PIN_5 | GPIO_PIN_7;
-    gpio_init.Speed = GPIO_SPEED_FREQ_LOW;
-    gpio_init.Pull = GPIO_NOPULL;
     gpio_init.Mode = GPIO_MODE_OUTPUT_PP;
+    gpio_init.Pull = GPIO_NOPULL;
+    gpio_init.Speed = GPIO_SPEED_FREQ_HIGH;
 
     HAL_GPIO_Init(GPIOA, &gpio_init);
 

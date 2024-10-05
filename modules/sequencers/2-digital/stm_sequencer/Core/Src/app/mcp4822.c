@@ -45,7 +45,7 @@ MCP4822_STATUS mcp4822_write_value(MCP4822_config* config, uint16_t value, MCP48
     // LSB
     uint8_t secondByte = value & MCP4822_FIRST_BYTE_MASK;
 
-
+    // split for debugging mainly
     tx_data[0] = firstByte;
     tx_data[1] = secondByte;
 
@@ -67,7 +67,7 @@ MCP4822_STATUS mcp4822_write_value(MCP4822_config* config, uint16_t value, MCP48
 
 static MCP4822_channel_config* get_chan_config(MCP4822_config* handle, MCP4822_DAC_SELECT dac_channel)
 {
-    //Assign pointer to the dac_channel configuration
+    // Assign pointer to the dac_channel configuration
     MCP4822_channel_config* chan_config;
     if (dac_channel == MCP4822_CHANNEL_A)
     {
