@@ -56,14 +56,14 @@ uint32_t midi_handler_init(struct midi_handler_config *cfg) {
     state.current_channel = 0x00;
 
     // CV output
-    MCP4728_Init(state.cfg.cv_dac1);
+    mcp4728_init(state.cfg.cv_dac1);
 
     if (state.cfg.mode == MH_MULTI_DAC) {
         // VEL output
-        MCP4728_Init(state.cfg.vel_dac2);
+        mcp4728_init(state.cfg.vel_dac2);
 
         // MOD output
-        MCP4728_Init(state.cfg.mod_dac3);
+        mcp4728_init(state.cfg.mod_dac3);
     }
 
     return 0;
@@ -131,8 +131,8 @@ void midi_handle_note_on(MIDI_event *midi_event) {
         }
 
         // Always write to DAC_1
-        MCP4728_Write_Voltage(state.cfg.cv_dac1, MCP4728_CHANNEL_A, value);
-        MCP4728_Write_Voltage(state.cfg.cv_dac1, MCP4728_CHANNEL_B, velocity * 4);
+        mcp4728_write_voltage(state.cfg.cv_dac1, MCP4728_CHANNEL_A, value);
+        mcp4728_write_voltage(state.cfg.cv_dac1, MCP4728_CHANNEL_B, velocity * 4);
 
         if (state.cfg.trigger_mode == MH_TRIGGER_ON) {
             HAL_GPIO_WritePin(GATE_1_OUT_GPIO_Port, GATE_1_OUT_Pin, GPIO_PIN_RESET);
@@ -150,13 +150,13 @@ void midi_handle_note_on(MIDI_event *midi_event) {
 
         // -- Write all values
         // -- Todo, the MCP shoudld have a bulk write for 2 channels?
-        MCP4728_Write_Voltage(state.cfg.cv_dac1, trigger_channel.channel, value);
+        mcp4728_write_voltage(state.cfg.cv_dac1, trigger_channel.channel, value);
 
         // velocity goes from 1 --> 127
         // Output goes from 0 --> 2000
         // 2000 / 127 = 15 --> we use a 15x translation for a wide velocity amount
         // Todo: check if this actually makes sense, or set a bit for high/low range?
-        MCP4728_Write_Voltage(state.cfg.vel_dac2, trigger_channel.channel, velocity * 4);
+        mcp4728_write_voltage(state.cfg.vel_dac2, trigger_channel.channel, velocity * 4);
 
         midi_handler_trigger_channel gate_channel;
         midi_channel_to_trigger_channel(midi_event->channel, &gate_channel);
@@ -197,7 +197,7 @@ void midi_handle_pitch(MIDI_event *midi_event) {
     uint8_t multiplier = 5;
 
     if (state.cfg.mode == MH_SINGLE_DAC) {
-        MCP4728_Write_Voltage(state.cfg.cv_dac1, MCP4728_CHANNEL_C, pitch * multiplier);
+        mcp4728_write_voltage(state.cfg.cv_dac1, MCP4728_CHANNEL_C, pitch * multiplier);
     } else {
         midi_handler_trigger_channel trigger_channel;
         midi_channel_to_trigger_channel(midi_event->channel, &trigger_channel);
@@ -207,7 +207,7 @@ void midi_handle_pitch(MIDI_event *midi_event) {
             return;
         }
 
-        MCP4728_Write_Voltage(state.cfg.vel_dac2, trigger_channel.channel, pitch * multiplier);
+        mcp4728_write_voltage(state.cfg.vel_dac2, trigger_channel.channel, pitch * multiplier);
     }
 }
 
@@ -224,12 +224,12 @@ void midi_handle_cc(MIDI_event *midi_event) {
     // Mod wheel!
     if (control == 1) {
         if (state.cfg.mode == MH_SINGLE_DAC) {
-            MCP4728_Write_Voltage(state.cfg.cv_dac1, MCP4728_CHANNEL_D, value * multiplier);
+            mcp4728_write_voltage(state.cfg.cv_dac1, MCP4728_CHANNEL_D, value * multiplier);
         } else {
             midi_handler_trigger_channel trigger_channel;
             midi_channel_to_trigger_channel(midi_event->channel, &trigger_channel);
 
-            MCP4728_Write_Voltage(state.cfg.mod_dac3, trigger_channel.channel, value * multiplier);
+            mcp4728_write_voltage(state.cfg.mod_dac3, trigger_channel.channel, value * multiplier);
         }
     }
 }

@@ -11,7 +11,6 @@
 #define MIDI_BUFFER_LENGTH (1024)
 #define MIDI_DATABYTE_MAX (32)
 
-#include <stdlib.h>
 #include <stdint.h>
 #include <stdbool.h>
 

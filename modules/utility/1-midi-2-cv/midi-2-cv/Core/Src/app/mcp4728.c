@@ -9,7 +9,7 @@ void MCP4728_Write_GeneralCall(I2C_HandleTypeDef *I2CHandler, uint8_t command) {
     HAL_I2C_Master_Transmit(I2CHandler, 0x00, &command, 1, HAL_MAX_DELAY);
 }
 
-void MCP4728_Write_Voltage(I2C_HandleTypeDef *I2CHandler, uint16_t channel, uint16_t output) {
+void mcp4728_write_voltage(I2C_HandleTypeDef *I2CHandler, uint16_t channel, uint16_t output) {
     uint8_t buf[3];
     uint8_t command = MCP4728_CMD_DACWRITE_SINGLE;
 
@@ -28,7 +28,7 @@ void MCP4728_Write_Voltage(I2C_HandleTypeDef *I2CHandler, uint16_t channel, uint
 }
 
 
-void MCP4728_Init(I2C_HandleTypeDef *I2CHandler) {
+void mcp4728_init(I2C_HandleTypeDef *I2CHandler) {
     MCP4728_Write_GeneralCall(I2CHandler, MCP4728_GENERAL_RESET);
     MCP4728_Write_GeneralCall(I2CHandler, MCP4728_GENERAL_WAKEUP);
 
