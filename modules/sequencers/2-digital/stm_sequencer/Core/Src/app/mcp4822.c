@@ -28,6 +28,7 @@ MCP4822_STATUS mcp4822_write_value(MCP4822_config* config, uint16_t value, MCP48
         return MCP4822_ERROR_INVALID_ARG;
     }
 
+
     //Receive the correct DAC channel configuration
     MCP4822_channel_config* curr_chan_config = get_chan_config(config, dac_channel);
 
@@ -46,8 +47,8 @@ MCP4822_STATUS mcp4822_write_value(MCP4822_config* config, uint16_t value, MCP48
     uint8_t secondByte = value & MCP4822_FIRST_BYTE_MASK;
 
     // split for debugging mainly
-    tx_data[0] = firstByte;
-    tx_data[1] = secondByte;
+    tx_data[1] = firstByte;
+    tx_data[0] = secondByte;
 
     // Meaning <CH></na>  </gain>  <MODE>
     // Value    0(A)   0   0(2x)   1(ACTIVE) 1111 1111 1111

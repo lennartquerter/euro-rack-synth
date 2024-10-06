@@ -1,5 +1,7 @@
 #include "app/sequencer.h"
-#include "app/mcp4822.h"
+
+#include <math.h>
+#include <sys/types.h>
 
 void sequencer_init(SEQUENCER_config* config, int BPM, MCP4822_config* mcp4822_config, TIM_HandleTypeDef* timer)
 {
@@ -23,14 +25,21 @@ void sequencer_init(SEQUENCER_config* config, int BPM, MCP4822_config* mcp4822_c
         config->channel_b.sequence_is_trigger[i] = 1;
     }
 
-    // 60 BPM is the slowest time we can handle (for now)
+    // 60 BPM is the slowest time we can handle
     if (BPM < 60)
     {
         BPM = 60;
     }
 
     // This does not make sense at the moment! need to check how it works!
-    config->usec_to_wait = 60 / BPM * 10000;
+    config->usec_to_wait = 60 / BPM * 1000;
+}
+
+uint16_t getVoltageForScale(uint16_t value)
+{
+    // Octave select required
+    const uint16_t base = 1000;
+    return base + value;
 }
 
 /**
@@ -39,28 +48,66 @@ void sequencer_init(SEQUENCER_config* config, int BPM, MCP4822_config* mcp4822_c
 void sequencer_run(SEQUENCER_config* config)
 {
     // set CV A value
-    mcp4822_write_value(config->mcp4822_config, config->channel_a.sequence_notes[config->current_index],
+    uint16_t const note_a = config->channel_a.sequence_notes[config->current_index];
+    uint16_t const note_b = config->channel_b.sequence_notes[config->current_index];
+
+
+    mcp4822_write_value(config->mcp4822_config, getVoltageForScale(note_a),
                         MCP4822_CHANNEL_A);
     // set CV B value
-    mcp4822_write_value(config->mcp4822_config, config->channel_b.sequence_notes[config->current_index],
+    mcp4822_write_value(config->mcp4822_config, getVoltageForScale(note_b),
                         MCP4822_CHANNEL_B);
 
-    if (config->channel_a.sequence_is_trigger[config->current_index] > 0)
+    uint8_t gateLengthA = config->channel_a.sequence_is_trigger[config->current_index];
+
+    if (gateLengthA > 0)
     {
         // send gate A (and probably reset after 10ms)
         HAL_GPIO_WritePin(GATE_A_OUT_GPIO_Port, GATE_A_OUT_Pin, GPIO_PIN_SET);
     }
 
-    if (config->channel_b.sequence_is_trigger[config->current_index] > 0)
+    uint8_t gateLengthB = config->channel_b.sequence_is_trigger[config->current_index];
+
+    if (gateLengthB > 0)
     {
         // send gate B (and probably reset after 10ms)
         HAL_GPIO_WritePin(GATE_B_OUT_GPIO_Port, GATE_B_OUT_Pin, GPIO_PIN_SET);
     }
 
-    // Gate is currently only 10ms (should be changed based on settings?)
+    // Gate is currently only set to the value for trigger,
     // Gate could be reset with a global variable that knows when to reset the gate
-    // should use a global interrupt for htim3 ?
-    HAL_Delay(10);
-    HAL_GPIO_WritePin(GATE_A_OUT_GPIO_Port, GATE_A_OUT_Pin, GPIO_PIN_RESET);
+    // should use a global interrupt for htim3?
+    // maximum time of gate should be usec_to_wait - 10ms?
+
+    // we calculate the least time we need to wait
+    uint32_t min_wait_time = fmin(gateLengthA, gateLengthB);
+
+    HAL_Delay(min_wait_time);
+    // we see which gate should be turned off
+    if (min_wait_time == gateLengthA)
+    {
+        HAL_GPIO_WritePin(GATE_A_OUT_GPIO_Port, GATE_A_OUT_Pin, GPIO_PIN_RESET);
+    }
+    else
+    {
+        HAL_GPIO_WritePin(GATE_B_OUT_GPIO_Port, GATE_B_OUT_Pin, GPIO_PIN_RESET);
+    }
+
+    // we wait the remaining time
+    HAL_Delay(fabs(gateLengthA - gateLengthB));
+
+    // reset both pins to reduce if/else
     HAL_GPIO_WritePin(GATE_B_OUT_GPIO_Port, GATE_B_OUT_Pin, GPIO_PIN_RESET);
+    HAL_GPIO_WritePin(GATE_A_OUT_GPIO_Port, GATE_A_OUT_Pin, GPIO_PIN_RESET);
+
+    // Set next step
+
+    // Set current index to the next step
+    config->current_index++;
+
+    // Reset index when we reach the end of the sequence
+    if (config->current_index >= config->sequence_length)
+    {
+        config->current_index = 0;
+    }
 }

@@ -22,8 +22,13 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
+#include <sys/types.h>
+
+#include "app/command_queue.h"
 #include "app/sequencer.h"
 #include "app/mcp4822.h"
+#include "app/encoder.h"
+#include "app/ui.h"
 
 /* USER CODE END Includes */
 
@@ -45,12 +50,17 @@
 /* Private variables ---------------------------------------------------------*/
 RTC_HandleTypeDef hrtc;
 
-SPI_HandleTypeDef hspi1;
+SPI_HandleTypeDef hspi3;
 
-TIM_HandleTypeDef htim1;
 TIM_HandleTypeDef htim3;
+TIM_HandleTypeDef htim4;
 
 /* USER CODE BEGIN PV */
+
+ENCODER_config encoder_config;
+COMMAND_QUEUE_config command_queue_config;
+
+uint32_t last_button_clicked = 0;
 
 /* USER CODE END PV */
 
@@ -58,15 +68,31 @@ TIM_HandleTypeDef htim3;
 void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
 static void MX_RTC_Init(void);
-static void MX_TIM1_Init(void);
 static void MX_TIM3_Init(void);
-static void MX_SPI1_Init(void);
+static void MX_SPI3_Init(void);
+static void MX_TIM4_Init(void);
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+void HAL_TIM_IC_CaptureCallback(TIM_HandleTypeDef* htim)
+{
+    encoder_handle_timer_interrupt(&encoder_config);
+}
+
+void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
+{
+    uint32_t current_time = htim3.Instance->CNT;
+
+    // debounce for the poor, 100ms
+    if (current_time - last_button_clicked > 500)
+    {
+        command_queue_push(&command_queue_config, ENCODER_CLICK);
+        last_button_clicked = htim3.Instance->CNT;
+    }
+}
 
 /* USER CODE END 0 */
 
@@ -99,63 +125,68 @@ int main(void)
     /* Initialize all configured peripherals */
     MX_GPIO_Init();
     MX_RTC_Init();
-    MX_TIM1_Init();
     MX_TIM3_Init();
-    MX_SPI1_Init();
+    MX_SPI3_Init();
+    MX_TIM4_Init();
     /* USER CODE BEGIN 2 */
+    const int BPM = 60;
+
     HAL_TIM_Base_Start(&htim3);
+    // Encoder only htim4
+    HAL_TIM_Encoder_Start_IT(&htim4, TIM_CHANNEL_ALL);
+
+    // Reset pins
     HAL_GPIO_WritePin(GATE_A_OUT_GPIO_Port, GATE_A_OUT_Pin, GPIO_PIN_RESET);
     HAL_GPIO_WritePin(GATE_B_OUT_GPIO_Port, GATE_B_OUT_Pin, GPIO_PIN_RESET);
     HAL_GPIO_WritePin(DAC_ENABLE_GPIO_Port, DAC_ENABLE_Pin, GPIO_PIN_SET);
 
+    // Init command Queue
+    command_queue_init(&command_queue_config, 32);
+
+    // Init DAC
     MCP4822_config dac_config;
+    mcp4822_init(&dac_config, DAC_ENABLE_GPIO_Port, DAC_ENABLE_Pin, &hspi3);
 
-    mcp4822_init(&dac_config, DAC_ENABLE_GPIO_Port, DAC_ENABLE_Pin, &hspi1);
+    // Init Encoder
+    encoder_init(&encoder_config, &command_queue_config, &htim4);
 
+    // Init Sequencer
     SEQUENCER_config sequencer_config;
-    sequencer_init(&sequencer_config, 120, &dac_config, &htim3);
+    sequencer_init(&sequencer_config, BPM, &dac_config, &htim3);
+
+    // Init UI
+    UI_config ui_config;
+    ui_init(&ui_config, &command_queue_config, &sequencer_config);
+
 
     /* USER CODE END 2 */
 
     /* Infinite loop */
     /* USER CODE BEGIN WHILE */
-    uint16_t value = 0;
-    uint32_t time = 0;
     uint32_t current_time = __HAL_TIM_GET_COUNTER(&htim3);
     while (1)
     {
-        if (value > MCP4822_DAC_MAX)
-        {
-            value = (uint16_t)0;
-        }
+        ui_run(&ui_config);
 
         if (__HAL_TIM_GET_COUNTER(&htim3) - current_time >= sequencer_config.usec_to_wait)
         {
-            // ***** START DEBUG --> increase value & set gates to active
-            sequencer_config.channel_a.sequence_notes[sequencer_config.current_index] = value;
-            sequencer_config.channel_a.sequence_is_trigger[sequencer_config.current_index] = 1;
-
-            sequencer_config.channel_b.sequence_notes[sequencer_config.current_index] = value;
-            sequencer_config.channel_b.sequence_is_trigger[sequencer_config.current_index] = 1;
-
-            value += (uint16_t)1;
-            // ***** END DEBUG
-
-
             // Run Sequencer Code
             sequencer_run(&sequencer_config);
 
-            // Set current index to the next step
-            sequencer_config.current_index++;
-
-            // Reset index when we reach the end of the sequence
-            if (sequencer_config.current_index >= sequencer_config.sequence_length)
-            {
-                sequencer_config.current_index = 0;
-            }
-
             // reset time value
             current_time = __HAL_TIM_GET_COUNTER(&htim3);
+
+            if (ui_config.mode == UI_MODE_RUN)
+            {
+                // Set current index to the next step
+                sequencer_config.current_index++;
+
+                // Reset index when we reach the end of the sequence
+                if (sequencer_config.current_index >= sequencer_config.sequence_length)
+                {
+                    sequencer_config.current_index = 0;
+                }
+            }
         }
 
         /* USER CODE END WHILE */
@@ -241,87 +272,39 @@ static void MX_RTC_Init(void)
 }
 
 /**
-  * @brief SPI1 Initialization Function
+  * @brief SPI3 Initialization Function
   * @param None
   * @retval None
   */
-static void MX_SPI1_Init(void)
+static void MX_SPI3_Init(void)
 {
-    /* USER CODE BEGIN SPI1_Init 0 */
+    /* USER CODE BEGIN SPI3_Init 0 */
 
-    /* USER CODE END SPI1_Init 0 */
+    /* USER CODE END SPI3_Init 0 */
 
-    /* USER CODE BEGIN SPI1_Init 1 */
+    /* USER CODE BEGIN SPI3_Init 1 */
 
-    /* USER CODE END SPI1_Init 1 */
-    /* SPI1 parameter configuration*/
-    hspi1.Instance = SPI1;
-    hspi1.Init.Mode = SPI_MODE_MASTER;
-    hspi1.Init.Direction = SPI_DIRECTION_2LINES;
-    hspi1.Init.DataSize = SPI_DATASIZE_16BIT;
-    hspi1.Init.CLKPolarity = SPI_POLARITY_HIGH;
-    hspi1.Init.CLKPhase = SPI_PHASE_1EDGE;
-    hspi1.Init.NSS = SPI_NSS_SOFT;
-    hspi1.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_2;
-    hspi1.Init.FirstBit = SPI_FIRSTBIT_MSB;
-    hspi1.Init.TIMode = SPI_TIMODE_DISABLE;
-    hspi1.Init.CRCCalculation = SPI_CRCCALCULATION_DISABLE;
-    hspi1.Init.CRCPolynomial = 10;
-    if (HAL_SPI_Init(&hspi1) != HAL_OK)
+    /* USER CODE END SPI3_Init 1 */
+    /* SPI3 parameter configuration*/
+    hspi3.Instance = SPI3;
+    hspi3.Init.Mode = SPI_MODE_MASTER;
+    hspi3.Init.Direction = SPI_DIRECTION_2LINES;
+    hspi3.Init.DataSize = SPI_DATASIZE_16BIT;
+    hspi3.Init.CLKPolarity = SPI_POLARITY_LOW;
+    hspi3.Init.CLKPhase = SPI_PHASE_1EDGE;
+    hspi3.Init.NSS = SPI_NSS_HARD_OUTPUT;
+    hspi3.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_2;
+    hspi3.Init.FirstBit = SPI_FIRSTBIT_MSB;
+    hspi3.Init.TIMode = SPI_TIMODE_DISABLE;
+    hspi3.Init.CRCCalculation = SPI_CRCCALCULATION_DISABLE;
+    hspi3.Init.CRCPolynomial = 10;
+    if (HAL_SPI_Init(&hspi3) != HAL_OK)
     {
         Error_Handler();
     }
-    /* USER CODE BEGIN SPI1_Init 2 */
+    /* USER CODE BEGIN SPI3_Init 2 */
 
-    /* USER CODE END SPI1_Init 2 */
-}
-
-/**
-  * @brief TIM1 Initialization Function
-  * @param None
-  * @retval None
-  */
-static void MX_TIM1_Init(void)
-{
-    /* USER CODE BEGIN TIM1_Init 0 */
-
-    /* USER CODE END TIM1_Init 0 */
-
-    TIM_Encoder_InitTypeDef sConfig = {0};
-    TIM_MasterConfigTypeDef sMasterConfig = {0};
-
-    /* USER CODE BEGIN TIM1_Init 1 */
-
-    /* USER CODE END TIM1_Init 1 */
-    htim1.Instance = TIM1;
-    htim1.Init.Prescaler = 0;
-    htim1.Init.CounterMode = TIM_COUNTERMODE_UP;
-    htim1.Init.Period = 65535;
-    htim1.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
-    htim1.Init.RepetitionCounter = 0;
-    htim1.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
-    sConfig.EncoderMode = TIM_ENCODERMODE_TI12;
-    sConfig.IC1Polarity = TIM_ICPOLARITY_RISING;
-    sConfig.IC1Selection = TIM_ICSELECTION_DIRECTTI;
-    sConfig.IC1Prescaler = TIM_ICPSC_DIV1;
-    sConfig.IC1Filter = 0;
-    sConfig.IC2Polarity = TIM_ICPOLARITY_RISING;
-    sConfig.IC2Selection = TIM_ICSELECTION_DIRECTTI;
-    sConfig.IC2Prescaler = TIM_ICPSC_DIV1;
-    sConfig.IC2Filter = 0;
-    if (HAL_TIM_Encoder_Init(&htim1, &sConfig) != HAL_OK)
-    {
-        Error_Handler();
-    }
-    sMasterConfig.MasterOutputTrigger = TIM_TRGO_RESET;
-    sMasterConfig.MasterSlaveMode = TIM_MASTERSLAVEMODE_DISABLE;
-    if (HAL_TIMEx_MasterConfigSynchronization(&htim1, &sMasterConfig) != HAL_OK)
-    {
-        Error_Handler();
-    }
-    /* USER CODE BEGIN TIM1_Init 2 */
-
-    /* USER CODE END TIM1_Init 2 */
+    /* USER CODE END SPI3_Init 2 */
 }
 
 /**
@@ -368,6 +351,53 @@ static void MX_TIM3_Init(void)
 }
 
 /**
+  * @brief TIM4 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_TIM4_Init(void)
+{
+    /* USER CODE BEGIN TIM4_Init 0 */
+
+    /* USER CODE END TIM4_Init 0 */
+
+    TIM_Encoder_InitTypeDef sConfig = {0};
+    TIM_MasterConfigTypeDef sMasterConfig = {0};
+
+    /* USER CODE BEGIN TIM4_Init 1 */
+
+    /* USER CODE END TIM4_Init 1 */
+    htim4.Instance = TIM4;
+    htim4.Init.Prescaler = 0;
+    htim4.Init.CounterMode = TIM_COUNTERMODE_UP;
+    htim4.Init.Period = 65535;
+    htim4.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
+    htim4.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
+    sConfig.EncoderMode = TIM_ENCODERMODE_TI12;
+    sConfig.IC1Polarity = TIM_ICPOLARITY_FALLING;
+    sConfig.IC1Selection = TIM_ICSELECTION_DIRECTTI;
+    sConfig.IC1Prescaler = TIM_ICPSC_DIV1;
+    sConfig.IC1Filter = 0;
+    sConfig.IC2Polarity = TIM_ICPOLARITY_FALLING;
+    sConfig.IC2Selection = TIM_ICSELECTION_DIRECTTI;
+    sConfig.IC2Prescaler = TIM_ICPSC_DIV1;
+    sConfig.IC2Filter = 0;
+    if (HAL_TIM_Encoder_Init(&htim4, &sConfig) != HAL_OK)
+    {
+        Error_Handler();
+    }
+    sMasterConfig.MasterOutputTrigger = TIM_TRGO_RESET;
+    sMasterConfig.MasterSlaveMode = TIM_MASTERSLAVEMODE_DISABLE;
+    if (HAL_TIMEx_MasterConfigSynchronization(&htim4, &sMasterConfig) != HAL_OK)
+    {
+        Error_Handler();
+    }
+    /* USER CODE BEGIN TIM4_Init 2 */
+
+    /* USER CODE END TIM4_Init 2 */
+}
+
+/**
   * @brief GPIO Initialization Function
   * @param None
   * @retval None
@@ -379,8 +409,12 @@ static void MX_GPIO_Init(void)
     /* USER CODE END MX_GPIO_Init_1 */
 
     /* GPIO Ports Clock Enable */
+    __HAL_RCC_GPIOC_CLK_ENABLE();
     __HAL_RCC_GPIOA_CLK_ENABLE();
     __HAL_RCC_GPIOB_CLK_ENABLE();
+
+    /*Configure GPIO pin Output Level */
+    HAL_GPIO_WritePin(GPIOC, LED_RUN_MODE_Pin | LED_STOP_MODE_Pin | LED_EDIT_MODE_Pin, GPIO_PIN_RESET);
 
     /*Configure GPIO pin Output Level */
     HAL_GPIO_WritePin(DAC_ENABLE_GPIO_Port, DAC_ENABLE_Pin, GPIO_PIN_RESET);
@@ -388,11 +422,18 @@ static void MX_GPIO_Init(void)
     /*Configure GPIO pin Output Level */
     HAL_GPIO_WritePin(GPIOB, GATE_B_OUT_Pin | GATE_A_OUT_Pin, GPIO_PIN_RESET);
 
-    /*Configure GPIO pins : CLK_INPUT_Pin ENCODER_BTN_Pin */
-    GPIO_InitStruct.Pin = CLK_INPUT_Pin | ENCODER_BTN_Pin;
+    /*Configure GPIO pins : LED_RUN_MODE_Pin LED_STOP_MODE_Pin LED_EDIT_MODE_Pin */
+    GPIO_InitStruct.Pin = LED_RUN_MODE_Pin | LED_STOP_MODE_Pin | LED_EDIT_MODE_Pin;
+    GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+    GPIO_InitStruct.Pull = GPIO_NOPULL;
+    GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+    HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
+
+    /*Configure GPIO pin : CLK_INPUT_Pin */
+    GPIO_InitStruct.Pin = CLK_INPUT_Pin;
     GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
     GPIO_InitStruct.Pull = GPIO_NOPULL;
-    HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+    HAL_GPIO_Init(CLK_INPUT_GPIO_Port, &GPIO_InitStruct);
 
     /*Configure GPIO pin : DAC_ENABLE_Pin */
     GPIO_InitStruct.Pin = DAC_ENABLE_Pin;
@@ -408,19 +449,17 @@ static void MX_GPIO_Init(void)
     GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_MEDIUM;
     HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
+    /*Configure GPIO pin : ENCODER_BTN_Pin */
+    GPIO_InitStruct.Pin = ENCODER_BTN_Pin;
+    GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
+    GPIO_InitStruct.Pull = GPIO_PULLUP;
+    HAL_GPIO_Init(ENCODER_BTN_GPIO_Port, &GPIO_InitStruct);
+
+    /* EXTI interrupt init*/
+    HAL_NVIC_SetPriority(EXTI15_10_IRQn, 0, 0);
+    HAL_NVIC_EnableIRQ(EXTI15_10_IRQn);
+
     /* USER CODE BEGIN MX_GPIO_Init_2 */
-    GPIO_InitTypeDef gpio_init = {0};
-
-    // Init SCK & MOSI pins
-    HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5 | GPIO_PIN_7, GPIO_PIN_RESET);
-
-    gpio_init.Pin = GPIO_PIN_5 | GPIO_PIN_7;
-    gpio_init.Mode = GPIO_MODE_OUTPUT_PP;
-    gpio_init.Pull = GPIO_NOPULL;
-    gpio_init.Speed = GPIO_SPEED_FREQ_HIGH;
-
-    HAL_GPIO_Init(GPIOA, &gpio_init);
-
     /* USER CODE END MX_GPIO_Init_2 */
 }
 

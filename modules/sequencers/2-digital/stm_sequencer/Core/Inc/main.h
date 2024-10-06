@@ -57,6 +57,12 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
+#define LED_RUN_MODE_Pin GPIO_PIN_13
+#define LED_RUN_MODE_GPIO_Port GPIOC
+#define LED_STOP_MODE_Pin GPIO_PIN_14
+#define LED_STOP_MODE_GPIO_Port GPIOC
+#define LED_EDIT_MODE_Pin GPIO_PIN_15
+#define LED_EDIT_MODE_GPIO_Port GPIOC
 #define CLK_INPUT_Pin GPIO_PIN_1
 #define CLK_INPUT_GPIO_Port GPIOA
 #define DAC_ENABLE_Pin GPIO_PIN_4
@@ -67,6 +73,7 @@ void Error_Handler(void);
 #define GATE_A_OUT_GPIO_Port GPIOB
 #define ENCODER_BTN_Pin GPIO_PIN_10
 #define ENCODER_BTN_GPIO_Port GPIOA
+#define ENCODER_BTN_EXTI_IRQn EXTI15_10_IRQn
 
 /* USER CODE BEGIN Private defines */
 
