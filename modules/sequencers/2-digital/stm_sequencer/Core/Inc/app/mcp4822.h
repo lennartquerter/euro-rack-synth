@@ -7,8 +7,8 @@
 ******************************************************************************
 */
 
-#ifndef __mcp4822_H
-#define __mcp4822_H
+#ifndef __MCP4822_H
+#define __MCP4822_H
 
 #include "stm32f4xx_hal.h"
 
@@ -22,11 +22,10 @@
 #define MCP4822_LOW_HALF_BYTE_MASK			    0x000F
 #define MCP4822_FIRST_BYTE_MASK 			    0x00FF
 
-/** Limits and Commonly used conversion Macro*/
 #define MCP4822_RES      	   		   12
 #define MCP4822_DAC_MAX				   4095
 #define MCP4822_VREF				   2.048f
-#define MCP4822_SPI_TIMEOUT			   1    // 1 msec timeout
+#define MCP4822_SPI_TIMEOUT			   1 // (in ms)
 
 
 typedef enum
@@ -79,4 +78,4 @@ void mcp4822_init(MCP4822_config* config, GPIO_TypeDef* port, uint16_t pin, SPI_
 
 MCP4822_STATUS mcp4822_write_value(MCP4822_config* config, uint16_t value, MCP4822_DAC_SELECT dac_channel);
 
-#endif
+#endif // __MCP4822_H

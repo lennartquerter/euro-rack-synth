@@ -74,6 +74,11 @@ void do_click(UI_config* config)
     config->handled = 1;
 }
 
+void render_ui(const UI_config* config)
+{
+
+}
+
 
 void ui_run(UI_config* config)
 {
@@ -103,4 +108,6 @@ void ui_run(UI_config* config)
             do_prev(config);
         }
     }
+
+    render_ui(config);
 }

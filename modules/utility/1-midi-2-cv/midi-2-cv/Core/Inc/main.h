@@ -59,10 +59,6 @@ void Error_Handler(void);
 /* Private defines -----------------------------------------------------------*/
 #define LED_INTERNAL_Pin GPIO_PIN_13
 #define LED_INTERNAL_GPIO_Port GPIOC
-#define MODE_1_Pin GPIO_PIN_14
-#define MODE_1_GPIO_Port GPIOC
-#define MODE_2_Pin GPIO_PIN_15
-#define MODE_2_GPIO_Port GPIOC
 #define GATE_1_IN_Pin GPIO_PIN_0
 #define GATE_1_IN_GPIO_Port GPIOA
 #define GATE_2_IN_Pin GPIO_PIN_1
@@ -81,6 +77,10 @@ void Error_Handler(void);
 #define GATE_3_OUT_GPIO_Port GPIOB
 #define GATE_4_OUT_Pin GPIO_PIN_15
 #define GATE_4_OUT_GPIO_Port GPIOB
+#define MODE_2_Pin GPIO_PIN_11
+#define MODE_2_GPIO_Port GPIOA
+#define MODE_1_Pin GPIO_PIN_12
+#define MODE_1_GPIO_Port GPIOA
 
 /* USER CODE BEGIN Private defines */
 

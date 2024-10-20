@@ -3,7 +3,13 @@
 	(generator "eeschema")
 	(generator_version "8.0")
 	(uuid "8f05db3b-5ad6-4744-9317-2788ac459619")
-	(paper "A4")
+	(paper "A3")
+	(title_block
+		(title "midas_mod-wheel")
+		(date "2024-10-20")
+		(rev "1")
+		(company "Lentronics")
+	)
 	(lib_symbols
 		(symbol "Amplifier_Operational:TL074"
 			(pin_names
@@ -2422,15 +2428,15 @@
 		)
 		(uuid "feebfc6f-c4ad-40c2-8863-10fe445735b7")
 	)
-	(text "GAIN = 5.7, 1 + (R2 [47] / R1 [10]) = 5.7"
+	(text "GAIN = 4, 1 + (R2 [30] / R1 [10]) = 4"
 		(exclude_from_sim no)
-		(at 153.162 35.306 0)
+		(at 153.924 30.988 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 		)
-		(uuid "80475f89-d1d1-4a31-9bc9-98d3e309230a")
+		(uuid "04981926-acbc-490e-a171-13a8623a8e49")
 	)
 	(text "0.000V to 2.048V (internal REF)"
 		(exclude_from_sim no)
@@ -2913,7 +2919,7 @@
 				)
 			)
 		)
-		(property "Value" "47K [1%]"
+		(property "Value" "30K [0.1%]"
 			(at 163.83 82.55 90)
 			(effects
 				(font
@@ -3277,7 +3283,7 @@
 				)
 			)
 		)
-		(property "Value" "47K [1%]"
+		(property "Value" "30K [0.1%]"
 			(at 163.83 133.35 90)
 			(effects
 				(font
@@ -3345,7 +3351,7 @@
 				)
 			)
 		)
-		(property "Value" "10K [1%]"
+		(property "Value" "10K [0.1%]"
 			(at 143.51 133.35 90)
 			(effects
 				(font
@@ -3626,7 +3632,7 @@
 				)
 			)
 		)
-		(property "Value" "10K [1%]"
+		(property "Value" "10K [0.1%]"
 			(at 142.24 57.15 90)
 			(effects
 				(font
@@ -3679,7 +3685,7 @@
 	(symbol
 		(lib_id "Amplifier_Operational:TL074")
 		(at 157.48 125.73 0)
-		(unit 4)
+		(unit 2)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -3775,7 +3781,7 @@
 			(project "midi-2-cv"
 				(path "/ffcc7acb-943e-4c85-833d-d9691a289ebb/f5a3adbe-4f29-4745-aae4-f507a7b28ec4"
 					(reference "U6")
-					(unit 4)
+					(unit 2)
 				)
 			)
 		)
@@ -4097,7 +4103,7 @@
 	(symbol
 		(lib_id "Amplifier_Operational:TL074")
 		(at 157.48 74.93 0)
-		(unit 2)
+		(unit 4)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -4193,7 +4199,7 @@
 			(project "midi-2-cv"
 				(path "/ffcc7acb-943e-4c85-833d-d9691a289ebb/f5a3adbe-4f29-4745-aae4-f507a7b28ec4"
 					(reference "U6")
-					(unit 2)
+					(unit 4)
 				)
 			)
 		)
@@ -4407,7 +4413,7 @@
 	(symbol
 		(lib_id "Amplifier_Operational:TL074")
 		(at 157.48 100.33 0)
-		(unit 3)
+		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -4503,7 +4509,7 @@
 			(project "midi-2-cv"
 				(path "/ffcc7acb-943e-4c85-833d-d9691a289ebb/f5a3adbe-4f29-4745-aae4-f507a7b28ec4"
 					(reference "U6")
-					(unit 3)
+					(unit 1)
 				)
 			)
 		)
@@ -4943,7 +4949,7 @@
 				)
 			)
 		)
-		(property "Value" "47K [1%]"
+		(property "Value" "30K [0.1%]"
 			(at 163.83 107.95 90)
 			(effects
 				(font
@@ -5011,7 +5017,7 @@
 				)
 			)
 		)
-		(property "Value" "47K [1%]"
+		(property "Value" "30K [0.1%]"
 			(at 162.56 57.15 90)
 			(effects
 				(font
@@ -5064,7 +5070,7 @@
 	(symbol
 		(lib_id "Amplifier_Operational:TL074")
 		(at 157.48 49.53 0)
-		(unit 1)
+		(unit 3)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -5160,7 +5166,7 @@
 			(project "midi-2-cv"
 				(path "/ffcc7acb-943e-4c85-833d-d9691a289ebb/f5a3adbe-4f29-4745-aae4-f507a7b28ec4"
 					(reference "U6")
-					(unit 1)
+					(unit 3)
 				)
 			)
 		)
@@ -5250,7 +5256,7 @@
 				)
 			)
 		)
-		(property "Value" "10K [1%]"
+		(property "Value" "10K [0.1%]"
 			(at 143.51 107.95 90)
 			(effects
 				(font
@@ -5318,7 +5324,7 @@
 				)
 			)
 		)
-		(property "Value" "10K [1%]"
+		(property "Value" "10K [0.1%]"
 			(at 143.51 82.55 90)
 			(effects
 				(font

@@ -3,7 +3,13 @@
 	(generator "eeschema")
 	(generator_version "8.0")
 	(uuid "422a470b-0e8b-418c-a093-bef9bdcfa777")
-	(paper "A4")
+	(paper "A3")
+	(title_block
+		(title "midas_gate-out")
+		(date "2024-10-20")
+		(rev "1")
+		(company "Lentronics")
+	)
 	(lib_symbols
 		(symbol "Amplifier_Operational:TL074"
 			(pin_names
@@ -385,108 +391,6 @@
 						)
 					)
 					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-		)
-		(symbol "Connector:TestPoint"
-			(pin_numbers hide)
-			(pin_names
-				(offset 0.762) hide)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "TP"
-				(at 0 6.858 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "TestPoint"
-				(at 0 5.08 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 5.08 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "~"
-				(at 5.08 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "test point"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "test point tp"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "Pin* Test*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "TestPoint_0_1"
-				(circle
-					(center 0 3.302)
-					(radius 0.762)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "TestPoint_1_1"
-				(pin passive line
-					(at 0 0 90)
-					(length 2.54)
-					(name "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1994,22 +1898,28 @@
 		)
 	)
 	(junction
+		(at 83.82 55.88)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "0c159c2e-31c5-4058-9955-97ef61d6187c")
+	)
+	(junction
 		(at 57.15 55.88)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "1ceceb9c-1312-46d5-ae61-c858a7c1679f")
 	)
 	(junction
+		(at 88.9 115.57)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "325fbbdc-a91a-4bb3-a17f-4085eac99da9")
+	)
+	(junction
 		(at 34.29 68.58)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "3293acbc-48f0-41c9-89f2-59fed416c1c5")
-	)
-	(junction
-		(at 88.9 115.57)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "3edf3cf7-aba6-45e9-b41a-65a4f0a8593a")
 	)
 	(junction
 		(at 168.91 83.82)
@@ -2042,12 +1952,6 @@
 		(uuid "609a9947-c3fa-46c6-9f75-5b8fdcaec3c2")
 	)
 	(junction
-		(at 83.82 55.88)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "6fe7fb78-6bed-4a12-b637-fc30ca5647fe")
-	)
-	(junction
 		(at 199.39 132.08)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2058,12 +1962,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "7ef26ae7-7132-4b8b-a563-770f78e96006")
-	)
-	(junction
-		(at 218.44 71.12)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "87a4001f-3224-467c-be82-b9b72a8928bd")
 	)
 	(junction
 		(at 251.46 113.03)
@@ -2084,6 +1982,12 @@
 		(uuid "e7d53a60-b53b-4896-9c1f-3c58d6a37b71")
 	)
 	(junction
+		(at 218.44 71.12)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "fd1f02ac-99ce-4f05-9271-a0aa0f7923f6")
+	)
+	(junction
 		(at 62.23 115.57)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2101,7 +2005,7 @@
 	)
 	(wire
 		(pts
-			(xy 83.82 53.34) (xy 83.82 55.88)
+			(xy 83.82 52.07) (xy 83.82 55.88)
 		)
 		(stroke
 			(width 0)
@@ -2461,7 +2365,7 @@
 	)
 	(wire
 		(pts
-			(xy 57.15 36.83) (xy 53.34 36.83)
+			(xy 53.34 36.83) (xy 49.53 36.83)
 		)
 		(stroke
 			(width 0)
@@ -2771,7 +2675,7 @@
 	)
 	(wire
 		(pts
-			(xy 64.77 36.83) (xy 68.58 36.83)
+			(xy 60.96 36.83) (xy 68.58 36.83)
 		)
 		(stroke
 			(width 0)
@@ -2931,16 +2835,6 @@
 	)
 	(wire
 		(pts
-			(xy 83.82 44.45) (xy 83.82 45.72)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e4af6f42-0e66-4f9f-8d9d-d7c0a36d43f5")
-	)
-	(wire
-		(pts
 			(xy 243.84 50.8) (xy 243.84 54.61)
 		)
 		(stroke
@@ -3019,15 +2913,16 @@
 		)
 		(uuid "fb9c9bf1-19e1-4bf4-b07e-ff4d548912da")
 	)
-	(text "The LED's have a 22K resistor value, but this needs to be \ndouble checked, as I started with 100K"
+	(text "A note on the R going into the Transistors:\nChanging to a 100K resistor could be beneficial if you're optimizing for \nlower power consumption and don't need extremely fast switching speeds. \nHowever, for a typical MIDI-to-CV gate output, the original 22K resistor \nis likely to provide a good balance of speed and current limiting. "
 		(exclude_from_sim no)
-		(at 68.326 21.082 0)
+		(at 15.748 18.288 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
+			(justify left)
 		)
-		(uuid "c09ed609-caba-44b0-bab9-56f8305c6f46")
+		(uuid "656098e6-74f4-485c-82e7-42f3d80fde85")
 	)
 	(hierarchical_label "GATE_2_CALLBACK"
 		(shape input)
@@ -3127,7 +3022,7 @@
 	)
 	(symbol
 		(lib_id "synth:PinSocket_01x04")
-		(at 83.82 115.57 180)
+		(at 80.01 115.57 0)
 		(unit 2)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3136,7 +3031,7 @@
 		(fields_autoplaced yes)
 		(uuid "0264e5ce-82bd-4907-b344-31326575b547")
 		(property "Reference" "H13"
-			(at 81.28 115.5699 0)
+			(at 82.55 115.5701 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3146,7 +3041,7 @@
 			)
 		)
 		(property "Value" "PinSocket_01x04"
-			(at 83.82 111.76 0)
+			(at 80.01 119.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3155,7 +3050,7 @@
 			)
 		)
 		(property "Footprint" "Synth:PinSocket_1x04_P2.54mm_Vertical"
-			(at 83.566 108.458 0)
+			(at 80.264 122.682 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3164,7 +3059,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 83.82 115.57 0)
+			(at 80.01 115.57 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3173,7 +3068,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 83.82 110.744 0)
+			(at 80.01 120.396 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3265,73 +3160,6 @@
 			(project "midi-2-cv"
 				(path "/ffcc7acb-943e-4c85-833d-d9691a289ebb/96e71e87-16af-4251-bc10-0f621c90add3"
 					(reference "R63")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 62.23 115.57 0)
-		(unit 1)
-		(exclude_from_sim yes)
-		(in_bom no)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "07886ce2-fea5-45cb-97a6-7ff7ad104acb")
-		(property "Reference" "TP9"
-			(at 64.77 110.9979 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "GATE_2_OUT"
-			(at 64.77 113.5379 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Connector_Pin:Pin_D1.0mm_L10.0mm"
-			(at 67.31 115.57 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 67.31 115.57 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "test point"
-			(at 62.23 115.57 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "667d4380-e562-435e-9c4b-4b872b599efc")
-		)
-		(instances
-			(project "midi-2-cv"
-				(path "/ffcc7acb-943e-4c85-833d-d9691a289ebb/96e71e87-16af-4251-bc10-0f621c90add3"
-					(reference "TP9")
 					(unit 1)
 				)
 			)
@@ -3677,7 +3505,7 @@
 	)
 	(symbol
 		(lib_id "synth:PinSocket_01x04")
-		(at 214.63 132.08 180)
+		(at 210.82 132.08 0)
 		(unit 4)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3686,7 +3514,7 @@
 		(fields_autoplaced yes)
 		(uuid "2323c08a-ff4c-496a-b4b3-ad2e83b3a438")
 		(property "Reference" "H13"
-			(at 212.09 132.0799 0)
+			(at 213.36 132.0801 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3696,7 +3524,7 @@
 			)
 		)
 		(property "Value" "PinSocket_01x04"
-			(at 214.63 128.27 0)
+			(at 210.82 135.89 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3705,7 +3533,7 @@
 			)
 		)
 		(property "Footprint" "Synth:PinSocket_1x04_P2.54mm_Vertical"
-			(at 214.376 124.968 0)
+			(at 211.074 139.192 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3714,7 +3542,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 214.63 132.08 0)
+			(at 210.82 132.08 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3723,7 +3551,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 214.63 127.254 0)
+			(at 210.82 136.906 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4471,73 +4299,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 191.77 71.12 0)
-		(unit 1)
-		(exclude_from_sim yes)
-		(in_bom no)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "498a37f5-9577-4cbf-b9ed-f0846ea9d198")
-		(property "Reference" "TP7"
-			(at 194.31 66.5479 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "GATE_3_OUT"
-			(at 194.31 69.0879 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Connector_Pin:Pin_D1.0mm_L10.0mm"
-			(at 196.85 71.12 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 196.85 71.12 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "test point"
-			(at 191.77 71.12 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "e2fe7191-9c12-4747-ac47-e83d0c84369a")
-		)
-		(instances
-			(project "midi-2-cv"
-				(path "/ffcc7acb-943e-4c85-833d-d9691a289ebb/96e71e87-16af-4251-bc10-0f621c90add3"
-					(reference "TP7")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Amplifier_Operational:TL074")
 		(at 184.15 132.08 0)
 		(unit 4)
@@ -4747,7 +4508,7 @@
 	)
 	(symbol
 		(lib_id "synth:PinHeader_01x04")
-		(at 209.55 71.12 0)
+		(at 213.36 71.12 180)
 		(unit 3)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -4756,7 +4517,7 @@
 		(fields_autoplaced yes)
 		(uuid "4f5a3b35-409e-487a-87d3-24e79d667fa2")
 		(property "Reference" "H12"
-			(at 212.09 71.1199 0)
+			(at 210.82 71.1201 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4766,7 +4527,7 @@
 			)
 		)
 		(property "Value" "PinHeader_01x04"
-			(at 212.09 72.3899 0)
+			(at 210.82 69.8501 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4776,7 +4537,7 @@
 			)
 		)
 		(property "Footprint" "Synth:PinHeader_1x04_P2.54mm_Vertical"
-			(at 209.55 78.232 0)
+			(at 213.36 64.008 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4785,7 +4546,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 209.55 71.12 0)
+			(at 213.36 71.12 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4794,7 +4555,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 209.55 75.946 0)
+			(at 213.36 66.294 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5159,7 +4920,7 @@
 	)
 	(symbol
 		(lib_id "synth:PinHeader_01x04")
-		(at 210.82 132.08 0)
+		(at 214.63 132.08 180)
 		(unit 4)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5168,7 +4929,7 @@
 		(fields_autoplaced yes)
 		(uuid "5a411d4b-878f-4a1a-9aa6-1529288024b4")
 		(property "Reference" "H12"
-			(at 213.36 132.0799 0)
+			(at 212.09 132.0801 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5178,7 +4939,7 @@
 			)
 		)
 		(property "Value" "PinHeader_01x04"
-			(at 213.36 133.3499 0)
+			(at 212.09 130.8101 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5188,7 +4949,7 @@
 			)
 		)
 		(property "Footprint" "Synth:PinHeader_1x04_P2.54mm_Vertical"
-			(at 210.82 139.192 0)
+			(at 214.63 124.968 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5197,7 +4958,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 210.82 132.08 0)
+			(at 214.63 132.08 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5206,7 +4967,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 210.82 136.906 0)
+			(at 214.63 127.254 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5510,7 +5271,7 @@
 	)
 	(symbol
 		(lib_id "power:GNDREF")
-		(at 53.34 36.83 270)
+		(at 49.53 36.83 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5519,7 +5280,7 @@
 		(fields_autoplaced yes)
 		(uuid "6a5243bd-4b91-4aed-835a-2609950c3a2c")
 		(property "Reference" "#PWR073"
-			(at 46.99 36.83 0)
+			(at 43.18 36.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5528,7 +5289,7 @@
 			)
 		)
 		(property "Value" "GNDREF"
-			(at 49.53 36.8299 90)
+			(at 45.72 36.8299 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5537,7 +5298,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 53.34 36.83 0)
+			(at 49.53 36.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5546,7 +5307,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 53.34 36.83 0)
+			(at 49.53 36.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5555,7 +5316,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GNDREF\" , reference supply ground"
-			(at 53.34 36.83 0)
+			(at 49.53 36.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5643,73 +5404,6 @@
 			(project "midi-2-cv"
 				(path "/ffcc7acb-943e-4c85-833d-d9691a289ebb/96e71e87-16af-4251-bc10-0f621c90add3"
 					(reference "GATE_2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 199.39 132.08 0)
-		(unit 1)
-		(exclude_from_sim yes)
-		(in_bom no)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "6c9378ba-7610-4103-9fe6-d4a378a4a53b")
-		(property "Reference" "TP8"
-			(at 201.93 127.5079 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "GATE_4_OUT"
-			(at 201.93 130.0479 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Connector_Pin:Pin_D1.0mm_L10.0mm"
-			(at 204.47 132.08 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 204.47 132.08 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "test point"
-			(at 199.39 132.08 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "7831720f-3dae-4890-baad-e8846638f503")
-		)
-		(instances
-			(project "midi-2-cv"
-				(path "/ffcc7acb-943e-4c85-833d-d9691a289ebb/96e71e87-16af-4251-bc10-0f621c90add3"
-					(reference "TP8")
 					(unit 1)
 				)
 			)
@@ -6077,7 +5771,7 @@
 	)
 	(symbol
 		(lib_id "synth:PinHeader_01x04")
-		(at 80.01 115.57 0)
+		(at 83.82 115.57 180)
 		(unit 2)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6086,7 +5780,7 @@
 		(fields_autoplaced yes)
 		(uuid "749b3da4-51a2-436b-87f6-b243b6e9c4ee")
 		(property "Reference" "H12"
-			(at 82.55 115.5699 0)
+			(at 81.28 115.5701 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6096,7 +5790,7 @@
 			)
 		)
 		(property "Value" "PinHeader_01x04"
-			(at 82.55 116.8399 0)
+			(at 81.28 114.3001 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6106,7 +5800,7 @@
 			)
 		)
 		(property "Footprint" "Synth:PinHeader_1x04_P2.54mm_Vertical"
-			(at 80.01 122.682 0)
+			(at 83.82 108.458 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6115,7 +5809,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 80.01 115.57 0)
+			(at 83.82 115.57 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6124,7 +5818,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 80.01 120.396 0)
+			(at 83.82 110.744 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6437,7 +6131,7 @@
 	)
 	(symbol
 		(lib_id "synth:PinHeader_01x04")
-		(at 74.93 55.88 0)
+		(at 78.74 55.88 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6446,7 +6140,7 @@
 		(fields_autoplaced yes)
 		(uuid "88764cb2-f65d-4a0d-a8f9-458d7cc2701f")
 		(property "Reference" "H12"
-			(at 77.47 55.8799 0)
+			(at 76.2 55.8801 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6456,7 +6150,7 @@
 			)
 		)
 		(property "Value" "PinHeader_01x04"
-			(at 77.47 57.1499 0)
+			(at 76.2 54.6101 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6466,7 +6160,7 @@
 			)
 		)
 		(property "Footprint" "Synth:PinHeader_1x04_P2.54mm_Vertical"
-			(at 74.93 62.992 0)
+			(at 78.74 48.768 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6475,7 +6169,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 74.93 55.88 0)
+			(at 78.74 55.88 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6484,7 +6178,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 74.93 60.706 0)
+			(at 78.74 51.054 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6726,7 +6420,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 60.96 36.83 90)
+		(at 57.15 36.83 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6735,7 +6429,7 @@
 		(fields_autoplaced yes)
 		(uuid "91658dc6-073f-4da2-a7d2-15f045c382e7")
 		(property "Reference" "R45"
-			(at 60.96 30.48 90)
+			(at 57.15 30.48 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6743,7 +6437,7 @@
 			)
 		)
 		(property "Value" "470R"
-			(at 60.96 33.02 90)
+			(at 57.15 33.02 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6751,7 +6445,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 60.96 38.608 90)
+			(at 57.15 38.608 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6760,7 +6454,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 60.96 36.83 0)
+			(at 57.15 36.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6769,7 +6463,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 60.96 36.83 0)
+			(at 57.15 36.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7759,7 +7453,7 @@
 	)
 	(symbol
 		(lib_id "synth:PinSocket_01x04")
-		(at 78.74 55.88 180)
+		(at 74.93 55.88 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7767,7 +7461,7 @@
 		(dnp no)
 		(uuid "cd01041c-9f13-4741-bdf9-caeaa54bff6a")
 		(property "Reference" "H13"
-			(at 74.168 55.626 0)
+			(at 79.502 56.134 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7776,7 +7470,7 @@
 			)
 		)
 		(property "Value" "PinSocket_01x04"
-			(at 78.74 52.07 0)
+			(at 74.93 59.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7785,7 +7479,7 @@
 			)
 		)
 		(property "Footprint" "Synth:PinSocket_1x04_P2.54mm_Vertical"
-			(at 78.486 48.768 0)
+			(at 75.184 62.992 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7794,7 +7488,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 78.74 55.88 0)
+			(at 74.93 55.88 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7803,7 +7497,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 78.74 51.054 0)
+			(at 74.93 60.706 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7834,7 +7528,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 83.82 49.53 180)
+		(at 83.82 48.26 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7843,7 +7537,7 @@
 		(fields_autoplaced yes)
 		(uuid "d0609d5c-8aa7-4bed-aad3-23e5904e65dd")
 		(property "Reference" "R47"
-			(at 86.36 48.2599 0)
+			(at 86.36 46.9899 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7852,7 +7546,7 @@
 			)
 		)
 		(property "Value" "22K"
-			(at 86.36 50.7999 0)
+			(at 86.36 49.5299 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7861,7 +7555,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 85.598 49.53 90)
+			(at 85.598 48.26 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7870,7 +7564,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 83.82 49.53 0)
+			(at 83.82 48.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7879,7 +7573,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 83.82 49.53 0)
+			(at 83.82 48.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8177,73 +7871,6 @@
 				(path "/ffcc7acb-943e-4c85-833d-d9691a289ebb/96e71e87-16af-4251-bc10-0f621c90add3"
 					(reference "H14")
 					(unit 2)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 57.15 55.88 0)
-		(unit 1)
-		(exclude_from_sim yes)
-		(in_bom no)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "e0cc4b88-3d3a-4cc0-bd22-a647e16b1163")
-		(property "Reference" "TP10"
-			(at 59.69 51.3079 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "GATE_1_OUT"
-			(at 59.69 53.8479 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Connector_Pin:Pin_D1.0mm_L10.0mm"
-			(at 62.23 55.88 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 62.23 55.88 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "test point"
-			(at 57.15 55.88 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "df27d391-99aa-42e7-b6ad-46ffd276b79d")
-		)
-		(instances
-			(project "midi-2-cv"
-				(path "/ffcc7acb-943e-4c85-833d-d9691a289ebb/96e71e87-16af-4251-bc10-0f621c90add3"
-					(reference "TP10")
-					(unit 1)
 				)
 			)
 		)
@@ -8598,7 +8225,7 @@
 	)
 	(symbol
 		(lib_id "synth:PinSocket_01x04")
-		(at 213.36 71.12 180)
+		(at 209.55 71.12 0)
 		(unit 3)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -8607,7 +8234,7 @@
 		(fields_autoplaced yes)
 		(uuid "f58856c9-d510-4428-aebe-4e78015da0e2")
 		(property "Reference" "H13"
-			(at 210.82 71.1199 0)
+			(at 212.09 71.1201 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8617,7 +8244,7 @@
 			)
 		)
 		(property "Value" "PinSocket_01x04"
-			(at 213.36 67.31 0)
+			(at 209.55 74.93 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8626,7 +8253,7 @@
 			)
 		)
 		(property "Footprint" "Synth:PinSocket_1x04_P2.54mm_Vertical"
-			(at 213.106 64.008 0)
+			(at 209.804 78.232 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8635,7 +8262,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 213.36 71.12 0)
+			(at 209.55 71.12 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8644,7 +8271,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 213.36 66.294 0)
+			(at 209.55 75.946 0)
 			(effects
 				(font
 					(size 1.27 1.27)

@@ -1,10 +1,17 @@
-#ifndef _SEQUENCER_H_
-#define _SEQUENCER_H_
+/*
+******************************************************************************
+* @file           : sequencer.h
+* @author         : Lennart Querter
+* @brief          : Header for sequencer.c file.
+*                   Core functionality of the sequencer, sets voltages on the DAC
+******************************************************************************
+*/
+
+#ifndef __SEQUENCER_H_
+#define __SEQUENCER_H_
 
 #include "main.h"
 #include "app/mcp4822.h"
-
-extern TIM_HandleTypeDef htim3;
 
 typedef struct
 {
@@ -29,5 +36,4 @@ void sequencer_init(SEQUENCER_config* config, int BPM, MCP4822_config* mcp4822_c
 
 void sequencer_run(SEQUENCER_config* config);
 
-
-#endif /* _SEQUENCER_H_ */
+#endif // __SEQUENCER_H_

@@ -1,9 +1,14 @@
 /*
- * Simple command_queue system for control events
- */
+******************************************************************************
+* @file           : command_queue.h
+* @author         : Lennart Querter
+* @brief          : Header for command_queue.c file.
+*                   Handles the Command Queue for the UI
+******************************************************************************
+*/
 
-#ifndef _SEQ_COMMAND_QUEUE_
-#define _SEQ_COMMAND_QUEUE_
+#ifndef __COMMAND_QUEUE_
+#define __COMMAND_QUEUE_
 
 #include <stdint.h>
 
@@ -36,4 +41,4 @@ COMMAND_QUEUE_STATUS command_queue_push(COMMAND_QUEUE_config* command_queue, COM
 
 COMMAND_QUEUE_STATUS command_queue_pop(COMMAND_QUEUE_config* command_queue, COMMAND_QUEUE_EVENT* event);
 
-#endif /* _SEQ_COMMAND_QUEUE_ */
+#endif // __COMMAND_QUEUE_

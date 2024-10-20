@@ -1,13 +1,17 @@
-//
-// Created by Lennart Querter on 05.10.24.
-//
+/*
+******************************************************************************
+* @file           : ui.h
+* @author         : Lennart Querter
+* @brief          : Header for ui.c file.
+*                   Handles updates from the command_queue, sets LED's and other UI values
+******************************************************************************
+*/
 
-#ifndef UI_H
-#define UI_H
+#ifndef __UI_H
+#define __UI_H
 
 #include "app/sequencer.h"
 #include "app/command_queue.h"
-
 
 typedef enum
 {
@@ -37,10 +41,17 @@ typedef struct
 
     int handled;
     int next_pressed;
+
+    // interface options
+
+    // multiplexer for 2x8 status LED
+
+
+
 } UI_config;
 
 void ui_init(UI_config* config, COMMAND_QUEUE_config* command_queue_config, SEQUENCER_config* sequencer_config);
 
 void ui_run(UI_config* config);
 
-#endif //UI_H
+#endif //__UI_H
