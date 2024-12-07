@@ -271,23 +271,34 @@ I use Fusion 360 for the designs (there is a free non-commercial license!).
 
 ### In progress
 
-| Type    | Module          | Version | Status          | Tested        |
-|---------|-----------------|---------|-----------------|---------------|
-| Utility | Midi-2-cv       | 1       | Protoboard done | yes - Working |
-| Utility | Noise Module    | 1       | Prototype phase | No            |
-| Utility | AND/OR          | 1       | Prototype phase | No            |
-| Utility | Math?           | 1       | Prototype phase | No            |
-| Utility | 1v/oct tuner    | 1       | Prototype phase | No            |
-| Utility | Quantizer       | 1       | Prototype phase | No            |
-| SEQ     | STM32 Sequencer | 1       | Prototype phase | No            |
-| Drums   | Kick            | 1       | Prototype phase | No            |
-| Drums   | Clap/Snare      | 1       | Prototype phase | No            |
-| Drums   | Hats            | 1       | Prototype phase | No            |
-| Drums   | Toms            | 1       | Prototype phase | No            |
-| FX      | Delay (DBB)     | 1       | Prototype phase | No            |
-| FX      | Delay (PT-chip) | 1       | Prototype phase | No            |
-| FX      | Reverb (Spring) | 1       | Prototype phase | No            |
-| FX      | Sample&Hold     | 1       | Prototype phase | No            |
+| Type     | Module                     | Version | Status          | Tested |
+|----------|----------------------------|---------|-----------------|--------|
+| Utility  | Midi-2-cv (Midas)          | 1       | Ready           | yes    |
+| Drums    | Kick                       | 1       | Breadboard done | Yes    |
+| Drums    | Clap/Snare                 | 1       | Prototype phase | No     |
+| FX       | Delay (PT-chip)            | 1       | Breadboard done | Yes    |
+| FX       | WaveFolder                 | 1       | Prototype phase | No     |
+| Utility  | Euro ProtoType Helper      | 1       | Prototype phase | No     |
+| FX       | Clouds Clone / Digital FX  | 1       | Prototype phase | No     |
+| Utility  | Cable tester               | 1       | Prototype phase | No     |
+
+
+### Next
+
+| Type    | Module          | Version | Status  | Tested        |
+|---------|-----------------|---------|---------|---------------|
+| VCA     | 4 x VCA         | 1       | Concept | No            |
+| Utility | Noise Module    | 1       | Concept | No            |
+| Utility | AND/OR          | 1       | Concept | No            |
+| Utility | Math?           | 1       | Concept | No            |
+| Utility | 1v/oct tuner    | 1       | Concept | No            |
+| Utility | Quantizer       | 1       | Concept | No            |
+| SEQ     | STM32 Sequencer | 1       | Concept | No            |
+| Drums   | Hats            | 1       | Concept | No            |
+| Drums   | Toms            | 1       | Concept | No            |
+| FX      | Delay (DBB)     | 1       | Concept | No            |
+| FX      | Reverb (Spring) | 1       | Concept | No            |
+| FX      | Sample&Hold     | 1       | Concept | No            |
 
 
 ### Previous versions

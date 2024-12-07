@@ -3176,6 +3176,175 @@
 				)
 			)
 		)
+		(symbol "synth:LED (3mm)"
+			(pin_numbers hide)
+			(pin_names
+				(offset 1.016) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "D"
+				(at 0 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "LED"
+				(at 0 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "Synth:LED_D3.0mm"
+				(at -0.254 -6.604 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Light emitting diode"
+				(at -0.254 -4.318 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "LED diode"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "LED* LED_SMD:* LED_THT:*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "LED (3mm)_0_1"
+				(polyline
+					(pts
+						(xy -1.27 -1.27) (xy -1.27 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 0) (xy 1.27 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -1.27) (xy 1.27 1.27) (xy -1.27 0) (xy 1.27 -1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -3.048 -0.762) (xy -4.572 -2.286) (xy -3.81 -2.286) (xy -4.572 -2.286) (xy -4.572 -1.524)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.778 -0.762) (xy -3.302 -2.286) (xy -2.54 -2.286) (xy -3.302 -2.286) (xy -3.302 -1.524)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "LED (3mm)_1_1"
+				(pin passive line
+					(at -3.81 0 0)
+					(length 2.54)
+					(name "K"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 3.81 0 180)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
 		(symbol "synth:R_Default"
 			(pin_numbers hide)
 			(pin_names
@@ -3610,7 +3779,7 @@
 		(uuid "4ba78d3b-d389-487b-af04-e188975b1404")
 	)
 	(junction
-		(at 119.38 180.34)
+		(at 113.03 180.34)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "4d489ccc-fed5-450e-a016-7a02424ec33f")
@@ -3876,7 +4045,7 @@
 		(uuid "f161065d-c527-4dd8-af04-4aea38f00550")
 	)
 	(no_connect
-		(at 306.07 133.35)
+		(at 313.69 133.35)
 		(uuid "fb003aa9-40fe-44b0-ac58-c379341b6374")
 	)
 	(wire
@@ -4101,7 +4270,7 @@
 	)
 	(wire
 		(pts
-			(xy 95.25 180.34) (xy 109.22 180.34)
+			(xy 95.25 180.34) (xy 102.87 180.34)
 		)
 		(stroke
 			(width 0)
@@ -4251,16 +4420,6 @@
 	)
 	(wire
 		(pts
-			(xy 128.27 173.99) (xy 128.27 175.26)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "319c320e-8c8f-47cb-b369-ba694faeb397")
-	)
-	(wire
-		(pts
 			(xy 111.76 49.53) (xy 111.76 57.15)
 		)
 		(stroke
@@ -4361,7 +4520,7 @@
 	)
 	(wire
 		(pts
-			(xy 116.84 180.34) (xy 119.38 180.34)
+			(xy 110.49 180.34) (xy 113.03 180.34)
 		)
 		(stroke
 			(width 0)
@@ -4421,7 +4580,7 @@
 	)
 	(wire
 		(pts
-			(xy 119.38 181.61) (xy 119.38 180.34)
+			(xy 113.03 181.61) (xy 113.03 180.34)
 		)
 		(stroke
 			(width 0)
@@ -4531,13 +4690,23 @@
 	)
 	(wire
 		(pts
-			(xy 306.07 130.81) (xy 316.23 130.81)
+			(xy 313.69 130.81) (xy 316.23 130.81)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "4e8944fe-d640-4d08-9c94-905fc3b41137")
+	)
+	(wire
+		(pts
+			(xy 119.38 228.6) (xy 123.19 228.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4fced8f6-92ff-4829-8de4-c42797a974a4")
 	)
 	(wire
 		(pts
@@ -4861,7 +5030,7 @@
 	)
 	(wire
 		(pts
-			(xy 119.38 180.34) (xy 120.65 180.34)
+			(xy 113.03 180.34) (xy 120.65 180.34)
 		)
 		(stroke
 			(width 0)
@@ -5311,6 +5480,16 @@
 	)
 	(wire
 		(pts
+			(xy 135.89 228.6) (xy 133.35 228.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "976af431-e05f-402a-8fb1-bbc5cb64c428")
+	)
+	(wire
+		(pts
 			(xy 250.19 69.85) (xy 250.19 77.47)
 		)
 		(stroke
@@ -5561,6 +5740,16 @@
 	)
 	(wire
 		(pts
+			(xy 137.16 175.26) (xy 128.27 175.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b43472b9-b7cf-4f0c-b2db-3c7d7176cd93")
+	)
+	(wire
+		(pts
 			(xy 133.35 265.43) (xy 133.35 270.51)
 		)
 		(stroke
@@ -5628,6 +5817,16 @@
 			(type default)
 		)
 		(uuid "bbec1f01-93ab-4e4f-933e-ead08c10e497")
+	)
+	(wire
+		(pts
+			(xy 318.77 128.27) (xy 313.69 128.27)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bdfc19ad-552c-464d-ad56-a0299084b01d")
 	)
 	(wire
 		(pts
@@ -5771,6 +5970,16 @@
 	)
 	(wire
 		(pts
+			(xy 38.1 199.39) (xy 35.56 199.39)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cc5b9744-bbeb-45d3-bb6e-30e3f6e746e7")
+	)
+	(wire
+		(pts
 			(xy 170.18 215.9) (xy 181.61 215.9)
 		)
 		(stroke
@@ -5851,6 +6060,16 @@
 	)
 	(wire
 		(pts
+			(xy 128.27 213.36) (xy 128.27 204.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d34cae40-cab0-41e8-8989-033cab3a6a23")
+	)
+	(wire
+		(pts
 			(xy 93.98 259.08) (xy 93.98 261.62)
 		)
 		(stroke
@@ -5891,7 +6110,7 @@
 	)
 	(wire
 		(pts
-			(xy 140.97 228.6) (xy 140.97 215.9)
+			(xy 140.97 217.17) (xy 140.97 215.9)
 		)
 		(stroke
 			(width 0)
@@ -6141,6 +6360,16 @@
 	)
 	(wire
 		(pts
+			(xy 158.75 228.6) (xy 162.56 228.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f72a5ef8-e315-4df4-8d93-5f907bba0c4f")
+	)
+	(wire
+		(pts
 			(xy 317.5 59.69) (xy 317.5 71.12)
 		)
 		(stroke
@@ -6148,6 +6377,16 @@
 			(type default)
 		)
 		(uuid "f7954724-0c5b-45c0-9f13-5f14eb49a78f")
+	)
+	(wire
+		(pts
+			(xy 151.13 228.6) (xy 143.51 228.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fea8252f-179b-4119-aba5-1074ea3f3177")
 	)
 	(rectangle
 		(start 185.42 248.92)
@@ -6237,7 +6476,7 @@
 	)
 	(text "Tune CV"
 		(exclude_from_sim no)
-		(at 303.022 135.89 0)
+		(at 310.642 135.89 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6556,6 +6795,7 @@
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "Footprint" ""
@@ -6745,7 +6985,7 @@
 	)
 	(symbol
 		(lib_id "power:GNDREF")
-		(at 391.16 111.76 270)
+		(at 391.16 111.76 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6754,7 +6994,7 @@
 		(fields_autoplaced yes)
 		(uuid "14a51456-034b-4077-b0b7-f6a8bf165955")
 		(property "Reference" "#PWR049"
-			(at 384.81 111.76 0)
+			(at 391.16 118.11 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6763,12 +7003,13 @@
 			)
 		)
 		(property "Value" "GNDREF"
-			(at 387.35 111.7599 90)
+			(at 391.1599 115.57 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
+				(hide yes)
 			)
 		)
 		(property "Footprint" ""
@@ -6878,6 +7119,76 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R")
+		(at 128.27 217.17 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "158b6de3-cc69-456c-9d8d-59708b4500d8")
+		(property "Reference" "R39"
+			(at 130.81 215.8999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "22K"
+			(at 130.81 218.4399 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+			(at 126.492 217.17 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 128.27 217.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 128.27 217.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "eb8d2c49-d39b-410a-ab65-57a4b0ad0755")
+		)
+		(pin "2"
+			(uuid "8e1b828a-63c2-4849-b2f5-2197554891fb")
+		)
+		(instances
+			(project "encore"
+				(path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
+					(reference "R39")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Diode:1N4148WS")
 		(at 205.74 99.06 270)
 		(unit 1)
@@ -6967,7 +7278,7 @@
 	)
 	(symbol
 		(lib_id "power:GNDREF")
-		(at 306.07 128.27 90)
+		(at 318.77 128.27 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6976,7 +7287,7 @@
 		(fields_autoplaced yes)
 		(uuid "18ecd1b2-ef3a-4008-b12e-508fd1ab56b5")
 		(property "Reference" "#PWR043"
-			(at 312.42 128.27 0)
+			(at 318.77 134.62 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6985,16 +7296,17 @@
 			)
 		)
 		(property "Value" "GNDREF"
-			(at 309.88 128.2699 90)
+			(at 318.7701 132.08 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
+				(hide yes)
 			)
 		)
 		(property "Footprint" ""
-			(at 306.07 128.27 0)
+			(at 318.77 128.27 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7003,7 +7315,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 306.07 128.27 0)
+			(at 318.77 128.27 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7012,7 +7324,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GNDREF\" , reference supply ground"
-			(at 306.07 128.27 0)
+			(at 318.77 128.27 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7202,6 +7514,7 @@
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "Footprint" ""
@@ -7408,7 +7721,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm"
+		(property "Footprint" "Synth:SOIC-8"
 			(at 148.59 265.43 0)
 			(effects
 				(font
@@ -8074,6 +8387,7 @@
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "Footprint" ""
@@ -8559,6 +8873,7 @@
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "Footprint" ""
@@ -8759,6 +9074,7 @@
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "Footprint" ""
@@ -8820,12 +9136,11 @@
 			)
 		)
 		(property "Value" "PWR_FLAG"
-			(at 106.68 250.1899 0)
+			(at 104.14 246.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
 		(property "Footprint" ""
@@ -9098,6 +9413,7 @@
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "Footprint" ""
@@ -9164,6 +9480,7 @@
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "Footprint" ""
@@ -9498,12 +9815,11 @@
 			)
 		)
 		(property "Value" "PWR_FLAG"
-			(at 106.68 262.8899 0)
+			(at 104.14 266.7 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
 			)
 		)
 		(property "Footprint" ""
@@ -9641,6 +9957,7 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
+				(hide yes)
 			)
 		)
 		(property "Footprint" ""
@@ -9776,7 +10093,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_SO:SO-14_3.9x8.65mm_P1.27mm"
+		(property "Footprint" "Synth:SOIC-14"
 			(at 96.52 201.93 0)
 			(effects
 				(font
@@ -9879,6 +10196,7 @@
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "Footprint" ""
@@ -9931,21 +10249,19 @@
 		(fields_autoplaced yes)
 		(uuid "5af030e4-8208-405f-870a-6698739cf45e")
 		(property "Reference" "TP2"
-			(at 143.51 199.8979 0)
+			(at 140.97 195.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
 		(property "Value" "TRIGGER"
-			(at 143.51 202.4379 0)
+			(at 140.97 198.12 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
 		(property "Footprint" "Connector_Pin:Pin_D1.0mm_L10.0mm"
@@ -10127,7 +10443,7 @@
 	)
 	(symbol
 		(lib_id "power:GNDREF")
-		(at 140.97 228.6 0)
+		(at 140.97 217.17 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -10136,7 +10452,7 @@
 		(fields_autoplaced yes)
 		(uuid "63c123a4-1b9d-46e4-8a2b-354912023b2f")
 		(property "Reference" "#PWR024"
-			(at 140.97 234.95 0)
+			(at 140.97 223.52 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10145,15 +10461,16 @@
 			)
 		)
 		(property "Value" "GNDREF"
-			(at 140.97 233.68 0)
+			(at 140.97 222.25 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "Footprint" ""
-			(at 140.97 228.6 0)
+			(at 140.97 217.17 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10162,7 +10479,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 140.97 228.6 0)
+			(at 140.97 217.17 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10171,7 +10488,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GNDREF\" , reference supply ground"
-			(at 140.97 228.6 0)
+			(at 140.97 217.17 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10284,6 +10601,7 @@
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "Footprint" ""
@@ -10557,7 +10875,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm"
+		(property "Footprint" "Synth:SOIC-8"
 			(at 255.27 142.24 0)
 			(effects
 				(font
@@ -10921,6 +11239,7 @@
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "Footprint" ""
@@ -10988,6 +11307,7 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
+				(hide yes)
 			)
 		)
 		(property "Footprint" ""
@@ -11031,6 +11351,74 @@
 	)
 	(symbol
 		(lib_id "power:GNDREF")
+		(at 162.56 228.6 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "7713da41-fe88-4d80-a830-9a1849d67021")
+		(property "Reference" "#PWR050"
+			(at 162.56 234.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GNDREF"
+			(at 162.5599 232.41 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 162.56 228.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 162.56 228.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GNDREF\" , reference supply ground"
+			(at 162.56 228.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b07bc80d-6e2f-42e7-86fe-0c0f26f31d12")
+		)
+		(instances
+			(project "encore"
+				(path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
+					(reference "#PWR050")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GNDREF")
 		(at 300.99 55.88 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -11054,6 +11442,7 @@
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "Footprint" ""
@@ -11097,7 +11486,7 @@
 	)
 	(symbol
 		(lib_id "power:GNDREF")
-		(at 35.56 199.39 90)
+		(at 38.1 199.39 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -11106,7 +11495,7 @@
 		(fields_autoplaced yes)
 		(uuid "7941e46d-e618-41b3-b53f-aabb646f0788")
 		(property "Reference" "#PWR04"
-			(at 41.91 199.39 0)
+			(at 38.1 205.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11115,16 +11504,17 @@
 			)
 		)
 		(property "Value" "GNDREF"
-			(at 39.37 199.3899 90)
+			(at 38.1001 203.2 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
+				(hide yes)
 			)
 		)
 		(property "Footprint" ""
-			(at 35.56 199.39 0)
+			(at 38.1 199.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11133,7 +11523,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 35.56 199.39 0)
+			(at 38.1 199.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11142,7 +11532,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GNDREF\" , reference supply ground"
-			(at 35.56 199.39 0)
+			(at 38.1 199.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11527,6 +11917,74 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R")
+		(at 154.94 228.6 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "8a20af47-d647-4b36-b5ee-162cd11d78a5")
+		(property "Reference" "R38"
+			(at 154.94 222.25 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "470R"
+			(at 154.94 224.79 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+			(at 154.94 226.822 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 154.94 228.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 154.94 228.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f9746fbc-0895-498c-913a-86a8bfe258de")
+		)
+		(pin "2"
+			(uuid "1b1ed781-0b46-4e45-a1ff-597c848841be")
+		)
+		(instances
+			(project "encore"
+				(path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
+					(reference "R38")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "synth:R_Default")
 		(at 299.72 198.12 180)
 		(unit 1)
@@ -11689,6 +12147,7 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
+				(hide yes)
 			)
 		)
 		(property "Footprint" ""
@@ -11866,7 +12325,7 @@
 	)
 	(symbol
 		(lib_id "synth:R_Default")
-		(at 113.03 180.34 90)
+		(at 106.68 180.34 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -11875,7 +12334,7 @@
 		(fields_autoplaced yes)
 		(uuid "92c7a8bd-2a39-49e4-b751-6e0b409c12df")
 		(property "Reference" "R12"
-			(at 113.03 173.99 90)
+			(at 106.68 173.99 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11883,7 +12342,7 @@
 			)
 		)
 		(property "Value" "1K"
-			(at 113.03 176.53 90)
+			(at 106.68 176.53 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11891,7 +12350,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 127.254 180.34 0)
+			(at 120.904 180.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11900,7 +12359,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 113.03 180.34 90)
+			(at 106.68 180.34 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11909,7 +12368,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 124.206 180.34 0)
+			(at 117.856 180.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12169,11 +12628,12 @@
 			)
 		)
 		(property "Value" "GNDREF"
-			(at 26.67 264.16 90)
+			(at 24.13 267.9699 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify right)
 			)
 		)
 		(property "Footprint" ""
@@ -12240,6 +12700,7 @@
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "Footprint" ""
@@ -12306,6 +12767,7 @@
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "Footprint" ""
@@ -12917,6 +13379,74 @@
 		)
 	)
 	(symbol
+		(lib_id "synth:LED (3mm)")
+		(at 139.7 228.6 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a1319a6b-91a3-4feb-b1bf-93fa2015ed4f")
+		(property "Reference" "D9"
+			(at 141.2875 220.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "RED_OUT_20mA"
+			(at 141.2875 223.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Synth:LED_D3.0mm"
+			(at 139.954 221.996 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 139.7 228.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Light emitting diode"
+			(at 139.954 224.282 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b309007a-db66-4635-ad15-08dff05d9576")
+		)
+		(pin "2"
+			(uuid "3b624b7f-2c87-48f3-90b7-268b3b4e1a52")
+		)
+		(instances
+			(project "encore"
+				(path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
+					(reference "D9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "synth:R_Default")
 		(at 214.63 184.15 0)
 		(unit 1)
@@ -13192,7 +13722,7 @@
 	)
 	(symbol
 		(lib_id "power:GNDREF")
-		(at 119.38 189.23 0)
+		(at 113.03 189.23 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -13201,7 +13731,7 @@
 		(fields_autoplaced yes)
 		(uuid "ac1b89c0-3114-4a8d-9225-da94f19c3ee8")
 		(property "Reference" "#PWR018"
-			(at 119.38 195.58 0)
+			(at 113.03 195.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13210,15 +13740,16 @@
 			)
 		)
 		(property "Value" "GNDREF"
-			(at 119.38 194.31 0)
+			(at 113.03 194.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "Footprint" ""
-			(at 119.38 189.23 0)
+			(at 113.03 189.23 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13227,7 +13758,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 119.38 189.23 0)
+			(at 113.03 189.23 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13236,7 +13767,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GNDREF\" , reference supply ground"
-			(at 119.38 189.23 0)
+			(at 113.03 189.23 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13276,11 +13807,12 @@
 			)
 		)
 		(property "Value" "-12V"
-			(at 154.94 275.59 90)
+			(at 152.4 278.1299 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
 		(property "Footprint" ""
@@ -13324,7 +13856,7 @@
 	)
 	(symbol
 		(lib_id "power:GNDREF")
-		(at 95.25 177.8 90)
+		(at 95.25 177.8 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -13333,7 +13865,7 @@
 		(fields_autoplaced yes)
 		(uuid "ae6d04b0-fef1-4679-a423-bb5beb7e4220")
 		(property "Reference" "#PWR012"
-			(at 101.6 177.8 0)
+			(at 95.25 184.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13342,12 +13874,13 @@
 			)
 		)
 		(property "Value" "GNDREF"
-			(at 99.06 177.7999 90)
+			(at 95.2501 181.61 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
+				(hide yes)
 			)
 		)
 		(property "Footprint" ""
@@ -13415,6 +13948,7 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
+				(hide yes)
 			)
 		)
 		(property "Footprint" ""
@@ -13457,6 +13991,80 @@
 		)
 	)
 	(symbol
+		(lib_id "Transistor_BJT:BC848")
+		(at 128.27 226.06 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "aff3fec9-d569-4589-9b4e-fa54c5f0c482")
+		(property "Reference" "Q8"
+			(at 128.27 232.41 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "BC848"
+			(at 128.27 234.95 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 126.365 231.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://www.infineon.com/dgdl/Infineon-BC847SERIES_BC848SERIES_BC849SERIES_BC850SERIES-DS-v01_01-en.pdf?fileId=db3a304314dca389011541d4630a1657"
+			(at 128.27 226.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "0.1A Ic, 30V Vce, NPN Transistor, SOT-23"
+			(at 128.27 226.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "ce8b62a7-88d4-4014-8115-70278ba57e93")
+		)
+		(pin "1"
+			(uuid "96418122-635d-491f-a1f5-1599b7fac2e3")
+		)
+		(pin "2"
+			(uuid "83fa7eb0-6fe6-4a6d-ba0e-c378cc468044")
+		)
+		(instances
+			(project "encore"
+				(path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
+					(reference "Q8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Amplifier_Operational:TL074")
 		(at 213.36 213.36 0)
 		(mirror x)
@@ -13483,7 +14091,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_SO:SO-14_3.9x8.65mm_P1.27mm"
+		(property "Footprint" "Synth:SOIC-14"
 			(at 212.09 215.9 0)
 			(effects
 				(font
@@ -13648,11 +14256,12 @@
 			)
 		)
 		(property "Value" "+12V"
-			(at 154.94 250.19 90)
+			(at 152.4 252.7299 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
 		(property "Footprint" ""
@@ -13766,7 +14375,7 @@
 	)
 	(symbol
 		(lib_id "power:GNDREF")
-		(at 96.52 229.87 90)
+		(at 96.52 229.87 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -13775,7 +14384,7 @@
 		(fields_autoplaced yes)
 		(uuid "b8330122-3984-4bf8-a699-e5c04b455407")
 		(property "Reference" "#PWR013"
-			(at 102.87 229.87 0)
+			(at 96.52 236.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13784,12 +14393,13 @@
 			)
 		)
 		(property "Value" "GNDREF"
-			(at 100.33 229.8699 90)
+			(at 96.5201 233.68 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
+				(hide yes)
 			)
 		)
 		(property "Footprint" ""
@@ -13856,6 +14466,7 @@
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "Footprint" ""
@@ -13925,7 +14536,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_SO:SO-14_3.9x8.65mm_P1.27mm"
+		(property "Footprint" "Synth:SOIC-14"
 			(at 173.99 262.89 0)
 			(effects
 				(font
@@ -14028,6 +14639,7 @@
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "Footprint" ""
@@ -14301,6 +14913,7 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
+				(hide yes)
 			)
 		)
 		(property "Footprint" ""
@@ -14412,7 +15025,7 @@
 	)
 	(symbol
 		(lib_id "power:GNDREF")
-		(at 128.27 173.99 180)
+		(at 137.16 175.26 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -14421,7 +15034,7 @@
 		(fields_autoplaced yes)
 		(uuid "c417e73e-e198-40e2-b104-50fe799d1912")
 		(property "Reference" "#PWR020"
-			(at 128.27 167.64 0)
+			(at 137.16 181.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14430,15 +15043,16 @@
 			)
 		)
 		(property "Value" "GNDREF"
-			(at 128.27 168.91 0)
+			(at 137.16 180.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "Footprint" ""
-			(at 128.27 173.99 0)
+			(at 137.16 175.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14447,7 +15061,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 128.27 173.99 0)
+			(at 137.16 175.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14456,7 +15070,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GNDREF\" , reference supply ground"
-			(at 128.27 173.99 0)
+			(at 137.16 175.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14478,7 +15092,7 @@
 	)
 	(symbol
 		(lib_id "Diode:1N4148WS")
-		(at 119.38 185.42 270)
+		(at 113.03 185.42 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -14487,25 +15101,25 @@
 		(fields_autoplaced yes)
 		(uuid "c4e1d986-7336-4484-b667-765f44c82990")
 		(property "Reference" "D4"
-			(at 121.92 184.1499 90)
+			(at 110.49 184.1499 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
 		(property "Value" "1N4148WS"
-			(at 121.92 186.6899 90)
+			(at 110.49 186.6899 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
 		(property "Footprint" "Diode_SMD:D_SOD-323_HandSoldering"
-			(at 114.935 185.42 0)
+			(at 108.585 185.42 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14514,7 +15128,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.vishay.com/docs/85751/1n4148ws.pdf"
-			(at 119.38 185.42 0)
+			(at 113.03 185.42 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14523,7 +15137,7 @@
 			)
 		)
 		(property "Description" "75V 0.15A Fast switching Diode, SOD-323"
-			(at 119.38 185.42 0)
+			(at 113.03 185.42 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14532,7 +15146,7 @@
 			)
 		)
 		(property "Sim.Device" "D"
-			(at 119.38 185.42 0)
+			(at 113.03 185.42 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14541,7 +15155,7 @@
 			)
 		)
 		(property "Sim.Pins" "1=K 2=A"
-			(at 119.38 185.42 0)
+			(at 113.03 185.42 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14729,6 +15343,7 @@
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "Footprint" ""
@@ -15197,7 +15812,7 @@
 	)
 	(symbol
 		(lib_id "synth:AudioJack_Mono_3.5mm")
-		(at 300.99 130.81 0)
+		(at 308.61 130.81 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -15206,7 +15821,7 @@
 		(fields_autoplaced yes)
 		(uuid "d73da7c0-7d8e-44e2-a4b3-d3e1c556f41f")
 		(property "Reference" "J4"
-			(at 301.3075 123.19 0)
+			(at 308.9275 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15214,7 +15829,7 @@
 			)
 		)
 		(property "Value" "INPUT"
-			(at 301.3075 125.73 0)
+			(at 308.9275 125.73 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15222,7 +15837,7 @@
 			)
 		)
 		(property "Footprint" "Synth:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles"
-			(at 300.99 135.382 0)
+			(at 308.61 135.382 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15231,7 +15846,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 300.99 130.81 0)
+			(at 308.61 130.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15240,7 +15855,7 @@
 			)
 		)
 		(property "Description" "Audio Jack, 2 Poles (Mono / TS), Switched T Pole (Normalling)"
-			(at 300.99 137.922 0)
+			(at 308.61 137.922 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15372,7 +15987,7 @@
 				)
 			)
 		)
-		(property "Value" "1uF [film]"
+		(property "Value" "1nF [film]"
 			(at 297.18 40.64 90)
 			(effects
 				(font
@@ -15588,6 +16203,7 @@
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "Footprint" ""
@@ -15630,6 +16246,73 @@
 		)
 	)
 	(symbol
+		(lib_id "power:+12V")
+		(at 119.38 228.6 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "de60d02d-5b5a-47ea-8031-78f22a3c3c91")
+		(property "Reference" "#PWR051"
+			(at 123.19 228.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+12V"
+			(at 115.57 228.5999 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 119.38 228.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 119.38 228.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+12V\""
+			(at 119.38 228.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "55808f3a-1306-455d-bc66-45dd554c21cc")
+		)
+		(instances
+			(project "encore"
+				(path "/ffcc7acb-943e-4c85-833d-d9691a289ebb"
+					(reference "#PWR051")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:PWR_FLAG")
 		(at 104.14 273.05 180)
 		(unit 1)
@@ -15649,12 +16332,11 @@
 			)
 		)
 		(property "Value" "PWR_FLAG"
-			(at 106.68 274.3199 0)
+			(at 104.14 278.13 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
 			)
 		)
 		(property "Footprint" ""
@@ -16074,7 +16756,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_SO:SO-14_3.9x8.65mm_P1.27mm"
+		(property "Footprint" "Synth:SOIC-14"
 			(at 353.06 111.76 0)
 			(effects
 				(font
@@ -16247,6 +16929,7 @@
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "Footprint" ""
@@ -16527,6 +17210,7 @@
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "Footprint" ""
@@ -16664,7 +17348,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_SO:SO-14_3.9x8.65mm_P1.27mm"
+		(property "Footprint" "Synth:SOIC-14"
 			(at 82.55 54.61 0)
 			(effects
 				(font
@@ -16896,7 +17580,7 @@
 				)
 			)
 		)
-		(property "Value" "1uF [film]"
+		(property "Value" "1nF [film]"
 			(at 283.21 40.64 90)
 			(effects
 				(font
@@ -17041,6 +17725,7 @@
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "Footprint" ""
@@ -17109,7 +17794,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm"
+		(property "Footprint" "Synth:SOIC-8"
 			(at 287.02 151.13 0)
 			(effects
 				(font
