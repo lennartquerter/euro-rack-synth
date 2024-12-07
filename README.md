@@ -34,21 +34,27 @@ There are tags on the commit that was ordered (for the exact gerber files)
 
 If there are issues, they will be reported in the README for each module.
 
-| Type    | Module          | Version | Status           | Tested | Issues?  | Panel available |
-|---------|-----------------|---------|------------------|--------|----------|-----------------|
-| VCO     | Vixen           | 2       | Built            | yes    | No       | Yes             |
-| VCO     | 3340            | 1       | Built            | Yes    | No       | Yes             |
-| LFO     | XOF             | 1       | Built            | Yes    | No       | Yes             |
-| VCA     | Sparkle         | 2       | Built            | Yes    | No       | Yes             |
-| SEQ     | Sensei          | 2       | Built            | yes    | No       | Yes             |
-| EG      | Scribble        | 2       | Built            | yes    | No       | Yes             |
-| EG      | 7555            | 1       | Built            | yes    | No       | Yes             |
-| Filter  | 3320            | 1       | Pending Assembly | No     | -        | Yes             |
-| Filter  | Low Orbit       | 1       | Built            | yes    | No       | Yes             |
-| Mixer   | Distorted Daisy | 2       | Built            | yes    | No       | Yes             |
-| Utility | Passive Mult    | 1       | Built            | Yes    | No       | Yes             |
-| Utility | Active Mult     | 1       | Pending Assembly | No     | -        | Yes             |
-| Utility | Chrono Divider  | 1       | Built            | yes    | No       | Yes             |
+| Type    | Module                    | Version | Status  | Tested | Issues? | Panel available |
+|---------|---------------------------|---------|---------|--------|---------|-----------------|
+| VCO     | Vixen [MKI]               | 2       | Built   | yes    | No      | Yes (3D print)  |
+| VCO     | 3340                      | 1       | Built   | Yes    | No      | Yes (3D print)  |
+| LFO     | XOF                       | 1       | Built   | Yes    | No      | Yes (3D print)  |
+| VCA     | Sparkle [MKI]             | 2       | Built   | Yes    | No      | Yes (3D print)  |
+| SEQ     | Sensei [Baby 8]           | 2       | Built   | yes    | No      | Yes (3D print)  |
+| EG      | Scribble [MKI]            | 2       | Built   | yes    | No      | Yes (3D print)  |
+| EG      | 7555 [Fastest Envelope]   | 1       | Built   | yes    | No      | Yes (3D print)  |
+| Filter  | 3320                      | 1       | Built   | Yes    | No      | Yes (3D print)  |
+| Filter  | Low Orbit [MKI]           | 1       | Built   | yes    | No      | Yes (3D print)  |
+| Mixer   | Distorted Daisy [MKI]     | 2       | Built   | yes    | No      | Yes (3D print)  |
+| Drums   | Encore (Snare/Clap) [MKI] | 1       | Testing | No     | -       | Yes (Gerber)    |
+| Drums   | Muay Thai (Kick) [MKI]    | 1       | Testing | No     | -       | Yes (Gerber)    |
+| FX      | Ricochet (Delay PT2399)   | 1       | Testing | No     | -       | Yes (Gerber)    |
+| FX      | Weathering (Clouds Clone) | 1       | Testing | No     | -       | Yes (Gerber)    |
+| Utility | Wavefolder (SuperNova)    | 1       | Testing | No     | -       | Yes (Gerber)    |
+| Utility | Midi 2 CV (Midas)         | 1       | Testing | No     | -       | Yes (Gerber)    |
+| Utility | Passive Mult              | 1       | Built   | Yes    | No      | Yes (3D print)  |
+| Utility | Active Mult               | 1       | Built   | Yes    | No      | Yes (3D print)  |
+| Utility | Chrono Divider            | 1       | Built   | yes    | No      | Yes (3D print)  |
 
 ## The story
 
@@ -265,51 +271,47 @@ I have a 3D printer accessible at the office, so I use it to build and prototype
 designs. At some point I might turn to a professional milling company but for now, it works well.
 I use Fusion 360 for the designs (there is a free non-commercial license!).
 
-
 ## Modules
-
 
 ### In progress
 
-| Type     | Module                     | Version | Status          | Tested |
-|----------|----------------------------|---------|-----------------|--------|
-| Utility  | Midi-2-cv (Midas)          | 1       | Ready           | yes    |
-| Drums    | Kick                       | 1       | Breadboard done | Yes    |
-| Drums    | Clap/Snare                 | 1       | Prototype phase | No     |
-| FX       | Delay (PT-chip)            | 1       | Breadboard done | Yes    |
-| FX       | WaveFolder                 | 1       | Prototype phase | No     |
-| Utility  | Euro ProtoType Helper      | 1       | Prototype phase | No     |
-| FX       | Clouds Clone / Digital FX  | 1       | Prototype phase | No     |
-| Utility  | Cable tester               | 1       | Prototype phase | No     |
-
+| Type    | Module                    | Version | Status          | Tested |
+|---------|---------------------------|---------|-----------------|--------|
+| Utility | Midi-2-cv (Midas)         | 1       | Ready           | yes    |
+| Drums   | Kick                      | 1       | Breadboard done | Yes    |
+| Drums   | Clap/Snare                | 1       | Prototype phase | No     |
+| FX      | Delay (PT-chip)           | 1       | Breadboard done | Yes    |
+| FX      | WaveFolder                | 1       | Prototype phase | No     |
+| Utility | Euro ProtoType Helper     | 1       | Prototype phase | No     |
+| FX      | Clouds Clone / Digital FX | 1       | Prototype phase | No     |
+| Utility | Cable tester              | 1       | Prototype phase | No     |
 
 ### Next
 
-| Type    | Module          | Version | Status  | Tested        |
-|---------|-----------------|---------|---------|---------------|
-| VCA     | 4 x VCA         | 1       | Concept | No            |
-| Utility | Noise Module    | 1       | Concept | No            |
-| Utility | AND/OR          | 1       | Concept | No            |
-| Utility | Math?           | 1       | Concept | No            |
-| Utility | 1v/oct tuner    | 1       | Concept | No            |
-| Utility | Quantizer       | 1       | Concept | No            |
-| SEQ     | STM32 Sequencer | 1       | Concept | No            |
-| Drums   | Hats            | 1       | Concept | No            |
-| Drums   | Toms            | 1       | Concept | No            |
-| FX      | Delay (DBB)     | 1       | Concept | No            |
-| FX      | Reverb (Spring) | 1       | Concept | No            |
-| FX      | Sample&Hold     | 1       | Concept | No            |
-
+| Type    | Module          | Version | Status  | Tested |
+|---------|-----------------|---------|---------|--------|
+| VCA     | 4 x VCA         | 1       | Concept | No     |
+| Utility | Noise Module    | 1       | Concept | No     |
+| Utility | AND/OR          | 1       | Concept | No     |
+| Utility | Math?           | 1       | Concept | No     |
+| Utility | 1v/oct tuner    | 1       | Concept | No     |
+| Utility | Quantizer       | 1       | Concept | No     |
+| SEQ     | STM32 Sequencer | 1       | Concept | No     |
+| Drums   | Hats            | 1       | Concept | No     |
+| Drums   | Toms            | 1       | Concept | No     |
+| FX      | Delay (DBB)     | 1       | Concept | No     |
+| FX      | Reverb (Spring) | 1       | Concept | No     |
+| FX      | Sample&Hold     | 1       | Concept | No     |
 
 ### Previous versions
 
-| Type    | Module          | Version | Status           | Tested | Issues? |
-|---------|-----------------|---------|------------------|--------|---------|
-| VCO     | Vixen           | 1       | Built            | Yes    | Minor   | 
-| VCA     | Sparkle         | 1       | Built            | Yes    | No      |
-| SEQ     | Sensei          | 1       | Built            | Yes    | Minor   |
-| EG      | Scribble        | 1       | Built            | Yes    | Yes     |
-| Mixer   | Distorted Daisy | 1       | Built            | yes    | No      |
+| Type  | Module          | Version | Status | Tested | Issues? |
+|-------|-----------------|---------|--------|--------|---------|
+| VCO   | Vixen           | 1       | Built  | Yes    | Minor   | 
+| VCA   | Sparkle         | 1       | Built  | Yes    | No      |
+| SEQ   | Sensei          | 1       | Built  | Yes    | Minor   |
+| EG    | Scribble        | 1       | Built  | Yes    | Yes     |
+| Mixer | Distorted Daisy | 1       | Built  | yes    | No      |
 
 ## Module links
 
