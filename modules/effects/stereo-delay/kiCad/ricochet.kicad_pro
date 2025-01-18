@@ -37,9 +37,9 @@
         "other_text_thickness": 0.15,
         "other_text_upright": false,
         "pads": {
-          "drill": 0.762,
-          "height": 1.524,
-          "width": 1.524
+          "drill": 1.0,
+          "height": 1.8,
+          "width": 1.8
         },
         "silk_line_width": 0.15,
         "silk_text_italic": false,
@@ -51,7 +51,13 @@
           "min_clearance": 0.5
         }
       },
-      "diff_pair_dimensions": [],
+      "diff_pair_dimensions": [
+        {
+          "gap": 0.0,
+          "via_gap": 0.0,
+          "width": 0.0
+        }
+      ],
       "drc_exclusions": [],
       "meta": {
         "version": 2
@@ -173,7 +179,10 @@
           "td_width_to_size_filter_ratio": 0.9
         }
       ],
-      "track_widths": [],
+      "track_widths": [
+        0.0,
+        0.3
+      ],
       "tuning_pattern_settings": {
         "diff_pair_defaults": {
           "corner_radius_percentage": 80,
@@ -200,7 +209,16 @@
           "spacing": 0.6
         }
       },
-      "via_dimensions": [],
+      "via_dimensions": [
+        {
+          "diameter": 0.0,
+          "drill": 0.0
+        },
+        {
+          "diameter": 0.8,
+          "drill": 0.4
+        }
+      ],
       "zones_allow_external_fillets": false
     },
     "ipc2581": {
@@ -653,12 +671,24 @@
       "power"
     ],
     [
-      "e8bb6fd2-e3bb-46c4-8883-9a438e4db137",
-      "PT2399_delay-module_channel_1"
+      "df460781-6868-4b5f-a343-a62cdc9e1fad",
+      "input_stage_B"
     ],
     [
-      "cee92e54-d997-41ed-bfc8-73b3197e304a",
-      "PT2399_delay-module_channel_2"
+      "e8bb6fd2-e3bb-46c4-8883-9a438e4db137",
+      "delay_stage_A"
+    ],
+    [
+      "ddf99ad6-35e3-44af-b5c8-bbf6767a4776",
+      "panning"
+    ],
+    [
+      "c5a12032-a144-4bc8-a11f-6da4033cad2b",
+      "input_stage_A"
+    ],
+    [
+      "8080dd5d-307b-44f8-a740-8cfdf8cbb0b1",
+      "delay_stage_B"
     ]
   ],
   "text_variables": {}

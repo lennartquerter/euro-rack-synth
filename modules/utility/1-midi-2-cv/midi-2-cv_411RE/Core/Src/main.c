@@ -23,6 +23,7 @@
 /* USER CODE BEGIN Includes */
 
 #include "app/midi.h"
+#include "app/mcp4728.h"
 #include "app/midi_handler.h"
 
 /* USER CODE END Includes */
@@ -343,7 +344,6 @@ static void MX_GPIO_Init(void)
 /* USER CODE END MX_GPIO_Init_1 */
 
   /* GPIO Ports Clock Enable */
-  __HAL_RCC_GPIOH_CLK_ENABLE();
   __HAL_RCC_GPIOA_CLK_ENABLE();
   __HAL_RCC_GPIOB_CLK_ENABLE();
   __HAL_RCC_GPIOC_CLK_ENABLE();
