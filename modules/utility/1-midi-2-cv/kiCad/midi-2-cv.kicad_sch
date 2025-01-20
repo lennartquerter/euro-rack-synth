@@ -1095,7 +1095,7 @@
 					)
 				)
 			)
-			(property "Footprint" "Synth:MIDI_DIN6_SD-50BV"
+			(property "Footprint" "Synth:SD-50BV (DIN5)"
 				(at 8.382 -19.558 0)
 				(effects
 					(font
@@ -1407,7 +1407,7 @@
 						(type none)
 					)
 				)
-				(pin unspecified line
+				(pin passive line
 					(at 0 0 0)
 					(length 5.08)
 					(name "1"
@@ -1425,7 +1425,7 @@
 						)
 					)
 				)
-				(pin unspecified line
+				(pin passive line
 					(at 0 -2.54 0)
 					(length 5.08)
 					(name "2"
@@ -1443,7 +1443,7 @@
 						)
 					)
 				)
-				(pin unspecified line
+				(pin passive line
 					(at 0 -5.08 0)
 					(length 5.08)
 					(name "3"
@@ -1461,7 +1461,7 @@
 						)
 					)
 				)
-				(pin unspecified line
+				(pin passive line
 					(at 0 -7.62 0)
 					(length 5.08)
 					(name "4"
@@ -1479,7 +1479,7 @@
 						)
 					)
 				)
-				(pin unspecified line
+				(pin passive line
 					(at 0 -10.16 0)
 					(length 5.08)
 					(name "5"
@@ -1497,7 +1497,7 @@
 						)
 					)
 				)
-				(pin unspecified line
+				(pin passive line
 					(at 0 -12.7 0)
 					(length 5.08)
 					(name "6"
@@ -2085,7 +2085,7 @@
 		(uuid "e055b7e5-b692-4256-ad0e-077dd9371a8a")
 	)
 	(no_connect
-		(at 92.71 96.52)
+		(at 92.71 95.25)
 		(uuid "105ce9b1-4090-4fe3-ab9c-a474c57d011f")
 	)
 	(no_connect
@@ -2093,11 +2093,11 @@
 		(uuid "1eb76aff-8240-4a85-81f6-ab85c242ac4a")
 	)
 	(no_connect
-		(at 82.55 96.52)
+		(at 82.55 95.25)
 		(uuid "43e11434-8439-4173-8ee4-567b151b45bf")
 	)
 	(no_connect
-		(at 95.25 96.52)
+		(at 95.25 95.25)
 		(uuid "6a644dc0-f55a-46d4-a94d-dc0ff2dd633f")
 	)
 	(wire
@@ -2402,7 +2402,7 @@
 	)
 	(wire
 		(pts
-			(xy 85.09 102.87) (xy 85.09 96.52)
+			(xy 85.09 102.87) (xy 85.09 95.25)
 		)
 		(stroke
 			(width 0)
@@ -2432,7 +2432,7 @@
 	)
 	(wire
 		(pts
-			(xy 90.17 96.52) (xy 90.17 116.84)
+			(xy 90.17 95.25) (xy 90.17 116.84)
 		)
 		(stroke
 			(width 0)
@@ -2479,6 +2479,16 @@
 			(type default)
 		)
 		(uuid "c2862b8d-1c27-468c-a3eb-52b232cbf295")
+	)
+	(wire
+		(pts
+			(xy 87.63 95.25) (xy 87.63 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c706fb9e-6ebf-44d0-9122-d5f744818861")
 	)
 	(wire
 		(pts
@@ -2739,7 +2749,7 @@
 	)
 	(symbol
 		(lib_id "synth:SD-50BV (DIN 5)")
-		(at 82.55 96.52 90)
+		(at 82.55 95.25 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2748,7 +2758,7 @@
 		(fields_autoplaced yes)
 		(uuid "2bbd6004-55eb-46f7-b1de-fea8ab6db1ab")
 		(property "Reference" "J1"
-			(at 99.06 86.3599 90)
+			(at 99.06 85.0899 90)
 			(effects
 				(font
 					(size 1.524 1.524)
@@ -2757,7 +2767,7 @@
 			)
 		)
 		(property "Value" "SD-50BV (DIN5)"
-			(at 99.06 88.8999 90)
+			(at 99.06 87.6299 90)
 			(effects
 				(font
 					(size 1.524 1.524)
@@ -2766,7 +2776,7 @@
 			)
 		)
 		(property "Footprint" "Synth:SD-50BV (DIN5)"
-			(at 102.108 88.138 0)
+			(at 102.108 86.868 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2776,7 +2786,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.sameskydevices.com/product/resource/sd-bv.pdf"
-			(at 104.14 87.376 0)
+			(at 104.14 86.106 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2786,7 +2796,7 @@
 			)
 		)
 		(property "Description" "MIDI DIN5 Connector"
-			(at 106.172 89.916 0)
+			(at 106.172 88.646 0)
 			(effects
 				(font
 					(size 1.27 1.27)

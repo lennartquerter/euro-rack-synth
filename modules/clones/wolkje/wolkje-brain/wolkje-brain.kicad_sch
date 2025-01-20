@@ -1057,13 +1057,121 @@
 				)
 			)
 		)
+		(symbol "power:PWR_FLAG"
+			(power)
+			(pin_numbers hide)
+			(pin_names
+				(offset 0) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#FLG"
+				(at 0 1.905 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" "PWR_FLAG"
+				(at 0 3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Special symbol for telling ERC where power comes from"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "flag power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "PWR_FLAG_0_0"
+				(pin power_out line
+					(at 0 0 90)
+					(length 0)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "PWR_FLAG_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 1.27) (xy -1.016 1.905) (xy 0 2.54) (xy 1.016 1.905) (xy 0 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+		)
+	)
+	(junction
+		(at 162.56 187.96)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "9b103215-d3cb-4a29-ba56-a7cfa4d0b732")
+	)
+	(junction
+		(at 162.56 170.18)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a36ab12f-1cfd-4ca0-98cb-a2f0495ae438")
 	)
 	(no_connect
-		(at 154.94 177.8)
+		(at 166.37 177.8)
 		(uuid "3f83dd6d-ae14-4f86-bd55-161ae31da818")
 	)
 	(no_connect
-		(at 154.94 180.34)
+		(at 166.37 180.34)
 		(uuid "4e7d514c-c637-47bd-8a69-66ac2e6051fd")
 	)
 	(wire
@@ -1105,6 +1213,26 @@
 			(type default)
 		)
 		(uuid "08f9f483-6a8f-4cab-83f7-6a0e59f2733b")
+	)
+	(wire
+		(pts
+			(xy 166.37 182.88) (xy 154.94 182.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0d561e0c-2b57-4e86-bce0-e33b1a2c5ee2")
+	)
+	(wire
+		(pts
+			(xy 166.37 172.72) (xy 154.94 172.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "155521f9-4bce-41c1-8ec4-b32676efb43d")
 	)
 	(wire
 		(pts
@@ -1168,6 +1296,16 @@
 	)
 	(wire
 		(pts
+			(xy 166.37 185.42) (xy 154.94 185.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5ad7d47c-23db-4fd7-817d-ccb61f22ce3a")
+	)
+	(wire
+		(pts
 			(xy 135.89 80.01) (xy 152.4 80.01)
 		)
 		(stroke
@@ -1195,6 +1333,16 @@
 			(type default)
 		)
 		(uuid "6d1f5052-abee-4836-98c6-210c2e43ca1e")
+	)
+	(wire
+		(pts
+			(xy 166.37 187.96) (xy 162.56 187.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "84902224-9fcc-495a-8788-d85dac95f33e")
 	)
 	(wire
 		(pts
@@ -1235,6 +1383,16 @@
 			(type default)
 		)
 		(uuid "a040ef56-935e-40a2-b0bf-82d4c27349e8")
+	)
+	(wire
+		(pts
+			(xy 162.56 170.18) (xy 154.94 170.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a5c05a84-24bc-4deb-8ab9-6e3a15c2aeca")
 	)
 	(wire
 		(pts
@@ -1308,6 +1466,16 @@
 	)
 	(wire
 		(pts
+			(xy 162.56 187.96) (xy 154.94 187.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c03ce8c3-3b3f-4ff3-a48d-2dfd93174cff")
+	)
+	(wire
+		(pts
 			(xy 85.09 78.74) (xy 92.71 78.74)
 		)
 		(stroke
@@ -1315,6 +1483,16 @@
 			(type default)
 		)
 		(uuid "c1206550-2588-49dc-a96f-fcb013fa2d84")
+	)
+	(wire
+		(pts
+			(xy 154.94 175.26) (xy 166.37 175.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c19d3604-a9f9-4da8-b114-304c6bd74c39")
 	)
 	(wire
 		(pts
@@ -1388,6 +1566,16 @@
 	)
 	(wire
 		(pts
+			(xy 166.37 170.18) (xy 162.56 170.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "eae0a9f5-41ee-4826-82ef-c4b1b82f088f")
+	)
+	(wire
+		(pts
 			(xy 184.15 76.2) (xy 190.5 76.2)
 		)
 		(stroke
@@ -1458,7 +1646,7 @@
 	)
 	(symbol
 		(lib_id "Connector_Generic:Conn_01x08")
-		(at 160.02 177.8 0)
+		(at 171.45 177.8 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -1466,8 +1654,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "153d3330-038b-4a20-a3d0-a099b58d1565")
-		(property "Reference" "J7"
-			(at 162.56 177.7999 0)
+		(property "Reference" "J3"
+			(at 173.99 177.7999 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1476,7 +1664,7 @@
 			)
 		)
 		(property "Value" "Power"
-			(at 162.56 180.3399 0)
+			(at 173.99 180.3399 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1485,7 +1673,7 @@
 			)
 		)
 		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical"
-			(at 160.02 177.8 0)
+			(at 171.45 177.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1494,7 +1682,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 160.02 177.8 0)
+			(at 171.45 177.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1503,7 +1691,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x08, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 160.02 177.8 0)
+			(at 171.45 177.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1538,7 +1726,7 @@
 		(instances
 			(project ""
 				(path "/d434ae79-d86c-4782-b5e7-77d1f29745ae"
-					(reference "J7")
+					(reference "J3")
 					(unit 1)
 				)
 			)
@@ -1554,7 +1742,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "156caad3-0056-41dc-b114-83dcd4d4e978")
-		(property "Reference" "#PWR037"
+		(property "Reference" "#PWR09"
 			(at 158.75 187.96 0)
 			(effects
 				(font
@@ -1605,7 +1793,7 @@
 		(instances
 			(project "wolkje-brain"
 				(path "/d434ae79-d86c-4782-b5e7-77d1f29745ae"
-					(reference "#PWR037")
+					(reference "#PWR09")
 					(unit 1)
 				)
 			)
@@ -1621,7 +1809,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2e5ab1eb-ad33-4d6f-ada5-b5058606dca2")
-		(property "Reference" "#PWR034"
+		(property "Reference" "#PWR02"
 			(at 158.75 170.18 0)
 			(effects
 				(font
@@ -1672,7 +1860,7 @@
 		(instances
 			(project "wolkje-brain"
 				(path "/d434ae79-d86c-4782-b5e7-77d1f29745ae"
-					(reference "#PWR034")
+					(reference "#PWR02")
 					(unit 1)
 				)
 			)
@@ -1688,7 +1876,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "35a95174-afb1-4b89-a7de-1cfbe69bf64a")
-		(property "Reference" "#PWR035"
+		(property "Reference" "#PWR07"
 			(at 158.75 185.42 0)
 			(effects
 				(font
@@ -1739,7 +1927,7 @@
 		(instances
 			(project "wolkje-brain"
 				(path "/d434ae79-d86c-4782-b5e7-77d1f29745ae"
-					(reference "#PWR035")
+					(reference "#PWR07")
 					(unit 1)
 				)
 			)
@@ -1755,7 +1943,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3d2759a4-1db3-44a2-b238-d6f7f530c3d9")
-		(property "Reference" "#PWR048"
+		(property "Reference" "#PWR08"
 			(at 125.73 194.31 0)
 			(effects
 				(font
@@ -1806,7 +1994,7 @@
 		(instances
 			(project "wolkje-brain"
 				(path "/d434ae79-d86c-4782-b5e7-77d1f29745ae"
-					(reference "#PWR048")
+					(reference "#PWR08")
 					(unit 1)
 				)
 			)
@@ -1822,7 +2010,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3d955334-eb3f-45db-8643-7aa871051e0f")
-		(property "Reference" "R8"
+		(property "Reference" "R1"
 			(at 128.27 175.2599 0)
 			(effects
 				(font
@@ -1876,7 +2064,7 @@
 		(instances
 			(project "wolkje-brain"
 				(path "/d434ae79-d86c-4782-b5e7-77d1f29745ae"
-					(reference "R8")
+					(reference "R1")
 					(unit 1)
 				)
 			)
@@ -1892,7 +2080,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3e48140c-8050-4318-97a8-d32c30771c07")
-		(property "Reference" "#PWR038"
+		(property "Reference" "#PWR06"
 			(at 148.59 182.88 0)
 			(effects
 				(font
@@ -1943,7 +2131,7 @@
 		(instances
 			(project "wolkje-brain"
 				(path "/d434ae79-d86c-4782-b5e7-77d1f29745ae"
-					(reference "#PWR038")
+					(reference "#PWR06")
 					(unit 1)
 				)
 			)
@@ -1959,7 +2147,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "8658ef23-42ac-4e6e-a3b8-7e508b3f0786")
-		(property "Reference" "#PWR049"
+		(property "Reference" "#PWR03"
 			(at 125.73 176.53 0)
 			(effects
 				(font
@@ -2009,7 +2197,7 @@
 		(instances
 			(project "wolkje-brain"
 				(path "/d434ae79-d86c-4782-b5e7-77d1f29745ae"
-					(reference "#PWR049")
+					(reference "#PWR03")
 					(unit 1)
 				)
 			)
@@ -2025,7 +2213,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "8c492f50-a92e-4413-bdd6-3ce930954829")
-		(property "Reference" "#PWR036"
+		(property "Reference" "#PWR04"
 			(at 158.75 172.72 0)
 			(effects
 				(font
@@ -2076,7 +2264,7 @@
 		(instances
 			(project "wolkje-brain"
 				(path "/d434ae79-d86c-4782-b5e7-77d1f29745ae"
-					(reference "#PWR036")
+					(reference "#PWR04")
 					(unit 1)
 				)
 			)
@@ -2092,7 +2280,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "9343ee31-8b17-48bb-a307-df0a02a5f4e0")
-		(property "Reference" "#PWR029"
+		(property "Reference" "#PWR01"
 			(at 148.59 137.16 0)
 			(effects
 				(font
@@ -2143,7 +2331,7 @@
 		(instances
 			(project ""
 				(path "/d434ae79-d86c-4782-b5e7-77d1f29745ae"
-					(reference "#PWR029")
+					(reference "#PWR01")
 					(unit 1)
 				)
 			)
@@ -2159,7 +2347,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "9f81cf52-a995-4c3b-afe9-3f640c2a73c7")
-		(property "Reference" "J5"
+		(property "Reference" "J2"
 			(at 156.21 125.7299 0)
 			(effects
 				(font
@@ -2219,7 +2407,7 @@
 		(instances
 			(project "wolkje-brain"
 				(path "/d434ae79-d86c-4782-b5e7-77d1f29745ae"
-					(reference "J5")
+					(reference "J2")
 					(unit 1)
 				)
 			)
@@ -2235,7 +2423,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a5f58289-44a2-4d9a-a607-308b2325a6ab")
-		(property "Reference" "D2"
+		(property "Reference" "D1"
 			(at 128.27 181.2924 90)
 			(effects
 				(font
@@ -2289,7 +2477,73 @@
 		(instances
 			(project "wolkje-brain"
 				(path "/d434ae79-d86c-4782-b5e7-77d1f29745ae"
-					(reference "D2")
+					(reference "D1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:PWR_FLAG")
+		(at 162.56 170.18 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a897b630-01c7-4a36-9606-3719de907727")
+		(property "Reference" "#FLG01"
+			(at 162.56 168.275 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 162.56 165.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 162.56 170.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 162.56 170.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 162.56 170.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "dd8831e1-2de3-45dc-835e-d61f2ace4fb4")
+		)
+		(instances
+			(project ""
+				(path "/d434ae79-d86c-4782-b5e7-77d1f29745ae"
+					(reference "#FLG01")
 					(unit 1)
 				)
 			)
@@ -2305,7 +2559,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b8f19c42-aae1-4f21-9451-0cedc7166f47")
-		(property "Reference" "#PWR039"
+		(property "Reference" "#PWR05"
 			(at 148.59 175.26 0)
 			(effects
 				(font
@@ -2356,7 +2610,7 @@
 		(instances
 			(project "wolkje-brain"
 				(path "/d434ae79-d86c-4782-b5e7-77d1f29745ae"
-					(reference "#PWR039")
+					(reference "#PWR05")
 					(unit 1)
 				)
 			)
@@ -2372,7 +2626,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c89266d7-ddc7-4abd-9a1d-a9b50cd3ce9c")
-		(property "Reference" "J4"
+		(property "Reference" "J1"
 			(at 186.69 27.94 90)
 			(effects
 				(font
@@ -2430,7 +2684,73 @@
 		(instances
 			(project ""
 				(path "/d434ae79-d86c-4782-b5e7-77d1f29745ae"
-					(reference "J4")
+					(reference "J1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:PWR_FLAG")
+		(at 162.56 187.96 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c9281297-ea04-45c9-8135-f619a3df8898")
+		(property "Reference" "#FLG02"
+			(at 162.56 189.865 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 162.56 193.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 162.56 187.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 162.56 187.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 162.56 187.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "6cba76f3-a9de-4852-94be-362ce5728721")
+		)
+		(instances
+			(project "wolkje-brain"
+				(path "/d434ae79-d86c-4782-b5e7-77d1f29745ae"
+					(reference "#FLG02")
 					(unit 1)
 				)
 			)
