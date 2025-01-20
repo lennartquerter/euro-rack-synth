@@ -13,6 +13,10 @@ I'm not an expert, but I'm learning as I go and I'm happy to share what I've lea
 
 (First version with 3D printed panels, I'm still missing knobs)
 
+#### 01.01.2025 Updated version
+
+![Update 2025](./img/synth-01-01-2025.png)
+
 ## Disclaimer
 
 I am not responsible for any damage to any of your modules. The modules
@@ -34,27 +38,25 @@ There are tags on the commit that was ordered (for the exact gerber files)
 
 If there are issues, they will be reported in the README for each module.
 
-| Type    | Module                    | Version | Status  | Tested | Issues? | Panel available |
-|---------|---------------------------|---------|---------|--------|---------|-----------------|
-| VCO     | Vixen [MKI]               | 2       | Built   | yes    | No      | Yes (3D print)  |
-| VCO     | 3340                      | 1       | Built   | Yes    | No      | Yes (3D print)  |
-| LFO     | XOF                       | 1       | Built   | Yes    | No      | Yes (3D print)  |
-| VCA     | Sparkle [MKI]             | 2       | Built   | Yes    | No      | Yes (3D print)  |
-| SEQ     | Sensei [Baby 8]           | 2       | Built   | yes    | No      | Yes (3D print)  |
-| EG      | Scribble [MKI]            | 2       | Built   | yes    | No      | Yes (3D print)  |
-| EG      | 7555 [Fastest Envelope]   | 1       | Built   | yes    | No      | Yes (3D print)  |
-| Filter  | 3320                      | 1       | Built   | Yes    | No      | Yes (3D print)  |
-| Filter  | Low Orbit [MKI]           | 1       | Built   | yes    | No      | Yes (3D print)  |
-| Mixer   | Distorted Daisy [MKI]     | 2       | Built   | yes    | No      | Yes (3D print)  |
-| Drums   | Encore (Snare/Clap) [MKI] | 1       | Testing | No     | -       | Yes (Gerber)    |
-| Drums   | Muay Thai (Kick) [MKI]    | 1       | Testing | No     | -       | Yes (Gerber)    |
-| FX      | Ricochet (Delay PT2399)   | 1       | Testing | No     | -       | Yes (Gerber)    |
-| FX      | Weathering (Clouds Clone) | 1       | Testing | No     | -       | Yes (Gerber)    |
-| Utility | Wavefolder (SuperNova)    | 1       | Testing | No     | -       | Yes (Gerber)    |
-| Utility | Midi 2 CV (Midas)         | 1       | Testing | No     | -       | Yes (Gerber)    |
-| Utility | Passive Mult              | 1       | Built   | Yes    | No      | Yes (3D print)  |
-| Utility | Active Mult               | 1       | Built   | Yes    | No      | Yes (3D print)  |
-| Utility | Chrono Divider            | 1       | Built   | yes    | No      | Yes (3D print)  |
+| Type    | Module                    | Version | Status | Tested | Issues? | Panel available |
+|---------|---------------------------|---------|--------|--------|---------|-----------------|
+| VCO     | Vixen [MKI]               | 2       | Built  | yes    | No      | Yes (3D print)  |
+| VCO     | 3340                      | 1       | Built  | Yes    | No      | Yes (3D print)  |
+| LFO     | XOF                       | 1       | Built  | Yes    | No      | Yes (3D print)  |
+| VCA     | Sparkle [MKI]             | 2       | Built  | Yes    | No      | Yes (3D print)  |
+| SEQ     | Sensei [Baby 8]           | 2       | Built  | yes    | No      | Yes (3D print)  |
+| EG      | Scribble [MKI]            | 2       | Built  | yes    | No      | Yes (3D print)  |
+| EG      | 7555 [Fastest Envelope]   | 1       | Built  | yes    | No      | Yes (3D print)  |
+| Filter  | 3320                      | 1       | Built  | Yes    | No      | Yes (3D print)  |
+| Filter  | Low Orbit [MKI]           | 1       | Built  | yes    | No      | Yes (3D print)  |
+| Mixer   | Distorted Daisy [MKI]     | 2       | Built  | yes    | No      | Yes (3D print)  |
+| Drums   | Muay Thai (Kick) [MKI]    | 1       | Built  | Yes    | No      | Yes (Gerber)    |
+| Utility | Wavefolder (SuperNova)    | 1       | built  | Yes    | Minor   | Yes (Gerber)    |
+| Utility | Passive Mult              | 1       | Built  | Yes    | No      | Yes (3D print)  |
+| Utility | Active Mult               | 1       | Built  | Yes    | No      | Yes (3D print)  |
+| Utility | Chrono Divider            | 1       | Built  | yes    | No      | Yes (3D print)  |
+| Utility | Euro ProtoType Helper     | 1       | Built  | yes    | No      | No              |
+
 
 ## The story
 
@@ -275,16 +277,15 @@ I use Fusion 360 for the designs (there is a free non-commercial license!).
 
 ### In progress
 
-| Type    | Module                    | Version | Status          | Tested |
-|---------|---------------------------|---------|-----------------|--------|
-| Utility | Midi-2-cv (Midas)         | 1       | Ready           | yes    |
-| Drums   | Kick                      | 1       | Breadboard done | Yes    |
-| Drums   | Clap/Snare                | 1       | Prototype phase | No     |
-| FX      | Delay (PT-chip)           | 1       | Breadboard done | Yes    |
-| FX      | WaveFolder                | 1       | Prototype phase | No     |
-| Utility | Euro ProtoType Helper     | 1       | Prototype phase | No     |
-| FX      | Clouds Clone / Digital FX | 1       | Prototype phase | No     |
-| Utility | Cable tester              | 1       | Prototype phase | No     |
+The following modules are still under active development. They are not yet ready for production usage.
+
+| Type    | Module                    | Version | Status                 | Tested |
+|---------|---------------------------|---------|------------------------|--------|
+| Utility | Cable tester              | 1       | ready_for_soldering    | No     |
+| Drums   | Clap/Snare                | 1       | NOT_WORKING            | yes    |
+| Utility | Midi-2-cv (Midas)         | 2       | Ready                  | yes    |
+| FX      | Delay (PT-chip)           | 2       | NOT_WORKING            | Yes    |
+| FX      | Clouds Clone / Digital FX | 2       | not_working            | yes    |
 
 ### Next
 
@@ -305,13 +306,17 @@ I use Fusion 360 for the designs (there is a free non-commercial license!).
 
 ### Previous versions
 
-| Type  | Module          | Version | Status | Tested | Issues? |
-|-------|-----------------|---------|--------|--------|---------|
-| VCO   | Vixen           | 1       | Built  | Yes    | Minor   | 
-| VCA   | Sparkle         | 1       | Built  | Yes    | No      |
-| SEQ   | Sensei          | 1       | Built  | Yes    | Minor   |
-| EG    | Scribble        | 1       | Built  | Yes    | Yes     |
-| Mixer | Distorted Daisy | 1       | Built  | yes    | No      |
+| Type    | Module                    | Version | Status       | Tested | Issues? |
+|---------|---------------------------|---------|--------------|--------|---------|
+| VCO     | Vixen                     | 1       | Built        | Yes    | Minor   | 
+| VCA     | Sparkle                   | 1       | Built        | Yes    | No      |
+| SEQ     | Sensei                    | 1       | Built        | Yes    | Minor   |
+| EG      | Scribble                  | 1       | Built        | Yes    | Yes     |
+| Mixer   | Distorted Daisy           | 1       | Built        | yes    | No      |
+| Utility | Midi-2-cv (Midas)         | 1       | Built        | yes    | yes     |
+| Drums   | Clap/Snare                | 1       | Built        | yes    | yes     |
+| FX      | Delay (PT-chip)           | 1       | Built        | Yes    | yes     |
+| FX      | Clouds Clone / Digital FX | 1       | Built        | yes    | yes     |
 
 ## Module links
 
@@ -320,6 +325,10 @@ I use Fusion 360 for the designs (there is a free non-commercial license!).
 - [VIXEN 3000.014](modules/voltage-controlled-oscillators/1-vixen/README.md)
 - [VCO: CEM 3340](modules/voltage-controlled-oscillators/2-3340/README.md)
 - [LFO](modules/voltage-controlled-oscillators/3-lfo/README.md)
+
+### Drums/Percussion
+
+- [Muay Thai (Kick)](modules/drums/1-kick/README.md)
 
 ### Voltage Controlled Amplifiers
 
@@ -348,3 +357,4 @@ I use Fusion 360 for the designs (there is a free non-commercial license!).
 - [Active Mult](modules/utility/4-active-mult/README.md)
 - [Passive Mult](modules/utility/5-passive-mult/README.md)
 - [Clock Divider](modules/utility/3-clock-divider/README.md)
+- [Wavefolder (SuperNova)](modules/utility/6-wavefolder/README.md)
