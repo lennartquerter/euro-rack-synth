@@ -75,8 +75,22 @@ void Error_Handler(void);
 #define TEXTURE_CV_GPIO_Port GPIOA
 #define BLEND_Pin GPIO_PIN_4
 #define BLEND_GPIO_Port GPIOC
+#define I2C1_RST_Pin GPIO_PIN_12
+#define I2C1_RST_GPIO_Port GPIOB
+#define SW_LOAD_Pin GPIO_PIN_13
+#define SW_LOAD_GPIO_Port GPIOB
 #define BLEND_CV_Pin GPIO_PIN_14
 #define BLEND_CV_GPIO_Port GPIOB
+#define SW_MODE_Pin GPIO_PIN_15
+#define SW_MODE_GPIO_Port GPIOB
+#define SW_FREEZE_Pin GPIO_PIN_6
+#define SW_FREEZE_GPIO_Port GPIOC
+#define LED_FREEZE_Pin GPIO_PIN_7
+#define LED_FREEZE_GPIO_Port GPIOC
+#define PLAY_TRIGGER_Pin GPIO_PIN_8
+#define PLAY_TRIGGER_GPIO_Port GPIOC
+#define FREEZE_TRIGGER_Pin GPIO_PIN_9
+#define FREEZE_TRIGGER_GPIO_Port GPIOC
 #define SPI3_ENABLE_Pin GPIO_PIN_11
 #define SPI3_ENABLE_GPIO_Port GPIOC
 

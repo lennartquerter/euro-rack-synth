@@ -895,126 +895,6 @@
 				)
 			)
 		)
-		(symbol "power:+5VA"
-			(power)
-			(pin_numbers hide)
-			(pin_names
-				(offset 0) hide)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "#PWR"
-				(at 0 -3.81 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Value" "+5VA"
-				(at 0 3.556 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Power symbol creates a global label with name \"+5VA\""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "global power"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "+5VA_0_1"
-				(polyline
-					(pts
-						(xy -0.762 1.27) (xy 0 2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 0) (xy 0 2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 2.54) (xy 0.762 1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "+5VA_1_1"
-				(pin power_in line
-					(at 0 0 90)
-					(length 0)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-		)
 		(symbol "power:GNDREF"
 			(power)
 			(pin_numbers hide)
@@ -1147,12 +1027,6 @@
 				)
 			)
 		)
-	)
-	(junction
-		(at 165.1 71.12)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "1e14a063-6ef8-4598-ab3f-38a148bb7a5a")
 	)
 	(junction
 		(at 165.1 104.14)
@@ -1340,7 +1214,7 @@
 	)
 	(wire
 		(pts
-			(xy 149.86 71.12) (xy 165.1 71.12)
+			(xy 149.86 71.12) (xy 177.8 71.12)
 		)
 		(stroke
 			(width 0)
@@ -1690,16 +1564,6 @@
 	)
 	(wire
 		(pts
-			(xy 165.1 71.12) (xy 177.8 71.12)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c4683281-8625-4f2d-8242-e8ca6d52ace8")
-	)
-	(wire
-		(pts
 			(xy 88.9 96.52) (xy 88.9 107.95)
 		)
 		(stroke
@@ -1797,6 +1661,17 @@
 			(type default)
 		)
 		(uuid "f7c72b92-4752-4348-84de-3bae63b98f93")
+	)
+	(text "Sets the MODE of the CHIP\n\nAD0 (Pin 11)    Mode\n0               I2S\n1               Left-Justified\n\nAD1 (Pin 12)    Mode\n0               Standard\n1               Custom\n\nAD2 (Pin 13)    MCLK Mode\n0               256Fs\n1               384Fs/512Fs"
+		(exclude_from_sim no)
+		(at 86.106 133.604 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "af6f3a57-26e0-42a3-802f-da3717214955")
 	)
 	(hierarchical_label "RST"
 		(shape input)
@@ -2267,72 +2142,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+3.3V")
-		(at 165.1 63.5 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "20409684-c72a-4a16-ba09-dec627a3e90b")
-		(property "Reference" "#PWR039"
-			(at 165.1 67.31 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+3.3V"
-			(at 165.1 58.42 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 165.1 63.5 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 165.1 63.5 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-			(at 165.1 63.5 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "6bd902a0-7305-47ad-b82f-4b0beed55292")
-		)
-		(instances
-			(project "reverb-dsp-brain"
-				(path "/d434ae79-d86c-4782-b5e7-77d1f29745ae/d5cbbb62-576c-47e8-bd32-3ebbeaee0e2b"
-					(reference "#PWR039")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:C")
 		(at 177.8 107.95 0)
 		(unit 1)
@@ -2534,6 +2343,73 @@
 			(project "reverb-dsp-brain"
 				(path "/d434ae79-d86c-4782-b5e7-77d1f29745ae/d5cbbb62-576c-47e8-bd32-3ebbeaee0e2b"
 					(reference "C14")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3.3V")
+		(at 177.8 29.21 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "572cc970-9e8a-46e4-8064-4946f7bd4bb1")
+		(property "Reference" "#PWR017"
+			(at 177.8 33.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3.3VA"
+			(at 180.34 27.9399 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 177.8 29.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 177.8 29.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 177.8 29.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c3678d02-1997-45a6-9bde-466315a3b371")
+		)
+		(instances
+			(project "reverb-dsp-brain"
+				(path "/d434ae79-d86c-4782-b5e7-77d1f29745ae/d5cbbb62-576c-47e8-bd32-3ebbeaee0e2b"
+					(reference "#PWR017")
 					(unit 1)
 				)
 			)
@@ -2941,72 +2817,6 @@
 			(project "reverb-dsp-brain"
 				(path "/d434ae79-d86c-4782-b5e7-77d1f29745ae/d5cbbb62-576c-47e8-bd32-3ebbeaee0e2b"
 					(reference "C12")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+5VA")
-		(at 177.8 29.21 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "71b2b0ff-b2c4-4fc7-bbed-db63b598791e")
-		(property "Reference" "#PWR031"
-			(at 177.8 33.02 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+5VA"
-			(at 177.8 24.13 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 177.8 29.21 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 177.8 29.21 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+5VA\""
-			(at 177.8 29.21 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "c73cba20-5fc5-45ce-b66b-47a4155c1dd8")
-		)
-		(instances
-			(project ""
-				(path "/d434ae79-d86c-4782-b5e7-77d1f29745ae/d5cbbb62-576c-47e8-bd32-3ebbeaee0e2b"
-					(reference "#PWR031")
 					(unit 1)
 				)
 			)
@@ -3564,76 +3374,6 @@
 			(project "reverb-dsp-brain"
 				(path "/d434ae79-d86c-4782-b5e7-77d1f29745ae/d5cbbb62-576c-47e8-bd32-3ebbeaee0e2b"
 					(reference "R4")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 165.1 67.31 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "aa38d69a-1110-4fcb-91ff-78e88d6aba99")
-		(property "Reference" "R6"
-			(at 167.64 66.0399 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "47K"
-			(at 167.64 68.5799 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 163.322 67.31 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 165.1 67.31 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 165.1 67.31 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "5a0b5f29-1bdd-4417-81ef-e398a03d5857")
-		)
-		(pin "1"
-			(uuid "62cdf487-0786-4bc1-9a7c-622c610b19a6")
-		)
-		(instances
-			(project "reverb-dsp-brain"
-				(path "/d434ae79-d86c-4782-b5e7-77d1f29745ae/d5cbbb62-576c-47e8-bd32-3ebbeaee0e2b"
-					(reference "R6")
 					(unit 1)
 				)
 			)

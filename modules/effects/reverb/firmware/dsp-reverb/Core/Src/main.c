@@ -19,10 +19,11 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 
-#include <stdio.h>
-
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+#include "app/cs4270.h"
+#include "app/reverb.h"
+#include "app/led_driver.h"
 
 /* USER CODE END Includes */
 
@@ -33,6 +34,9 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
+// Buffer sizes for 48kHz stereo, 24-bit
+#define BUFFER_SIZE     256  // Adjust based on your latency requirements
+#define SAMPLE_SIZE     4    // 32-bit container for 24-bit samples
 
 /* USER CODE END PD */
 
@@ -52,7 +56,23 @@ SAI_HandleTypeDef hsai_BlockB1;
 
 SPI_HandleTypeDef hspi3;
 
+UART_HandleTypeDef huart1;
+
 /* USER CODE BEGIN PV */
+
+LED_DRIVER_config led_driver_config;
+CS4270_config cs4270_config;
+REVERB_config reverb_config;
+
+
+// Define buffers for ADC results
+uint16_t adc1_buffer[5];  // Size matches NbrOfConversion
+uint16_t adc2_buffer[5];
+
+// DMA buffers
+int32_t rxBuffer[BUFFER_SIZE * 2]; // Double buffer for input
+int32_t txBuffer[BUFFER_SIZE * 2]; // Double buffer for output
+
 
 /* USER CODE END PV */
 
@@ -64,12 +84,48 @@ static void MX_ADC2_Init(void);
 static void MX_I2C1_Init(void);
 static void MX_SAI1_Init(void);
 static void MX_SPI3_Init(void);
+static void MX_USART1_UART_Init(void);
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+
+// Initialize DMA
+void initAudioDMA(void)
+{
+    // Start SAI DMA for both RX and TX
+    HAL_SAI_Receive_DMA(&hsai_BlockB1, (uint8_t*)rxBuffer, BUFFER_SIZE * 2);
+    HAL_SAI_Transmit_DMA(&hsai_BlockA1, (uint8_t*)txBuffer, BUFFER_SIZE * 2);
+}
+
+void initADC(void)
+{
+    // Start ADCs with DMA
+    HAL_ADC_Start_DMA(&hadc1, (uint32_t*)adc1_buffer, 5);
+    HAL_ADC_Start_DMA(&hadc2, (uint32_t*)adc2_buffer, 5);
+}
+
+// DMA Callbacks
+
+void HAL_SAI_RxHalfCpltCallback(SAI_HandleTypeDef* hsai)
+{
+    if (hsai->Instance == SAI1_Block_B)
+    {
+        // Process first half of input buffer
+        REVERB_process(rxBuffer, txBuffer, 0, BUFFER_SIZE);
+    }
+}
+
+void HAL_SAI_RxCpltCallback(SAI_HandleTypeDef* hsai)
+{
+    if (hsai->Instance == SAI1_Block_B)
+    {
+        // Process second half of input buffer
+        REVERB_process(rxBuffer, txBuffer, BUFFER_SIZE, BUFFER_SIZE);
+    }
+}
 
 /* USER CODE END 0 */
 
@@ -106,7 +162,86 @@ int main(void)
     MX_I2C1_Init();
     MX_SAI1_Init();
     MX_SPI3_Init();
+    MX_USART1_UART_Init();
     /* USER CODE BEGIN 2 */
+
+    // **********************
+    // INIT LED DRIVER
+    // **********************
+    LED_DRIVER_init(&led_driver_config, SPI3_ENABLE_GPIO_Port, SPI3_ENABLE_Pin, &hspi3);
+
+    LED_DRIVER_set_color(&led_driver_config, LED1, LED_GREEN);
+    HAL_Delay(500);
+
+    // **********************
+    // INIT CS4270
+    // **********************
+    cs4270_init(&cs4270_config, I2C1_RST_GPIO_Port, I2C1_RST_Pin, &hi2c1);
+    if (cs4270_configure(&cs4270_config) != HAL_OK)
+    {
+        LED_DRIVER_set_all(&led_driver_config, LED_RED);
+        Error_Handler();
+    }
+
+    LED_DRIVER_set_color(&led_driver_config, LED2, LED_GREEN);
+    HAL_Delay(500);
+
+    // Set initial volume
+    cs4270_set_volume(&cs4270_config, 0); // 0dB
+
+    // **********************
+    // INIT Reverb
+    // **********************
+
+    REVERB_init(&reverb_config,
+                SIZE_GPIO_Port,
+                SIZE_Pin,
+                TEXTURE_GPIO_Port,
+                TEXTURE_Pin,
+                PITCH_GPIO_Port,
+                PITCH_Pin,
+                BLEND_GPIO_Port,
+                BLEND_Pin,
+                V_OCT_GPIO_Port,
+                V_OCT_Pin,
+                SIZE_CV_GPIO_Port,
+                SIZE_CV_Pin,
+                BLEND_CV_GPIO_Port,
+                BLEND_CV_Pin,
+                TEXTURE_CV_GPIO_Port,
+                TEXTURE_CV_Pin,
+                POSITION_GPIO_Port,
+                POSITION_Pin,
+                DENSITY_GPIO_Port,
+                DENSITY_Pin
+    );
+
+    LED_DRIVER_set_color(&led_driver_config, LED3, LED_GREEN);
+    HAL_Delay(500);
+
+    // **********************
+    // INIT ADC's for DMA
+    // **********************
+    initADC();
+
+    LED_DRIVER_set_color(&led_driver_config, LED4, LED_GREEN);
+    HAL_Delay(500);
+
+    // **********************
+    // INIT DMA
+    // **********************
+
+    // Start DMA transfers, only after the CS4270 has been configured
+    initAudioDMA();
+
+    // **********************
+    // SHOW SUCCESS STATUS
+    // **********************
+
+    LED_DRIVER_set_all(&led_driver_config, LED_YELLOW);
+    // Wait for a second before turing all lights off to show all is okay
+    HAL_Delay(1000);
+    LED_DRIVER_set_all(&led_driver_config, LED_OFF);
 
     /* USER CODE END 2 */
 
@@ -118,7 +253,10 @@ int main(void)
 
         /* USER CODE BEGIN 3 */
 
-        printf('hello world');
+        // **********************
+        // PROCESS REVERB CONFIG
+        // **********************
+        REVERB_run(&reverb_config);
     }
     /* USER CODE END 3 */
 }
@@ -230,6 +368,12 @@ static void MX_ADC1_Init(void)
         Error_Handler();
     }
     /* USER CODE BEGIN ADC1_Init 2 */
+
+    // V_OCT
+    sConfig.Channel = ADC_CHANNEL_1;  // PA0
+    sConfig.Rank = ADC_REGULAR_RANK_1;
+    sConfig.SamplingTime = ADC_SAMPLETIME_47CYCLES_5;
+    HAL_ADC_ConfigChannel(&hadc1, &sConfig);
 
     /* USER CODE END ADC1_Init 2 */
 }
@@ -424,6 +568,52 @@ static void MX_SPI3_Init(void)
 }
 
 /**
+  * @brief USART1 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_USART1_UART_Init(void)
+{
+    /* USER CODE BEGIN USART1_Init 0 */
+
+    /* USER CODE END USART1_Init 0 */
+
+    /* USER CODE BEGIN USART1_Init 1 */
+
+    /* USER CODE END USART1_Init 1 */
+    huart1.Instance = USART1;
+    huart1.Init.BaudRate = 115200;
+    huart1.Init.WordLength = UART_WORDLENGTH_8B;
+    huart1.Init.StopBits = UART_STOPBITS_1;
+    huart1.Init.Parity = UART_PARITY_NONE;
+    huart1.Init.Mode = UART_MODE_TX_RX;
+    huart1.Init.HwFlowCtl = UART_HWCONTROL_NONE;
+    huart1.Init.OverSampling = UART_OVERSAMPLING_16;
+    huart1.Init.OneBitSampling = UART_ONE_BIT_SAMPLE_DISABLE;
+    huart1.Init.ClockPrescaler = UART_PRESCALER_DIV1;
+    huart1.AdvancedInit.AdvFeatureInit = UART_ADVFEATURE_NO_INIT;
+    if (HAL_UART_Init(&huart1) != HAL_OK)
+    {
+        Error_Handler();
+    }
+    if (HAL_UARTEx_SetTxFifoThreshold(&huart1, UART_TXFIFO_THRESHOLD_1_8) != HAL_OK)
+    {
+        Error_Handler();
+    }
+    if (HAL_UARTEx_SetRxFifoThreshold(&huart1, UART_RXFIFO_THRESHOLD_1_8) != HAL_OK)
+    {
+        Error_Handler();
+    }
+    if (HAL_UARTEx_DisableFifoMode(&huart1) != HAL_OK)
+    {
+        Error_Handler();
+    }
+    /* USER CODE BEGIN USART1_Init 2 */
+
+    /* USER CODE END USART1_Init 2 */
+}
+
+/**
   * @brief GPIO Initialization Function
   * @param None
   * @retval None
@@ -441,7 +631,45 @@ static void MX_GPIO_Init(void)
     __HAL_RCC_GPIOB_CLK_ENABLE();
 
     /*Configure GPIO pin Output Level */
+    HAL_GPIO_WritePin(I2C1_RST_GPIO_Port, I2C1_RST_Pin, GPIO_PIN_RESET);
+
+    /*Configure GPIO pin Output Level */
+    HAL_GPIO_WritePin(LED_FREEZE_GPIO_Port, LED_FREEZE_Pin, GPIO_PIN_RESET);
+
+    /*Configure GPIO pin Output Level */
     HAL_GPIO_WritePin(SPI3_ENABLE_GPIO_Port, SPI3_ENABLE_Pin, GPIO_PIN_SET);
+
+    /*Configure GPIO pin : I2C1_RST_Pin */
+    GPIO_InitStruct.Pin = I2C1_RST_Pin;
+    GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+    GPIO_InitStruct.Pull = GPIO_NOPULL;
+    GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+    HAL_GPIO_Init(I2C1_RST_GPIO_Port, &GPIO_InitStruct);
+
+    /*Configure GPIO pins : SW_LOAD_Pin SW_MODE_Pin */
+    GPIO_InitStruct.Pin = SW_LOAD_Pin | SW_MODE_Pin;
+    GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+    GPIO_InitStruct.Pull = GPIO_PULLUP;
+    HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+
+    /*Configure GPIO pin : SW_FREEZE_Pin */
+    GPIO_InitStruct.Pin = SW_FREEZE_Pin;
+    GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+    GPIO_InitStruct.Pull = GPIO_PULLUP;
+    HAL_GPIO_Init(SW_FREEZE_GPIO_Port, &GPIO_InitStruct);
+
+    /*Configure GPIO pin : LED_FREEZE_Pin */
+    GPIO_InitStruct.Pin = LED_FREEZE_Pin;
+    GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+    GPIO_InitStruct.Pull = GPIO_NOPULL;
+    GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+    HAL_GPIO_Init(LED_FREEZE_GPIO_Port, &GPIO_InitStruct);
+
+    /*Configure GPIO pins : PLAY_TRIGGER_Pin FREEZE_TRIGGER_Pin */
+    GPIO_InitStruct.Pin = PLAY_TRIGGER_Pin | FREEZE_TRIGGER_Pin;
+    GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+    GPIO_InitStruct.Pull = GPIO_PULLDOWN;
+    HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
 
     /*Configure GPIO pin : SPI3_ENABLE_Pin */
     GPIO_InitStruct.Pin = SPI3_ENABLE_Pin;
