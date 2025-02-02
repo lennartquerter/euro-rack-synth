@@ -9,11 +9,18 @@ The goal of having the MCU board as a independent board is to allow the user to 
 They can replace the Audio codec & MCU with more modern versions to generate different effects. The front panel design
 is different on the second side, providing a alternative look for the module.
 
-License: CC BY-SA 3.0
+License: CC BY-SA 3.0 [Mutable Instruments](https://mutable-instruments.net/)
 
 Schematics used:
 - Original Clouds
 - TOIL's THT version of Clouds
+
+(firmware included in the repository, copied from TOIL's version)
+
+## !!! BUILD NOTES (VERSION 2)
+
+- (brain) Footprint of LED D1 is inverted! (fixed in version 3)
+- (control) All POTS are inverted. They are mirrored. (fixed in version 3)
 
 ## Information
 
@@ -43,6 +50,17 @@ PCB Tested: Yes
 Built: Yes
 
 Issues:
-- Voltage pins for TL072 were swapped
-- LM4040 had the wrong footprint (pin-out was 1->2 instead of 3>2). swapped with cheaper LM4040 SOT-23-3 component
-- LED's were in the wrong configuration, swapped position
+- (control board) Voltage pins for TL072 were swapped
+- (control board) LM4040 had the wrong footprint (pin-out was 1->2 instead of 3>2). swapped with cheaper LM4040 SOT-23-3 component
+- (control board) LED's were in the wrong configuration, swapped position
+- (brain) STM32 could not be flashed.
+- (brain) NRST was not pulled down, leading to constant reset.
+
+### Version: 2
+PCB Tested: Yes
+
+Built: Yes
+
+Issues:
+- (brain) LED D1 is inverted! This is fixed in version 3, but if you are making your own PCB, make sure to invert the LED.
+- (control) All POTS are inverted. They are mirrored.
