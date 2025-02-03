@@ -23,6 +23,7 @@
 /* USER CODE BEGIN Includes */
 #include "app/cs4270.h"
 #include "app/reverb.h"
+#include "app/adc.h"
 #include "app/led_driver.h"
 
 /* USER CODE END Includes */
@@ -48,6 +49,8 @@
 /* Private variables ---------------------------------------------------------*/
 ADC_HandleTypeDef hadc1;
 ADC_HandleTypeDef hadc2;
+DMA_HandleTypeDef hdma_adc1;
+DMA_HandleTypeDef hdma_adc2;
 
 I2C_HandleTypeDef hi2c1;
 
@@ -60,13 +63,15 @@ UART_HandleTypeDef huart1;
 
 /* USER CODE BEGIN PV */
 
+// Configurations
 LED_DRIVER_config led_driver_config;
 CS4270_config cs4270_config;
-REVERB_config reverb_config;
 
+// UI Parameters
+REVERB_parameters reverb_parameters;
 
 // Define buffers for ADC results
-uint16_t adc1_buffer[5];  // Size matches NbrOfConversion
+uint16_t adc1_buffer[5]; // Size matches NbrOfConversion
 uint16_t adc2_buffer[5];
 
 // DMA buffers
@@ -79,6 +84,7 @@ int32_t txBuffer[BUFFER_SIZE * 2]; // Double buffer for output
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
+static void MX_DMA_Init(void);
 static void MX_ADC1_Init(void);
 static void MX_ADC2_Init(void);
 static void MX_I2C1_Init(void);
@@ -96,18 +102,21 @@ static void MX_USART1_UART_Init(void);
 void initAudioDMA(void)
 {
     // Start SAI DMA for both RX and TX
-    HAL_SAI_Receive_DMA(&hsai_BlockB1, (uint8_t*)rxBuffer, BUFFER_SIZE * 2);
-    HAL_SAI_Transmit_DMA(&hsai_BlockA1, (uint8_t*)txBuffer, BUFFER_SIZE * 2);
-}
-
-void initADC(void)
-{
-    // Start ADCs with DMA
-    HAL_ADC_Start_DMA(&hadc1, (uint32_t*)adc1_buffer, 5);
-    HAL_ADC_Start_DMA(&hadc2, (uint32_t*)adc2_buffer, 5);
+    HAL_SAI_Receive_DMA(&hsai_BlockB1, rxBuffer, BUFFER_SIZE * 2);
+    HAL_SAI_Transmit_DMA(&hsai_BlockA1, txBuffer, BUFFER_SIZE * 2);
 }
 
 // DMA Callbacks
+
+void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc)
+{
+    if(hadc->Instance == ADC1)
+    {
+        // Process new values
+        REVERB_parameters parameters = ADC_fetch_parameters();
+        ADC_smooth_parameters(parameters, &reverb_parameters);
+    }
+}
 
 void HAL_SAI_RxHalfCpltCallback(SAI_HandleTypeDef* hsai)
 {
@@ -157,6 +166,7 @@ int main(void)
 
     /* Initialize all configured peripherals */
     MX_GPIO_Init();
+    MX_DMA_Init();
     MX_ADC1_Init();
     MX_ADC2_Init();
     MX_I2C1_Init();
@@ -193,36 +203,12 @@ int main(void)
     // INIT Reverb
     // **********************
 
-    REVERB_init(&reverb_config,
-                SIZE_GPIO_Port,
-                SIZE_Pin,
-                TEXTURE_GPIO_Port,
-                TEXTURE_Pin,
-                PITCH_GPIO_Port,
-                PITCH_Pin,
-                BLEND_GPIO_Port,
-                BLEND_Pin,
-                V_OCT_GPIO_Port,
-                V_OCT_Pin,
-                SIZE_CV_GPIO_Port,
-                SIZE_CV_Pin,
-                BLEND_CV_GPIO_Port,
-                BLEND_CV_Pin,
-                TEXTURE_CV_GPIO_Port,
-                TEXTURE_CV_Pin,
-                POSITION_GPIO_Port,
-                POSITION_Pin,
-                DENSITY_GPIO_Port,
-                DENSITY_Pin
-    );
-
     LED_DRIVER_set_color(&led_driver_config, LED3, LED_GREEN);
     HAL_Delay(500);
 
     // **********************
     // INIT ADC's for DMA
     // **********************
-    initADC();
 
     LED_DRIVER_set_color(&led_driver_config, LED4, LED_GREEN);
     HAL_Delay(500);
@@ -256,7 +242,6 @@ int main(void)
         // **********************
         // PROCESS REVERB CONFIG
         // **********************
-        REVERB_run(&reverb_config);
     }
     /* USER CODE END 3 */
 }
@@ -331,16 +316,16 @@ static void MX_ADC1_Init(void)
     hadc1.Init.Resolution = ADC_RESOLUTION_12B;
     hadc1.Init.DataAlign = ADC_DATAALIGN_RIGHT;
     hadc1.Init.GainCompensation = 0;
-    hadc1.Init.ScanConvMode = ADC_SCAN_DISABLE;
+    hadc1.Init.ScanConvMode = ADC_SCAN_ENABLE;
     hadc1.Init.EOCSelection = ADC_EOC_SINGLE_CONV;
     hadc1.Init.LowPowerAutoWait = DISABLE;
-    hadc1.Init.ContinuousConvMode = DISABLE;
-    hadc1.Init.NbrOfConversion = 1;
+    hadc1.Init.ContinuousConvMode = ENABLE;
+    hadc1.Init.NbrOfConversion = 5;
     hadc1.Init.DiscontinuousConvMode = DISABLE;
     hadc1.Init.ExternalTrigConv = ADC_SOFTWARE_START;
     hadc1.Init.ExternalTrigConvEdge = ADC_EXTERNALTRIGCONVEDGE_NONE;
-    hadc1.Init.DMAContinuousRequests = DISABLE;
-    hadc1.Init.Overrun = ADC_OVR_DATA_OVERWRITTEN;
+    hadc1.Init.DMAContinuousRequests = ENABLE;
+    hadc1.Init.Overrun = ADC_OVR_DATA_PRESERVED;
     hadc1.Init.OversamplingMode = DISABLE;
     if (HAL_ADC_Init(&hadc1) != HAL_OK)
     {
@@ -359,7 +344,7 @@ static void MX_ADC1_Init(void)
     */
     sConfig.Channel = ADC_CHANNEL_1;
     sConfig.Rank = ADC_REGULAR_RANK_1;
-    sConfig.SamplingTime = ADC_SAMPLETIME_2CYCLES_5;
+    sConfig.SamplingTime = ADC_SAMPLETIME_47CYCLES_5;
     sConfig.SingleDiff = ADC_SINGLE_ENDED;
     sConfig.OffsetNumber = ADC_OFFSET_NONE;
     sConfig.Offset = 0;
@@ -367,10 +352,46 @@ static void MX_ADC1_Init(void)
     {
         Error_Handler();
     }
+
+    /** Configure Regular Channel
+    */
+    sConfig.Channel = ADC_CHANNEL_2;
+    sConfig.Rank = ADC_REGULAR_RANK_2;
+    if (HAL_ADC_ConfigChannel(&hadc1, &sConfig) != HAL_OK)
+    {
+        Error_Handler();
+    }
+
+    /** Configure Regular Channel
+    */
+    sConfig.Channel = ADC_CHANNEL_3;
+    sConfig.Rank = ADC_REGULAR_RANK_3;
+    if (HAL_ADC_ConfigChannel(&hadc1, &sConfig) != HAL_OK)
+    {
+        Error_Handler();
+    }
+
+    /** Configure Regular Channel
+    */
+    sConfig.Channel = ADC_CHANNEL_4;
+    sConfig.Rank = ADC_REGULAR_RANK_4;
+    if (HAL_ADC_ConfigChannel(&hadc1, &sConfig) != HAL_OK)
+    {
+        Error_Handler();
+    }
+
+    /** Configure Regular Channel
+    */
+    sConfig.Channel = ADC_CHANNEL_5;
+    sConfig.Rank = ADC_REGULAR_RANK_5;
+    if (HAL_ADC_ConfigChannel(&hadc1, &sConfig) != HAL_OK)
+    {
+        Error_Handler();
+    }
     /* USER CODE BEGIN ADC1_Init 2 */
 
     // V_OCT
-    sConfig.Channel = ADC_CHANNEL_1;  // PA0
+    sConfig.Channel = ADC_CHANNEL_1; // PA0
     sConfig.Rank = ADC_REGULAR_RANK_1;
     sConfig.SamplingTime = ADC_SAMPLETIME_47CYCLES_5;
     HAL_ADC_ConfigChannel(&hadc1, &sConfig);
@@ -402,16 +423,16 @@ static void MX_ADC2_Init(void)
     hadc2.Init.Resolution = ADC_RESOLUTION_12B;
     hadc2.Init.DataAlign = ADC_DATAALIGN_RIGHT;
     hadc2.Init.GainCompensation = 0;
-    hadc2.Init.ScanConvMode = ADC_SCAN_DISABLE;
-    hadc2.Init.EOCSelection = ADC_EOC_SINGLE_CONV;
+    hadc2.Init.ScanConvMode = ADC_SCAN_ENABLE;
+    hadc2.Init.EOCSelection = ADC_EOC_SEQ_CONV;
     hadc2.Init.LowPowerAutoWait = DISABLE;
-    hadc2.Init.ContinuousConvMode = DISABLE;
-    hadc2.Init.NbrOfConversion = 1;
+    hadc2.Init.ContinuousConvMode = ENABLE;
+    hadc2.Init.NbrOfConversion = 5;
     hadc2.Init.DiscontinuousConvMode = DISABLE;
     hadc2.Init.ExternalTrigConv = ADC_SOFTWARE_START;
     hadc2.Init.ExternalTrigConvEdge = ADC_EXTERNALTRIGCONVEDGE_NONE;
-    hadc2.Init.DMAContinuousRequests = DISABLE;
-    hadc2.Init.Overrun = ADC_OVR_DATA_OVERWRITTEN;
+    hadc2.Init.DMAContinuousRequests = ENABLE;
+    hadc2.Init.Overrun = ADC_OVR_DATA_PRESERVED;
     hadc2.Init.OversamplingMode = DISABLE;
     if (HAL_ADC_Init(&hadc2) != HAL_OK)
     {
@@ -422,10 +443,46 @@ static void MX_ADC2_Init(void)
     */
     sConfig.Channel = ADC_CHANNEL_3;
     sConfig.Rank = ADC_REGULAR_RANK_1;
-    sConfig.SamplingTime = ADC_SAMPLETIME_2CYCLES_5;
+    sConfig.SamplingTime = ADC_SAMPLETIME_47CYCLES_5;
     sConfig.SingleDiff = ADC_SINGLE_ENDED;
     sConfig.OffsetNumber = ADC_OFFSET_NONE;
     sConfig.Offset = 0;
+    if (HAL_ADC_ConfigChannel(&hadc2, &sConfig) != HAL_OK)
+    {
+        Error_Handler();
+    }
+
+    /** Configure Regular Channel
+    */
+    sConfig.Channel = ADC_CHANNEL_4;
+    sConfig.Rank = ADC_REGULAR_RANK_2;
+    if (HAL_ADC_ConfigChannel(&hadc2, &sConfig) != HAL_OK)
+    {
+        Error_Handler();
+    }
+
+    /** Configure Regular Channel
+    */
+    sConfig.Channel = ADC_CHANNEL_5;
+    sConfig.Rank = ADC_REGULAR_RANK_3;
+    if (HAL_ADC_ConfigChannel(&hadc2, &sConfig) != HAL_OK)
+    {
+        Error_Handler();
+    }
+
+    /** Configure Regular Channel
+    */
+    sConfig.Channel = ADC_CHANNEL_6;
+    sConfig.Rank = ADC_REGULAR_RANK_4;
+    if (HAL_ADC_ConfigChannel(&hadc2, &sConfig) != HAL_OK)
+    {
+        Error_Handler();
+    }
+
+    /** Configure Regular Channel
+    */
+    sConfig.Channel = ADC_CHANNEL_7;
+    sConfig.Rank = ADC_REGULAR_RANK_5;
     if (HAL_ADC_ConfigChannel(&hadc2, &sConfig) != HAL_OK)
     {
         Error_Handler();
@@ -611,6 +668,24 @@ static void MX_USART1_UART_Init(void)
     /* USER CODE BEGIN USART1_Init 2 */
 
     /* USER CODE END USART1_Init 2 */
+}
+
+/**
+  * Enable DMA controller clock
+  */
+static void MX_DMA_Init(void)
+{
+    /* DMA controller clock enable */
+    __HAL_RCC_DMAMUX1_CLK_ENABLE();
+    __HAL_RCC_DMA1_CLK_ENABLE();
+
+    /* DMA interrupt init */
+    /* DMA1_Channel1_IRQn interrupt configuration */
+    HAL_NVIC_SetPriority(DMA1_Channel1_IRQn, 0, 0);
+    HAL_NVIC_EnableIRQ(DMA1_Channel1_IRQn);
+    /* DMA1_Channel2_IRQn interrupt configuration */
+    HAL_NVIC_SetPriority(DMA1_Channel2_IRQn, 0, 0);
+    HAL_NVIC_EnableIRQ(DMA1_Channel2_IRQn);
 }
 
 /**
