@@ -7,6 +7,7 @@
 #define _M2C_BUFFER_
 
 #include <stdint.h>
+#include <stdbool.h>
 
 typedef enum {
     BUFFER_FAILURE,
@@ -27,5 +28,11 @@ BUFFER_STATUS buffer_u8_free(Buffer *buf);
 BUFFER_STATUS buffer_push(Buffer *buf, const uint8_t *input);
 
 BUFFER_STATUS buffer_pop(Buffer *buf, uint8_t *ret);
+
+uint16_t buffer_get_size(Buffer *buf);
+
+bool buffer_is_empty(Buffer *buf);
+
+bool buffer_is_full(Buffer *buf);
 
 #endif /* _M2C_BUFFER_ */

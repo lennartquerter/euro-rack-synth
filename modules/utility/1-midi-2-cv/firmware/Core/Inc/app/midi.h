@@ -8,11 +8,12 @@
 #ifndef _M2C_MIDI_H_
 #define _M2C_MIDI_H_
 
-#define MIDI_BUFFER_LENGTH (1024)
-#define MIDI_DATABYTE_MAX (32)
+#define MIDI_BUFFER_LENGTH 1024
+#define MIDI_DATABYTE_MAX 32
 
 #include <stdint.h>
 #include <stdbool.h>
+#include <stdio.h>
 
 #include "app.h"
 #include "stm32f4xx_hal.h"
@@ -70,5 +71,7 @@ int32_t midi_run(MIDI_event *midi_event);
 bool midi_push_buffer(uint8_t *input);
 
 bool midi_pop_buffer();
+
+void midi_reset_buffer();
 
 #endif /* _M2C_MIDI_H_ */
