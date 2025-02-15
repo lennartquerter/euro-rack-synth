@@ -1,40 +1,64 @@
-#ifndef _MIDI_HANDLER_H_
-#define _MIDI_HANDLER_H_
+//
+// Created by Lennart Querter on 14.02.25.
+//
 
-#include "midi.h"
+#ifndef MIDI_HANDLER_H
+#define MIDI_HANDLER_H
 
-typedef enum {
-    MH_SINGLE_DAC,      // Sets the system up to write to 3 channels on a single DAC, only 1 midi channel is supported
-    MH_MULTI_DAC,       // Sets the system up to write to 3 different DACs, 4 midi channels are supported
-} MIDI_HANDLER_DAC_MODE;
+#define MIDI_BUFFER_LENGTH 1024
+#define MIDI_DATABYTE_MAX 32
 
-typedef enum {
-    MH_CHANNEL,         // Every output lane will be assigned to 1 MIDI channel (Mono)
-    MH_SEQUENCE,        // Every note will be set to the next available channel (Mono, sequence)
-    MH_POLYPHONIC,      // Only MIDI channel 1 is used, but up to 4 notes are assigned to each lane (POLY)
-} MIDI_HANDLER_ASSIGNMENT_MODE;
+#include "buffer.h"
+#include <stdint.h>
+#include <stdbool.h>
 
-typedef enum {
-    MH_TRIGGER_ON,         // Will restart the gate on EVERY keypress
-    MH_TRIGGER_OFF,        // Will not restart the gate on subsequent key press
-} MIDI_HANDLER_NOTE_TRIGGER;
-
-struct midi_handler_config {
-    MIDI_HANDLER_DAC_MODE mode;
-    MIDI_HANDLER_ASSIGNMENT_MODE assignment_mode;
-    MIDI_HANDLER_NOTE_TRIGGER trigger_mode;
-
-    I2C_HandleTypeDef *cv_dac1;     // will be used in MH_SINGLE_DAC mode
-    I2C_HandleTypeDef *vel_dac2;
-    I2C_HandleTypeDef *mod_dac3;
-
-    uint8_t available_channels;    // 4 bits as BIT_MASK (LSB) to denote which channels are active and can be used --> 0b0000ABCD;
+struct MIDI_HANDLER_config {
+    Buffer *buffer;
 };
 
-uint32_t midi_handler_init(struct midi_handler_config *config);
+typedef enum {
+    START_ANALYSIS,    // Initial Status, including exception.
+    WAIT_DATA1,        // Waiting data byte(1st byte)
+    WAIT_DATA2,        // Waiting data byte(2nd byte)
+    WAIT_SYSTEM_DATA,  // Waiting data byte(system exclusive)
+    END_ANALYSIS       // Analysis is ended.
+} MIDI_analysis_status;
 
-void midi_handler_run(MIDI_event *midi_event);
+typedef enum {
+    EXCC_START,
+    EXCC_PARAM,
+    EXCC_DAT
+} MIDI_extend_cc_status;
 
-void midi_handler_set_available_channels(uint8_t available_channels);
+typedef enum {
+    MSG_NOTHING,    // Exception(can't resolved, missing data, etc.)
+    MSG_NOTE_ON,    // Note-on message
+    MSG_NOTE_OFF,   // Note-off message
+    MSG_PITCH,      // PitchBend message
+    MSG_SYSEX,      // System Exclusive message
+    MSG_CC,         // Control Change message
+    MSG_PROG,       // Program Change message
+} MIDI_message_type;
 
-#endif /* _MIDI_HANDLER_H_ */
+typedef enum {
+    CC_ALL_NOTES_OFF = 123,
+} MIDI_cc_message_type;
+
+typedef struct {
+    MIDI_message_type type;
+    uint8_t channel;
+    uint8_t data_byte[MIDI_DATABYTE_MAX]; //data_byte[0]=MSB, [1]=LSB, [2]=OTHER...(e.g. sysEx, Control Change...)
+} MIDI_event;
+
+typedef struct {
+    MIDI_analysis_status stat;
+    MIDI_message_type type;
+    uint8_t channel;
+    uint8_t data_idx;
+} MidiAnalysisStatus;
+
+uint32_t MIDI_HANDLER_init(const struct MIDI_HANDLER_config* cfg);
+uint32_t MIDI_HANDLER_get_event(MIDI_event *midi_event);
+bool MIDI_HANDLER_push_buffer(uint8_t *input);
+
+#endif //MIDI_HANDLER_H

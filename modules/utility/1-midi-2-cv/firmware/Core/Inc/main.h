@@ -57,18 +57,12 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
-#define GATE_1_IN_Pin GPIO_PIN_1
-#define GATE_1_IN_GPIO_Port GPIOA
-#define GATE_2_IN_Pin GPIO_PIN_2
-#define GATE_2_IN_GPIO_Port GPIOA
-#define GATE_3_IN_Pin GPIO_PIN_5
-#define GATE_3_IN_GPIO_Port GPIOA
-#define GATE_4_IN_Pin GPIO_PIN_6
-#define GATE_4_IN_GPIO_Port GPIOA
-#define MODE_SW_1_Pin GPIO_PIN_0
-#define MODE_SW_1_GPIO_Port GPIOB
-#define MODE_SW_2_Pin GPIO_PIN_1
-#define MODE_SW_2_GPIO_Port GPIOB
+#define SW_MODE_1_Pin GPIO_PIN_0
+#define SW_MODE_1_GPIO_Port GPIOB
+#define SW_MODE_1_EXTI_IRQn EXTI0_IRQn
+#define SW_MODE_2_Pin GPIO_PIN_1
+#define SW_MODE_2_GPIO_Port GPIOB
+#define SW_MODE_2_EXTI_IRQn EXTI1_IRQn
 #define GATE_1_OUT_Pin GPIO_PIN_12
 #define GATE_1_OUT_GPIO_Port GPIOB
 #define GATE_2_OUT_Pin GPIO_PIN_13
@@ -77,8 +71,6 @@ void Error_Handler(void);
 #define GATE_3_OUT_GPIO_Port GPIOB
 #define GATE_4_OUT_Pin GPIO_PIN_15
 #define GATE_4_OUT_GPIO_Port GPIOB
-#define CH_16_OUT_Pin GPIO_PIN_10
-#define CH_16_OUT_GPIO_Port GPIOC
 
 /* USER CODE BEGIN Private defines */
 

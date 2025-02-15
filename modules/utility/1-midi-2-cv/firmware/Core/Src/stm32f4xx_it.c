@@ -212,6 +212,34 @@ void RCC_IRQHandler(void)
 }
 
 /**
+  * @brief This function handles EXTI line0 interrupt.
+  */
+void EXTI0_IRQHandler(void)
+{
+  /* USER CODE BEGIN EXTI0_IRQn 0 */
+
+  /* USER CODE END EXTI0_IRQn 0 */
+  HAL_GPIO_EXTI_IRQHandler(SW_MODE_1_Pin);
+  /* USER CODE BEGIN EXTI0_IRQn 1 */
+
+  /* USER CODE END EXTI0_IRQn 1 */
+}
+
+/**
+  * @brief This function handles EXTI line1 interrupt.
+  */
+void EXTI1_IRQHandler(void)
+{
+  /* USER CODE BEGIN EXTI1_IRQn 0 */
+
+  /* USER CODE END EXTI1_IRQn 0 */
+  HAL_GPIO_EXTI_IRQHandler(SW_MODE_2_Pin);
+  /* USER CODE BEGIN EXTI1_IRQn 1 */
+
+  /* USER CODE END EXTI1_IRQn 1 */
+}
+
+/**
   * @brief This function handles USART1 global interrupt.
   */
 void USART1_IRQHandler(void)
