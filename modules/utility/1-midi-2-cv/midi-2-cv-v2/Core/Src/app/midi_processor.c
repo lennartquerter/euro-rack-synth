@@ -93,15 +93,15 @@ void MIDI_PROCESSOR_mode_changed()
     GPIO_PinState sw_mode_1 = HAL_GPIO_ReadPin(SW_MODE_1_GPIO_Port, SW_MODE_1_Pin);
     GPIO_PinState sw_mode_2 = HAL_GPIO_ReadPin(SW_MODE_2_GPIO_Port, SW_MODE_2_Pin);
 
-    if (sw_mode_1 == GPIO_PIN_RESET && sw_mode_2 == GPIO_PIN_RESET)
+    if (sw_mode_1 == GPIO_PIN_SET && sw_mode_2 == GPIO_PIN_SET)
     {
         state.cfg.mode = MIDI_MODE_POLY;
     }
-    if (sw_mode_1 == GPIO_PIN_SET)
+    else if (sw_mode_2 == GPIO_PIN_SET)
     {
         state.cfg.mode = MIDI_MODE_CHANNEL;
     }
-    else if (sw_mode_2 == GPIO_PIN_SET)
+    else if (sw_mode_1 == GPIO_PIN_SET)
     {
         state.cfg.mode = MIDI_MODE_SEQUENCE;
     }
@@ -121,6 +121,12 @@ void MIDI_PROCESSOR_mode_changed()
 
 void MIDI_PROCESSOR_note_on(MIDI_event* midi_event)
 {
+    if (midi_event->channel == 0 && (state.cfg.mode == MIDI_MODE_POLY || state.cfg.mode == MIDI_MODE_SEQUENCE))
+    {
+        // we only accept messages on channel 1 for SEQ/POLU
+        return;
+    }
+
     const uint8_t note = midi_event->data_byte[0];
     const uint8_t velocity = midi_event->data_byte[1];
 
@@ -152,7 +158,7 @@ void MIDI_PROCESSOR_note_on(MIDI_event* midi_event)
     }
     else if (state.cfg.mode == MIDI_MODE_SEQUENCE)
     {
-        // Increate the channel on every note played
+        // Increase the channel on every note played
         state.current_channel++;
 
         // only allow a maximum of 4 channels
@@ -171,6 +177,12 @@ void MIDI_PROCESSOR_note_on(MIDI_event* midi_event)
 
 void MIDI_PROCESSOR_note_off(MIDI_event* midi_event)
 {
+    if (midi_event->channel == 0 && (state.cfg.mode == MIDI_MODE_POLY || state.cfg.mode == MIDI_MODE_SEQUENCE))
+    {
+        // we only accept messages on channel 1 for SEQ/POLU
+        return;
+    }
+
     const uint8_t note = midi_event->data_byte[0];
     const uint8_t release_velocity = midi_event->data_byte[1];
 
@@ -236,6 +248,12 @@ void MIDI_PROCESSOR_cc(MIDI_event* midi_event)
 
 void MIDI_PROCESSOR_pitch(MIDI_event* midi_event)
 {
+    if (midi_event->channel == 0 && (state.cfg.mode == MIDI_MODE_POLY || state.cfg.mode == MIDI_MODE_SEQUENCE))
+    {
+        // we only accept messages on channel 1 for SEQ/POLU
+        return;
+    }
+
     uint16_t pitch_value = midi_event->data_byte[0];
     pitch_value <<= 8;
     pitch_value |= (uint16_t)midi_event->data_byte[1];
