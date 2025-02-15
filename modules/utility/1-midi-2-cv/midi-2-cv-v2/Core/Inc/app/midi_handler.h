@@ -40,6 +40,10 @@ typedef enum {
     MSG_PROG,       // Program Change message
 } MIDI_message_type;
 
+typedef enum {
+    CC_ALL_NOTES_OFF = 123,
+} MIDI_cc_message_type;
+
 typedef struct {
     MIDI_message_type type;
     uint8_t channel;

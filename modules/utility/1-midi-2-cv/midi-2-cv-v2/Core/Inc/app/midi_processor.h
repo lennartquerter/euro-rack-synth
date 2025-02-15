@@ -4,9 +4,19 @@
 
 #ifndef MIDI_PROCESSOR_H
 #define MIDI_PROCESSOR_H
+
 #include <stdint.h>
 #include "midi_handler.h"
 #include "stm32f4xx_hal.h"
+
+#define NUMBER_OF_CHANNELS                  4
+#define NUMBER_OF_NOTES_PER_CHANNEL         4
+#define MIDI_NOTES_LENGTH                   127
+#define DEFAULT_DAC_MAX_VALUE               2000
+#define DEFAULT_PITCH_BEND                  250
+
+#define PITCH_CENTER                        8192
+#define PITCH_RANGE                         8192
 
 typedef enum
 {
@@ -44,7 +54,8 @@ typedef struct
     MIDI_PROCESSOR_note notes[4];
 } MIDI_PROCESSOR_channel;
 
-uint8_t MIDI_PROCESSOR_init(struct MIDI_PROCESSOR_config* cfg);
+uint8_t MIDI_PROCESSOR_init(const struct MIDI_PROCESSOR_config* cfg);
 void MIDI_PROCESSOR_handle_event(MIDI_event* midi_event);
+void MIDI_PROCESSOR_mode_changed();
 
 #endif //MIDI_PROCESSOR_H

@@ -92,6 +92,13 @@ bool midi_is_event_generated(MIDI_event* midi_event)
             midi_event->channel = lower_half_byte;
             analyzed_status.channel = lower_half_byte;
             break;
+        case 176: // Control Change (0xB)
+            midi_event->type = MSG_CC;
+            analyzed_status.type = MSG_CC;
+            analyzed_status.stat = WAIT_DATA1;
+            midi_event->channel = lower_half_byte;
+            analyzed_status.channel = lower_half_byte;
+            break;
         default:
             // reset the state if we don't understand what is happening
             analyzed_status.stat = START_ANALYSIS;
