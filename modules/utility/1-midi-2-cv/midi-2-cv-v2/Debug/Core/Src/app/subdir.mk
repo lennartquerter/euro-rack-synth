@@ -5,13 +5,22 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-../Core/Src/app/mcp4728.c 
+../Core/Src/app/buffer.c \
+../Core/Src/app/mcp4728.c \
+../Core/Src/app/midi_handler.c \
+../Core/Src/app/midi_processor.c 
 
 OBJS += \
-./Core/Src/app/mcp4728.o 
+./Core/Src/app/buffer.o \
+./Core/Src/app/mcp4728.o \
+./Core/Src/app/midi_handler.o \
+./Core/Src/app/midi_processor.o 
 
 C_DEPS += \
-./Core/Src/app/mcp4728.d 
+./Core/Src/app/buffer.d \
+./Core/Src/app/mcp4728.d \
+./Core/Src/app/midi_handler.d \
+./Core/Src/app/midi_processor.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes
@@ -21,7 +30,7 @@ Core/Src/app/%.o Core/Src/app/%.su Core/Src/app/%.cyclo: ../Core/Src/app/%.c Cor
 clean: clean-Core-2f-Src-2f-app
 
 clean-Core-2f-Src-2f-app:
-	-$(RM) ./Core/Src/app/mcp4728.cyclo ./Core/Src/app/mcp4728.d ./Core/Src/app/mcp4728.o ./Core/Src/app/mcp4728.su
+	-$(RM) ./Core/Src/app/buffer.cyclo ./Core/Src/app/buffer.d ./Core/Src/app/buffer.o ./Core/Src/app/buffer.su ./Core/Src/app/mcp4728.cyclo ./Core/Src/app/mcp4728.d ./Core/Src/app/mcp4728.o ./Core/Src/app/mcp4728.su ./Core/Src/app/midi_handler.cyclo ./Core/Src/app/midi_handler.d ./Core/Src/app/midi_handler.o ./Core/Src/app/midi_handler.su ./Core/Src/app/midi_processor.cyclo ./Core/Src/app/midi_processor.d ./Core/Src/app/midi_processor.o ./Core/Src/app/midi_processor.su
 
 .PHONY: clean-Core-2f-Src-2f-app
 

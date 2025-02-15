@@ -59,8 +59,12 @@ void Error_Handler(void);
 /* Private defines -----------------------------------------------------------*/
 #define GATE_1_OUT_Pin GPIO_PIN_12
 #define GATE_1_OUT_GPIO_Port GPIOB
-#define MIDI_IN_Pin GPIO_PIN_10
-#define MIDI_IN_GPIO_Port GPIOA
+#define GATE_2_OUT_Pin GPIO_PIN_13
+#define GATE_2_OUT_GPIO_Port GPIOB
+#define GATE_3_OUT_Pin GPIO_PIN_14
+#define GATE_3_OUT_GPIO_Port GPIOB
+#define GATE_4_OUT_Pin GPIO_PIN_15
+#define GATE_4_OUT_GPIO_Port GPIOB
 
 /* USER CODE BEGIN Private defines */
 

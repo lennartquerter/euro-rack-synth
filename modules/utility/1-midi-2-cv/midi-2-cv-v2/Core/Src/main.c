@@ -21,7 +21,11 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+#include <sys/types.h>
+
 #include "app/mcp4728.h"
+#include "app/midi_handler.h"
+#include "app/midi_processor.h"
 
 /* USER CODE END Includes */
 
@@ -45,9 +49,15 @@ I2C_HandleTypeDef hi2c1;
 I2C_HandleTypeDef hi2c2;
 I2C_HandleTypeDef hi2c3;
 
+RTC_HandleTypeDef hrtc;
+
+TIM_HandleTypeDef htim1;
+
 UART_HandleTypeDef huart1;
 
 /* USER CODE BEGIN PV */
+
+uint8_t midi_received_buf;
 
 /* USER CODE END PV */
 
@@ -58,6 +68,8 @@ static void MX_I2C1_Init(void);
 static void MX_I2C2_Init(void);
 static void MX_I2C3_Init(void);
 static void MX_USART1_UART_Init(void);
+static void MX_RTC_Init(void);
+static void MX_TIM1_Init(void);
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
@@ -65,14 +77,21 @@ static void MX_USART1_UART_Init(void);
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 
-// Add this to your code to check clock configuration
-void Check_Clocks(void)
+/*
+ * This is the interrupt handler. Make sure that the USART global interrupt is enabled in the IOC
+ */
+void HAL_UART_RxCpltCallback(UART_HandleTypeDef* huart)
 {
-	uint32_t I2C_Clock =  HAL_RCC_GetPCLK1Freq() / 2;
+    if (huart->Instance == huart1.Instance)
+    {
+        MIDI_HANDLER_push_buffer(&midi_received_buf);
+        HAL_UART_Receive_IT(&huart1, &midi_received_buf, 1);
+    }
+}
 
-
-    printf("PCLK1 Frequency: %lu Hz\n", HAL_RCC_GetPCLK1Freq());
-    printf("I2C Clock: %lu Hz\n",I2C_Clock);
+void USART2_IRQHandler(void)
+{
+    HAL_UART_IRQHandler(&huart1);
 }
 
 /* USER CODE END 0 */
@@ -110,68 +129,78 @@ int main(void)
   MX_I2C2_Init();
   MX_I2C3_Init();
   MX_USART1_UART_Init();
+  MX_RTC_Init();
+  MX_TIM1_Init();
   /* USER CODE BEGIN 2 */
 
-    HAL_Delay(1000);
+    // Delay to let things settle before user init
+    HAL_Delay(250);
 
-
-    Check_Clocks();
-
+    /*
+     * Initialize all the I2C devices for DAC
+    */
     if (HAL_I2C_Init(&hi2c1) != HAL_OK)
     {
-        // Try recovery procedure
-        if (I2C_Reset(hi2c1) != HAL_OK)
-        {
-            Error_Handler();
-        }
+        Error_Handler();
     }
-
-    // Check for any remaining errors
-    I2C_Check_Error(hi2c1);
-
-    // Test communication with device
-    if (HAL_I2C_IsDeviceReady(&hi2c1, MCP4728_BASE_ADDR, 3, 1000) != HAL_OK)
+    if (HAL_I2C_Init(&hi2c2) != HAL_OK)
+    {
+        Error_Handler();
+    }
+    if (HAL_I2C_Init(&hi2c3) != HAL_OK)
     {
         Error_Handler();
     }
 
-    uint16_t index = 0;
+    /*
+     * Set up the MIDI Handler that will process all incoming MIDI messages and convert them into MIDI events
+     */
+    Buffer rx_buffer;
+
+    struct MIDI_HANDLER_config midi_handler_config;
+    midi_handler_config.buffer = &rx_buffer;
+
+    MIDI_HANDLER_init(&midi_handler_config);
+
+    /*
+     * Set up the MIDI Processor, that will convert the midi event into output over the DAC/Gates
+     */
+    struct MIDI_PROCESSOR_config midi_processor_config;
+    midi_processor_config.cv_dac1 = &hi2c1;
+    midi_processor_config.vel_dac2 = &hi2c2;
+    midi_processor_config.mod_dac3 = &hi2c3;
+    midi_processor_config.mode = MIDI_MODE_CHANNEL;
+    midi_processor_config.available_channels = 0b00001111;
+
+    MIDI_PROCESSOR_init(&midi_processor_config);
 
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+
+    // Start the first receive operation
+    HAL_UART_Receive_IT(&huart1, &midi_received_buf, 1);
+
+    // Delay to let things set up
+    HAL_Delay(250);
+
     while (1)
     {
+        // initialize a midi_event
+        MIDI_event midi_event;
+
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-        index += 100;
-        HAL_GPIO_WritePin(GATE_1_OUT_GPIO_Port, GATE_1_OUT_Pin, GPIO_PIN_RESET);
-        HAL_Delay(10);
 
-        HAL_GPIO_WritePin(GATE_1_OUT_GPIO_Port, GATE_1_OUT_Pin, GPIO_PIN_SET);
-        HAL_Delay(10);
-
-        MCP4728_SingleWrite(&hi2c1, MCP4728_CHANNEL_A, index, 1, 0, 0);
-        MCP4728_SingleWrite(&hi2c1, MCP4728_CHANNEL_B, index, 1, 0, 0);
-        MCP4728_SingleWrite(&hi2c1, MCP4728_CHANNEL_C, index, 1, 0, 0);
-        MCP4728_SingleWrite(&hi2c1, MCP4728_CHANNEL_D, index, 1, 0, 0);
-
-
-        MCP4728_SingleWrite(&hi2c2, MCP4728_CHANNEL_A, index, 1, 0, 0);
-        MCP4728_SingleWrite(&hi2c2, MCP4728_CHANNEL_B, index, 1, 0, 0);
-        MCP4728_SingleWrite(&hi2c2, MCP4728_CHANNEL_C, index, 1, 0, 0);
-        MCP4728_SingleWrite(&hi2c2, MCP4728_CHANNEL_D, index, 1, 0, 0);
-
-        MCP4728_SingleWrite(&hi2c3, MCP4728_CHANNEL_A, index, 1, 0, 0);
-        MCP4728_SingleWrite(&hi2c3, MCP4728_CHANNEL_B, index, 1, 0, 0);
-        MCP4728_SingleWrite(&hi2c3, MCP4728_CHANNEL_C, index, 1, 0, 0);
-        MCP4728_SingleWrite(&hi2c3, MCP4728_CHANNEL_D, index, 1, 0, 0);
-
-        if (index >= 2000)
+        // if there is an event
+        if (MIDI_HANDLER_get_event(&midi_event) > 0)
         {
-            index = 0;
+            // process the midi event
+            MIDI_PROCESSOR_handle_event(&midi_event);
+            // short delay to ensure all events got settled
+            HAL_Delay(10);
         }
     }
   /* USER CODE END 3 */
@@ -194,8 +223,9 @@ void SystemClock_Config(void)
   /** Initializes the RCC Oscillators according to the specified parameters
   * in the RCC_OscInitTypeDef structure.
   */
-  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSE;
+  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_LSI|RCC_OSCILLATORTYPE_HSE;
   RCC_OscInitStruct.HSEState = RCC_HSE_ON;
+  RCC_OscInitStruct.LSIState = RCC_LSI_ON;
   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
   RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSE;
   RCC_OscInitStruct.PLL.PLLM = 10;
@@ -325,6 +355,87 @@ static void MX_I2C3_Init(void)
 }
 
 /**
+  * @brief RTC Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_RTC_Init(void)
+{
+
+  /* USER CODE BEGIN RTC_Init 0 */
+
+  /* USER CODE END RTC_Init 0 */
+
+  /* USER CODE BEGIN RTC_Init 1 */
+
+  /* USER CODE END RTC_Init 1 */
+
+  /** Initialize RTC Only
+  */
+  hrtc.Instance = RTC;
+  hrtc.Init.HourFormat = RTC_HOURFORMAT_24;
+  hrtc.Init.AsynchPrediv = 127;
+  hrtc.Init.SynchPrediv = 255;
+  hrtc.Init.OutPut = RTC_OUTPUT_DISABLE;
+  hrtc.Init.OutPutPolarity = RTC_OUTPUT_POLARITY_HIGH;
+  hrtc.Init.OutPutType = RTC_OUTPUT_TYPE_OPENDRAIN;
+  if (HAL_RTC_Init(&hrtc) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN RTC_Init 2 */
+
+  /* USER CODE END RTC_Init 2 */
+
+}
+
+/**
+  * @brief TIM1 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_TIM1_Init(void)
+{
+
+  /* USER CODE BEGIN TIM1_Init 0 */
+
+  /* USER CODE END TIM1_Init 0 */
+
+  TIM_ClockConfigTypeDef sClockSourceConfig = {0};
+  TIM_MasterConfigTypeDef sMasterConfig = {0};
+
+  /* USER CODE BEGIN TIM1_Init 1 */
+
+  /* USER CODE END TIM1_Init 1 */
+  htim1.Instance = TIM1;
+  htim1.Init.Prescaler = 0;
+  htim1.Init.CounterMode = TIM_COUNTERMODE_UP;
+  htim1.Init.Period = 65535;
+  htim1.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
+  htim1.Init.RepetitionCounter = 0;
+  htim1.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
+  if (HAL_TIM_Base_Init(&htim1) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sClockSourceConfig.ClockSource = TIM_CLOCKSOURCE_INTERNAL;
+  if (HAL_TIM_ConfigClockSource(&htim1, &sClockSourceConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sMasterConfig.MasterOutputTrigger = TIM_TRGO_RESET;
+  sMasterConfig.MasterSlaveMode = TIM_MASTERSLAVEMODE_DISABLE;
+  if (HAL_TIMEx_MasterConfigSynchronization(&htim1, &sMasterConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN TIM1_Init 2 */
+
+  /* USER CODE END TIM1_Init 2 */
+
+}
+
+/**
   * @brief USART1 Initialization Function
   * @param None
   * @retval None
@@ -340,7 +451,7 @@ static void MX_USART1_UART_Init(void)
 
   /* USER CODE END USART1_Init 1 */
   huart1.Instance = USART1;
-  huart1.Init.BaudRate = 312500;
+  huart1.Init.BaudRate = 31250;
   huart1.Init.WordLength = UART_WORDLENGTH_8B;
   huart1.Init.StopBits = UART_STOPBITS_1;
   huart1.Init.Parity = UART_PARITY_NONE;
@@ -352,6 +463,12 @@ static void MX_USART1_UART_Init(void)
     Error_Handler();
   }
   /* USER CODE BEGIN USART1_Init 2 */
+
+    // Enable USART2 interrupt
+    HAL_NVIC_EnableIRQ(USART2_IRQn);
+
+    // Enable UART receive interrupt
+    __HAL_UART_ENABLE_IT(&huart1, UART_IT_RXNE);
 
   /* USER CODE END USART1_Init 2 */
 
@@ -375,7 +492,7 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOA_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GATE_1_OUT_GPIO_Port, GATE_1_OUT_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOB, GATE_1_OUT_Pin|GATE_2_OUT_Pin|GATE_3_OUT_Pin|GATE_4_OUT_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin : GATE_1_OUT_Pin */
   GPIO_InitStruct.Pin = GATE_1_OUT_Pin;
@@ -383,6 +500,13 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_MEDIUM;
   HAL_GPIO_Init(GATE_1_OUT_GPIO_Port, &GPIO_InitStruct);
+
+  /*Configure GPIO pins : GATE_2_OUT_Pin GATE_3_OUT_Pin GATE_4_OUT_Pin */
+  GPIO_InitStruct.Pin = GATE_2_OUT_Pin|GATE_3_OUT_Pin|GATE_4_OUT_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
 /* USER CODE BEGIN MX_GPIO_Init_2 */
 /* USER CODE END MX_GPIO_Init_2 */
