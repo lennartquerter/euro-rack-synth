@@ -1,12 +1,14 @@
 (kicad_sch
-	(version 20231120)
+	(version 20250114)
 	(generator "eeschema")
-	(generator_version "8.0")
+	(generator_version "9.0")
 	(uuid "eb704a00-24ef-4c0c-bc9d-72190fb140d4")
 	(paper "A3")
 	(lib_symbols
 		(symbol "Device:R"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
 				(offset 0)
 			)
@@ -125,10 +127,15 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Diode:1N4148WS"
-			(pin_numbers hide)
-			(pin_names hide)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -226,10 +233,10 @@
 				)
 				(polyline
 					(pts
-						(xy 1.27 0) (xy -1.27 0)
+						(xy 1.27 1.27) (xy 1.27 -1.27) (xy -1.27 0) (xy 1.27 1.27)
 					)
 					(stroke
-						(width 0)
+						(width 0.254)
 						(type default)
 					)
 					(fill
@@ -238,10 +245,10 @@
 				)
 				(polyline
 					(pts
-						(xy 1.27 1.27) (xy 1.27 -1.27) (xy -1.27 0) (xy 1.27 1.27)
+						(xy 1.27 0) (xy -1.27 0)
 					)
 					(stroke
-						(width 0.254)
+						(width 0)
 						(type default)
 					)
 					(fill
@@ -287,10 +294,13 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Transistor_BJT:MMBT3904"
 			(pin_names
-				(offset 0) hide)
+				(offset 0)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -363,6 +373,18 @@
 			(symbol "MMBT3904_0_1"
 				(polyline
 					(pts
+						(xy 0.635 1.905) (xy 0.635 -1.905) (xy 0.635 -1.905)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
 						(xy 0.635 0.635) (xy 2.54 2.54)
 					)
 					(stroke
@@ -385,12 +407,11 @@
 						(type none)
 					)
 				)
-				(polyline
-					(pts
-						(xy 0.635 1.905) (xy 0.635 -1.905) (xy 0.635 -1.905)
-					)
+				(circle
+					(center 1.27 0)
+					(radius 2.8194)
 					(stroke
-						(width 0.508)
+						(width 0.254)
 						(type default)
 					)
 					(fill
@@ -409,17 +430,6 @@
 						(type outline)
 					)
 				)
-				(circle
-					(center 1.27 0)
-					(radius 2.8194)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
 			)
 			(symbol "MMBT3904_1_1"
 				(pin input line
@@ -433,24 +443,6 @@
 						)
 					)
 					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 2.54 -5.08 90)
-					(length 2.54)
-					(name "E"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -476,13 +468,36 @@
 						)
 					)
 				)
+				(pin passive line
+					(at 2.54 -5.08 90)
+					(length 2.54)
+					(name "E"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "power:GNDREF"
 			(power)
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 0) hide)
+				(offset 0)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -609,6 +624,7 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "synth:AudioJack_Mono_3.5mm"
 			(exclude_from_sim no)
@@ -678,18 +694,6 @@
 			(symbol "AudioJack_Mono_3.5mm_0_1"
 				(polyline
 					(pts
-						(xy 1.778 -0.254) (xy 2.032 -0.762)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
 						(xy 0 0) (xy 0.635 -0.635) (xy 1.27 0) (xy 2.54 0)
 					)
 					(stroke
@@ -702,7 +706,7 @@
 				)
 				(polyline
 					(pts
-						(xy 2.54 -2.54) (xy 1.778 -2.54) (xy 1.778 -0.254) (xy 1.524 -0.762)
+						(xy 1.778 -0.254) (xy 2.032 -0.762)
 					)
 					(stroke
 						(width 0)
@@ -718,6 +722,18 @@
 					)
 					(stroke
 						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 -2.54) (xy 1.778 -2.54) (xy 1.778 -0.254) (xy 1.524 -0.762)
+					)
+					(stroke
+						(width 0)
 						(type default)
 					)
 					(fill
@@ -781,6 +797,7 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 	)
 	(junction
@@ -957,7 +974,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "098a750c-12e3-4d5a-b48a-a63a45183f1f")
-		(property "Reference" "R27"
+		(property "Reference" "R36"
 			(at 209.55 80.0099 0)
 			(effects
 				(font
@@ -1011,11 +1028,11 @@
 		(instances
 			(project "quantizer"
 				(path "/ffcc7acb-943e-4c85-833d-d9691a289ebb/2c36e7cf-6e7b-4409-b46c-ca9b923a6c05"
-					(reference "R27")
+					(reference "R36")
 					(unit 1)
 				)
 				(path "/ffcc7acb-943e-4c85-833d-d9691a289ebb/566e399b-0865-4981-b484-2923af42a2d9"
-					(reference "R43")
+					(reference "R55")
 					(unit 1)
 				)
 			)
@@ -1031,7 +1048,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "1481ff18-dde9-4ee0-8361-bb4794f5f472")
-		(property "Reference" "R26"
+		(property "Reference" "R35"
 			(at 201.93 64.77 90)
 			(effects
 				(font
@@ -1083,11 +1100,11 @@
 		(instances
 			(project "quantizer"
 				(path "/ffcc7acb-943e-4c85-833d-d9691a289ebb/2c36e7cf-6e7b-4409-b46c-ca9b923a6c05"
-					(reference "R26")
+					(reference "R35")
 					(unit 1)
 				)
 				(path "/ffcc7acb-943e-4c85-833d-d9691a289ebb/566e399b-0865-4981-b484-2923af42a2d9"
-					(reference "R42")
+					(reference "R54")
 					(unit 1)
 				)
 			)
@@ -1104,7 +1121,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "304b198a-bd2d-4b34-b710-bd9ed099f6fc")
-		(property "Reference" "J4"
+		(property "Reference" "J9"
 			(at 177.8 69.9134 0)
 			(effects
 				(font
@@ -1113,7 +1130,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "CV_INPUT"
+		(property "Value" "TRIG_INPUT"
 			(at 177.8 72.4534 0)
 			(effects
 				(font
@@ -1161,11 +1178,11 @@
 		(instances
 			(project "quantizer"
 				(path "/ffcc7acb-943e-4c85-833d-d9691a289ebb/2c36e7cf-6e7b-4409-b46c-ca9b923a6c05"
-					(reference "J4")
+					(reference "J9")
 					(unit 1)
 				)
 				(path "/ffcc7acb-943e-4c85-833d-d9691a289ebb/566e399b-0865-4981-b484-2923af42a2d9"
-					(reference "J8")
+					(reference "J10")
 					(unit 1)
 				)
 			)
@@ -1181,7 +1198,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "307b19d9-38ab-4300-8ed2-0cb93c383bb3")
-		(property "Reference" "#PWR056"
+		(property "Reference" "#PWR0105"
 			(at 222.25 91.44 0)
 			(effects
 				(font
@@ -1232,11 +1249,11 @@
 		(instances
 			(project "quantizer"
 				(path "/ffcc7acb-943e-4c85-833d-d9691a289ebb/2c36e7cf-6e7b-4409-b46c-ca9b923a6c05"
-					(reference "#PWR056")
+					(reference "#PWR0105")
 					(unit 1)
 				)
 				(path "/ffcc7acb-943e-4c85-833d-d9691a289ebb/566e399b-0865-4981-b484-2923af42a2d9"
-					(reference "#PWR074")
+					(reference "#PWR0128")
 					(unit 1)
 				)
 			)
@@ -1252,7 +1269,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3b090bde-5ca0-47d9-839e-e52410ea5498")
-		(property "Reference" "#PWR057"
+		(property "Reference" "#PWR0106"
 			(at 241.3 91.44 0)
 			(effects
 				(font
@@ -1303,11 +1320,11 @@
 		(instances
 			(project "quantizer"
 				(path "/ffcc7acb-943e-4c85-833d-d9691a289ebb/2c36e7cf-6e7b-4409-b46c-ca9b923a6c05"
-					(reference "#PWR057")
+					(reference "#PWR0106")
 					(unit 1)
 				)
 				(path "/ffcc7acb-943e-4c85-833d-d9691a289ebb/566e399b-0865-4981-b484-2923af42a2d9"
-					(reference "#PWR075")
+					(reference "#PWR0129")
 					(unit 1)
 				)
 			)
@@ -1399,7 +1416,7 @@
 					(unit 1)
 				)
 				(path "/ffcc7acb-943e-4c85-833d-d9691a289ebb/566e399b-0865-4981-b484-2923af42a2d9"
-					(reference "D5")
+					(reference "D9")
 					(unit 1)
 				)
 			)
@@ -1415,7 +1432,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "97229742-0251-4182-895d-870f66b145f6")
-		(property "Reference" "R25"
+		(property "Reference" "R34"
 			(at 201.93 53.34 90)
 			(effects
 				(font
@@ -1467,11 +1484,11 @@
 		(instances
 			(project "quantizer"
 				(path "/ffcc7acb-943e-4c85-833d-d9691a289ebb/2c36e7cf-6e7b-4409-b46c-ca9b923a6c05"
-					(reference "R25")
+					(reference "R34")
 					(unit 1)
 				)
 				(path "/ffcc7acb-943e-4c85-833d-d9691a289ebb/566e399b-0865-4981-b484-2923af42a2d9"
-					(reference "R41")
+					(reference "R53")
 					(unit 1)
 				)
 			)
@@ -1487,7 +1504,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b361da34-5a52-492d-bd6a-04a93ecdf143")
-		(property "Reference" "#PWR054"
+		(property "Reference" "#PWR0103"
 			(at 186.69 85.09 0)
 			(effects
 				(font
@@ -1538,11 +1555,11 @@
 		(instances
 			(project "quantizer"
 				(path "/ffcc7acb-943e-4c85-833d-d9691a289ebb/2c36e7cf-6e7b-4409-b46c-ca9b923a6c05"
-					(reference "#PWR054")
+					(reference "#PWR0103")
 					(unit 1)
 				)
 				(path "/ffcc7acb-943e-4c85-833d-d9691a289ebb/566e399b-0865-4981-b484-2923af42a2d9"
-					(reference "#PWR072")
+					(reference "#PWR0126")
 					(unit 1)
 				)
 			)
@@ -1558,7 +1575,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d380d29d-0858-483d-81c9-18e40798def6")
-		(property "Reference" "#PWR055"
+		(property "Reference" "#PWR0104"
 			(at 207.01 91.44 0)
 			(effects
 				(font
@@ -1609,11 +1626,11 @@
 		(instances
 			(project "quantizer"
 				(path "/ffcc7acb-943e-4c85-833d-d9691a289ebb/2c36e7cf-6e7b-4409-b46c-ca9b923a6c05"
-					(reference "#PWR055")
+					(reference "#PWR0104")
 					(unit 1)
 				)
 				(path "/ffcc7acb-943e-4c85-833d-d9691a289ebb/566e399b-0865-4981-b484-2923af42a2d9"
-					(reference "#PWR073")
+					(reference "#PWR0127")
 					(unit 1)
 				)
 			)
@@ -1629,7 +1646,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "fa8d2c49-cd9a-44cc-9355-a8ad22c991ea")
-		(property "Reference" "Q3"
+		(property "Reference" "Q1"
 			(at 243.84 69.8499 0)
 			(effects
 				(font
@@ -1689,11 +1706,11 @@
 		(instances
 			(project "quantizer"
 				(path "/ffcc7acb-943e-4c85-833d-d9691a289ebb/2c36e7cf-6e7b-4409-b46c-ca9b923a6c05"
-					(reference "Q3")
+					(reference "Q1")
 					(unit 1)
 				)
 				(path "/ffcc7acb-943e-4c85-833d-d9691a289ebb/566e399b-0865-4981-b484-2923af42a2d9"
-					(reference "Q4")
+					(reference "Q2")
 					(unit 1)
 				)
 			)

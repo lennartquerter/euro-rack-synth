@@ -1,5 +1,7 @@
 # Building a Eurorack synth
 
+tags: lenimal, eurorack, synthesizer, diy, electronics, music
+
 This is a collection of notes and resources for building a Eurorack synth.
 I'm not an expert, but I'm learning as I go and I'm happy to share what I've learned.
 

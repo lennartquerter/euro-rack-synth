@@ -1,7 +1,7 @@
 (kicad_sch
-	(version 20231120)
+	(version 20250114)
 	(generator "eeschema")
-	(generator_version "8.0")
+	(generator_version "9.0")
 	(uuid "b06ccbbc-17db-47a0-86e3-317065119d97")
 	(paper "A3")
 	(lib_symbols
@@ -71,35 +71,17 @@
 				)
 			)
 			(symbol "74HC595_1_0"
-				(pin tri_state line
-					(at 10.16 7.62 180)
-					(length 2.54)
-					(name "QB"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
 				(pin input line
-					(at -10.16 2.54 0)
+					(at -10.16 10.16 0)
 					(length 2.54)
-					(name "~{SRCLR}"
+					(name "SER"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "10"
+					(number "14"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -118,6 +100,24 @@
 						)
 					)
 					(number "11"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -10.16 2.54 0)
+					(length 2.54)
+					(name "~{SRCLR}"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "10"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -161,17 +161,35 @@
 						)
 					)
 				)
-				(pin input line
-					(at -10.16 10.16 0)
+				(pin power_in line
+					(at 0 15.24 270)
 					(length 2.54)
-					(name "SER"
+					(name "VCC"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "14"
+					(number "16"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 0 -17.78 90)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -197,17 +215,17 @@
 						)
 					)
 				)
-				(pin power_in line
-					(at 0 15.24 270)
+				(pin tri_state line
+					(at 10.16 7.62 180)
 					(length 2.54)
-					(name "VCC"
+					(name "QB"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "16"
+					(number "1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -323,24 +341,6 @@
 						)
 					)
 				)
-				(pin power_in line
-					(at 0 -17.78 90)
-					(length 2.54)
-					(name "GND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
 				(pin output line
 					(at 10.16 -12.7 180)
 					(length 2.54)
@@ -373,9 +373,12 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Device:C"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
 				(offset 0.254)
 			)
@@ -448,7 +451,7 @@
 			(symbol "C_0_1"
 				(polyline
 					(pts
-						(xy -2.032 -0.762) (xy 2.032 -0.762)
+						(xy -2.032 0.762) (xy 2.032 0.762)
 					)
 					(stroke
 						(width 0.508)
@@ -460,7 +463,7 @@
 				)
 				(polyline
 					(pts
-						(xy -2.032 0.762) (xy 2.032 0.762)
+						(xy -2.032 -0.762) (xy 2.032 -0.762)
 					)
 					(stroke
 						(width 0.508)
@@ -509,9 +512,12 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Device:R"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
 				(offset 0)
 			)
@@ -630,10 +636,13 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Transistor_BJT:MMBT3904"
 			(pin_names
-				(offset 0) hide)
+				(offset 0)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -706,6 +715,18 @@
 			(symbol "MMBT3904_0_1"
 				(polyline
 					(pts
+						(xy 0.635 1.905) (xy 0.635 -1.905) (xy 0.635 -1.905)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
 						(xy 0.635 0.635) (xy 2.54 2.54)
 					)
 					(stroke
@@ -728,12 +749,11 @@
 						(type none)
 					)
 				)
-				(polyline
-					(pts
-						(xy 0.635 1.905) (xy 0.635 -1.905) (xy 0.635 -1.905)
-					)
+				(circle
+					(center 1.27 0)
+					(radius 2.8194)
 					(stroke
-						(width 0.508)
+						(width 0.254)
 						(type default)
 					)
 					(fill
@@ -752,17 +772,6 @@
 						(type outline)
 					)
 				)
-				(circle
-					(center 1.27 0)
-					(radius 2.8194)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
 			)
 			(symbol "MMBT3904_1_1"
 				(pin input line
@@ -776,24 +785,6 @@
 						)
 					)
 					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 2.54 -5.08 90)
-					(length 2.54)
-					(name "E"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -819,13 +810,36 @@
 						)
 					)
 				)
+				(pin passive line
+					(at 2.54 -5.08 90)
+					(length 2.54)
+					(name "E"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "power:+3.3V"
 			(power)
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 0) hide)
+				(offset 0)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -897,7 +911,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 0) (xy 0 2.54)
+						(xy 0 2.54) (xy 0.762 1.27)
 					)
 					(stroke
 						(width 0)
@@ -909,7 +923,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 2.54) (xy 0.762 1.27)
+						(xy 0 0) (xy 0 2.54)
 					)
 					(stroke
 						(width 0)
@@ -940,12 +954,17 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "power:GNDREF"
 			(power)
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 0) hide)
+				(offset 0)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -1072,6 +1091,7 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 	)
 	(junction
@@ -1715,7 +1735,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "0598315f-1602-4436-ad71-5ac3d167ebfd")
-		(property "Reference" "#PWR019"
+		(property "Reference" "#PWR021"
 			(at 165.1 97.79 0)
 			(effects
 				(font
@@ -1767,7 +1787,7 @@
 		(instances
 			(project "quantizer"
 				(path "/ffcc7acb-943e-4c85-833d-d9691a289ebb/4e3d7d8d-0ba4-4ee1-9c56-6c84176a8d22"
-					(reference "#PWR019")
+					(reference "#PWR021")
 					(unit 1)
 				)
 			)
@@ -1783,7 +1803,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "08a53e9e-1a58-4ede-a597-a9dea0bff188")
-		(property "Reference" "#PWR016"
+		(property "Reference" "#PWR018"
 			(at 175.26 67.31 0)
 			(effects
 				(font
@@ -1833,7 +1853,7 @@
 		(instances
 			(project "quantizer"
 				(path "/ffcc7acb-943e-4c85-833d-d9691a289ebb/4e3d7d8d-0ba4-4ee1-9c56-6c84176a8d22"
-					(reference "#PWR016")
+					(reference "#PWR018")
 					(unit 1)
 				)
 			)
@@ -1849,7 +1869,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "144792f5-b32b-4420-b84f-1b468aa84695")
-		(property "Reference" "#PWR022"
+		(property "Reference" "#PWR024"
 			(at 139.7 143.51 0)
 			(effects
 				(font
@@ -1899,7 +1919,7 @@
 		(instances
 			(project "quantizer"
 				(path "/ffcc7acb-943e-4c85-833d-d9691a289ebb/4e3d7d8d-0ba4-4ee1-9c56-6c84176a8d22"
-					(reference "#PWR022")
+					(reference "#PWR024")
 					(unit 1)
 				)
 			)
@@ -1983,7 +2003,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "256b1a87-f01e-4ec9-84ef-e1fe5690fd8c")
-		(property "Reference" "#PWR025"
+		(property "Reference" "#PWR027"
 			(at 276.86 162.56 0)
 			(effects
 				(font
@@ -2035,7 +2055,7 @@
 		(instances
 			(project "quantizer"
 				(path "/ffcc7acb-943e-4c85-833d-d9691a289ebb/4e3d7d8d-0ba4-4ee1-9c56-6c84176a8d22"
-					(reference "#PWR025")
+					(reference "#PWR027")
 					(unit 1)
 				)
 			)
@@ -2163,7 +2183,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3f9ae4b6-5d0c-4b5e-b2b8-b4652e94bcd7")
-		(property "Reference" "#PWR024"
+		(property "Reference" "#PWR026"
 			(at 251.46 152.4 0)
 			(effects
 				(font
@@ -2215,7 +2235,7 @@
 		(instances
 			(project "quantizer"
 				(path "/ffcc7acb-943e-4c85-833d-d9691a289ebb/4e3d7d8d-0ba4-4ee1-9c56-6c84176a8d22"
-					(reference "#PWR024")
+					(reference "#PWR026")
 					(unit 1)
 				)
 			)
@@ -2231,7 +2251,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "414a0659-ccd3-4f4d-af2e-5e732b285c88")
-		(property "Reference" "#PWR026"
+		(property "Reference" "#PWR028"
 			(at 161.29 171.45 0)
 			(effects
 				(font
@@ -2283,7 +2303,7 @@
 		(instances
 			(project "quantizer"
 				(path "/ffcc7acb-943e-4c85-833d-d9691a289ebb/4e3d7d8d-0ba4-4ee1-9c56-6c84176a8d22"
-					(reference "#PWR026")
+					(reference "#PWR028")
 					(unit 1)
 				)
 			)
@@ -2549,7 +2569,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "7ae7198e-9f8b-49cf-a6a9-f2165f6c15fe")
-		(property "Reference" "#PWR021"
+		(property "Reference" "#PWR023"
 			(at 171.45 140.97 0)
 			(effects
 				(font
@@ -2599,7 +2619,7 @@
 		(instances
 			(project "quantizer"
 				(path "/ffcc7acb-943e-4c85-833d-d9691a289ebb/4e3d7d8d-0ba4-4ee1-9c56-6c84176a8d22"
-					(reference "#PWR021")
+					(reference "#PWR023")
 					(unit 1)
 				)
 			)
@@ -2691,7 +2711,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "aa99801a-2e2b-4a46-b209-90ef2d7fa927")
-		(property "Reference" "#PWR018"
+		(property "Reference" "#PWR020"
 			(at 162.56 77.47 0)
 			(effects
 				(font
@@ -2743,7 +2763,7 @@
 		(instances
 			(project "quantizer"
 				(path "/ffcc7acb-943e-4c85-833d-d9691a289ebb/4e3d7d8d-0ba4-4ee1-9c56-6c84176a8d22"
-					(reference "#PWR018")
+					(reference "#PWR020")
 					(unit 1)
 				)
 			)
@@ -2759,7 +2779,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b8205a3e-ada7-4b1a-94ad-faeabcea0d49")
-		(property "Reference" "#PWR020"
+		(property "Reference" "#PWR022"
 			(at 175.26 110.49 0)
 			(effects
 				(font
@@ -2811,7 +2831,7 @@
 		(instances
 			(project "quantizer"
 				(path "/ffcc7acb-943e-4c85-833d-d9691a289ebb/4e3d7d8d-0ba4-4ee1-9c56-6c84176a8d22"
-					(reference "#PWR020")
+					(reference "#PWR022")
 					(unit 1)
 				)
 			)
@@ -2827,7 +2847,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "dad4f0b8-3e39-4cb9-9e53-4ca32bd74c9e")
-		(property "Reference" "#PWR017"
+		(property "Reference" "#PWR019"
 			(at 139.7 71.12 0)
 			(effects
 				(font
@@ -2877,7 +2897,7 @@
 		(instances
 			(project "quantizer"
 				(path "/ffcc7acb-943e-4c85-833d-d9691a289ebb/4e3d7d8d-0ba4-4ee1-9c56-6c84176a8d22"
-					(reference "#PWR017")
+					(reference "#PWR019")
 					(unit 1)
 				)
 			)
@@ -2893,7 +2913,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e3b6ddf1-353a-4777-82f3-6cb29d3f198d")
-		(property "Reference" "#PWR023"
+		(property "Reference" "#PWR025"
 			(at 158.75 151.13 0)
 			(effects
 				(font
@@ -2945,7 +2965,7 @@
 		(instances
 			(project "quantizer"
 				(path "/ffcc7acb-943e-4c85-833d-d9691a289ebb/4e3d7d8d-0ba4-4ee1-9c56-6c84176a8d22"
-					(reference "#PWR023")
+					(reference "#PWR025")
 					(unit 1)
 				)
 			)
@@ -3031,7 +3051,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f228b094-ba1c-4eaf-aea2-91d846fa9781")
-		(property "Reference" "#PWR027"
+		(property "Reference" "#PWR029"
 			(at 171.45 184.15 0)
 			(effects
 				(font
@@ -3083,7 +3103,7 @@
 		(instances
 			(project "quantizer"
 				(path "/ffcc7acb-943e-4c85-833d-d9691a289ebb/4e3d7d8d-0ba4-4ee1-9c56-6c84176a8d22"
-					(reference "#PWR027")
+					(reference "#PWR029")
 					(unit 1)
 				)
 			)
@@ -3168,6 +3188,10 @@
 	(sheet
 		(at 237.49 63.5)
 		(size 60.96 64.77)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
 		(fields_autoplaced yes)
 		(stroke
 			(width 0.1524)
@@ -3197,163 +3221,163 @@
 		)
 		(pin "F_18" input
 			(at 237.49 116.84 180)
+			(uuid "4cc220f6-091a-435d-bb04-585432d78ac3")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "4cc220f6-091a-435d-bb04-585432d78ac3")
 		)
 		(pin "D_7" input
 			(at 237.49 91.44 180)
+			(uuid "3232ddd7-9471-454e-b8bd-221f14a023ca")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "3232ddd7-9471-454e-b8bd-221f14a023ca")
 		)
 		(pin "E_1" input
 			(at 237.49 78.74 180)
+			(uuid "454d3a28-ca63-4f23-921b-4f3794039867")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "454d3a28-ca63-4f23-921b-4f3794039867")
 		)
 		(pin "A_12" input
 			(at 237.49 104.14 180)
+			(uuid "db3775c3-6906-4d4d-b221-49e99f8d835c")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "db3775c3-6906-4d4d-b221-49e99f8d835c")
 		)
 		(pin "B_10" input
 			(at 237.49 101.6 180)
+			(uuid "01ab8ee0-92b5-44c1-99d1-df4b0c660adc")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "01ab8ee0-92b5-44c1-99d1-df4b0c660adc")
 		)
 		(pin "C_9" input
 			(at 237.49 93.98 180)
+			(uuid "e185a272-9463-4315-bf38-4626bd25799b")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "e185a272-9463-4315-bf38-4626bd25799b")
 		)
 		(pin "G_17" input
 			(at 237.49 114.3 180)
+			(uuid "6799d409-f39a-4a15-816b-83764dd7ac26")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "6799d409-f39a-4a15-816b-83764dd7ac26")
 		)
 		(pin "H_15" input
 			(at 237.49 111.76 180)
+			(uuid "ad87d1a0-eee5-4831-ba54-2236bc4f01e3")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "ad87d1a0-eee5-4831-ba54-2236bc4f01e3")
 		)
 		(pin "J_14" input
 			(at 237.49 109.22 180)
+			(uuid "f1b5a1de-398f-4c7d-ab99-08702ff4286c")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "f1b5a1de-398f-4c7d-ab99-08702ff4286c")
 		)
 		(pin "N_2" input
 			(at 237.49 81.28 180)
+			(uuid "e4a69692-33a6-4be6-bc6c-381c6a24f885")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "e4a69692-33a6-4be6-bc6c-381c6a24f885")
 		)
 		(pin "M_4" input
 			(at 237.49 83.82 180)
+			(uuid "81f4e7e7-d424-4e2c-ae80-3676218a3b4a")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "81f4e7e7-d424-4e2c-ae80-3676218a3b4a")
 		)
 		(pin "K1" input
 			(at 251.46 128.27 270)
+			(uuid "006ea699-abed-412b-9629-5ffce52e9dac")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "006ea699-abed-412b-9629-5ffce52e9dac")
 		)
 		(pin "K2" input
 			(at 276.86 128.27 270)
+			(uuid "ae7536bc-4941-493b-8296-cbcbc43e2f27")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "ae7536bc-4941-493b-8296-cbcbc43e2f27")
 		)
 		(pin "P_13" input
 			(at 237.49 106.68 180)
+			(uuid "c9f1c7c2-fd6f-4fc4-b984-7988d944706b")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "c9f1c7c2-fd6f-4fc4-b984-7988d944706b")
 		)
 		(pin "K_6" input
 			(at 237.49 88.9 180)
+			(uuid "afb12982-c2b3-4b8a-b722-334ee6e2e769")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "afb12982-c2b3-4b8a-b722-334ee6e2e769")
 		)
 		(pin "L_5" input
 			(at 237.49 86.36 180)
+			(uuid "035fb46b-edaa-4ce4-a4bc-91cf333943f1")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "035fb46b-edaa-4ce4-a4bc-91cf333943f1")
 		)
 		(instances
 			(project "quantizer"

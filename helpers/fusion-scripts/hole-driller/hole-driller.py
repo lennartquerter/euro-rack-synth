@@ -185,7 +185,6 @@ def add_points(root_comp, module_file, type):
     circles = sketch.sketchCurves.sketchCircles
 
     hole_positions = module_file[type]
-    hole_size = hole_size_map[type]
 
     panel_width_in_mm = hp_to_mm * module_file['hp']
     panel_height_in_mm = full_height * 10
@@ -200,8 +199,13 @@ def add_points(root_comp, module_file, type):
         x = panel_width_in_mm - hole["fromRight"] - right_offset_in_mm
         y = panel_height_in_mm - hole["fromTop"] - top_offset_in_mm
 
+        current_hole_size = hole_size_map[type]
+
         center_point = adsk.core.Point3D.create(x / 10, y / 10, panel_offset_z)
-        circles.addByCenterRadius(center_point, hole_size / 2)
+        if 'override_hole_size' in hole:
+            current_hole_size = hole['override_hole_size']
+
+        circles.addByCenterRadius(center_point, current_hole_size / 2)
 
         extrude(root_comp, sketch.profiles.item(idx), -panel_offset_z,
                 adsk.fusion.FeatureOperations.CutFeatureOperation)
