@@ -1,0 +1,412 @@
+{
+  "metadata": {
+    "skill_name": "kicad-graph",
+    "timestamp": "2026-04-27T15:21:00Z",
+    "evals_run": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "runs_per_configuration": 1
+  },
+  "runs": [
+    {
+      "eval_id": 1,
+      "eval_name": "passive-mult-topology",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 5,
+        "failed": 0,
+        "total": 5,
+        "time_seconds": 69.217,
+        "tokens": 83161,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Identifies exactly 8 audio jacks (J1-J8)",
+          "passed": true,
+          "evidence": "Lists 2 input + 6 output jacks J1-J8"
+        },
+        {
+          "text": "Correctly identifies J1, J2 as inputs and J3-J8 as outputs",
+          "passed": true,
+          "evidence": "Explicitly labels J1, J2 inputs and J3-J8 outputs"
+        },
+        {
+          "text": "Correctly identifies bank groupings {J1,J3,J4,J5} and {J2,J6,J7,J8}",
+          "passed": true,
+          "evidence": "Bank 1: J1->J3,J4,J5 via Net-1; Bank 2: J2->J6,J7,J8 via Net-2"
+        },
+        {
+          "text": "Mentions all sleeves on ground (GNDREF)",
+          "passed": true,
+          "evidence": "\"All jacks share a common ground rail (GNDREF) on their sleeve (S) contacts.\""
+        },
+        {
+          "text": "Explains J2.TN normalling to Bank 1",
+          "passed": true,
+          "evidence": "Correctly explains that J2.TN connects to Net-1 so unplugged J2 inherits J1 signal"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 1,
+      "eval_name": "passive-mult-topology",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.6,
+        "passed": 3,
+        "failed": 2,
+        "total": 5,
+        "time_seconds": 25.614,
+        "tokens": 83214,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Identifies exactly 8 audio jacks (J1-J8)",
+          "passed": true,
+          "evidence": "Lists J1-J8"
+        },
+        {
+          "text": "Correctly identifies J1, J2 as inputs and J3-J8 as outputs",
+          "passed": true,
+          "evidence": "Identifies J1, J2 as inputs and J3-J8 as outputs based on Value field"
+        },
+        {
+          "text": "Correctly identifies bank groupings {J1,J3,J4,J5} and {J2,J6,J7,J8}",
+          "passed": false,
+          "evidence": "WRONG: claims J1 -> J3,J4 only (2 outputs) and J2 -> J5,J6,J7,J8 (4 outputs). Truth is J1->J3,J4,J5 and J2->J6,J7,J8."
+        },
+        {
+          "text": "Mentions all sleeves on ground (GNDREF)",
+          "passed": true,
+          "evidence": "Mentions GNDREF connecting to sleeves"
+        },
+        {
+          "text": "Explains J2.TN normalling to Bank 1",
+          "passed": false,
+          "evidence": "WRONG: claims 'TN pins are marked no_connect... no active jack normalling implemented'. The schematic does have J2.TN wired to Net-1."
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 2,
+      "eval_name": "3320-hpf-signal-trace",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 5,
+        "failed": 0,
+        "total": 5,
+        "time_seconds": 66.977,
+        "tokens": 80792,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Identifies SIGNAL_IN and SIGNAL_OUT as hierarchical interface labels",
+          "passed": true,
+          "evidence": "Treats SIGNAL_IN and SIGNAL_OUT as external interface labels and starts/ends the trace there"
+        },
+        {
+          "text": "Names AC-coupling caps (C7 input, C11 output)",
+          "passed": true,
+          "evidence": "States 'C7 (300pF) is the first AC-coupling capacitor' and 'C11 provides AC-coupling at the final output node'"
+        },
+        {
+          "text": "Walks through 4 cascaded stages of U2 with named pole capacitors",
+          "passed": true,
+          "evidence": "Stage A/B/C/D breakdown with U2 pin pairs (1->7, 2->6, 17->15, 18->10) and pole caps"
+        },
+        {
+          "text": "FREQ_CTRL and RES_CTRL identified as control inputs",
+          "passed": true,
+          "evidence": "Both control inputs explicitly traced through R10/R11 and R9 to U2 pins 12 and 9"
+        },
+        {
+          "text": "Component refs and pin numbers cited are consistent with JSON",
+          "passed": true,
+          "evidence": "All cited refs (U2, R4-R12, RV1, C7-C11) appear in components list; pin numbers in valid CEM3320 range"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 2,
+      "eval_name": "3320-hpf-signal-trace",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.6,
+        "passed": 3,
+        "failed": 2,
+        "total": 5,
+        "time_seconds": 66.177,
+        "tokens": 96279,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Identifies SIGNAL_IN and SIGNAL_OUT as hierarchical interface labels",
+          "passed": true,
+          "evidence": "Identifies as positions (91.44, 68.58) and (218.44, 68.58); functions as entry/exit"
+        },
+        {
+          "text": "Names AC-coupling caps (C7 input, C11 output)",
+          "passed": true,
+          "evidence": "Says 'C7 input AC coupling' and 'C11 output AC coupling capacitor'"
+        },
+        {
+          "text": "Walks through 4 cascaded stages of U2 with named pole capacitors",
+          "passed": false,
+          "evidence": "Treats U2 as a black box; doesn't break out 4 distinct stages or pin-by-pin pole sequence. Heavy on coordinates rather than stage-level structure."
+        },
+        {
+          "text": "FREQ_CTRL and RES_CTRL identified as control inputs",
+          "passed": true,
+          "evidence": "FREQ_CTRL through R10/R11 and RES_CTRL through R9 mentioned"
+        },
+        {
+          "text": "Component refs and pin numbers cited are consistent with JSON",
+          "passed": false,
+          "evidence": "Cites positions (e.g. (151.13, 87.63)) but very few specific pin numbers; some structural claims (e.g. \"C7 shunt to ground\") are unverified"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 3,
+      "eval_name": "wolkje-hierarchy-overview",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.8,
+        "passed": 4,
+        "failed": 1,
+        "total": 5,
+        "time_seconds": 98.827,
+        "tokens": 83462,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Identifies all 4 sheets: /, /STM32, /audio-codec, /signal_connector",
+          "passed": true,
+          "evidence": "Sheet table lists Root, /STM32, /signal_connector, /audio-codec"
+        },
+        {
+          "text": "Reports component counts per sheet (~5/24/13/4)",
+          "passed": true,
+          "evidence": "Reports root=5, STM32=24, audio-codec=13, signal_connector=4 - exact match"
+        },
+        {
+          "text": "Lists at least 8 user-control hierarchical signals",
+          "passed": true,
+          "evidence": "Lists 16+ signals: TEXTURE_CV, SIZE_CV, POSITION_CV, DENSITY_CV, V_OCT, BLEND_CV, TEXTURE, BLEND, SIZE, PITCH, PLAY_TRIGGER, FREEZE_TRIGGER, SW_LOAD, SW_FREEZE, SW_MODE, FREEZE_LED"
+        },
+        {
+          "text": "Identifies audio path L_IN/L_OUT/R_IN/R_OUT between root and audio-codec",
+          "passed": false,
+          "evidence": "Doesn't call out L_IN/L_OUT/R_IN/R_OUT explicitly; says STM32 talks to codec via I2S 'on shared power pins' which is incorrect"
+        },
+        {
+          "text": "Mentions +3.3V/+3.3VA/GND span multiple sheets",
+          "passed": true,
+          "evidence": "Power Rails section enumerates GNDREF, +3.3V, +3.3VA across all/most sheets"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 3,
+      "eval_name": "wolkje-hierarchy-overview",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.4,
+        "passed": 2,
+        "failed": 3,
+        "total": 5,
+        "time_seconds": 84.025,
+        "tokens": 95563,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Identifies all 4 sheets: /, /STM32, /audio-codec, /signal_connector",
+          "passed": true,
+          "evidence": "Lists root + 3 sub-sheets (4 total)"
+        },
+        {
+          "text": "Reports component counts per sheet (~5/24/13/4)",
+          "passed": false,
+          "evidence": "Wrong counts: says STM32 has 41, audio-codec 24, signal_connector 8. Truth is 24/13/4. Power flags inflate the counts."
+        },
+        {
+          "text": "Lists at least 8 user-control hierarchical signals",
+          "passed": true,
+          "evidence": "Lists ~14 signals (BLEND_CV, DENSITY_CV, POSITION_CV, etc.)"
+        },
+        {
+          "text": "Identifies audio path L_IN/L_OUT/R_IN/R_OUT between root and audio-codec",
+          "passed": false,
+          "evidence": "Doesn't mention L_IN/L_OUT/R_IN/R_OUT. Instead fabricates I2S signal names (I2S_SIN, I2S_SOUT, I2S_LRCK, I2S_SCK) that aren't actually in the schematic."
+        },
+        {
+          "text": "Mentions +3.3V/+3.3VA/GND span multiple sheets",
+          "passed": false,
+          "evidence": "Doesn't discuss power rail topology beyond mentioning power flags exist"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 4,
+      "eval_name": "3320-power-rail-audit",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 4,
+        "failed": 0,
+        "total": 4,
+        "time_seconds": 115.481,
+        "tokens": 88423,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Reports ~24 pins on +12V, ~25 on -12V, ~94 on GNDREF",
+          "passed": true,
+          "evidence": "Reports 24/25/94 - exact match to JSON"
+        },
+        {
+          "text": "Identifies correct power pins per chip (U1.4=-12V, U1.8=+12V, U2.4=+12V, U2.11=-12V, U3.14=+12V)",
+          "passed": true,
+          "evidence": "All chip pin assignments match JSON. Correctly identifies U3 as single-supply (+12V/GND only). Notes U1.3/U1.5 'GND' but these are signal inputs not power - minor inaccuracy."
+        },
+        {
+          "text": "Lists at least 3 specific bypass cap refs",
+          "passed": true,
+          "evidence": "Lists 5 caps on +12V (C1,C3,C5,C7,C15) and 4 on -12V (C2,C4,C6,C8) - matches JSON"
+        },
+        {
+          "text": "States explicitly whether anything is missing or all is correct",
+          "passed": true,
+          "evidence": "'No design issues identified' - explicit conclusion"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 4,
+      "eval_name": "3320-power-rail-audit",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.0,
+        "passed": 0,
+        "failed": 4,
+        "total": 4,
+        "time_seconds": 168.544,
+        "tokens": 103806,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Reports ~24 pins on +12V, ~25 on -12V, ~94 on GNDREF",
+          "passed": false,
+          "evidence": "Reports 9/9/42. Truth is 24/25/94. Off by ~2.5x because they only counted power symbol instances, not all pins on the rails."
+        },
+        {
+          "text": "Identifies correct power pins per chip",
+          "passed": false,
+          "evidence": "Wrong: U2 pin 13=+12V (truth: U2.4=+12V; pin 13 is something else), U3 pins 10,17=+12V (truth: U3.14=VCC, U3.10 is on net-21)"
+        },
+        {
+          "text": "Lists at least 3 specific bypass cap refs",
+          "passed": false,
+          "evidence": "Lists generic cap inventory (C1-C15) with mostly '?' values, doesn't pin down which are bypass caps for which rail"
+        },
+        {
+          "text": "States explicitly whether anything is missing or all is correct",
+          "passed": false,
+          "evidence": "Says 'POTENTIAL ISSUE: U1, U2, U3 appear to be missing -12V supply connections' - wrong, they all have correct rails. Conclusion is uncertain rather than definitive."
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "run_summary": {
+    "with_skill": {
+      "pass_rate": {
+        "mean": 0.95,
+        "stddev": 0.0866,
+        "min": 0.8,
+        "max": 1.0
+      },
+      "time_seconds": {
+        "mean": 87.6255,
+        "stddev": 20.4122,
+        "min": 66.977,
+        "max": 115.481
+      },
+      "tokens": {
+        "mean": 83959.5,
+        "stddev": 2776.7336,
+        "min": 80792,
+        "max": 88423
+      }
+    },
+    "without_skill": {
+      "pass_rate": {
+        "mean": 0.4,
+        "stddev": 0.2449,
+        "min": 0.0,
+        "max": 0.6
+      },
+      "time_seconds": {
+        "mean": 86.09,
+        "stddev": 52.098,
+        "min": 25.614,
+        "max": 168.544
+      },
+      "tokens": {
+        "mean": 94715.5,
+        "stddev": 7383.8418,
+        "min": 83214,
+        "max": 103806
+      }
+    },
+    "delta": {
+      "pass_rate": "+0.550",
+      "time_seconds": "+1.5",
+      "tokens": "-10756"
+    }
+  },
+  "notes": [
+    "With-skill pass rate 95% vs baseline 40% \u2014 a 55-point lift.",
+    "With-skill is faster on average (88s vs 86s) on the connectivity-heavy evals (3320 power audit, wolkje hierarchy).",
+    "Baseline failed catastrophically on quantitative connectivity questions: eval-4 baseline reported 9/9/42 pin counts vs truth 24/25/94, and claimed -12V wasn't wired to the chips when it actually is.",
+    "Eval-1 baseline misidentified bank groupings: claimed J1->J3,J4 (2 outputs) vs truth J1->J3,J4,J5 (3 outputs). Without netlist resolution this is hard to recover from raw S-expressions.",
+    "Eval-3 baseline fabricated I2S signal names (I2S_SIN, I2S_SOUT) that don't exist in the schematic \u2014 a hallucination risk when forced to read raw KiCad files.",
+    "With-skill saw one miss on eval-3 (didn't explicitly call out L_IN/L_OUT/R_IN/R_OUT audio bridge). Easy to fix in iteration 2 by emphasizing audio-path inspection in SKILL.md guidance."
+  ]
+}

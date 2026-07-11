@@ -40,25 +40,29 @@ There are tags on the commit that was ordered (for the exact gerber files)
 
 If there are issues, they will be reported in the README for each module.
 
-| Type    | Module                    | Version | Status | Tested | Issues? | Panel available |
-|---------|---------------------------|---------|--------|--------|---------|-----------------|
-| VCO     | Vixen [MKI]               | 2       | Built  | yes    | No      | Yes (3D print)  |
-| VCO     | 3340                      | 1       | Built  | Yes    | No      | Yes (3D print)  |
-| LFO     | XOF                       | 1       | Built  | Yes    | No      | Yes (3D print)  |
-| VCA     | Sparkle [MKI]             | 2       | Built  | Yes    | No      | Yes (3D print)  |
-| SEQ     | Sensei [Baby 8]           | 2       | Built  | yes    | No      | Yes (3D print)  |
-| EG      | Scribble [MKI]            | 2       | Built  | yes    | No      | Yes (3D print)  |
-| EG      | 7555 [Fastest Envelope]   | 1       | Built  | yes    | No      | Yes (3D print)  |
-| Filter  | 3320                      | 1       | Built  | Yes    | No      | Yes (3D print)  |
-| Filter  | Low Orbit [MKI]           | 1       | Built  | yes    | No      | Yes (3D print)  |
-| Mixer   | Distorted Daisy [MKI]     | 2       | Built  | yes    | No      | Yes (3D print)  |
-| Drums   | Muay Thai (Kick) [MKI]    | 1       | Built  | Yes    | No      | Yes (Gerber)    |
-| Utility | Wavefolder (SuperNova)    | 1       | built  | Yes    | Minor   | Yes (Gerber)    |
-| Utility | Passive Mult              | 1       | Built  | Yes    | No      | Yes (3D print)  |
-| Utility | Active Mult               | 1       | Built  | Yes    | No      | Yes (3D print)  |
-| Utility | Chrono Divider            | 1       | Built  | yes    | No      | Yes (3D print)  |
-| Utility | Euro ProtoType Helper     | 1       | Built  | yes    | No      | No              |
-
+| Type    | Module                    | Version | Status     | Tested | Issues? | Panel available |
+|---------|---------------------------|---------|------------|--------|---------|-----------------|
+| VCO     | Vixen [MKI]               | 2       | Built      | yes    | No      | Yes (3D print)  |
+| VCO     | 3340                      | 1       | Built      | Yes    | No      | Yes (3D print)  |
+| LFO     | XOF                       | 1       | Built      | Yes    | No      | Yes (3D print)  |
+| VCA     | Sparkle [MKI]             | 2       | Built      | Yes    | No      | Yes (3D print)  |
+| SEQ     | Sensei [Baby 8]           | 2       | Built      | yes    | No      | Yes (3D print)  |
+| EG      | Scribble [MKI]            | 2       | Built      | yes    | No      | Yes (3D print)  |
+| EG      | 7555 [Fastest Envelope]   | 1       | Built      | yes    | No      | Yes (3D print)  |
+| Filter  | 3320                      | 1       | Built      | Yes    | No      | Yes (3D print)  |
+| Filter  | Low Orbit [MKI]           | 1       | Built      | yes    | No      | Yes (3D print)  |
+| Mixer   | Distorted Daisy [MKI]     | 2       | Built      | yes    | No      | Yes (3D print)  |
+| Drums   | Muay Thai (Kick) [MKI]    | 1       | Built      | Yes    | No      | Yes (Gerber)    |
+| Utility | Wavefolder (SuperNova)    | 1       | built      | Yes    | Minor   | Yes (Gerber)    |
+| Utility | Passive Mult              | 1       | Built      | Yes    | No      | Yes (3D print)  |
+| Utility | Active Mult               | 1       | Built      | Yes    | No      | Yes (3D print)  |
+| Utility | Chrono Divider            | 1       | Built      | yes    | No      | Yes (3D print)  |
+| Utility | Euro ProtoType Helper     | 1       | Built      | yes    | No      | No              |
+| Utility | Cable tester              | 1       | Built      | Yes    | No      | No              |
+| Drums   | Clap/Snare                | 1       | NotWorking | yes    | ?       | Yes (Gerber)    |
+| Utility | Midi-2-cv (Midas)         | 2       | Built      | yes    | No      | Yes (Gerber)    |
+| FX      | Delay (PT-chip)           | 2       | Built      | Yes    | No      | Yes (Gerber)    |
+| FX      | Clouds Clone / Digital FX | 2       | Built      | yes    | Minor   | Yes (Gerber)    |
 
 ## The story
 
@@ -281,13 +285,17 @@ I use Fusion 360 for the designs (there is a free non-commercial license!).
 
 The following modules are still under active development. They are not yet ready for production usage.
 
-| Type    | Module                    | Version | Status                 | Tested |
-|---------|---------------------------|---------|------------------------|--------|
-| Utility | Cable tester              | 1       | ready_for_soldering    | No     |
-| Drums   | Clap/Snare                | 1       | NOT_WORKING            | yes    |
-| Utility | Midi-2-cv (Midas)         | 2       | Ready                  | yes    |
-| FX      | Delay (PT-chip)           | 2       | NOT_WORKING            | Yes    |
-| FX      | Clouds Clone / Digital FX | 2       | not_working            | yes    |
+| Type    | Module                 | Version | Status  | Tested |
+|---------|------------------------|---------|---------|--------|
+| Utility | Quantizer / Sequencer  | 1       | Concept | No     |
+| Utility | Master Clock           | 1       | Concept | No     |
+| Utility | Precision Adder        | 1       | Concept | No     |
+| Utility | Dual Compressor        | 1       | Concept | No     |
+| Drums   | Hats                   | 1       | Concept | No     |
+| Drums   | Snare                  | 1       | Concept | No     |
+| Drums   | Cymbals                | 1       | Concept | No     |
+| Drums   | FM Drums               | 1       | Concept | No     |
+| Utility | SD card folder Sampler | 1       | Concept | No     |
 
 ### Next
 
@@ -298,9 +306,6 @@ The following modules are still under active development. They are not yet ready
 | Utility | AND/OR          | 1       | Concept | No     |
 | Utility | Math?           | 1       | Concept | No     |
 | Utility | 1v/oct tuner    | 1       | Concept | No     |
-| Utility | Quantizer       | 1       | Concept | No     |
-| SEQ     | STM32 Sequencer | 1       | Concept | No     |
-| Drums   | Hats            | 1       | Concept | No     |
 | Drums   | Toms            | 1       | Concept | No     |
 | FX      | Delay (DBB)     | 1       | Concept | No     |
 | FX      | Reverb (Spring) | 1       | Concept | No     |
@@ -308,17 +313,17 @@ The following modules are still under active development. They are not yet ready
 
 ### Previous versions
 
-| Type    | Module                    | Version | Status       | Tested | Issues? |
-|---------|---------------------------|---------|--------------|--------|---------|
-| VCO     | Vixen                     | 1       | Built        | Yes    | Minor   | 
-| VCA     | Sparkle                   | 1       | Built        | Yes    | No      |
-| SEQ     | Sensei                    | 1       | Built        | Yes    | Minor   |
-| EG      | Scribble                  | 1       | Built        | Yes    | Yes     |
-| Mixer   | Distorted Daisy           | 1       | Built        | yes    | No      |
-| Utility | Midi-2-cv (Midas)         | 1       | Built        | yes    | yes     |
-| Drums   | Clap/Snare                | 1       | Built        | yes    | yes     |
-| FX      | Delay (PT-chip)           | 1       | Built        | Yes    | yes     |
-| FX      | Clouds Clone / Digital FX | 1       | Built        | yes    | yes     |
+| Type    | Module                    | Version | Status | Tested | Issues? |
+|---------|---------------------------|---------|--------|--------|---------|
+| VCO     | Vixen                     | 1       | Built  | Yes    | Minor   | 
+| VCA     | Sparkle                   | 1       | Built  | Yes    | No      |
+| SEQ     | Sensei                    | 1       | Built  | Yes    | Minor   |
+| EG      | Scribble                  | 1       | Built  | Yes    | Yes     |
+| Mixer   | Distorted Daisy           | 1       | Built  | yes    | No      |
+| Utility | Midi-2-cv (Midas)         | 1       | Built  | yes    | yes     |
+| Drums   | Clap/Snare                | 1       | Built  | yes    | yes     |
+| FX      | Delay (PT-chip)           | 1       | Built  | Yes    | yes     |
+| FX      | Clouds Clone / Digital FX | 1       | Built  | yes    | yes     |
 
 ## Module links
 
