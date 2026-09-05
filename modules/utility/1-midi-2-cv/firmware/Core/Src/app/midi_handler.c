@@ -92,6 +92,13 @@ bool midi_is_event_generated(MIDI_event* midi_event)
             midi_event->channel = lower_half_byte;
             analyzed_status.channel = lower_half_byte;
             break;
+        case 224: // Pitch Bend Change (0xE0)
+            midi_event->type = MSG_PITCH;
+            analyzed_status.type = MSG_PITCH;
+            analyzed_status.stat = WAIT_DATA1;
+            midi_event->channel = lower_half_byte;
+            analyzed_status.channel = lower_half_byte;
+            break;
         case 176: // Control Change (0xB)
             midi_event->type = MSG_CC;
             analyzed_status.type = MSG_CC;
@@ -107,8 +114,8 @@ bool midi_is_event_generated(MIDI_event* midi_event)
     }
     else if (analyzed_status.stat == WAIT_DATA1)
     {
-        // push data into the first data_byte
-        midi_event->data_byte[0] = (midi_buffer);
+        // push data into the first data_byte (7-bit, MIDI data bytes never have bit 7 set)
+        midi_event->data_byte[0] = (midi_buffer & 0x7F);
 
         if (analyzed_status.type == MSG_NOTE_ON ||
             analyzed_status.type == MSG_NOTE_OFF ||
@@ -124,7 +131,7 @@ bool midi_is_event_generated(MIDI_event* midi_event)
     }
     else if (analyzed_status.stat == WAIT_DATA2)
     {
-        midi_event->data_byte[1] = (midi_buffer);
+        midi_event->data_byte[1] = (midi_buffer & 0x7F);
         return true;
     }
     else if (analyzed_status.stat == END_ANALYSIS)

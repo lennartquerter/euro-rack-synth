@@ -55,6 +55,11 @@ add_definitions(-DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE)
 
 file(GLOB_RECURSE SOURCES "Core/*.*" "Drivers/*.*")
 
+# Warnings for our own code only. The vendor sources under Drivers/ (ST HAL, CMSIS) are not
+# warning-clean, and enabling this globally would bury our diagnostics in their noise.
+file(GLOB_RECURSE APP_SOURCES "Core/Src/*.c")
+set_source_files_properties(${APP_SOURCES} PROPERTIES COMPILE_OPTIONS "-Wall;-Wextra")
+
 set(LINKER_SCRIPT ${CMAKE_SOURCE_DIR}/STM32F411RETX_FLASH.ld)
 
 add_link_options(-Wl,-gc-sections,--print-memory-usage,-Map=${PROJECT_BINARY_DIR}/${PROJECT_NAME}.map)

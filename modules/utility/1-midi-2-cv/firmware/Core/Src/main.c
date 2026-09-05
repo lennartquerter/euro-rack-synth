@@ -92,6 +92,9 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef* huart)
 
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 {
+    // Signature is fixed by the HAL; this callback services the single mode-switch EXTI line
+    UNUSED(GPIO_Pin);
+
     MIDI_PROCESSOR_mode_changed();
 
     if (EXTI->PR & EXTI_PR_PR0)
@@ -158,6 +161,19 @@ int main(void)
     {
         Error_Handler();
     }
+
+    /*
+     * Put the DACs into the configuration the output scaling assumes: internal 2.048V reference at
+     * gain 1. Fast Write carries no Vref/gain bits, so without this every voltage depends on
+     * whatever the chips happen to hold in EEPROM.
+     *
+     * A failure here is deliberately not fatal: a module that outputs mis-scaled CV is still more
+     * useful on stage than one that sits in Error_Handler(), and the most likely cause is a
+     * transient I2C fault rather than a dead DAC.
+     */
+    MCP4728_Init(&hi2c1);
+    MCP4728_Init(&hi2c2);
+    MCP4728_Init(&hi2c3);
 
     /*
      * Set up the MIDI Handler that will process all incoming MIDI messages and convert them into MIDI events

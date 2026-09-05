@@ -17,6 +17,22 @@
 
 // Command bytes
 #define MCP4728_CMD_SINGLE_WRITE  0x58
+#define MCP4728_CMD_SEQ_WRITE     0x50  // writes the DAC input registers AND their EEPROM
+#define MCP4728_CMD_WRITE_VREF    0x80  // volatile: 0x80 | (VrefA<<3 | VrefB<<2 | VrefC<<1 | VrefD)
+#define MCP4728_CMD_WRITE_GAIN    0xC0  // volatile: 0xC0 | (GxA<<3  | GxB<<2  | GxC<<1  | GxD)
+#define MCP4728_CMD_WRITE_PD      0xA0  // volatile: two bytes, 2 power-down bits per channel
+
+// Config bits as they appear in the high nibble of a channel's config/data byte
+#define MCP4728_VREF_INTERNAL     0x80  // 2.048V internal reference (0x00 would select VDD)
+#define MCP4728_GAIN_X1           0x00  // 0x10 would select x2
+#define MCP4728_PD_NORMAL         0x00
+
+// The configuration this module depends on: internal 2.048V reference at gain 1, powered up.
+// Fast Write carries no Vref/gain bits, so this must already be in the input registers.
+#define MCP4728_CONFIG_BYTE       (MCP4728_VREF_INTERNAL | MCP4728_PD_NORMAL | MCP4728_GAIN_X1)
+
+#define MCP4728_READ_LENGTH       24    // 6 bytes per channel: 3 DAC register, 3 EEPROM
+#define MCP4728_EEPROM_WRITE_MS   60    // datasheet: 50ms typical per EEPROM write cycle
 
 #define MCP4728_CHANNEL_A               0
 #define MCP4728_CHANNEL_B               1
@@ -29,6 +45,8 @@
 #define MCP4728_GENERAL_SWUPDATE        0x08
 
 HAL_StatusTypeDef MCP4728_Init(I2C_HandleTypeDef* I2CHandler);
+HAL_StatusTypeDef MCP4728_SetConfig(I2C_HandleTypeDef* I2CHandler);
+HAL_StatusTypeDef MCP4728_StoreConfigEEPROM(I2C_HandleTypeDef* I2CHandler);
 HAL_StatusTypeDef I2C_Reset(I2C_HandleTypeDef I2CHandler);
 HAL_StatusTypeDef I2C_Check_Error(I2C_HandleTypeDef I2CHandler);
 

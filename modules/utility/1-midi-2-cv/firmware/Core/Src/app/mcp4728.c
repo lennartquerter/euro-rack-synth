@@ -2,6 +2,54 @@
 
 #include "app/mcp4728.h"
 
+// Sets Vref and gain in the volatile input registers. Fast Write carries neither, so without this
+// the module runs on whatever the chip loaded from its EEPROM at power-up and every output voltage
+// silently depends on that. Done on every boot; costs two bytes and no EEPROM wear.
+HAL_StatusTypeDef MCP4728_SetConfig(I2C_HandleTypeDef* I2CHandler)
+{
+    // All four channels: internal 2.048V reference
+    uint8_t vref_cmd = MCP4728_CMD_WRITE_VREF | 0x0F;
+    if (HAL_I2C_Master_Transmit(I2CHandler, MCP4728_ADDR, &vref_cmd, 1, HAL_MAX_DELAY) != HAL_OK)
+    {
+        return HAL_ERROR;
+    }
+
+    // All four channels: gain x1
+    uint8_t gain_cmd = MCP4728_CMD_WRITE_GAIN | 0x00;
+    if (HAL_I2C_Master_Transmit(I2CHandler, MCP4728_ADDR, &gain_cmd, 1, HAL_MAX_DELAY) != HAL_OK)
+    {
+        return HAL_ERROR;
+    }
+
+    return HAL_OK;
+}
+
+// Persists the same configuration to EEPROM so the chip powers up correct even before firmware
+// runs. Only called when a read-back shows the stored config differs, so this does not wear the
+// EEPROM on every boot.
+HAL_StatusTypeDef MCP4728_StoreConfigEEPROM(I2C_HandleTypeDef* I2CHandler)
+{
+    // Sequential write starting at channel A: command byte, then 2 bytes per channel
+    uint8_t data[9];
+    data[0] = MCP4728_CMD_SEQ_WRITE; // starting channel A, UDAC = 0
+
+    for (int channel = 0; channel < 4; channel++)
+    {
+        data[1 + channel * 2] = MCP4728_CONFIG_BYTE; // Vref/PD/gain, upper data nibble zero
+        data[2 + channel * 2] = 0x00;                // power up at 0V
+    }
+
+    if (HAL_I2C_Master_Transmit(I2CHandler, MCP4728_ADDR, data, sizeof(data), HAL_MAX_DELAY) != HAL_OK)
+    {
+        return HAL_ERROR;
+    }
+
+    // The chip is busy for the duration of the EEPROM write cycle and will NAK until it finishes
+    HAL_Delay(MCP4728_EEPROM_WRITE_MS);
+
+    return HAL_OK;
+}
+
 HAL_StatusTypeDef MCP4728_Init(I2C_HandleTypeDef* I2CHandler)
 {
     // Check if device is responding
@@ -9,6 +57,32 @@ HAL_StatusTypeDef MCP4728_Init(I2C_HandleTypeDef* I2CHandler)
     {
         return HAL_ERROR;
     }
+
+    // Make the running configuration correct first -- this is what the outputs actually depend on
+    if (MCP4728_SetConfig(I2CHandler) != HAL_OK)
+    {
+        return HAL_ERROR;
+    }
+
+    // Then check what the chip will load at its next power-up, and only rewrite EEPROM if it is
+    // wrong. A read returns 6 bytes per channel: 3 for the DAC register, then 3 for the EEPROM.
+    uint8_t registers[MCP4728_READ_LENGTH];
+    if (HAL_I2C_Master_Receive(I2CHandler, MCP4728_ADDR, registers, sizeof(registers), HAL_MAX_DELAY) != HAL_OK)
+    {
+        return HAL_ERROR;
+    }
+
+    for (int channel = 0; channel < 4; channel++)
+    {
+        // Byte 1 of the EEPROM triple holds Vref, the power-down bits and the gain bit
+        const uint8_t stored_config = registers[channel * 6 + 4] & 0xF0;
+
+        if (stored_config != MCP4728_CONFIG_BYTE)
+        {
+            return MCP4728_StoreConfigEEPROM(I2CHandler);
+        }
+    }
+
     return HAL_OK;
 }
 

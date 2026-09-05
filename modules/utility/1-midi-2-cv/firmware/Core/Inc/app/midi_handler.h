@@ -41,13 +41,16 @@ typedef enum {
 } MIDI_message_type;
 
 typedef enum {
+    CC_MOD_WHEEL = 1,
     CC_ALL_NOTES_OFF = 123,
 } MIDI_cc_message_type;
 
 typedef struct {
     MIDI_message_type type;
     uint8_t channel;
-    uint8_t data_byte[MIDI_DATABYTE_MAX]; //data_byte[0]=MSB, [1]=LSB, [2]=OTHER...(e.g. sysEx, Control Change...)
+    // Data bytes in wire order: data_byte[0] is the first data byte after the status byte.
+    // For pitch bend that makes [0] the LSB and [1] the MSB, not the other way around.
+    uint8_t data_byte[MIDI_DATABYTE_MAX];
 } MIDI_event;
 
 typedef struct {
