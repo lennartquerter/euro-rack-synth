@@ -46,7 +46,7 @@ BUFFER_STATUS buffer_u8_free(Buffer *buf) {
 	}
 
 	if (buf->buffer != NULL) {
-		free(buf->buffer);
+		free((void *)buf->buffer);  // cast away volatile: free() takes a plain void *
 		buf->buffer = NULL;  // Prevent use-after-free
 	}
 

@@ -74,6 +74,19 @@ void Error_Handler(void);
 
 /* USER CODE BEGIN Private defines */
 
+// Jack-detect (normalling) contacts on the gate outputs. Each output jack's tip-normal pin
+// sits on a 100K pull-up to +3.3V and shorts to the tip while no plug is inserted, so the
+// line follows the gate output when the jack is empty and floats high once a plug lifts the
+// contact. Named to match GATE_n_CALLBACK on the schematic.
+#define GATE_1_CALLBACK_Pin GPIO_PIN_1
+#define GATE_1_CALLBACK_GPIO_Port GPIOA
+#define GATE_2_CALLBACK_Pin GPIO_PIN_2
+#define GATE_2_CALLBACK_GPIO_Port GPIOA
+#define GATE_3_CALLBACK_Pin GPIO_PIN_4
+#define GATE_3_CALLBACK_GPIO_Port GPIOA
+#define GATE_4_CALLBACK_Pin GPIO_PIN_5
+#define GATE_4_CALLBACK_GPIO_Port GPIOA
+
 /* USER CODE END Private defines */
 
 #ifdef __cplusplus

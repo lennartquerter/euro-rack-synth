@@ -14,6 +14,14 @@
 // In Poly and Sequence mode the module listens to a single MIDI channel, which drives all four
 // outputs. 0 is the channel nibble for MIDI channel 1.
 #define MIDI_INPUT_CHANNEL                  0
+
+// Sentinel for the DAC shadow copies. A real value is 12-bit, so this can never match one and
+// forces the next write through -- used to invalidate the shadows on reset.
+#define DAC_SHADOW_INVALID                  0xFFFF
+
+// Time for a jack-detect line to settle after the gates are driven low before it is sampled. The
+// 100K pull-up against stray capacitance needs microseconds; 1ms is simply the smallest tick.
+#define GATE_DETECT_SETTLE_MS               1
 #define NUMBER_OF_NOTES_PER_CHANNEL         4
 #define MIDI_NOTES_LENGTH                   127
 
@@ -54,8 +62,6 @@ struct MIDI_PROCESSOR_config
     I2C_HandleTypeDef* vel_dac2;
     I2C_HandleTypeDef* mod_dac3;
 
-    uint8_t available_channels;
-    // 4 bits as BIT_MASK (LSB) to denote which channels are active and can be used --> 0b0000ABCD;
     MIDI_PROCESSOR_mode mode;
 };
 
@@ -64,6 +70,10 @@ typedef struct
     bool is_on;
     uint8_t number;
     uint8_t note_value;
+
+    // When this voice was last taken. Used to pick the oldest voice to steal once all of them are
+    // busy, so a fifth simultaneous note replaces the longest-held note instead of being dropped.
+    uint32_t started_at;
 
     uint32_t cv;
     uint32_t velocity;
@@ -81,7 +91,8 @@ typedef struct
     MIDI_PROCESSOR_note notes[4];
 } MIDI_PROCESSOR_channel;
 
-uint8_t MIDI_PROCESSOR_init(const struct MIDI_PROCESSOR_config* cfg);
+// Returns 0 on success, negative on failure. Signed for the same reason as the handler above.
+int32_t MIDI_PROCESSOR_init(const struct MIDI_PROCESSOR_config* cfg);
 void MIDI_PROCESSOR_handle_event(MIDI_event* midi_event);
 void MIDI_PROCESSOR_mode_changed();
 

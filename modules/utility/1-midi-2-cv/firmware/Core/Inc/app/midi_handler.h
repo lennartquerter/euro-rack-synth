@@ -8,6 +8,19 @@
 #define MIDI_BUFFER_LENGTH 1024
 #define MIDI_DATABYTE_MAX 32
 
+// Bit 7 separates status bytes from data bytes: data bytes are always 0-127
+#define MIDI_STATUS_BIT       0x80
+
+// System Real-Time messages are single bytes from 0xF8 upwards. They may appear between any two
+// bytes of another message, so they are filtered out before the parser state machine sees them.
+#define MIDI_REALTIME_FIRST   0xF8
+
+// Channel voice status bytes, high nibble only (the low nibble is the channel)
+#define MIDI_STATUS_NOTE_OFF    0x80
+#define MIDI_STATUS_NOTE_ON     0x90
+#define MIDI_STATUS_CC          0xB0
+#define MIDI_STATUS_PITCH_BEND  0xE0
+
 #include "buffer.h"
 #include <stdint.h>
 #include <stdbool.h>
@@ -60,8 +73,13 @@ typedef struct {
     uint8_t data_idx;
 } MidiAnalysisStatus;
 
-uint32_t MIDI_HANDLER_init(const struct MIDI_HANDLER_config* cfg);
-uint32_t MIDI_HANDLER_get_event(MIDI_event *midi_event);
+// Both return a negative value on failure, so the return type must be signed: as uint32_t the -1
+// error code came back as 4294967295 and read as success at every call site.
+int32_t MIDI_HANDLER_init(const struct MIDI_HANDLER_config* cfg);
+
+// Returns 1 when midi_event was filled, 0 when no complete message is available yet, -1 on error.
+// Only a return of 1 means midi_event holds valid data.
+int32_t MIDI_HANDLER_get_event(MIDI_event *midi_event);
 bool MIDI_HANDLER_push_buffer(uint8_t *input);
 
 #endif //MIDI_HANDLER_H

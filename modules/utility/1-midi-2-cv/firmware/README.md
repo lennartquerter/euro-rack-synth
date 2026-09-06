@@ -29,6 +29,26 @@ Midas offers three distinct modes of operation, selectable via a 3-position swit
 Channel mode listens on MIDI channels 1-4, one per output. Poly and Sequence mode both listen on
 MIDI channel 1 only (`MIDI_INPUT_CHANNEL`) and drive all four outputs from it.
 
+### Jack detection
+
+Each gate jack has a normalling contact wired to a detect input (PA1, PA2, PA4, PA5 -- the
+`GATE_n_CALLBACK` nets). The contact shorts to the tip while the jack is empty, so the detect line
+follows the gate output when nothing is plugged in and is left floating high by the board's 100K
+pull-up once a plug lifts it. **High therefore means a cable is present, and the reading is only
+valid with the gates driven low** -- `detect_available_channels()` drives them low, settles, then
+samples.
+
+Poly and Sequence mode allocate voices only to patched outputs, so a two-cable patch gives
+two-voice polyphony and a two-step sequence instead of sending notes to empty jacks. Channel mode
+is unaffected: its output mapping is fixed by MIDI channel. If nothing is detected the firmware
+falls back to using all four, which is also what happens on a board without the detect hardware.
+
+The scan runs at startup and on every mode change, so a cable patched while running is picked up by
+flicking the mode switch.
+
+Poly mode steals the oldest sounding voice when all patched voices are busy, rather than dropping
+the note.
+
 ## Technical Specifications
 
 - MIDI Input: 5-pin DIN

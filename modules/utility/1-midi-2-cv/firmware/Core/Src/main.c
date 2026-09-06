@@ -60,6 +60,12 @@ UART_HandleTypeDef huart1;
 uint8_t midi_received_buf;
 struct MIDI_PROCESSOR_config midi_processor_config;
 
+// The mode switch is mechanical and bounces for a few milliseconds. The EXTI handler only
+// records that an edge happened; the main loop acts once the contacts have settled.
+#define MODE_SWITCH_DEBOUNCE_MS 20
+static volatile bool mode_change_pending = false;
+static volatile uint32_t mode_change_tick = 0;
+
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -90,18 +96,39 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef* huart)
     }
 }
 
+/*
+ * On any UART error the HAL aborts the pending receive. Overrun is the realistic one here: a byte
+ * arriving while the previous one is still unread. Without re-arming, MIDI would stop dead until
+ * the module is power cycled.
+ */
+void HAL_UART_ErrorCallback(UART_HandleTypeDef* huart)
+{
+    if (huart->Instance != huart1.Instance)
+    {
+        return;
+    }
+
+    // Clearing any one of these clears the shared status register read sequence
+    __HAL_UART_CLEAR_OREFLAG(huart);
+    __HAL_UART_CLEAR_NEFLAG(huart);
+    __HAL_UART_CLEAR_FEFLAG(huart);
+    __HAL_UART_CLEAR_PEFLAG(huart);
+
+    // The byte that caused the error is lost; the parser recovers on the next status byte
+    HAL_UART_Receive_IT(&huart1, &midi_received_buf, 1);
+}
+
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 {
-    // Signature is fixed by the HAL; this callback services the single mode-switch EXTI line
+    // Signature is fixed by the HAL; both mode-switch lines land here. HAL_GPIO_EXTI_IRQHandler
+    // has already cleared the pending bit, so there is nothing to acknowledge.
     UNUSED(GPIO_Pin);
 
-    MIDI_PROCESSOR_mode_changed();
-
-    if (EXTI->PR & EXTI_PR_PR0)
-    {
-        // Clear the EXTI pending bit
-        EXTI->PR = EXTI_PR_PR0;
-    }
+    // Only timestamp the edge. Running MIDI_PROCESSOR_mode_changed() here would let
+    // reset_channels() preempt note handling half way through an update, and a bouncing switch
+    // would re-enter it several times per flick.
+    mode_change_pending = true;
+    mode_change_tick = HAL_GetTick();
 }
 
 /* USER CODE END 0 */
@@ -183,7 +210,12 @@ int main(void)
     struct MIDI_HANDLER_config midi_handler_config;
     midi_handler_config.buffer = &rx_buffer;
 
-    MIDI_HANDLER_init(&midi_handler_config);
+    // A failure here means the ring buffer could not be allocated, so no MIDI can be received at
+    // all. Nothing downstream works, so fail loudly rather than run as a dead module.
+    if (MIDI_HANDLER_init(&midi_handler_config) < 0)
+    {
+        Error_Handler();
+    }
 
     /*
      * Set up the MIDI Processor, that will convert the midi event into output over the DAC/Gates
@@ -192,9 +224,12 @@ int main(void)
     midi_processor_config.vel_dac2 = &hi2c2;
     midi_processor_config.mod_dac3 = &hi2c3;
     midi_processor_config.mode = MIDI_MODE_POLY;
-    midi_processor_config.available_channels = 0b00001111;
 
-    MIDI_PROCESSOR_init(&midi_processor_config);
+    // Which outputs are usable is measured from the jack-detect lines, not configured here
+    if (MIDI_PROCESSOR_init(&midi_processor_config) < 0)
+    {
+        Error_Handler();
+    }
 
   /* USER CODE END 2 */
 
@@ -213,6 +248,14 @@ int main(void)
 
     while (1)
     {
+        // Apply a mode change once the switch has been quiet for the debounce window. Each new
+        // edge pushes the deadline out, so only the final resting position takes effect.
+        if (mode_change_pending && (HAL_GetTick() - mode_change_tick) >= MODE_SWITCH_DEBOUNCE_MS)
+        {
+            mode_change_pending = false;
+            MIDI_PROCESSOR_mode_changed();
+        }
+
         // initialize a midi_event
         MIDI_event midi_event;
 
@@ -225,8 +268,6 @@ int main(void)
         {
             // process the midi event
             MIDI_PROCESSOR_handle_event(&midi_event);
-            // short delay to ensure all events got settled
-            HAL_Delay(1);
         }
     }
   /* USER CODE END 3 */
@@ -328,7 +369,7 @@ static void MX_I2C2_Init(void)
 
   /* USER CODE END I2C2_Init 1 */
   hi2c2.Instance = I2C2;
-  hi2c2.Init.ClockSpeed = 100000;
+  hi2c2.Init.ClockSpeed = 400000;
   hi2c2.Init.DutyCycle = I2C_DUTYCYCLE_2;
   hi2c2.Init.OwnAddress1 = 0;
   hi2c2.Init.AddressingMode = I2C_ADDRESSINGMODE_7BIT;
@@ -362,7 +403,7 @@ static void MX_I2C3_Init(void)
 
   /* USER CODE END I2C3_Init 1 */
   hi2c3.Instance = I2C3;
-  hi2c3.Init.ClockSpeed = 100000;
+  hi2c3.Init.ClockSpeed = 400000;
   hi2c3.Init.DutyCycle = I2C_DUTYCYCLE_2;
   hi2c3.Init.OwnAddress1 = 0;
   hi2c3.Init.AddressingMode = I2C_ADDRESSINGMODE_7BIT;
@@ -490,10 +531,7 @@ static void MX_USART1_UART_Init(void)
   }
   /* USER CODE BEGIN USART1_Init 2 */
 
-    // Enable USART2 interrupt
-    HAL_NVIC_EnableIRQ(USART2_IRQn);
-
-    // Enable UART receive interrupt
+    // NVIC for USART1 is enabled by HAL_UART_MspInit; only the RXNE source is set here
     __HAL_UART_ENABLE_IT(&huart1, UART_IT_RXNE);
 
   /* USER CODE END USART1_Init 2 */
@@ -548,6 +586,15 @@ static void MX_GPIO_Init(void)
   HAL_NVIC_EnableIRQ(EXTI1_IRQn);
 
 /* USER CODE BEGIN MX_GPIO_Init_2 */
+
+  /* Jack-detect inputs for the four gate outputs. No internal pull: the board already has a 100K
+     pull-up (R32 and friends) on each line, and an internal pull-up would fight the gate driver
+     that these lines sit on while a jack is empty. */
+  GPIO_InitStruct.Pin = GATE_1_CALLBACK_Pin|GATE_2_CALLBACK_Pin|GATE_3_CALLBACK_Pin|GATE_4_CALLBACK_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+
 /* USER CODE END MX_GPIO_Init_2 */
 }
 
