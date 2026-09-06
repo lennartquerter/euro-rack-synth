@@ -168,9 +168,11 @@ SECTIONS
   ._user_heap_stack :
   {
     . = ALIGN(8);
+    __heap_start = .;
     PROVIDE ( end = . );
     PROVIDE ( _end = . );
     . = . + _Min_Heap_Size;
+    __heap_end = .;
     . = . + _Min_Stack_Size;
     . = ALIGN(8);
   } >RAM
